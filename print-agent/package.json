@@ -1,0 +1,17 @@
+{
+  "name": "foodix-print-agent",
+  "version": "1.0.0",
+  "description": "Agente local de impresión para FoodIX — puente HTTP→TCP hacia la impresora térmica de red",
+  "main": "agent.js",
+  "bin": {
+    "foodix-print-agent": "agent.js"
+  },
+  "scripts": {
+    "start": "node agent.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

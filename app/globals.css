@@ -1,0 +1,643 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 25% 97%;        /* warm off-white #F7F4F0 */
+    --foreground: 20 14% 11%;        /* stone-900 #1C1917 */
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 11%;
+    --primary: 22 96% 47%;           /* #E85D04 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 10% 92%;
+    --secondary-foreground: 20 14% 20%;
+    --muted: 30 10% 92%;
+    --muted-foreground: 25 5% 50%;   /* stone-500 */
+    --accent: 37 90% 55%;
+    --accent-foreground: 20 14% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 10% 90%;            /* stone-200 */
+    --input: 30 10% 90%;
+    --ring: 22 96% 47%;
+    --radius: 0.75rem;
+    --sidebar-bg: #1C1917;           /* always dark sidebar */
+    --sidebar-text: #E7E5E4;
+    --sidebar-active: #E85D04;
+  }
+  /* Fuerza tokens de tema CLARO en un subárbol, aunque <html> tenga .dark.
+     Se usa en pantallas de marca (login/PIN) que están diseñadas en claro. */
+  .theme-light {
+    color-scheme: light;
+    /* Reaplica el color de texto con los tokens claros: si <html> tiene .dark,
+       el <body> ya calculó su `color` con el --foreground oscuro (texto claro)
+       y los hijos que solo heredan (p. ej. el <h1> de marca) quedarían
+       invisibles sobre fondos claros. Forzar `color` aquí lo corrige. */
+    color: hsl(20 14% 11%);
+    --background: 40 25% 97%;
+    --foreground: 20 14% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 11%;
+    --primary: 22 96% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 10% 92%;
+    --secondary-foreground: 20 14% 20%;
+    --muted: 30 10% 92%;
+    --muted-foreground: 25 5% 50%;
+    --accent: 37 90% 55%;
+    --accent-foreground: 20 14% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 10% 90%;
+    --input: 30 10% 90%;
+    --ring: 22 96% 47%;
+  }
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 30 10% 96%;
+    --card: 0 0% 10%;
+    --card-foreground: 30 10% 96%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 30 10% 96%;
+    --primary: 22 96% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 30 10% 90%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 25 5% 55%;
+    --accent: 37 90% 55%;
+    --accent-foreground: 20 14% 11%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 22 96% 50%;
+    --sidebar-bg: #111111;
+  }
+}
+
+@keyframes carta-address-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 1rem)); }
+}
+
+/* Título del restaurante: scroll horizontal de ida y vuelta (ping-pong) cuando
+   el nombre no cabe. Pausas al inicio y al final (para poder leer el nombre
+   completo) y easing en ambos extremos para un arranque/frenado suave. El
+   recorrido `--bn-overflow` lo calcula el componente según el desbordamiento. */
+@keyframes branch-name-pingpong {
+  0%, 14%   { transform: translateX(0); }
+  46%, 54%  { transform: translateX(calc(-1 * var(--bn-overflow, 0px))); }
+  86%, 100% { transform: translateX(0); }
+}
+
+@keyframes viewer-image-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes info-card-in {
+  from { opacity: 0; transform: translateY(18px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes price-pop {
+  0% { opacity: 0; transform: scale(0.85); }
+  70% { transform: scale(1.06); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-viewer-image-in {
+  animation: viewer-image-in 0.38s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-info-card-in {
+  animation: info-card-in 0.42s 0.08s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-price-pop {
+  display: inline-block;
+  animation: price-pop 0.24s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.address-ticker-track {
+  animation: carta-address-marquee linear infinite;
+  will-change: transform;
+}
+
+.address-ticker-track:hover,
+.address-ticker-track:focus-within {
+  animation-play-state: paused;
+}
+
+.branch-name-pingpong {
+  animation: branch-name-pingpong var(--bn-duration, 12s) cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  will-change: transform;
+}
+
+.branch-name-pingpong:hover {
+  animation-play-state: paused;
+}
+
+.carta-menu-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 420px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .address-ticker-track {
+    animation: none;
+  }
+
+  .animate-viewer-image-in,
+  .animate-info-card-in,
+  .animate-price-pop {
+    animation: none;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.25rem;
+    /* Evita el "inflado" de texto de iOS Safari al girar a horizontal y la
+       reescala automática de fuentes en Chrome/Brave móvil. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  * {
+    @apply border-border;
+  }
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 3px;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Render consistente entre Safari y Chromium + sin destello azul al tocar. */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+    /* No permitir scroll horizontal accidental en móvil. */
+    overflow-x: hidden;
+  }
+  /* Los controles de formulario heredan la fuente (Safari usa la del sistema
+     por defecto) y respetan el color-scheme para selects/inputs nativos. */
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+  }
+  /* Imágenes y media nunca desbordan su contenedor (Safari es estricto). */
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+}
+
+@layer utilities {
+  /* ─── Safe-area (notch / barra de gestos iOS) ───
+     Requiere viewport-fit=cover (definido en app/layout.tsx). En navegadores
+     sin notch los env() valen 0, así que no afectan a Android/desktop. */
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .safe-area-inset-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  .pb-safe {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+  .pt-safe {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+  .px-safe {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  /* Altura de viewport dinámica con fallback para Safari antiguo (<15.4) y
+     navegadores que no soportan dvh. */
+  .min-h-screen-dvh {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+  .h-screen-dvh {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: 3px;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Fondo punteado sutil para pantallas de marca (login, PIN). */
+  .dot-grid-bg {
+    background-image: radial-gradient(circle, hsl(20 10% 70% / 0.35) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  [data-pos-accessibility="true"] {
+    font-size: calc(1rem * var(--pos-font-scale, 1));
+  }
+  [data-pos-accessibility="true"] button,
+  [data-pos-accessibility="true"] input,
+  [data-pos-accessibility="true"] textarea,
+  [data-pos-accessibility="true"] select,
+  [data-pos-accessibility="true"] [role="button"] {
+    min-height: calc(2.5rem * var(--pos-control-scale, 1));
+  }
+  [data-pos-accessibility="true"] button svg,
+  [data-pos-accessibility="true"] a svg,
+  [data-pos-accessibility="true"] [role="button"] svg {
+    transform: scale(var(--pos-icon-scale, 1));
+    transform-origin: center;
+  }
+  [data-pos-accessibility="true"][data-pos-mode="tablet"] main,
+  [data-pos-accessibility="true"][data-pos-mode="kiosk"] main {
+    letter-spacing: 0;
+  }
+  [data-pos-accessibility="true"][data-pos-mode="kiosk"] .grid {
+    gap: max(0.75rem, 1em);
+  }
+  [data-pos-accessibility="true"][data-pos-contrast="true"] input,
+  [data-pos-accessibility="true"][data-pos-contrast="true"] textarea,
+  [data-pos-accessibility="true"][data-pos-contrast="true"] select {
+    border-width: 2px;
+  }
+  [data-pos-accessibility="true"][data-pos-contrast="true"] button:focus-visible,
+  [data-pos-accessibility="true"][data-pos-contrast="true"] a:focus-visible,
+  [data-pos-accessibility="true"][data-pos-contrast="true"] input:focus-visible,
+  [data-pos-accessibility="true"][data-pos-contrast="true"] textarea:focus-visible {
+    outline-width: 3px;
+  }
+}
+
+/* ─── Keyframes ─── */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.75); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  15%     { transform: translateX(-9px); }
+  30%     { transform: translateX(8px); }
+  45%     { transform: translateX(-6px); }
+  60%     { transform: translateX(5px); }
+  75%     { transform: translateX(-3px); }
+  90%     { transform: translateX(2px); }
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(1);    opacity: 0.5; }
+  50%  { transform: scale(1.22); opacity: 0.15; }
+  100% { transform: scale(1);    opacity: 0.5; }
+}
+@keyframes spin-brand {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes logo-bounce {
+  0%,100% { transform: scale(1); }
+  40%     { transform: scale(1.12); }
+  60%     { transform: scale(0.95); }
+  80%     { transform: scale(1.04); }
+}
+@keyframes modal-enter {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes keypad-in {
+  0%   { opacity: 0; transform: translateY(36px) scale(0.92); }
+  60%  { opacity: 1; transform: translateY(-4px) scale(1.015); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes keypad-dialog-in {
+  0%   { opacity: 0; transform: translate(-50%, -50%) translateY(36px) scale(0.92); }
+  60%  { opacity: 1; transform: translate(-50%, -50%) translateY(-4px) scale(1.015); }
+  100% { opacity: 1; transform: translate(-50%, -50%) translateY(0) scale(1); }
+}
+/* Entrada escalonada de cada tecla del PIN pad (efecto "pop" premium). */
+@keyframes pin-key-in {
+  0%   { opacity: 0; transform: translateY(12px) scale(0.6); }
+  70%  { opacity: 1; transform: translateY(-2px) scale(1.08); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+/* Pop del punto indicador al rellenarse. */
+@keyframes pin-dot-pop {
+  0%   { transform: scale(0.5); }
+  60%  { transform: scale(1.35); }
+  100% { transform: scale(1.1); }
+}
+
+/* ─── Carta digital: entrada espectacular al filtrar ─── */
+@keyframes carta-pop {
+  0%   { transform: scale(0.7); }
+  55%  { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+@keyframes carta-section-in {
+  0%   { opacity: 0; transform: translateY(12px); letter-spacing: 0.12em; }
+  100% { opacity: 1; transform: translateY(0); letter-spacing: normal; }
+}
+@keyframes carta-chip-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(232 93 4 / 0.45); }
+  50%      { box-shadow: 0 0 0 6px rgb(232 93 4 / 0); }
+}
+@keyframes carta-heat {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(239 68 68 / 0.0); }
+  50%      { box-shadow: 0 0 11px 2px rgb(249 115 22 / 0.6); }
+}
+@keyframes carta-cool {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(59 130 246 / 0.0); }
+  50%      { box-shadow: 0 0 11px 2px rgb(56 189 248 / 0.55); }
+}
+/* Glow suave del logo DevHive al llegar al final de la carta. */
+@keyframes carta-logo-glow {
+  0%, 100% { filter: drop-shadow(0 0 0 rgb(232 93 4 / 0)); transform: scale(1); }
+  50%      { filter: drop-shadow(0 0 14px rgb(232 93 4 / 0.55)); transform: scale(1.06); }
+}
+
+/* ─── Chatbot "Sol": botón, mensajes y chips ─── */
+@keyframes chat-fab-in {
+  0%   { opacity: 0; transform: translateY(16px) scale(0.6); }
+  60%  { opacity: 1; transform: translateY(-3px) scale(1.06); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes chat-msg-user {
+  0%   { opacity: 0; transform: translate(16px, 10px) scale(0.94); }
+  100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+@keyframes chat-msg-bot {
+  0%   { opacity: 0; transform: translate(-16px, 10px) scale(0.94); }
+  100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+@keyframes chat-chip-in {
+  0%   { opacity: 0; transform: translateY(8px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ─── Animation utilities ─── */
+@layer utilities {
+  .animate-fade-in-up  { animation: fade-in-up  0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-fade-in     { animation: fade-in     0.35s ease both; }
+  .animate-fade-out    { animation: fade-out    0.25s ease both; }
+  .animate-scale-in    { animation: scale-in    0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-slide-down  { animation: slide-down  0.22s ease both; }
+  .animate-shake       { animation: shake       0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }
+  .animate-pulse-ring  { animation: pulse-ring  1.5s ease-in-out infinite; }
+  .animate-spin-brand  { animation: spin-brand  0.85s linear infinite; }
+  .animate-logo-bounce  { animation: logo-bounce  0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }
+  .animate-modal-enter  { animation: modal-enter  0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-keypad-in    { animation: keypad-in    0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-keypad-dialog-in { animation: keypad-dialog-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  /* backwards (no forwards): muestra el frame inicial durante el delay y libera
+     el transform al terminar, para no romper el active:scale-95 al presionar. */
+  .animate-pin-key      { animation: pin-key-in   0.34s cubic-bezier(0.34, 1.56, 0.64, 1) backwards; }
+  .animate-pin-dot      { animation: pin-dot-pop  0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+  .animate-carta-pop     { animation: carta-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+  .animate-carta-section { animation: carta-section-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-carta-glow    { animation: carta-chip-glow 1.4s ease-out 2; }
+  .animate-carta-pop-glow { animation: carta-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both, carta-chip-glow 1.4s ease-out 0.2s 2; }
+  .animate-carta-heat    { animation: carta-heat 1.9s ease-in-out infinite; }
+  .animate-carta-cool    { animation: carta-cool 2.3s ease-in-out infinite; }
+  .carta-logo-glow       { animation: carta-logo-glow 2.4s ease-in-out infinite; }
+  .animate-chat-fab      { animation: chat-fab-in  0.5s  cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+  .animate-chat-user     { animation: chat-msg-user 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+  .animate-chat-bot      { animation: chat-msg-bot  0.42s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+  .animate-chat-chip     { animation: chat-chip-in  0.4s  cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+  /* Reveal premium ligado al scroll horizontal de la carta: las tarjetas
+     aparecen al entrar al viewport y se desvanecen al salir (volver al inicio).
+     El estado .is-visible lo conmuta un IntersectionObserver. */
+  .carta-reveal {
+    opacity: 0;
+    transform: translateY(38px) scale(0.9);
+    filter: blur(5px);
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      filter 0.6s ease;
+    will-change: opacity, transform, filter;
+  }
+  .carta-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  .delay-75  { animation-delay: 75ms; }
+  .delay-100 { animation-delay: 100ms; }
+  .delay-150 { animation-delay: 150ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+
+  /* Elevación sutil al pasar el cursor (tarjetas, filas) */
+  .hover-lift {
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px -8px rgb(0 0 0 / 0.18);
+  }
+
+  /* Skeleton con shimmer (barrido de luz) */
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .skeleton-shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(255 255 255 / 0.12),
+      transparent
+    );
+    animation: shimmer 1.6s infinite;
+  }
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+/* ─── Landing page ─── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-22px) rotate(1.5deg); }
+}
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(26px, -32px) scale(1.08); }
+  66%      { transform: translate(-22px, 20px) scale(0.94); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes section-arrival {
+  0% {
+    box-shadow: inset 0 0 0 9999px rgb(232 93 4 / 0);
+    filter: saturate(1);
+  }
+  35% {
+    box-shadow: inset 0 0 0 9999px rgb(232 93 4 / 0.035);
+    filter: saturate(1.04);
+  }
+  100% {
+    box-shadow: inset 0 0 0 9999px rgb(232 93 4 / 0);
+    filter: saturate(1);
+  }
+}
+@keyframes page-load-blur {
+  0% {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  100% {
+    opacity: 0;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes page-load-blur-dark {
+  0% {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(12, 10, 9, 0.2);
+  }
+  100% {
+    opacity: 0;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    background-color: rgba(12, 10, 9, 0);
+  }
+}
+/* ─── Asistente IA: gradiente fluido + ondas tipo ecualizador ─── */
+@keyframes ai-flow {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}
+@keyframes ai-bar {
+  0%, 100% { transform: scaleY(0.35); opacity: 0.7; }
+  50%      { transform: scaleY(1);    opacity: 1; }
+}
+@layer utilities {
+  .animate-float      { animation: float 5s ease-in-out infinite; }
+  .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+  .animate-blob       { animation: blob 16s ease-in-out infinite; }
+  .animate-marquee    { animation: marquee 28s linear infinite; }
+  .animate-ai-flow    { background-size: 220% 220%; animation: ai-flow 3s ease infinite; }
+  .animate-ai-bar     { animation: ai-bar 1s ease-in-out infinite; transform-origin: center bottom; }
+  .section-arrival    { animation: section-arrival 1.05s ease-out both; }
+  .page-load-blur {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483647;
+    pointer-events: none;
+    animation: page-load-blur 0.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+    will-change: opacity, backdrop-filter, background-color;
+  }
+  .dark .page-load-blur {
+    animation-name: page-load-blur-dark;
+  }
+
+  /* Aparición progresiva al hacer scroll (se activa con .in-view vía JS) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(34px) scale(0.985);
+    filter: blur(4px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 0.7s ease;
+    will-change: opacity, transform, filter;
+  }
+  .reveal.in-view { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+
+/* Accesibilidad: respeta la preferencia de menos movimiento del sistema */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal,
+  .carta-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .page-load-blur {
+    opacity: 0 !important;
+    transform: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: transparent !important;
+    animation: none !important;
+  }
+}

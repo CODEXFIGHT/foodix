@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descarga POS APK — FoodIX</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#E85D04',
+              hover: '#C44D00',
+            }
+          },
+          animation: {
+            'shake': 'shake 0.4s ease-in-out',
+            'slide-in': 'slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+            'fade-out': 'fadeOut 0.2s ease-out',
+          },
+          keyframes: {
+            shake: {
+              '0%, 100%': { transform: 'translateX(0)' },
+              '25%': { transform: 'translateX(-5px)' },
+              '75%': { transform: 'translateX(5px)' },
+            },
+            slideIn: {
+              '0%': { transform: 'translateX(100%) translateY(-10px)', opacity: '0' },
+              '100%': { transform: 'translateX(0) translateY(0)', opacity: '1' },
+            },
+            fadeOut: {
+              '0%': { opacity: '1' },
+              '100%': { opacity: '0' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Estilos personalizados para inputs y scroll */
+    input:focus {
+      outline: none;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-stone-50 flex flex-col custom-scrollbar text-stone-800 antialiased">
+
+  <!-- NAVBAR -->
+  <header class="h-16 border-b border-stone-200 bg-white sticky top-0 z-40 flex items-center justify-between px-6 shadow-sm">
+    <!-- Brand Logo -->
+    <div class="flex items-center gap-2.5">
+      <div class="rounded-lg bg-brand text-white font-bold flex items-center justify-center shadow-sm" style="width: 32px; height: 32px; font-size: 17.6px;">
+        R
+      </div>
+      <span class="font-bold tracking-tight text-lg text-stone-900">
+        Restaur<span class="text-brand">OS</span><sup class="text-[0.55em] align-super">©</sup>
+      </span>
+    </div>
+
+    <!-- Right Side Status -->
+    <div class="flex items-center gap-2">
+      <span class="flex items-center gap-1.5 text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">
+        <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+        Servidor en línea
+      </span>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 flex items-center justify-center py-10 px-4">
+    <div class="w-full max-w-md" id="cardContainer">
+      <div class="bg-white rounded-2xl border border-stone-200 shadow-xl p-8 transition-all duration-300 transform" id="validationCard">
+        
+        <!-- APK Icon & Header -->
+        <div class="text-center space-y-3 mb-6">
+          <div class="mx-auto h-20 w-20 bg-orange-50 rounded-2xl flex items-center justify-center text-brand border border-orange-100 shadow-inner">
+            <i data-lucide="tablet" class="h-10 w-10"></i>
+          </div>
+          <h1 class="text-2xl font-bold tracking-tight text-stone-900">
+            Descarga para Equipos POS
+          </h1>
+          <p class="text-stone-500 text-sm leading-relaxed px-2">
+            Ingresa tu Token de Suscripción para verificar tu sucursal y habilitar la descarga del archivo de instalación (.APK).
+          </p>
+        </div>
+
+        <!-- Formular / Input -->
+        <form id="tokenForm" class="space-y-4" onsubmit="event.preventDefault(); validateToken();">
+          <div class="space-y-1.5">
+            <label for="tokenInput" class="text-xs font-bold text-stone-600 uppercase tracking-wider block">
+              Token de Suscripción
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-stone-400">
+                <i data-lucide="key-round" class="h-4.5 w-4.5"></i>
+              </span>
+              <input 
+                type="text" 
+                id="tokenInput" 
+                placeholder="RES-POS-XXXX-XXXX" 
+                class="w-full pl-11 pr-4 py-3 bg-stone-50 border border-stone-200 rounded-xl font-mono text-sm tracking-widest placeholder-stone-400 font-semibold focus:border-brand focus:ring-1 focus:ring-brand focus:bg-white transition-all text-stone-800"
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </div>
+            <p class="text-[11px] text-stone-400 leading-normal">
+              Ejemplos demo: <code class="bg-stone-100 px-1 py-0.5 rounded font-mono font-semibold text-stone-600">RES-POS-PRO-2026</code> o <code class="bg-stone-100 px-1 py-0.5 rounded font-mono font-semibold text-stone-600">RES-POS-WARN-EXPR</code>.
+            </p>
+          </div>
+
+          <!-- Submit Button -->
+          <button 
+            type="submit" 
+            id="submitBtn"
+            class="w-full bg-brand hover:bg-brand-hover text-white py-3 px-4 rounded-xl font-semibold shadow-md active:scale-[0.98] transition-all flex items-center justify-center gap-2 group cursor-pointer"
+          >
+            <span id="btnText">Validar Token de Suscripción</span>
+            <i id="btnIcon" data-lucide="arrow-right" class="h-4.5 w-4.5 group-hover:translate-x-0.5 transition-transform"></i>
+          </button>
+        </form>
+
+        <!-- Success/Download Section (Hidden initially) -->
+        <div id="downloadSection" class="hidden space-y-6 pt-2 border-t border-stone-100 mt-6">
+          <div class="p-4 bg-emerald-50 border border-emerald-100 rounded-xl space-y-2">
+            <div class="flex items-center gap-2 text-emerald-800 font-semibold text-sm">
+              <i data-lucide="check-circle-2" class="h-5 w-5 shrink-0 text-emerald-600"></i>
+              <span>¡Validación Correcta!</span>
+            </div>
+            <div class="text-xs text-emerald-700/90 leading-relaxed font-medium space-y-1 pl-7">
+              <p><strong>Sucursal:</strong> <span id="infoBranch">Taller Check Central</span></p>
+              <p><strong>Plan actual:</strong> <span id="infoPlan">Plan Pro</span></p>
+              <p><strong>Vigencia:</strong> <span id="infoExpiry">31 Dic 2026</span></p>
+            </div>
+          </div>
+
+          <!-- Action Download Button -->
+          <a 
+            id="downloadApkBtn"
+            href="#"
+            download="foodix_pos_v1.0.0.apk"
+            onclick="triggerDownload(event);"
+            class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 px-4 rounded-xl font-bold shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
+          >
+            <i data-lucide="download" class="h-5 w-5 animate-bounce"></i>
+            <span>Descargar APK para POS</span>
+          </a>
+          
+          <p class="text-center text-[11px] text-stone-400 leading-normal">
+            Tamaño de archivo: ~14.8 MB · Versión v1.0.0
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toastContainer" class="fixed top-4 right-4 z-50 flex flex-col gap-3 max-w-sm w-full pointer-events-none"></div>
+
+  <!-- FOOTER -->
+  <footer class="flex flex-col items-center gap-2 py-4 text-xs text-stone-500 select-none bg-white border-t border-stone-200 w-full mt-auto">
+    <a
+      href="https://codexfight.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center justify-center gap-2 font-medium opacity-80 hover:opacity-100 transition-opacity group"
+    >
+      <img
+        src="https://i.ibb.co/hR4W8tnY/devhive-512.png"
+        alt="CodexFight"
+        width="18"
+        height="18"
+        class="shrink-0 rounded-sm group-hover:scale-110 transition-transform"
+      />
+      <span class="text-center group-hover:text-stone-800 transition-colors">
+        CodexFight · 2026 · Todos los derechos reservados
+      </span>
+    </a>
+    <span class="font-medium opacity-60 tabular-nums">Restaur<span class="text-brand">OS</span> · v1.0.0-beta.28</span>
+    <div class="flex items-center gap-3 font-semibold opacity-75">
+      <a href="#" class="hover:opacity-100 hover:underline transition-opacity">Manual</a>
+      <span>·</span>
+      <a href="#" class="hover:opacity-100 hover:underline transition-opacity">Privacidad</a>
+      <span>·</span>
+      <a href="#" class="hover:opacity-100 hover:underline transition-opacity">Términos</a>
+      <span>·</span>
+      <a href="#" class="hover:opacity-100 hover:underline transition-opacity">Cookies</a>
+    </div>
+  </footer>
+
+  <script>
+    // Inicialización de Lucide Icons
+    lucide.createIcons();
+
+    // Autoformateo del input a Mayúsculas
+    const tokenInput = document.getElementById('tokenInput');
+    tokenInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.toUpperCase();
+    });
+
+    // Definición de base de datos de tokens demostración
+    const VALID_TOKENS = {
+      'RES-POS-PRO-2026': {
+        branch: 'Restaurante Central S.A.',
+        plan: 'Plan Profesional (Pro)',
+        expiry: '31 de Diciembre, 2026',
+        type: 'success',
+        message: '¡Tu suscripción Pro está activa y autorizada!'
+      },
+      'RES-POS-WARN-EXPR': {
+        branch: 'Sucursal Plaza Las Torres',
+        plan: 'Plan Básico',
+        expiry: '30 de Junio, 2026 (Próximo a expirar)',
+        type: 'warning',
+        message: 'Tu suscripción vencerá pronto. Puedes descargar el APK, pero recuerda renovar en tu panel.'
+      },
+      'RES-POS-DEMO-POS': {
+        branch: 'Demo Food Service',
+        plan: 'Periodo de Prueba (Trial)',
+        expiry: '15 de Julio, 2026',
+        type: 'success',
+        message: 'Validación exitosa para tu sucursal de prueba.'
+      }
+    };
+
+    // Función del Toast
+    function showToast(type, title, message) {
+      const container = document.getElementById('toastContainer');
+      
+      // Crear elemento del toast
+      const toast = document.createElement('div');
+      toast.className = `p-4 bg-white border rounded-xl shadow-lg flex gap-3 items-start animate-slide-in pointer-events-auto transition-all duration-300`;
+      
+      let iconColor = '';
+      let borderColor = '';
+      let iconName = '';
+
+      if (type === 'success') {
+        iconName = 'check-circle-2';
+        iconColor = 'text-emerald-500';
+        borderColor = 'border-emerald-100';
+      } else if (type === 'warning') {
+        iconName = 'alert-triangle';
+        iconColor = 'text-amber-500';
+        borderColor = 'border-amber-100';
+      } else {
+        iconName = 'alert-circle';
+        iconColor = 'text-rose-500';
+        borderColor = 'border-rose-100';
+      }
+
+      toast.classList.add(borderColor);
+
+      toast.innerHTML = `
+        <div class="${iconColor} mt-0.5">
+          <i data-lucide="${iconName}" class="h-5 w-5"></i>
+        </div>
+        <div class="flex-1 space-y-1 text-left">
+          <h4 class="text-sm font-bold text-stone-900">${title}</h4>
+          <p class="text-xs text-stone-600 leading-normal font-medium">${message}</p>
+        </div>
+        <button onclick="closeToast(this.parentElement)" class="text-stone-400 hover:text-stone-600 transition-colors">
+          <i data-lucide="x" class="h-4 w-4"></i>
+        </button>
+      `;
+
+      container.appendChild(toast);
+      lucide.createIcons({
+        attrs: {
+          class: ['h-5 w-5']
+        },
+        nameAttr: 'data-lucide',
+        nodeList: [toast]
+      });
+
+      // Auto-eliminar después de 4.5 segundos
+      setTimeout(() => {
+        closeToast(toast);
+      }, 4500);
+    }
+
+    function closeToast(toastElement) {
+      if (!toastElement) return;
+      toastElement.classList.add('opacity-0', 'translate-x-8');
+      setTimeout(() => {
+        toastElement.remove();
+      }, 300);
+    }
+
+    // Validación del Token
+    function validateToken() {
+      const token = tokenInput.value.trim();
+      const submitBtn = document.getElementById('submitBtn');
+      const btnText = document.getElementById('btnText');
+      const btnIcon = document.getElementById('btnIcon');
+      const downloadSection = document.getElementById('downloadSection');
+      const validationCard = document.getElementById('validationCard');
+
+      // Limpiar estados anteriores
+      downloadSection.classList.add('hidden');
+      validationCard.classList.remove('animate-shake');
+
+      // Validar vacío
+      if (token === '') {
+        validationCard.classList.add('animate-shake');
+        showToast('error', 'Token Requerido', 'Por favor ingresa tu Token de Suscripción para continuar.');
+        tokenInput.focus();
+        return;
+      }
+
+      // Habilitar estado de validando en el botón
+      submitBtn.disabled = true;
+      btnText.innerText = 'Validando Token…';
+      submitBtn.classList.add('opacity-80', 'cursor-not-allowed');
+      
+      // Cambiar ícono a loader animado
+      btnIcon.setAttribute('data-lucide', 'loader-2');
+      btnIcon.classList.add('animate-spin');
+      lucide.createIcons({ nodeList: [submitBtn] });
+
+      // Simular retraso de validación API de 1.5s
+      setTimeout(() => {
+        // Restaurar botón
+        submitBtn.disabled = false;
+        btnText.innerText = 'Validar Token de Suscripción';
+        submitBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+        btnIcon.setAttribute('data-lucide', 'arrow-right');
+        btnIcon.classList.remove('animate-spin');
+        lucide.createIcons({ nodeList: [submitBtn] });
+
+        // Verificar coincidencia en "Base de Datos"
+        if (VALID_TOKENS[token]) {
+          const match = VALID_TOKENS[token];
+          
+          // Escribir datos
+          document.getElementById('infoBranch').innerText = match.branch;
+          document.getElementById('infoPlan').innerText = match.plan;
+          document.getElementById('infoExpiry').innerText = match.expiry;
+
+          // Mostrar alertas y desbloquear
+          showToast(match.type, 'Suscripción Validada', match.message);
+          downloadSection.classList.remove('hidden');
+          
+          // Hacer scroll suave hacia abajo del contenedor si está en móvil
+          setTimeout(() => {
+            downloadSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }, 100);
+
+        } else {
+          // Vibración/Shake de error
+          validationCard.classList.add('animate-shake');
+          showToast('error', 'Token Inválido', 'El token ingresado no es válido, ha expirado o está desactivado.');
+          tokenInput.focus();
+        }
+      }, 1500);
+    }
+
+    // Acción simulada de descarga
+    function triggerDownload(e) {
+      showToast('success', 'Iniciando descarga', 'El archivo APK de FoodIX se está descargando en tu equipo.');
+    }
+  </script>
+</body>
+</html>
