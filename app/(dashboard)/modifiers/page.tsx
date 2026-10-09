@@ -72,7 +72,7 @@ export default function ModifiersPage() {
         title="Modificadores"
         description="Opciones y extras de tus productos (términos, ingredientes, tamaños…)"
         actions={
-          <Button onClick={openNew} className="bg-[#D1400F] hover:bg-[#B03508]">
+          <Button onClick={openNew} className="bg-[#FACC15] hover:bg-[#EAB308]">
             <Plus className="h-4 w-4 mr-1" /> Nuevo grupo
           </Button>
         }

@@ -139,7 +139,7 @@ function POSConfigView({ posCount, onSelect, variant, busy = false }: POSConfigV
             Define cómo se organiza la operación Caliente / Frío de este establecimiento.
           </p>
         </div>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#D1400F]/15 px-3 py-1 text-xs font-semibold text-[#D1400F] ring-1 ring-[#D1400F]/25">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FACC15]/15 px-3 py-1 text-xs font-semibold text-yellow-700 dark:text-yellow-400 ring-1 ring-[#FACC15]/25">
           <Check className="h-3.5 w-3.5" />
           Actual: {posCount} POS
         </span>
@@ -158,12 +158,12 @@ function POSConfigView({ posCount, onSelect, variant, busy = false }: POSConfigV
               className={cn(
                 'group relative overflow-hidden rounded-2xl border p-5 text-left transition-all duration-300 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70',
                 selected
-                  ? 'border-[#D1400F] ring-2 ring-[#D1400F]/30'
+                  ? 'border-[#EAB308] ring-2 ring-[#FACC15]/30'
                   : dark
                     ? 'border-white/10 hover:border-white/25'
                     : 'border-stone-200 hover:border-stone-300 dark:border-white/10 dark:hover:border-white/25',
                 selected
-                  ? dark ? 'bg-[#D1400F]/10' : 'bg-orange-50/70 dark:bg-[#D1400F]/10'
+                  ? dark ? 'bg-[#FACC15]/10' : 'bg-amber-50/70 dark:bg-[#FACC15]/10'
                   : dark ? 'bg-white/[0.03] hover:bg-white/[0.06]' : 'bg-white hover:bg-stone-50 dark:bg-white/[0.03]',
               )}
             >
@@ -171,7 +171,7 @@ function POSConfigView({ posCount, onSelect, variant, busy = false }: POSConfigV
                 <span
                   className={cn(
                     'grid h-11 w-11 shrink-0 place-items-center rounded-xl transition-colors',
-                    selected ? 'bg-[#D1400F] text-white' : dark ? 'bg-white/10 text-neutral-300' : 'bg-stone-100 text-stone-500 dark:bg-white/10 dark:text-zinc-300',
+                    selected ? 'bg-[#FACC15] text-stone-950' : dark ? 'bg-white/10 text-neutral-300' : 'bg-stone-100 text-stone-500 dark:bg-white/10 dark:text-zinc-300',
                   )}
                 >
                   <opt.Icon className="h-5 w-5" />
@@ -179,7 +179,7 @@ function POSConfigView({ posCount, onSelect, variant, busy = false }: POSConfigV
                 <span
                   className={cn(
                     'grid h-6 w-6 place-items-center rounded-full border-2 transition-all',
-                    selected ? 'border-[#D1400F] bg-[#D1400F] text-white' : dark ? 'border-white/20' : 'border-stone-300 dark:border-white/20',
+                    selected ? 'border-[#EAB308] bg-[#FACC15] text-stone-950' : dark ? 'border-white/20' : 'border-stone-300 dark:border-white/20',
                   )}
                 >
                   {selected && <Check className="h-3.5 w-3.5" />}
@@ -189,7 +189,7 @@ function POSConfigView({ posCount, onSelect, variant, busy = false }: POSConfigV
               <p className={cn('mt-4 text-lg font-bold', dark ? 'text-white' : 'text-stone-900 dark:text-white')}>
                 {opt.title}
               </p>
-              <p className="text-sm font-medium text-[#D1400F]">{opt.subtitle}</p>
+              <p className="text-sm font-medium text-yellow-700 dark:text-yellow-400">{opt.subtitle}</p>
 
               <ul className="mt-3 space-y-1.5">
                 {opt.points.map(p => (
@@ -197,7 +197,7 @@ function POSConfigView({ posCount, onSelect, variant, busy = false }: POSConfigV
                     key={p.text}
                     className={cn('flex items-center gap-2 text-xs', dark ? 'text-neutral-400' : 'text-stone-600 dark:text-zinc-400')}
                   >
-                    <p.Icon className="h-3.5 w-3.5 shrink-0 text-[#D1400F]/80" />
+                    <p.Icon className="h-3.5 w-3.5 shrink-0 text-yellow-700 dark:text-yellow-400/80" />
                     {p.text}
                   </li>
                 ))}
@@ -212,10 +212,10 @@ function POSConfigView({ posCount, onSelect, variant, busy = false }: POSConfigV
           'flex items-start gap-2.5 rounded-xl p-3.5 text-sm',
           dark
             ? 'bg-white/[0.03] text-neutral-300 ring-1 ring-white/10'
-            : 'bg-orange-50/60 text-stone-600 ring-1 ring-orange-100 dark:bg-white/[0.03] dark:text-zinc-300 dark:ring-white/10',
+            : 'bg-amber-50/60 text-stone-600 ring-1 ring-amber-100 dark:bg-white/[0.03] dark:text-zinc-300 dark:ring-white/10',
         )}
       >
-        <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#D1400F]" />
+        <Info className="mt-0.5 h-4 w-4 shrink-0 text-yellow-700 dark:text-yellow-400" />
         <p className="leading-relaxed">{HELP_TEXT}</p>
       </div>
     </div>

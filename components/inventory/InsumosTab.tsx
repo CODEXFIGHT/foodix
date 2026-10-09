@@ -78,7 +78,7 @@ export function InsumosTab({ branchId }: { branchId: number | null }) {
   return (
     <div className="space-y-3">
       <div className="flex justify-end">
-        <Button onClick={openNew} size="sm" className="bg-[#D1400F] hover:bg-[#B03508]">
+        <Button onClick={openNew} size="sm" className="bg-[#FACC15] hover:bg-[#EAB308]">
           <Plus className="h-4 w-4 mr-1" /> Nuevo insumo
         </Button>
       </div>
@@ -145,7 +145,7 @@ export function InsumosTab({ branchId }: { branchId: number | null }) {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setFormOpen(false)}>Cancelar</Button>
-            <Button onClick={handleSave} disabled={!form.name.trim() || createItem.isPending || updateItem.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">
+            <Button onClick={handleSave} disabled={!form.name.trim() || createItem.isPending || updateItem.isPending} className="bg-[#FACC15] hover:bg-[#EAB308]">
               Guardar
             </Button>
           </DialogFooter>
@@ -159,9 +159,9 @@ export function InsumosTab({ branchId }: { branchId: number | null }) {
           <div className="space-y-3">
             <div className="grid grid-cols-2 gap-2">
               <Button variant={adjType === 'waste' ? 'default' : 'outline'} onClick={() => setAdjType('waste')}
-                className={adjType === 'waste' ? 'bg-[#D1400F] hover:bg-[#B03508]' : ''}>Merma</Button>
+                className={adjType === 'waste' ? 'bg-[#FACC15] hover:bg-[#EAB308]' : ''}>Merma</Button>
               <Button variant={adjType === 'adjustment' ? 'default' : 'outline'} onClick={() => setAdjType('adjustment')}
-                className={adjType === 'adjustment' ? 'bg-[#D1400F] hover:bg-[#B03508]' : ''}>Ajuste</Button>
+                className={adjType === 'adjustment' ? 'bg-[#FACC15] hover:bg-[#EAB308]' : ''}>Ajuste</Button>
             </div>
             <div className="space-y-1.5">
               <Label>{adjType === 'waste' ? 'Cantidad a descontar' : 'Cantidad (+ entra / − sale)'}</Label>
@@ -174,7 +174,7 @@ export function InsumosTab({ branchId }: { branchId: number | null }) {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setAdjItem(null)}>Cancelar</Button>
-            <Button onClick={handleAdjust} disabled={adjust.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">Aplicar</Button>
+            <Button onClick={handleAdjust} disabled={adjust.isPending} className="bg-[#FACC15] hover:bg-[#EAB308]">Aplicar</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

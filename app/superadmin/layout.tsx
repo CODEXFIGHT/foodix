@@ -179,7 +179,7 @@ function MobileBottomNav({ onLogoutStart }: { onLogoutStart: () => void }) {
   const itemCls = (active: boolean) =>
     cn(
       'flex-1 flex flex-col items-center justify-center min-w-0 transition-colors relative',
-      active ? 'text-[#D1400F]' : 'text-neutral-500 hover:text-neutral-300',
+      active ? 'text-yellow-400' : 'text-neutral-500 hover:text-neutral-300',
     )
 
   const moreItems = [
@@ -244,7 +244,7 @@ function MobileBottomNav({ onLogoutStart }: { onLogoutStart: () => void }) {
                     Pro
                   </span>
                 )}
-                {active && <span className="ml-auto h-1.5 w-1.5 rounded-full bg-[#D1400F]" />}
+                {active && <span className="ml-auto h-1.5 w-1.5 rounded-full bg-[#FACC15]" />}
               </Link>
             )
           })}
@@ -271,7 +271,7 @@ function MobileBottomNav({ onLogoutStart }: { onLogoutStart: () => void }) {
               <Link key={href} href={href} className={itemCls(active)}>
                 <Icons8Image src={icon} alt={label} size={18} className={cn('brightness-0 invert', !active && 'opacity-50')} />
                 <span className="text-[10px] font-medium leading-none w-full truncate text-center px-0.5 mt-1">{label}</span>
-                {active && <span className="absolute bottom-1 h-1 w-1 rounded-full bg-[#D1400F]" />}
+                {active && <span className="absolute bottom-1 h-1 w-1 rounded-full bg-[#FACC15]" />}
               </Link>
             )
           })}
@@ -280,9 +280,9 @@ function MobileBottomNav({ onLogoutStart }: { onLogoutStart: () => void }) {
             onClick={() => setShowMore(!showMore)}
             className={itemCls(isMoreActive || showMore)}
           >
-            <MoreHorizontal className={cn("h-[18px] w-[18px]", isMoreActive || showMore ? "text-[#D1400F]" : "text-neutral-500")} />
+            <MoreHorizontal className={cn("h-[18px] w-[18px]", isMoreActive || showMore ? "text-yellow-400" : "text-neutral-500")} />
             <span className="text-[10px] font-medium leading-none mt-1">Más</span>
-            {(isMoreActive || showMore) && <span className="absolute bottom-1 h-1 w-1 rounded-full bg-[#D1400F]" />}
+            {(isMoreActive || showMore) && <span className="absolute bottom-1 h-1 w-1 rounded-full bg-[#FACC15]" />}
           </button>
         </div>
       </nav>
@@ -314,7 +314,7 @@ export default function SuperAdminLayout({ children }: { children: React.ReactNo
                   className="rounded-lg flex-shrink-0 shadow-sm"
                 />
                 <span className="text-white font-semibold text-sm tracking-tight hidden min-[360px]:inline-block animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-                  Food<span className="text-[#D1400F]">IX</span>
+                  Food<span className="text-yellow-400">IX</span>
                   <sup className="text-[0.55em] align-super">©</sup>
                 </span>
               </div>

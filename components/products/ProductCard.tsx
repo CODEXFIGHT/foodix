@@ -40,7 +40,7 @@ export function ProductCard({ product, category, onToggle, onDelete, onEdit, isA
                   </span>
                 )}
               </div>
-              <p className="font-bold text-[#D1400F] shrink-0">{formatCurrency(product.price)}</p>
+              <p className="font-bold text-yellow-700 dark:text-yellow-400 shrink-0">{formatCurrency(product.price)}</p>
             </div>
             {product.description && (
               <p className="mt-1 text-xs text-muted-foreground line-clamp-2">{product.description}</p>

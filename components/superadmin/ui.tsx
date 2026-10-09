@@ -118,7 +118,7 @@ const DOT_COLORS: Record<string, string> = {
   green:   'bg-emerald-400',
   red:     'bg-red-400',
   yellow:  'bg-amber-400',
-  orange:  'bg-orange-400',
+  orange:  'bg-amber-400',
   neutral: 'bg-neutral-500',
   blue:    'bg-blue-400',
 }

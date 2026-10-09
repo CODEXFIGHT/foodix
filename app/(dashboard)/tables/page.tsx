@@ -138,7 +138,7 @@ export default function TablesPage() {
         {[
           { label: 'Libres', count: libre, color: 'bg-green-100 text-green-700' },
           { label: 'Ocupadas', count: ocupada, color: 'bg-red-100 text-red-700' },
-          { label: 'Reservadas', count: reservada, color: 'bg-yellow-100 text-yellow-700' },
+          { label: 'Reservadas', count: reservada, color: 'bg-yellow-100 text-yellow-700 dark:text-yellow-400' },
         ].map(s => (
           <Badge key={s.label} className={s.color}>
             {s.count} {s.label}
@@ -238,7 +238,7 @@ export default function TablesPage() {
           <button
             onClick={() => setShowAdd(true)}
             aria-label="Agregar mesa"
-            className="sm:hidden fixed right-4 bottom-20 z-50 h-14 w-14 rounded-full bg-[#D1400F] text-white shadow-lg flex items-center justify-center hover:bg-[#B03508] active:scale-95 transition-all"
+            className="sm:hidden fixed right-4 bottom-20 z-50 h-14 w-14 rounded-full bg-[#FACC15] text-stone-950 shadow-lg flex items-center justify-center hover:bg-[#EAB308] active:scale-95 transition-all"
             style={{ bottom: 'max(5rem, calc(env(safe-area-inset-bottom) + 5rem))' }}
           >
             <Plus className="h-6 w-6" />

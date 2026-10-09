@@ -55,7 +55,7 @@ function MenuContent() {
     <div className="min-h-[calc(100vh-3.5rem)] bg-stone-50">
       {/* Hero */}
       <div className="relative overflow-hidden bg-[#1C1917] px-5 py-10 text-center text-white">
-        <div className="pointer-events-none absolute -left-10 top-0 h-40 w-40 rounded-full bg-[#D1400F]/30 blur-3xl" aria-hidden />
+        <div className="pointer-events-none absolute -left-10 top-0 h-40 w-40 rounded-full bg-[#FACC15]/30 blur-3xl" aria-hidden />
         <div className="pointer-events-none absolute -right-10 bottom-0 h-40 w-40 rounded-full bg-[#F5A623]/20 blur-3xl" aria-hidden />
         <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-[#F5A623]">
           <Sparkles className="h-3.5 w-3.5" /> Menú digital
@@ -73,7 +73,7 @@ function MenuContent() {
               onClick={() => scrollTo(c.id)}
               className={cn(
                 'shrink-0 rounded-full border px-4 py-1.5 text-sm font-medium transition-all',
-                active === c.id ? 'border-[#D1400F] bg-[#D1400F] text-white' : 'border-stone-200 bg-white text-stone-600 hover:border-[#D1400F]/40',
+                active === c.id ? 'border-[#EAB308] bg-[#FACC15] text-stone-950' : 'border-stone-200 bg-white text-stone-600 hover:border-[#EAB308]/40',
               )}
             >
               {c.emoji} {c.name}
@@ -106,7 +106,7 @@ function MenuContent() {
                     <div className="min-w-0 flex-1">
                       <p className="font-semibold text-stone-900">{p.name}</p>
                       <p className="line-clamp-2 text-sm text-stone-500">{p.description}</p>
-                      <p className="mt-1 font-bold text-[#D1400F]">{formatMoney(p.price, restaurant.currency)}</p>
+                      <p className="mt-1 font-bold text-yellow-700">{formatMoney(p.price, restaurant.currency)}</p>
                     </div>
                   </button>
                 ))}
@@ -153,7 +153,7 @@ function ProductDetail({
   return (
     <Dialog open={!!product} onOpenChange={v => !v && onClose()}>
       <DialogContent className="overflow-hidden p-0">
-        <div className="relative grid h-40 place-items-center bg-gradient-to-br from-[#D1400F] to-[#F5A623] text-7xl">
+        <div className="relative grid h-40 place-items-center bg-gradient-to-br from-[#FACC15] to-[#F5A623] text-7xl">
           {product.emoji}
           <button onClick={onClose} className="absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full bg-black/20 text-white hover:bg-black/40">
             <X className="h-4 w-4" />
@@ -163,7 +163,7 @@ function ProductDetail({
           <DialogHeader>
             <DialogTitle className="flex items-center justify-between gap-2">
               <span>{product.name}</span>
-              <span className="text-[#D1400F]">{formatMoney(product.price, currency)}</span>
+              <span className="text-yellow-700 dark:text-yellow-400">{formatMoney(product.price, currency)}</span>
             </DialogTitle>
             <DialogDescription>{product.description}</DialogDescription>
           </DialogHeader>

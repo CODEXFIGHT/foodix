@@ -24,7 +24,7 @@ const FILTERS: { value: Filter; label: string }[] = [
 ]
 
 const STATUS_BADGE: Record<ContactLeadStatus, string> = {
-  new: 'bg-orange-400/15 text-orange-300 border-orange-400/20',
+  new: 'bg-amber-400/15 text-yellow-400 border-amber-400/20',
   read: 'bg-sky-400/15 text-sky-300 border-sky-400/20',
   archived: 'bg-white/10 text-neutral-400 border-white/10',
 }
@@ -56,7 +56,7 @@ export default function SuperAdminLeadsPage() {
 
   const kpis = [
     { label: 'Total', value: metrics?.total ?? 0 },
-    { label: 'Nuevas', value: metrics?.new ?? 0, accent: (metrics?.new ?? 0) > 0 ? 'text-orange-400' : undefined },
+    { label: 'Nuevas', value: metrics?.new ?? 0, accent: (metrics?.new ?? 0) > 0 ? 'text-yellow-500' : undefined },
     { label: 'Leídas', value: metrics?.read ?? 0 },
     { label: 'Archivadas', value: metrics?.archived ?? 0 },
   ]
@@ -113,7 +113,7 @@ export default function SuperAdminLeadsPage() {
             return (
               <Surface key={lead.id} className="p-4">
                 <div className="flex items-start gap-3">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#D1400F]/15 text-sm font-semibold text-orange-300">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#FACC15]/15 text-sm font-semibold text-yellow-400">
                     {lead.name.slice(0, 2).toUpperCase()}
                   </div>
                   <div className="min-w-0 flex-1">

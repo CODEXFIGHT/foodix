@@ -74,7 +74,7 @@ export const DEVICE_STATUS_META: Record<DeviceStatus, DeviceStatusMeta> = {
   online:  { label: 'Online',      dot: 'bg-emerald-400', pill: 'bg-emerald-400/10 text-emerald-300 border-emerald-400/20', pulse: true },
   idle:    { label: 'Inactivo',    dot: 'bg-amber-400',   pill: 'bg-amber-400/10 text-amber-300 border-amber-400/20' },
   offline: { label: 'Offline',     dot: 'bg-red-400',     pill: 'bg-red-400/10 text-red-300 border-red-400/20' },
-  error:   { label: 'Error',       dot: 'bg-orange-400',  pill: 'bg-orange-400/10 text-orange-300 border-orange-400/20', pulse: true },
+  error:   { label: 'Error',       dot: 'bg-amber-400',  pill: 'bg-amber-400/10 text-yellow-400 border-amber-400/20', pulse: true },
   in_test: { label: 'En prueba',   dot: 'bg-blue-400',    pill: 'bg-blue-400/10 text-blue-300 border-blue-400/20' },
   unknown: { label: 'Desconocido', dot: 'bg-neutral-500', pill: 'bg-neutral-500/10 text-neutral-400 border-neutral-500/20' },
 }

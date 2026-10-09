@@ -236,7 +236,7 @@ export function MenuItemModal({
               <p className="text-sm text-stone-500 mt-1 leading-relaxed">{item.description}</p>
             </div>
             <div className="text-right flex-shrink-0">
-              <p className="text-2xl font-extrabold text-[#D1400F] leading-none">${item.price}</p>
+              <p className="text-2xl font-extrabold text-yellow-700 dark:text-yellow-400 leading-none">${item.price}</p>
               <p className="text-[11px] text-stone-400 mt-0.5">MXN</p>
             </div>
           </div>
@@ -343,7 +343,7 @@ export function MenuItemModal({
               <button
                 onClick={() => setQty(q => Math.max(1, q - 1))}
                 disabled={qty <= 1}
-                className="w-9 h-9 rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:border-[#D1400F] hover:text-[#D1400F] disabled:opacity-30 active:scale-90 transition-all"
+                className="w-9 h-9 rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:border-[#EAB308] hover:text-yellow-700 dark:hover:text-yellow-400 disabled:opacity-30 active:scale-90 transition-all"
               >
                 <Minus className="h-4 w-4" />
               </button>
@@ -351,7 +351,7 @@ export function MenuItemModal({
               <button
                 onClick={() => setQty(q => Math.min(20, q + 1))}
                 disabled={qty >= 20}
-                className="w-9 h-9 rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:border-[#D1400F] hover:text-[#D1400F] disabled:opacity-30 active:scale-90 transition-all"
+                className="w-9 h-9 rounded-full border border-stone-200 flex items-center justify-center text-stone-600 hover:border-[#EAB308] hover:text-yellow-700 dark:hover:text-yellow-400 disabled:opacity-30 active:scale-90 transition-all"
               >
                 <Plus className="h-4 w-4" />
               </button>
@@ -369,7 +369,7 @@ export function MenuItemModal({
             </button>
             <button
               onClick={handleAddToCart}
-              className="flex-1 h-11 rounded-xl bg-[#D1400F] text-white text-sm font-bold flex items-center justify-center gap-2 hover:bg-[#B03508] active:scale-[0.98] transition-all shadow-md shadow-[#D1400F]/25"
+              className="flex-1 h-11 rounded-xl bg-[#FACC15] text-stone-950 text-sm font-bold flex items-center justify-center gap-2 hover:bg-[#EAB308] active:scale-[0.98] transition-all shadow-md shadow-[#FACC15]/25"
             >
               <ShoppingCart className="h-4 w-4" />
               Agregar · ${(item.price * qty).toFixed(2)}
@@ -386,7 +386,7 @@ export function MenuItemModal({
 function StatChip({ icon, label, title }: { icon: React.ReactNode; label: string; title: string }) {
   return (
     <div title={title} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-stone-200 rounded-full text-xs font-semibold text-stone-700 shadow-sm">
-      <span className="text-[#D1400F]">{icon}</span>
+      <span className="text-yellow-700">{icon}</span>
       {label}
     </div>
   );

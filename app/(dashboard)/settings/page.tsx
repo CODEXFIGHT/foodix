@@ -159,7 +159,7 @@ export default function SettingsPage() {
               <Label>Slogan</Label>
               <Input {...register('slogan')} placeholder="Tu restaurante, en orden" />
             </div>
-            <Button type="submit" disabled={isSubmitting} className="bg-[#D1400F] hover:bg-[#B03508]">
+            <Button type="submit" disabled={isSubmitting} className="bg-[#FACC15] hover:bg-[#EAB308]">
               {isSubmitting ? 'Guardando…' : 'Guardar cambios'}
             </Button>
           </form>
@@ -231,7 +231,7 @@ export default function SettingsPage() {
               <Button
                 type="submit"
                 disabled={!profileDirty || profileSubmitting}
-                className="bg-[#D1400F] hover:bg-[#B03508]"
+                className="bg-[#FACC15] hover:bg-[#EAB308]"
               >
                 {profileSubmitting ? 'Guardando…' : 'Guardar cuenta'}
               </Button>

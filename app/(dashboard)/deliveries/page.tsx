@@ -247,7 +247,7 @@ export default function DeliveriesPage() {
                 <Input value={newDriver.phone} onChange={e => setNewDriver(d => ({ ...d, phone: e.target.value }))} /></div>
               <div className="w-28 space-y-1.5"><Label className="text-xs">Vehículo</Label>
                 <Input value={newDriver.vehicle} onChange={e => setNewDriver(d => ({ ...d, vehicle: e.target.value }))} placeholder="Moto…" /></div>
-              <Button onClick={handleAddDriver} disabled={createDriver.isPending} className="bg-[#D1400F] hover:bg-[#B03508]"><Plus className="h-4 w-4" /></Button>
+              <Button onClick={handleAddDriver} disabled={createDriver.isPending} className="bg-[#FACC15] hover:bg-[#EAB308]"><Plus className="h-4 w-4" /></Button>
             </div>
           </div>
           <DialogFooter>
@@ -285,7 +285,7 @@ export default function DeliveriesPage() {
                 <Input type="number" inputMode="decimal" value={newZone.min_order} onChange={e => setNewZone(z => ({ ...z, min_order: e.target.value }))} /></div>
               <div className="w-24 space-y-1.5"><Label className="text-xs">Min. estimados</Label>
                 <Input type="number" inputMode="numeric" value={newZone.estimated_minutes} onChange={e => setNewZone(z => ({ ...z, estimated_minutes: e.target.value }))} /></div>
-              <Button onClick={handleAddZone} disabled={createZone.isPending} className="bg-[#D1400F] hover:bg-[#B03508]"><Plus className="h-4 w-4" /></Button>
+              <Button onClick={handleAddZone} disabled={createZone.isPending} className="bg-[#FACC15] hover:bg-[#EAB308]"><Plus className="h-4 w-4" /></Button>
             </div>
           </div>
           <DialogFooter>
@@ -305,7 +305,7 @@ function DeliveryTimeline({ orderId }: { orderId: number }) {
     <div className="border-t pt-2 space-y-1.5">
       {events.map((e, i) => (
         <div key={i} className="flex items-center gap-2 text-xs text-muted-foreground">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#D1400F] shrink-0" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#FACC15] shrink-0" />
           <span className="font-medium text-foreground">{EVENT_LABEL[e.status] ?? e.status}</span>
           {e.driver_name && <span>· {e.driver_name}</span>}
           <span className="ml-auto shrink-0">{formatDate(e.created_at)}</span>

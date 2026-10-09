@@ -28,7 +28,7 @@ export function CodexFightFooter({ className }: CodexFightFooterProps = {}) {
           CodexFight · 2026 · Todos los derechos reservados
         </span>
       </a>
-      <span className="font-medium opacity-60 tabular-nums">Food<span className="text-[#D1400F]">IX</span> · {APP_VERSION}</span>
+      <span className="font-medium opacity-60 tabular-nums">Food<span className="text-yellow-700 dark:text-yellow-400">IX</span> · {APP_VERSION}</span>
       <div className="flex items-center gap-3 font-medium opacity-70">
         <Link href="/manual" className="hover:opacity-100 hover:underline transition-opacity">Manual</Link>
         <span>·</span>

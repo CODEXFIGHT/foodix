@@ -39,7 +39,7 @@ function SubscriptionBlockedScreen({ status }: { status: SubscriptionState }) {
 
         <div className="flex flex-col gap-3 pt-2">
           {(user?.role === 'admin') && status !== 'terminated' && (
-            <Button asChild className="bg-[#D1400F] hover:bg-[#B03508]">
+            <Button asChild className="bg-[#FACC15] hover:bg-[#EAB308]">
               <a href="/billing">Ir a Mi Suscripción</a>
             </Button>
           )}
@@ -57,7 +57,7 @@ function SubscriptionBlockedScreen({ status }: { status: SubscriptionState }) {
 
 function PastDueBanner() {
   return (
-    <div className="bg-yellow-500/15 border-b border-yellow-500/30 text-yellow-800 px-4 py-2 text-sm flex items-center gap-2">
+    <div className="bg-yellow-500/15 border-b border-yellow-500/30 text-yellow-800 dark:text-yellow-400 px-4 py-2 text-sm flex items-center gap-2">
       <Icons8Image src={ICONS8.warning} alt="Aviso" size={18} className="flex-shrink-0" />
       <span className="flex-1">{SUBSCRIPTION_MESSAGE.past_due}</span>
       <a href="/billing" className="font-semibold underline whitespace-nowrap">Renovar</a>

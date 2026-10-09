@@ -83,14 +83,14 @@ export function CustomLineDialog({ open, onOpenChange, onAdd }: CustomLineDialog
           <button
             onClick={() => setMode('open')}
             className={cn('h-11 rounded-lg border text-sm font-medium',
-              mode === 'open' ? 'bg-[#D1400F] text-white border-[#D1400F]' : 'hover:bg-muted')}
+              mode === 'open' ? 'bg-[#FACC15] text-stone-950 border-[#EAB308]' : 'hover:bg-muted')}
           >
             Precio abierto
           </button>
           <button
             onClick={() => setMode('kg')}
             className={cn('h-11 rounded-lg border text-sm font-medium',
-              mode === 'kg' ? 'bg-[#D1400F] text-white border-[#D1400F]' : 'hover:bg-muted')}
+              mode === 'kg' ? 'bg-[#FACC15] text-stone-950 border-[#EAB308]' : 'hover:bg-muted')}
           >
             Por kilogramo
           </button>
@@ -151,7 +151,7 @@ export function CustomLineDialog({ open, onOpenChange, onAdd }: CustomLineDialog
 
         <DialogFooter>
           <Button variant="outline" onClick={() => { reset(); onOpenChange(false) }}>Cancelar</Button>
-          <Button className="bg-[#D1400F] hover:bg-[#B03508]" disabled={!canAdd} onClick={handleAdd}>
+          <Button className="bg-[#FACC15] hover:bg-[#EAB308]" disabled={!canAdd} onClick={handleAdd}>
             Agregar
           </Button>
         </DialogFooter>

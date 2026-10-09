@@ -42,17 +42,17 @@ export function StationHeader({ station, activeCount, lastUpdated }: StationHead
       <div className="flex items-center gap-3 min-w-0">
         {/* Brand Logo "R" */}
         <div className="flex items-center gap-2 shrink-0">
-          <div className="grid h-8 w-8 place-items-center rounded-lg bg-[#D1400F] font-heading text-lg font-bold text-white select-none">
+          <div className="grid h-8 w-8 place-items-center rounded-lg bg-[#FACC15] font-heading text-lg font-bold text-stone-950 select-none">
             R
           </div>
           <span className="hidden text-sm font-semibold sm:inline-block text-stone-800 animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-            Food<span className="text-[#D1400F]">IX</span><sup className="text-[0.55em] align-super">©</sup>
+            Food<span className="text-yellow-700 dark:text-yellow-400">IX</span><sup className="text-[0.55em] align-super">©</sup>
           </span>
         </div>
 
         {/* Station Badge */}
         <span className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold bg-stone-100 text-stone-700">
-          <span className={cn('h-2 w-2 rounded-full', isAll ? 'bg-green-500' : isHot ? 'bg-orange-500' : 'bg-blue-600')} />
+          <span className={cn('h-2 w-2 rounded-full', isAll ? 'bg-green-500' : isHot ? 'bg-amber-500' : 'bg-blue-600')} />
           {isAll ? 'Cocina' : isHot ? 'Cocina Caliente' : 'Bar / Fría'}
         </span>
 

@@ -22,7 +22,7 @@ function urgencyClass(seconds: number, station: 'hot' | 'cold'): string {
   const min = seconds / 60
   if (station === 'hot') {
     if (min > 12) return 'bg-red-600 text-white animate-pulse'
-    if (min > 8)  return 'bg-orange-500 text-white'
+    if (min > 8)  return 'bg-amber-500 text-stone-950'
     return 'bg-amber-500/20 text-amber-300'
   } else {
     if (min > 8)  return 'bg-purple-600 text-white animate-pulse'
@@ -50,7 +50,7 @@ export function useUrgencyStyle(elapsedSeconds: number, station: 'hot' | 'cold')
   const min = elapsedSeconds / 60
   if (station === 'hot') {
     if (min > 12) return { border: 'border-l-red-500',    bg: 'bg-red-950',    pulse: true }
-    if (min > 8)  return { border: 'border-l-orange-500', bg: 'bg-orange-950', pulse: false }
+    if (min > 8)  return { border: 'border-l-amber-500', bg: 'bg-amber-950', pulse: false }
     return               { border: 'border-l-amber-500',  bg: 'bg-stone-900',  pulse: false }
   } else {
     if (min > 8)  return { border: 'border-l-purple-500', bg: 'bg-purple-950', pulse: true }

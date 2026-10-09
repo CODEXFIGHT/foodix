@@ -24,7 +24,7 @@ import type { Order } from '@/lib/types'
 
 const STATUS_META: Record<string, { label: string; cls: string }> = {
   pending:   { label: 'Abierto',    cls: 'bg-amber-100 text-amber-700' },
-  preparing: { label: 'Preparando', cls: 'bg-orange-100 text-orange-700' },
+  preparing: { label: 'Preparando', cls: 'bg-amber-100 text-yellow-800' },
   ready:     { label: 'Listo',      cls: 'bg-blue-100 text-blue-700' },
   delivered: { label: 'Entregado',  cls: 'bg-indigo-100 text-indigo-700' },
   completed: { label: 'Cobrado',    cls: 'bg-green-100 text-green-700' },
@@ -186,7 +186,7 @@ export default function TicketHistoryPage() {
             />
             {qrError && <p className="text-xs text-destructive mt-1">{qrError}</p>}
           </div>
-          <Button onClick={lookupQr} disabled={searching} className="bg-[#D1400F] hover:bg-[#B03508]">
+          <Button onClick={lookupQr} disabled={searching} className="bg-[#FACC15] hover:bg-[#EAB308]">
             {searching ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Consultar'}
           </Button>
         </CardContent>
@@ -194,9 +194,9 @@ export default function TicketHistoryPage() {
 
       {/* Ticket consultado por QR/folio que no está en el rango de fechas filtrado actual. */}
       {queriedOrder && (
-        <Card className="border-[#D1400F]/40">
+        <Card className="border-[#EAB308]/40">
           <CardContent className="p-3">
-            <p className="text-xs font-medium text-[#D1400F] mb-2">Ticket consultado (fuera del rango de fechas actual)</p>
+            <p className="text-xs font-medium text-yellow-700 dark:text-yellow-400 mb-2">Ticket consultado (fuera del rango de fechas actual)</p>
             {(() => {
               const o = queriedOrder
               const meta = STATUS_META[o.status] ?? STATUS_META.pending
@@ -315,7 +315,7 @@ export default function TicketHistoryPage() {
       <Dialog open={searching} onOpenChange={() => {}}>
         <DialogContent className="sm:max-w-[320px] [&>button]:hidden" onInteractOutside={e => e.preventDefault()}>
           <div className="flex flex-col items-center gap-3 py-4 text-center">
-            <Loader2 className="h-8 w-8 animate-spin text-[#D1400F]" />
+            <Loader2 className="h-8 w-8 animate-spin text-yellow-700 dark:text-yellow-400" />
             <p className="text-sm text-muted-foreground">Buscando el folio…</p>
           </div>
         </DialogContent>
@@ -332,7 +332,7 @@ export default function TicketHistoryPage() {
             <DialogDescription>{notFoundText}</DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button onClick={() => setNotFoundOpen(false)} className="bg-[#D1400F] hover:bg-[#B03508]">
+            <Button onClick={() => setNotFoundOpen(false)} className="bg-[#FACC15] hover:bg-[#EAB308]">
               Entendido
             </Button>
           </DialogFooter>

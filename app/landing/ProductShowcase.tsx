@@ -15,7 +15,7 @@ import { useState } from 'react'
 import { cn } from '@/lib/utils/cn'
 import { Icons8Image } from '@/components/shared/Icons8Image'
 import { ICONS8 } from '@/lib/constants/icons'
-import { BrowserFrame, AppShell, PageHead, Bar, BRAND } from './ScreenMockups'
+import { BrowserFrame, AppShell, PageHead, Bar, BRAND, BRAND_TEXT } from './ScreenMockups'
 
 /* ════════════════════════════ Marcos de dispositivo ════════════════════════════ */
 
@@ -49,7 +49,7 @@ export function PhoneFrame({ children }: { children: React.ReactNode }) {
 /* ════════════════════════════ A. Dashboard Admin ════════════════════════════ */
 export function AdminDashboardMockup() {
   const kpis = [
-    { l: 'Ventas del día', v: '$12,480', s: '32 pedidos', c: BRAND, chip: '💰', bg: '#fff7ed' },
+    { l: 'Ventas del día', v: '$12,480', s: '32 pedidos', c: BRAND, chip: '💰', bg: '#FFFBEB' },
     { l: 'Órdenes activas', v: '6', s: 'en proceso', c: '#3b82f6', chip: '🧾', bg: '#eff6ff' },
     { l: 'Mesas ocupadas', v: '7/12', s: '5 libres', c: '#22c55e', chip: '🍽️', bg: '#f0fdf4' },
     { l: 'Ticket promedio', v: '$390', s: '+8% vs ayer', c: '#a855f7', chip: '📈', bg: '#faf5ff' },
@@ -82,7 +82,7 @@ export function AdminDashboardMockup() {
           <div className="col-span-1 rounded-lg bg-white border border-stone-100 p-1.5 flex flex-col">
             <p className="text-[6px] font-semibold text-stone-500 mb-1">Ventas — últimos 7 días</p>
             <div className="flex-1 flex items-end gap-1">
-              {[42, 60, 48, 78, 55, 70, 92].map((h, i) => <Bar key={i} h={h} c={i % 3 === 0 ? BRAND : '#fed7aa'} />)}
+              {[42, 60, 48, 78, 55, 70, 92].map((h, i) => <Bar key={i} h={h} c={i % 3 === 0 ? BRAND : '#FDE68A'} />)}
             </div>
           </div>
           <div className="col-span-1 rounded-lg bg-white border border-stone-100 p-1.5 flex flex-col">
@@ -99,7 +99,7 @@ export function AdminDashboardMockup() {
           <div className="rounded-lg bg-white border border-stone-100 p-1.5 flex flex-col">
             <p className="text-[6px] font-semibold text-stone-500 mb-1.5">Accesos rápidos</p>
             {['+ Nuevo pedido', 'Mapa de mesas', 'Caja / cobro', 'Reportes PDF'].map((a, i) => (
-              <div key={a} className="rounded bg-stone-50 border border-stone-100 px-1 py-[3px] mb-1 text-[5.5px] font-medium text-stone-600 flex items-center justify-between" style={i === 0 ? { color: BRAND, borderColor: '#fed7aa', background: '#fff7ed' } : undefined}>
+              <div key={a} className="rounded bg-stone-50 border border-stone-100 px-1 py-[3px] mb-1 text-[5.5px] font-medium text-stone-600 flex items-center justify-between" style={i === 0 ? { color: BRAND_TEXT, borderColor: '#FDE68A', background: '#FFFBEB' } : undefined}>
                 {a} <span>›</span>
               </div>
             ))}
@@ -131,7 +131,7 @@ export function TablesMapMockup() {
       <AppShell active="Mesas">
         <PageHead title="Mapa de mesas" sub="12 mesas · 7 ocupadas · 2 cuentas abiertas" action="+ Abrir mesa" />
         <div className="flex gap-1 mb-1.5 flex-wrap">
-          {[['Libre', '#16a34a', '#f0fdf4'], ['Ocupada', '#c2410c', '#fff7ed'], ['Cuenta abierta', '#2563eb', '#eff6ff'], ['En espera', '#ca8a04', '#fefce8']].map(([l, c, bg]) => (
+          {[['Libre', '#16a34a', '#f0fdf4'], ['Ocupada', '#B45309', '#FFFBEB'], ['Cuenta abierta', '#2563eb', '#eff6ff'], ['En espera', '#ca8a04', '#fefce8']].map(([l, c, bg]) => (
             <span key={l} className="text-[5px] font-semibold rounded-full px-1.5 py-[2px] flex items-center gap-1" style={{ color: c, background: bg }}>
               <span className="h-1 w-1 rounded-full" style={{ background: c }} />{l}
             </span>
@@ -155,7 +155,7 @@ export function TablesMapMockup() {
           {/* Detalle de mesa seleccionada */}
           <div className="rounded-lg bg-white border-2 p-1.5 flex flex-col" style={{ borderColor: BRAND }}>
             <p className="text-[7px] font-extrabold text-stone-900 leading-none">Mesa 4 · 6 pers.</p>
-            <p className="text-[5px] mt-0.5" style={{ color: BRAND }}>● Ocupada · 38 min</p>
+            <p className="text-[5px] mt-0.5" style={{ color: BRAND_TEXT }}>● Ocupada · 38 min</p>
             <div className="my-1.5 space-y-0.5 flex-1">
               {[['2× Tostada camarón', '$170'], ['1× Coctel pulpo', '$165'], ['3× Cerveza', '$135'], ['2× Agua fresca', '$80'], ['1× Aguachile', '$170']].map(([d, p]) => (
                 <div key={d} className="flex justify-between text-[5px] text-stone-600"><span className="truncate">{d}</span><span className="font-semibold">{p}</span></div>
@@ -163,11 +163,11 @@ export function TablesMapMockup() {
             </div>
             <div className="border-t border-stone-100 pt-1 flex justify-between">
               <span className="text-[6px] font-semibold text-stone-500">Total cuenta</span>
-              <span className="text-[9px] font-extrabold" style={{ color: BRAND }}>$620.00</span>
+              <span className="text-[9px] font-extrabold" style={{ color: BRAND_TEXT }}>$620.00</span>
             </div>
             <div className="mt-1 grid grid-cols-2 gap-1">
               <span className="text-[5px] font-semibold text-center text-stone-600 border border-stone-200 rounded px-1 py-[2px]">+ Agregar</span>
-              <span className="text-[5px] font-semibold text-center text-white rounded px-1 py-[2px]" style={{ background: BRAND }}>Cobrar</span>
+              <span className="text-[5px] font-semibold text-center text-[#1C1917] rounded px-1 py-[2px]" style={{ background: BRAND }}>Cobrar</span>
             </div>
           </div>
         </div>
@@ -191,19 +191,19 @@ export function WaiterOrderMockup() {
         <div className="flex-1 flex flex-col p-2 min-w-0">
           <div className="flex items-center justify-between mb-1.5">
             <span className="text-[8px] font-extrabold text-stone-900">Mesa 7 · Nuevo pedido</span>
-            <span className="text-[5px] font-semibold rounded px-1.5 py-[2px]" style={{ background: '#fff7ed', color: BRAND }}>Cambiar mesa</span>
+            <span className="text-[5px] font-semibold rounded px-1.5 py-[2px]" style={{ background: '#FFFBEB', color: BRAND_TEXT }}>Cambiar mesa</span>
           </div>
           <div className="flex gap-1 mb-1.5 overflow-hidden">
             {cats.map((c, i) => (
-              <span key={c} className="text-[5.5px] font-semibold rounded-full px-1.5 py-[2px] whitespace-nowrap" style={i === 0 ? { background: BRAND, color: '#fff' } : { background: '#fff', color: '#78716c', border: '1px solid #e7e5e4' }}>{c}</span>
+              <span key={c} className="text-[5.5px] font-semibold rounded-full px-1.5 py-[2px] whitespace-nowrap" style={i === 0 ? { background: BRAND, color: '#1C1917' } : { background: '#fff', color: '#78716c', border: '1px solid #e7e5e4' }}>{c}</span>
             ))}
           </div>
           <div className="grid grid-cols-3 gap-1.5 flex-1 content-start">
             {prods.map((p, i) => (
               <div key={p.n} className="rounded-lg bg-white border border-stone-100 p-1.5 flex flex-col" style={i === 0 ? { borderColor: BRAND } : undefined}>
-                <div className="h-5 rounded bg-orange-50 mb-1 grid place-items-center text-[8px]">🦐</div>
+                <div className="h-5 rounded bg-amber-50 mb-1 grid place-items-center text-[8px]">🦐</div>
                 <p className="text-[5px] font-semibold text-stone-700 leading-tight">{p.n}</p>
-                <p className="text-[6px] font-extrabold mt-auto" style={{ color: BRAND }}>{p.p}</p>
+                <p className="text-[6px] font-extrabold mt-auto" style={{ color: BRAND_TEXT }}>{p.p}</p>
               </div>
             ))}
           </div>
@@ -215,19 +215,19 @@ export function WaiterOrderMockup() {
             <div className="rounded-lg border border-stone-100 p-1.5">
               <div className="flex justify-between"><span className="text-[5.5px] font-semibold text-stone-700">2× Tostada camarón</span><span className="text-[5.5px] font-extrabold">$170</span></div>
               <div className="flex flex-wrap gap-0.5 mt-1">
-                {['Sin cebolla', 'Extra aguacate'].map(m => <span key={m} className="text-[4.5px] font-medium rounded-full px-1 py-[1px]" style={{ background: '#fff7ed', color: BRAND }}>{m}</span>)}
+                {['Sin cebolla', 'Extra aguacate'].map(m => <span key={m} className="text-[4.5px] font-medium rounded-full px-1 py-[1px]" style={{ background: '#FFFBEB', color: BRAND_TEXT }}>{m}</span>)}
               </div>
             </div>
             <div className="rounded-lg border border-stone-100 p-1.5">
               <div className="flex justify-between"><span className="text-[5.5px] font-semibold text-stone-700">1× Aguachile verde</span><span className="text-[5.5px] font-extrabold">$170</span></div>
               <div className="flex flex-wrap gap-0.5 mt-1">
-                {['Sin chile', 'Sin arroz'].map(m => <span key={m} className="text-[4.5px] font-medium rounded-full px-1 py-[1px]" style={{ background: '#fff7ed', color: BRAND }}>{m}</span>)}
+                {['Sin chile', 'Sin arroz'].map(m => <span key={m} className="text-[4.5px] font-medium rounded-full px-1 py-[1px]" style={{ background: '#FFFBEB', color: BRAND_TEXT }}>{m}</span>)}
               </div>
             </div>
           </div>
           <div className="border-t border-stone-100 pt-1.5 mt-1.5">
-            <div className="flex justify-between mb-1"><span className="text-[6px] text-stone-500">Total</span><span className="text-[9px] font-extrabold" style={{ color: BRAND }}>$340.00</span></div>
-            <div className="rounded-lg text-center text-[6px] font-bold text-white py-1.5" style={{ background: BRAND }}>Enviar a cocina →</div>
+            <div className="flex justify-between mb-1"><span className="text-[6px] text-stone-500">Total</span><span className="text-[9px] font-extrabold" style={{ color: BRAND_TEXT }}>$340.00</span></div>
+            <div className="rounded-lg text-center text-[6px] font-bold text-[#1C1917] py-1.5" style={{ background: BRAND }}>Enviar a cocina →</div>
           </div>
         </div>
       </div>
@@ -278,8 +278,8 @@ export function KitchenKDSMockup() {
             <Card mesa="Llevar" n="#1033" mins="0:12" items={[{ d: '1× Coctel pulpo' }]} btn="Comenzar →" btnColor="#2563eb" />
           </Col>
           <Col title="EN PREPARACIÓN" color="#fbbf24" count={2}>
-            <Card mesa="Mesa 7" n="#1031" mins="3:24" items={[{ d: '1× Filete empapelado' }, { d: '2× Arroz tumbada' }]} btn="Marcar listo ✓" btnColor="#d97706" />
-            <Card mesa="Mesa 2" n="#1030" mins="5:51" items={[{ d: '1× Mojarra frita', mods: ['Sin arroz'] }]} btn="Marcar listo ✓" btnColor="#d97706" />
+            <Card mesa="Mesa 7" n="#1031" mins="3:24" items={[{ d: '1× Filete empapelado' }, { d: '2× Arroz tumbada' }]} btn="Marcar listo ✓" btnColor="#A16207" />
+            <Card mesa="Mesa 2" n="#1030" mins="5:51" items={[{ d: '1× Mojarra frita', mods: ['Sin arroz'] }]} btn="Marcar listo ✓" btnColor="#A16207" />
           </Col>
           <Col title="LISTOS" color="#34d399" count={1}>
             <Card mesa="Mesa 1" n="#1029" mins="✓ 0:30" items={[{ d: '1× Caldo de mariscos' }]} btn="Entregar ✓" btnColor="#059669" />
@@ -307,18 +307,18 @@ export function KioskMockup() {
           </div>
           <div className="flex gap-1.5 mb-2 justify-center">
             {cats.map((c, i) => (
-              <span key={c} className="text-[6px] font-bold rounded-full px-2 py-[3px]" style={i === 0 ? { background: BRAND, color: '#fff' } : { background: '#fff', color: '#78716c', border: '1px solid #e7e5e4' }}>{c}</span>
+              <span key={c} className="text-[6px] font-bold rounded-full px-2 py-[3px]" style={i === 0 ? { background: BRAND, color: '#1C1917' } : { background: '#fff', color: '#78716c', border: '1px solid #e7e5e4' }}>{c}</span>
             ))}
           </div>
           <div className="grid grid-cols-2 gap-2 flex-1 content-start">
             {prods.map(p => (
               <div key={p.n} className="rounded-xl bg-white border border-stone-100 p-2 flex flex-col relative">
-                {p.star && <span className="absolute top-1 right-1 text-[6px] font-bold rounded-full px-1.5 py-[1px]" style={{ background: '#fff7ed', color: BRAND }}>★ Top</span>}
-                <div className="h-9 rounded-lg bg-orange-50 mb-1.5 grid place-items-center text-[16px]">🌮</div>
+                {p.star && <span className="absolute top-1 right-1 text-[6px] font-bold rounded-full px-1.5 py-[1px]" style={{ background: '#FFFBEB', color: BRAND_TEXT }}>★ Top</span>}
+                <div className="h-9 rounded-lg bg-amber-50 mb-1.5 grid place-items-center text-[16px]">🌮</div>
                 <p className="text-[7px] font-bold text-stone-800">{p.n}</p>
                 <div className="flex items-center justify-between mt-1">
-                  <span className="text-[8px] font-extrabold" style={{ color: BRAND }}>{p.p}</span>
-                  <span className="h-4 w-4 rounded-full text-white grid place-items-center text-[9px] font-bold" style={{ background: BRAND }}>+</span>
+                  <span className="text-[8px] font-extrabold" style={{ color: BRAND_TEXT }}>{p.p}</span>
+                  <span className="h-4 w-4 rounded-full text-[#1C1917] grid place-items-center text-[9px] font-bold" style={{ background: BRAND }}>+</span>
                 </div>
               </div>
             ))}
@@ -333,8 +333,8 @@ export function KioskMockup() {
             ))}
           </div>
           <div className="border-t border-white/10 pt-1.5">
-            <div className="flex justify-between mb-1.5"><span className="text-[6px] text-white/60">Total</span><span className="text-[11px] font-extrabold" style={{ color: '#fdba74' }}>$236.00</span></div>
-            <div className="rounded-lg text-center text-[7px] font-extrabold py-2" style={{ background: BRAND }}>Confirmar pedido</div>
+            <div className="flex justify-between mb-1.5"><span className="text-[6px] text-white/60">Total</span><span className="text-[11px] font-extrabold" style={{ color: '#FCD34D' }}>$236.00</span></div>
+            <div className="rounded-lg text-center text-[7px] font-extrabold text-[#1C1917] py-2" style={{ background: BRAND }}>Confirmar pedido</div>
           </div>
         </div>
       </div>
@@ -372,7 +372,7 @@ export function OpenTicketMockup() {
               </div>
               <span className="text-[9px] font-extrabold text-stone-900">{t.total}</span>
               <div className="flex flex-col gap-0.5 shrink-0">
-                <span className="text-[5px] font-bold text-white rounded px-1.5 py-[2px] text-center" style={{ background: BRAND }}>Cobrar</span>
+                <span className="text-[5px] font-bold text-[#1C1917] rounded px-1.5 py-[2px] text-center" style={{ background: BRAND }}>Cobrar</span>
                 <div className="flex gap-0.5">
                   <span className="text-[5px] font-semibold text-stone-500 border border-stone-200 rounded px-1 py-[1px]">Reabrir</span>
                   <span className="text-[5px] font-semibold text-stone-500 border border-stone-200 rounded px-1 py-[1px]">🖨</span>
@@ -404,7 +404,7 @@ export function CashierMockup() {
             <div className="border-t border-stone-100 mt-1 pt-1 space-y-0.5">
               <div className="flex justify-between text-[5.5px] text-stone-500"><span>Subtotal</span><span>$515.00</span></div>
               <div className="flex justify-between text-[5.5px] text-stone-500"><span>Propina (10%)</span><span>$51.50</span></div>
-              <div className="flex justify-between"><span className="text-[7px] font-extrabold text-stone-900">Total</span><span className="text-[10px] font-extrabold" style={{ color: BRAND }}>$566.50</span></div>
+              <div className="flex justify-between"><span className="text-[7px] font-extrabold text-stone-900">Total</span><span className="text-[10px] font-extrabold" style={{ color: BRAND_TEXT }}>$566.50</span></div>
             </div>
           </div>
           {/* pago */}
@@ -413,7 +413,7 @@ export function CashierMockup() {
               <p className="text-[6px] font-bold text-stone-500 mb-1.5">Método de pago</p>
               <div className="grid grid-cols-2 gap-1.5">
                 {[['💵 Efectivo', true], ['💳 Crédito', false], ['💳 Débito', false], ['🔁 SPEI', false]].map(([l, on]) => (
-                  <div key={l as string} className="rounded-lg text-center text-[6px] font-semibold py-2" style={on ? { background: '#fff7ed', color: BRAND, border: `1px solid ${BRAND}` } : { background: '#fafaf9', color: '#78716c', border: '1px solid #e7e5e4' }}>{l}</div>
+                  <div key={l as string} className="rounded-lg text-center text-[6px] font-semibold py-2" style={on ? { background: '#FFFBEB', color: BRAND, border: `1px solid ${BRAND_TEXT}` } : { background: '#fafaf9', color: '#78716c', border: '1px solid #e7e5e4' }}>{l}</div>
                 ))}
               </div>
               <div className="mt-1.5 rounded-lg bg-stone-50 border border-stone-100 p-1.5">
@@ -421,7 +421,7 @@ export function CashierMockup() {
                 <p className="text-[10px] font-extrabold text-stone-900">$600.00 <span className="text-[5px] font-medium text-green-600">· Cambio $33.50</span></p>
               </div>
             </div>
-            <div className="rounded-lg text-center text-[7px] font-extrabold text-white py-2" style={{ background: BRAND }}>Cobrar $566.50</div>
+            <div className="rounded-lg text-center text-[7px] font-extrabold text-[#1C1917] py-2" style={{ background: BRAND }}>Cobrar $566.50</div>
             <div className="rounded-lg text-center text-[6px] font-semibold text-stone-600 border border-stone-200 py-1.5">🖨 Imprimir ticket</div>
           </div>
         </div>
@@ -437,24 +437,24 @@ export function DigitalMenuMockup() {
       <PhoneFrame>
         <div className="h-full flex flex-col bg-white">
           <div className="pt-5 pb-2 px-2.5 text-center" style={{ background: BRAND }}>
-            <p className="text-[9px] font-extrabold text-white">Mariscos El Puerto</p>
-            <p className="text-[5px] text-white/80">Carta digital · Mesa 7</p>
+            <p className="text-[9px] font-extrabold text-[#1C1917]">Mariscos El Puerto</p>
+            <p className="text-[5px] text-[#1C1917]/75">Carta digital · Mesa 7</p>
           </div>
           <div className="flex gap-1 px-2 py-1.5 overflow-hidden">
             {['Tostadas', 'Cocteles', 'Bebidas'].map((c, i) => (
-              <span key={c} className="text-[5px] font-semibold rounded-full px-1.5 py-[2px] whitespace-nowrap" style={i === 0 ? { background: BRAND, color: '#fff' } : { background: '#f5f5f4', color: '#78716c' }}>{c}</span>
+              <span key={c} className="text-[5px] font-semibold rounded-full px-1.5 py-[2px] whitespace-nowrap" style={i === 0 ? { background: BRAND, color: '#1C1917' } : { background: '#f5f5f4', color: '#78716c' }}>{c}</span>
             ))}
           </div>
           <div className="flex-1 px-2 space-y-1.5 overflow-hidden">
             {[['Tostada de camarón', '$85'], ['Tostada de ceviche', '$80'], ['Aguachile verde', '$170'], ['Coctel campechana', '$180'], ['Filete empapelado', '$220']].map(([n, p]) => (
               <div key={n} className="flex items-center gap-1.5">
-                <span className="h-7 w-7 rounded-lg bg-orange-50 grid place-items-center text-[10px] shrink-0">🦐</span>
+                <span className="h-7 w-7 rounded-lg bg-amber-50 grid place-items-center text-[10px] shrink-0">🦐</span>
                 <div className="flex-1 min-w-0"><p className="text-[6px] font-bold text-stone-800 truncate">{n}</p><p className="text-[4.5px] text-stone-400">Especialidad de la casa</p></div>
-                <span className="text-[6px] font-extrabold" style={{ color: BRAND }}>{p}</span>
+                <span className="text-[6px] font-extrabold" style={{ color: BRAND_TEXT }}>{p}</span>
               </div>
             ))}
           </div>
-          <div className="p-2"><div className="rounded-lg text-center text-[6px] font-bold text-white py-1.5" style={{ background: BRAND }}>Ver carta completa</div></div>
+          <div className="p-2"><div className="rounded-lg text-center text-[6px] font-bold text-[#1C1917] py-1.5" style={{ background: BRAND }}>Ver carta completa</div></div>
         </div>
       </PhoneFrame>
       {/* QR */}
@@ -489,7 +489,7 @@ export function ProductManagerMockup() {
             <div className="grid grid-cols-2 gap-1.5">
               <div>
                 <p className="text-[5px] font-semibold text-stone-400 mb-0.5">Precio</p>
-                <div className="rounded border border-stone-200 px-1.5 py-1 text-[6px] font-extrabold" style={{ color: BRAND }}>$85.00</div>
+                <div className="rounded border border-stone-200 px-1.5 py-1 text-[6px] font-extrabold" style={{ color: BRAND_TEXT }}>$85.00</div>
               </div>
               <div>
                 <p className="text-[5px] font-semibold text-stone-400 mb-0.5">Categoría</p>
@@ -506,7 +506,7 @@ export function ProductManagerMockup() {
             <div className="flex flex-wrap gap-1">
               {['Sin cebolla', 'Extra queso', 'Sin arroz', 'Más salsa', 'Extra aguacate', 'Sin chile'].map((m, i) => (
                 <span key={m} className="text-[5.5px] font-semibold rounded-full px-1.5 py-[2px] flex items-center gap-0.5"
-                  style={i < 4 ? { background: '#fff7ed', color: BRAND, border: `1px solid ${BRAND}55` } : { background: '#fafaf9', color: '#a8a29e', border: '1px solid #e7e5e4' }}>
+                  style={i < 4 ? { background: '#FFFBEB', color: BRAND, border: `1px solid ${BRAND_TEXT}55` } : { background: '#fafaf9', color: '#a8a29e', border: '1px solid #e7e5e4' }}>
                   {i < 4 ? '✓ ' : '+ '}{m}
                 </span>
               ))}
@@ -546,7 +546,7 @@ export function SuperadminMockup() {
           {rows.map(r => (
             <div key={r.n} className="grid grid-cols-[2fr_1fr_1fr_1fr] gap-1 px-2 py-1.5 border-b border-stone-50 items-center">
               <div><p className="text-[6px] font-bold text-stone-800">{r.n}</p><p className="text-[4.5px] text-stone-400">📍 {r.loc}</p></div>
-              <span className="text-[5px] font-semibold rounded px-1 py-[1px] self-start" style={r.plan === 'Pro' ? { background: '#fff7ed', color: BRAND } : { background: '#f5f5f4', color: '#78716c' }}>{r.plan}</span>
+              <span className="text-[5px] font-semibold rounded px-1 py-[1px] self-start" style={r.plan === 'Pro' ? { background: '#FFFBEB', color: BRAND_TEXT } : { background: '#f5f5f4', color: '#78716c' }}>{r.plan}</span>
               <span className="text-[5.5px] text-stone-600">{r.dev}</span>
               <span className="text-[5px] font-semibold flex items-center gap-1" style={{ color: r.on ? '#16a34a' : '#a8a29e' }}>
                 <span className="h-1 w-1 rounded-full" style={{ background: r.on ? '#22c55e' : '#d6d3d1' }} />{r.on ? 'Activo' : 'Inactivo'}
@@ -704,7 +704,7 @@ export function LandingProductShowcase() {
             className={cn(
               'snap-start shrink-0 inline-flex items-center gap-1.5 h-9 pl-2 pr-3.5 rounded-full text-xs font-semibold transition-all active:scale-95',
               i === active
-                ? 'bg-[#D1400F] text-white shadow-sm'
+                ? 'bg-[#FACC15] text-stone-950 shadow-sm'
                 : 'bg-white border border-stone-200 text-stone-600 hover:border-stone-300 hover:bg-stone-50 dark:bg-[#161616] dark:border-white/15 dark:text-zinc-300 dark:hover:bg-white/10',
             )}
           >
@@ -722,7 +722,7 @@ export function LandingProductShowcase() {
         </div>
         {/* Texto comercial */}
         <div className={cn(mockupRight ? 'lg:order-1' : 'lg:order-2')}>
-          <span className="inline-flex items-center gap-2 text-xs font-semibold pl-1.5 pr-3 py-1 rounded-full bg-orange-50 text-[#D1400F] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold pl-1.5 pr-3 py-1 rounded-full bg-amber-50 text-yellow-700 dark:text-yellow-400 border border-amber-100 dark:bg-amber-500/10 dark:border-amber-500/20">
             <Icons8Image src={item.icon} alt="" size={18} className="shrink-0" /> {item.tab}
           </span>
           <h3 className="mt-4 font-heading font-extrabold text-2xl sm:text-3xl text-stone-900 leading-tight dark:text-white">{item.title}</h3>
@@ -730,7 +730,7 @@ export function LandingProductShowcase() {
           <ul className="mt-5 space-y-2.5">
             {item.bullets.map(b => (
               <li key={b} className="flex items-start gap-2.5 text-sm text-stone-700 dark:text-zinc-300">
-                <span className="mt-0.5 h-4 w-4 shrink-0 rounded-full bg-orange-50 text-[#D1400F] grid place-items-center text-[10px] font-bold dark:bg-orange-500/15">✓</span>
+                <span className="mt-0.5 h-4 w-4 shrink-0 rounded-full bg-amber-50 text-yellow-700 dark:text-yellow-400 grid place-items-center text-[10px] font-bold dark:bg-amber-500/15">✓</span>
                 {b}
               </li>
             ))}
@@ -741,7 +741,7 @@ export function LandingProductShowcase() {
                 key={s.key}
                 onClick={() => setActive(i)}
                 aria-label={s.tab}
-                className={cn('h-1.5 rounded-full transition-all', i === active ? 'w-6 bg-[#D1400F]' : 'w-1.5 bg-stone-300 hover:bg-stone-400 dark:bg-zinc-800 dark:hover:bg-zinc-700')}
+                className={cn('h-1.5 rounded-full transition-all', i === active ? 'w-6 bg-[#FACC15]' : 'w-1.5 bg-stone-300 hover:bg-stone-400 dark:bg-zinc-800 dark:hover:bg-zinc-700')}
               />
             ))}
           </div>

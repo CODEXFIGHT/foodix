@@ -456,7 +456,7 @@ function ConnectView({
 function UpsellView() {
   return (
     <div className="flex flex-col items-center text-center gap-4 py-8">
-      <span className="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-[#D1400F]/20 grid place-items-center border border-white/10">
+      <span className="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-[#FACC15]/20 grid place-items-center border border-white/10">
         <Lock className="h-7 w-7 text-purple-300" />
       </span>
       <div className="space-y-1.5">
@@ -487,7 +487,7 @@ function UpsellView() {
 
       <Button
         onClick={() => { window.location.href = '/billing' }}
-        className="w-full max-w-xs mt-2 bg-gradient-to-r from-purple-600 to-[#D1400F] hover:opacity-90 text-white gap-2"
+        className="w-full max-w-xs mt-2 bg-gradient-to-r from-purple-600 to-[#FACC15] hover:opacity-90 text-white gap-2"
       >
         <Crown className="h-4 w-4" /> Mejorar a FoodIX AI
       </Button>

@@ -108,7 +108,7 @@ export function CountrySelector({ className }: { className?: string }) {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="inline-flex items-center justify-between gap-2.5 px-4 py-2 rounded-full border border-stone-300 bg-white text-xs font-semibold text-stone-700 hover:border-orange-300 hover:bg-orange-50/50 transition-all shadow-sm active:scale-95 dark:border-white/15 dark:bg-stone-900 dark:text-zinc-200 dark:hover:border-orange-500/40 dark:hover:bg-white/5"
+        className="inline-flex items-center justify-between gap-2.5 px-4 py-2 rounded-full border border-stone-300 bg-white text-xs font-semibold text-stone-700 hover:border-amber-300 hover:bg-amber-50/50 transition-all shadow-sm active:scale-95 dark:border-white/15 dark:bg-stone-900 dark:text-zinc-200 dark:hover:border-amber-500/40 dark:hover:bg-white/5"
       >
         <span className="flex items-center gap-2">
           {selectedCountry.flag === '🌐' ? <Globe className="w-4 h-4 text-stone-500" /> : <span className="text-base leading-none">{selectedCountry.flag}</span>}
@@ -133,7 +133,7 @@ export function CountrySelector({ className }: { className?: string }) {
                   className={cn(
                     'w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium transition-colors text-left',
                     isSelected
-                      ? 'bg-orange-50 text-[#D1400F] font-bold dark:bg-orange-500/10'
+                      ? 'bg-amber-50 text-yellow-700 dark:text-yellow-400 font-bold dark:bg-amber-500/10'
                       : 'text-stone-700 hover:bg-stone-50 dark:text-zinc-300 dark:hover:bg-white/5'
                   )}
                 >
@@ -141,7 +141,7 @@ export function CountrySelector({ className }: { className?: string }) {
                     <span className="text-base leading-none">{c.flag}</span>
                     <span>{c.name}</span>
                   </span>
-                  {isSelected && <Check className="w-3.5 h-3.5 text-[#D1400F]" />}
+                  {isSelected && <Check className="w-3.5 h-3.5 text-yellow-700 dark:text-yellow-400" />}
                 </button>
               )
             })}

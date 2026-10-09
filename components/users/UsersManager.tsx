@@ -22,7 +22,7 @@ const ROLE_META: Record<string, { label: string; icon: typeof ShieldCheck; color
   superadmin: { label: 'Super Admin',   icon: ShieldCheck,      color: 'bg-yellow-500/15 text-yellow-600' },
   admin:      { label: 'Administrador', icon: ShieldCheck,      color: 'bg-blue-500/15 text-blue-600' },
   mesero:     { label: 'Mesero',        icon: UtensilsCrossed,  color: 'bg-emerald-500/15 text-emerald-600' },
-  cocina:     { label: 'Cocina',        icon: ChefHat,          color: 'bg-orange-500/15 text-orange-600' },
+  cocina:     { label: 'Cocina',        icon: ChefHat,          color: 'bg-amber-500/15 text-yellow-600' },
 }
 
 interface UsersManagerProps {
@@ -205,7 +205,7 @@ export function UsersManager({ branchId, allowedRoles, canDelete = false, theme 
       <div className="flex justify-end">
         <Button
           onClick={openNew}
-          className={dark ? 'bg-yellow-500 hover:bg-yellow-600 text-yellow-900' : 'bg-[#D1400F] hover:bg-[#B03508]'}
+          className={dark ? 'bg-yellow-500 hover:bg-yellow-600 text-yellow-900' : 'bg-[#FACC15] hover:bg-[#EAB308]'}
         >
           <Plus className="h-4 w-4 mr-1" />Nuevo usuario
         </Button>
@@ -267,7 +267,7 @@ export function UsersManager({ branchId, allowedRoles, canDelete = false, theme 
                       onClick={() => openPinModal(u)}
                       title={u.has_pin ? 'Cambiar PIN' : 'Asignar PIN'}
                       className={cn(
-                        u.has_pin && 'border-[#D1400F]/40 text-[#D1400F]',
+                        u.has_pin && 'border-[#EAB308]/40 text-yellow-700 dark:text-yellow-400',
                         dark ? 'border-white/10 bg-transparent text-slate-300 hover:bg-white/5' : '',
                       )}
                     >
@@ -373,7 +373,7 @@ export function UsersManager({ branchId, allowedRoles, canDelete = false, theme 
             <Button
               onClick={handleSave}
               disabled={create.isPending || update.isPending}
-              className={dark ? 'bg-yellow-500 hover:bg-yellow-600 text-yellow-900' : 'bg-[#D1400F] hover:bg-[#B03508]'}
+              className={dark ? 'bg-yellow-500 hover:bg-yellow-600 text-yellow-900' : 'bg-[#FACC15] hover:bg-[#EAB308]'}
             >
               {create.isPending || update.isPending ? 'Guardando…' : 'Guardar'}
             </Button>

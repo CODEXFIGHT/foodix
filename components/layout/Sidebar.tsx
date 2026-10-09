@@ -89,14 +89,14 @@ export function Sidebar() {
                   title={collapsed ? label : undefined}
                   className={cn(
                     'relative flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors overflow-hidden group',
-                    active ? 'text-[#D1400F] font-semibold' : 'text-stone-400 hover:bg-white/5 hover:text-stone-200',
+                    active ? 'text-yellow-400 font-semibold' : 'text-stone-400 hover:bg-white/5 hover:text-stone-200',
                     collapsed && 'justify-center px-2',
                   )}
                 >
                   {active && (
                     <motion.span
                       layoutId="sidebar-active-pill"
-                      className="absolute inset-0 rounded-lg bg-[#D1400F]/10 border-l-2 border-l-[#D1400F]"
+                      className="absolute inset-0 rounded-lg bg-[#FACC15]/10 border-l-2 border-l-[#FACC15]"
                       transition={{ type: 'spring', stiffness: 500, damping: 38 }}
                     />
                   )}
@@ -113,7 +113,7 @@ export function Sidebar() {
                   {active && !collapsed && (
                     <motion.span
                       layout
-                      className="relative z-10 ml-auto w-1.5 h-1.5 rounded-full bg-[#D1400F]"
+                      className="relative z-10 ml-auto w-1.5 h-1.5 rounded-full bg-[#FACC15]"
                     />
                   )}
                 </Link>
@@ -129,14 +129,14 @@ export function Sidebar() {
                 title={collapsed ? 'Cocina' : undefined}
                 className={cn(
                   'relative w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors overflow-hidden group',
-                  isKitchenActive ? 'text-[#D1400F] font-semibold' : 'text-stone-400 hover:bg-white/5 hover:text-stone-200',
+                  isKitchenActive ? 'text-yellow-400 font-semibold' : 'text-stone-400 hover:bg-white/5 hover:text-stone-200',
                   collapsed && 'justify-center px-2',
                 )}
               >
                 {isKitchenActive && (
                   <motion.span
                     layoutId="sidebar-active-pill"
-                    className="absolute inset-0 rounded-lg bg-[#D1400F]/10 border-l-2 border-l-[#D1400F]"
+                    className="absolute inset-0 rounded-lg bg-[#FACC15]/10 border-l-2 border-l-[#FACC15]"
                     transition={{ type: 'spring', stiffness: 500, damping: 38 }}
                   />
                 )}
@@ -181,7 +181,7 @@ export function Sidebar() {
                             className={cn(
                               'flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors',
                               active
-                                ? 'bg-[#D1400F]/10 text-[#D1400F]'
+                                ? 'bg-[#FACC15]/10 text-yellow-400'
                                 : 'text-stone-500 hover:text-stone-200 hover:bg-white/5',
                             )}
                           >
@@ -206,14 +206,14 @@ export function Sidebar() {
           title={collapsed ? 'Centro de Ayuda' : undefined}
           className={cn(
             'relative flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors overflow-hidden group',
-            pathname.startsWith('/help') ? 'text-[#D1400F] font-semibold' : 'text-stone-400 hover:bg-white/5 hover:text-stone-200',
+            pathname.startsWith('/help') ? 'text-yellow-400 font-semibold' : 'text-stone-400 hover:bg-white/5 hover:text-stone-200',
             collapsed && 'justify-center px-2',
           )}
         >
           {pathname.startsWith('/help') && (
             <motion.span
               layoutId="sidebar-active-pill"
-              className="absolute inset-0 rounded-lg bg-[#D1400F]/10 border-l-2 border-l-[#D1400F]"
+              className="absolute inset-0 rounded-lg bg-[#FACC15]/10 border-l-2 border-l-[#FACC15]"
               transition={{ type: 'spring', stiffness: 500, damping: 38 }}
             />
           )}

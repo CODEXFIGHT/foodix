@@ -80,6 +80,8 @@ const nextConfig = {
       { protocol: 'https', hostname: 'img.icons8.com' },
       { protocol: 'https', hostname: 'i.ibb.co' },
       { protocol: 'https', hostname: 'tallercheck.mx' },
+      // Fotografía real de ambiente (landing: testimonios, cómo funciona).
+      { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
   },
 

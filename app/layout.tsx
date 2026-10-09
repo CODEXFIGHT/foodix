@@ -60,7 +60,7 @@ export const viewport: Viewport = {
   userScalable: false,
   // Permite usar env(safe-area-inset-*) bajo el notch/barra de gestos en iOS.
   viewportFit: 'cover',
-  themeColor: '#D1400F',
+  themeColor: '#FACC15',
   colorScheme: 'light',
 }
 

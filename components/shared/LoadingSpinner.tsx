@@ -48,9 +48,9 @@ export function AuthOverlay({ message = 'Cargando...' }: AuthOverlayProps) {
       <div className="flex flex-col items-center gap-5 animate-scale-in">
         {/* pulsing ring behind logo */}
         <div className="relative flex items-center justify-center">
-          <div className="absolute h-20 w-20 rounded-full bg-[#D1400F]/20 animate-pulse-ring" />
-          <div className="relative h-16 w-16 rounded-2xl bg-[#D1400F] flex items-center justify-center shadow-lg shadow-[#D1400F]/30">
-            <span className="text-white font-bold text-2xl select-none">F</span>
+          <div className="absolute h-20 w-20 rounded-full bg-[#FACC15]/20 animate-pulse-ring" />
+          <div className="relative h-16 w-16 rounded-2xl bg-[#FACC15] flex items-center justify-center shadow-lg shadow-[#FACC15]/30">
+            <span className="text-stone-950 font-bold text-2xl select-none">F</span>
             {/* spinning arc overlay */}
             <svg
               className="absolute inset-0 h-full w-full animate-spin-brand"

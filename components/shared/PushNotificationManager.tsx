@@ -92,7 +92,7 @@ export function PushNotificationManager() {
         size="sm"
         loading={loading}
         onClick={handleActivate}
-        className="shrink-0 bg-[#D1400F] hover:bg-[#B03508]"
+        className="shrink-0 bg-[#FACC15] hover:bg-[#EAB308]"
       >
         Activar notificaciones
       </Button>
@@ -107,7 +107,7 @@ function Banner({ children, onClose }: { children: React.ReactNode; onClose: () 
       style={{ bottom: 'calc(env(safe-area-inset-bottom, 0px) + 4.5rem)' }}
     >
       <div className="pointer-events-auto mx-auto flex max-w-md items-center gap-3 rounded-2xl border border-border bg-card/95 p-3 pl-4 shadow-xl backdrop-blur supports-[backdrop-filter]:bg-card/80 lg:max-w-lg">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#D1400F]/10 text-[#D1400F]">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#FACC15]/10 text-yellow-700 dark:text-yellow-400">
           <Bell className="h-5 w-5" />
         </span>
         {children}

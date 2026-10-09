@@ -35,9 +35,9 @@ export function ComboPicker({ onAddCombo }: ComboPickerProps) {
   if (activeCombos.length === 0) return null
 
   return (
-    <div className="mb-4 rounded-2xl border bg-orange-50/60 p-3 dark:bg-orange-950/10">
-      <p className="mb-2 flex items-center gap-1.5 text-sm font-bold text-stone-900 dark:text-orange-100">
-        <PackagePlus className="h-4 w-4 text-[#D1400F]" />
+    <div className="mb-4 rounded-2xl border bg-amber-50/60 p-3 dark:bg-amber-950/10">
+      <p className="mb-2 flex items-center gap-1.5 text-sm font-bold text-stone-900 dark:text-yellow-200">
+        <PackagePlus className="h-4 w-4 text-yellow-700 dark:text-yellow-400" />
         Combos
       </p>
       <div className="flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -55,7 +55,7 @@ export function ComboPicker({ onAddCombo }: ComboPickerProps) {
               combo_id: combo.id,
               combo_name: combo.name,
             })}
-            className="min-w-[190px] max-w-[220px] rounded-xl border border-orange-200 bg-white p-2.5 text-left shadow-sm transition-all hover:border-[#D1400F] hover:shadow-md active:scale-[0.98] dark:border-orange-900/40 dark:bg-stone-950"
+            className="min-w-[190px] max-w-[220px] rounded-xl border border-amber-200 bg-white p-2.5 text-left shadow-sm transition-all hover:border-[#EAB308] hover:shadow-md active:scale-[0.98] dark:border-amber-900/40 dark:bg-stone-950"
           >
             <span className="block truncate text-sm font-bold">{combo.name}</span>
             {combo.items.length > 0 && (
@@ -63,7 +63,7 @@ export function ComboPicker({ onAddCombo }: ComboPickerProps) {
                 {combo.items.map(i => `${i.quantity}x ${i.name ?? 'producto'}`).join(' + ')}
               </span>
             )}
-            <span className="mt-1 block text-sm font-extrabold text-[#D1400F]">{formatCurrency(combo.price)}</span>
+            <span className="mt-1 block text-sm font-extrabold text-yellow-700 dark:text-yellow-400">{formatCurrency(combo.price)}</span>
           </button>
         ))}
       </div>

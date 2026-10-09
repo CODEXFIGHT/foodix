@@ -45,7 +45,7 @@ export function ContactForm() {
     <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 items-center">
       {/* Texto */}
       <div className="text-center lg:text-left">
-        <span className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1.5 text-xs font-semibold text-[#D1400F] dark:border-orange-500/20 dark:bg-orange-500/10 dark:text-orange-200">
+        <span className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-yellow-700 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-yellow-300">
           <MessageCircle className="h-3.5 w-3.5" /> Más información
         </span>
         <h2 className="mt-4 font-heading text-3xl font-extrabold text-stone-900 sm:text-4xl dark:text-white">
@@ -72,7 +72,7 @@ export function ContactForm() {
           {/* Nombre */}
           <div className="space-y-1.5">
             <label htmlFor="contact-name" className="text-sm font-medium text-stone-700 dark:text-zinc-300">
-              Nombre <span className="text-[#D1400F]">*</span>
+              Nombre <span className="text-yellow-700 dark:text-yellow-400">*</span>
             </label>
             <input
               id="contact-name"
@@ -83,7 +83,7 @@ export function ContactForm() {
                 'h-11 w-full rounded-xl border bg-white px-4 text-sm text-stone-900 outline-none transition-colors placeholder:text-stone-400 focus:ring-2 dark:bg-black dark:text-white',
                 errors.name
                   ? 'border-red-400 focus:ring-red-400/40'
-                  : 'border-stone-200 focus:border-[#D1400F] focus:ring-[#D1400F]/30 dark:border-white/15',
+                  : 'border-stone-200 focus:border-[#CA8A04] focus:ring-[#CA8A04]/30 dark:border-white/15',
               )}
               {...register('name')}
             />
@@ -97,7 +97,7 @@ export function ContactForm() {
           {/* WhatsApp */}
           <div className="space-y-1.5">
             <label htmlFor="contact-whatsapp" className="text-sm font-medium text-stone-700 dark:text-zinc-300">
-              WhatsApp <span className="text-[#D1400F]">*</span>
+              WhatsApp <span className="text-yellow-700 dark:text-yellow-400">*</span>
             </label>
             <input
               id="contact-whatsapp"
@@ -109,7 +109,7 @@ export function ContactForm() {
                 'h-11 w-full rounded-xl border bg-white px-4 text-sm text-stone-900 outline-none transition-colors placeholder:text-stone-400 focus:ring-2 dark:bg-black dark:text-white',
                 errors.whatsapp
                   ? 'border-red-400 focus:ring-red-400/40'
-                  : 'border-stone-200 focus:border-[#D1400F] focus:ring-[#D1400F]/30 dark:border-white/15',
+                  : 'border-stone-200 focus:border-[#CA8A04] focus:ring-[#CA8A04]/30 dark:border-white/15',
               )}
               {...register('whatsapp')}
             />
@@ -123,7 +123,7 @@ export function ContactForm() {
           {/* Mensaje */}
           <div className="space-y-1.5">
             <label htmlFor="contact-message" className="text-sm font-medium text-stone-700 dark:text-zinc-300">
-              Mensaje <span className="text-[#D1400F]">*</span>
+              Mensaje <span className="text-yellow-700 dark:text-yellow-400">*</span>
             </label>
             <textarea
               id="contact-message"
@@ -133,7 +133,7 @@ export function ContactForm() {
                 'w-full resize-y rounded-xl border bg-white px-4 py-3 text-sm text-stone-900 outline-none transition-colors placeholder:text-stone-400 focus:ring-2 dark:bg-black dark:text-white',
                 errors.message
                   ? 'border-red-400 focus:ring-red-400/40'
-                  : 'border-stone-200 focus:border-[#D1400F] focus:ring-[#D1400F]/30 dark:border-white/15',
+                  : 'border-stone-200 focus:border-[#CA8A04] focus:ring-[#CA8A04]/30 dark:border-white/15',
               )}
               {...register('message')}
             />
@@ -147,7 +147,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={sending}
-            className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#D1400F] text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#B03508] hover:shadow-md active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
+            className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#FACC15] text-sm font-semibold text-stone-950 shadow-sm transition-all hover:bg-[#EAB308] hover:shadow-md active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
           >
             {sending ? (
               <>

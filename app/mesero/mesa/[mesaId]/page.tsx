@@ -353,7 +353,7 @@ export default function MesaActivaPage({ params }: { params: Promise<{ mesaId: s
           )}
           classNames={{
             base: 'flex-1',
-            inputWrapper: 'bg-muted/50 shadow-none data-[hover=true]:bg-muted/70 group-data-[focus=true]:ring-1 group-data-[focus=true]:ring-[#D1400F]',
+            inputWrapper: 'bg-muted/50 shadow-none data-[hover=true]:bg-muted/70 group-data-[focus=true]:ring-1 group-data-[focus=true]:ring-[#FACC15]',
           }}
         />
 
@@ -362,7 +362,7 @@ export default function MesaActivaPage({ params }: { params: Promise<{ mesaId: s
             type="button"
             onClick={() => { haptic(); setRepeatOpen(true) }}
             aria-label={`Repetir lo de esta mesa (${repeatableCount} líneas)`}
-            className="flex h-12 shrink-0 items-center gap-1.5 rounded-full border border-[#D1400F]/30 bg-[#D1400F]/5 px-4 text-sm font-bold text-[#D1400F] transition-colors active:scale-95 touch-manipulation"
+            className="flex h-12 shrink-0 items-center gap-1.5 rounded-full border border-[#EAB308]/30 bg-[#FACC15]/5 px-4 text-sm font-bold text-yellow-700 dark:text-yellow-400 transition-colors active:scale-95 touch-manipulation"
           >
             <RotateCcw className="h-4 w-4" />
             <span className="hidden sm:inline">Repetir</span>

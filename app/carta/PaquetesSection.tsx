@@ -62,7 +62,7 @@ function ComboCard({ combo, idx, onOpen }: { combo: PublicCombo; idx: number; on
       aria-label={`Ver qué incluye ${combo.name}`}
       data-reveal=""
       style={{ transitionDelay: `${(idx % 10) * 45}ms` }}
-      className="carta-reveal group relative flex w-full flex-col overflow-hidden rounded-[1.25rem] border border-amber-300/70 bg-white text-left shadow-[0_4px_16px_-6px_rgba(28,25,23,0.18)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_-12px_rgba(209,64,15,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D1400F]/50 active:scale-[.965]"
+      className="carta-reveal group relative flex w-full flex-col overflow-hidden rounded-[1.25rem] border border-amber-300/70 bg-white text-left shadow-[0_4px_16px_-6px_rgba(28,25,23,0.18)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_-12px_rgba(250,204,21,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#CA8A04]/50 active:scale-[.965]"
     >
       <div className="relative aspect-square overflow-hidden bg-stone-100">
         {combo.image ? (
@@ -110,7 +110,7 @@ function ComboCard({ combo, idx, onOpen }: { combo: PublicCombo; idx: number; on
         </span>
       </div>
 
-      <div className="relative flex min-h-[3.25rem] flex-1 flex-col justify-center bg-gradient-to-br from-amber-500 via-[#D1400F] to-[#B03508] px-3 py-2.5">
+      <div className="relative flex min-h-[3.25rem] flex-1 flex-col justify-center bg-gradient-to-br from-amber-500 via-[#FACC15] to-[#EAB308] px-3 py-2.5">
         <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/25" />
         <h3 className="line-clamp-2 text-center text-sm font-bold uppercase leading-tight tracking-wide text-white">
           {combo.name}
@@ -209,7 +209,7 @@ function ComboModal({
           )}
 
           <div className="mt-4">
-            <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#D1400F]">Qué incluye</p>
+            <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.18em] text-yellow-700 dark:text-yellow-400">Qué incluye</p>
             <ul className="space-y-2">
               {combo.items.map(item => (
                 <li
@@ -232,7 +232,7 @@ function ComboModal({
                       {item.available ? `$${item.price.toFixed(2)} por separado` : 'Temporalmente sin disponibilidad'}
                     </p>
                   </div>
-                  <span className="shrink-0 rounded-full bg-[#D1400F]/10 px-2.5 py-1 text-xs font-extrabold text-[#D1400F]">
+                  <span className="shrink-0 rounded-full bg-[#FACC15]/10 px-2.5 py-1 text-xs font-extrabold text-yellow-700 dark:text-yellow-400">
                     ×{item.quantity}
                   </span>
                 </li>
@@ -255,7 +255,7 @@ function ComboModal({
           <div className="flex items-center justify-between">
             <div>
               <p className="text-[11px] font-medium uppercase tracking-wide text-stone-400">Precio del paquete</p>
-              <p className="text-2xl font-extrabold leading-none text-[#D1400F]">
+              <p className="text-2xl font-extrabold leading-none text-yellow-700">
                 ${(combo.price * qty).toFixed(2)}
                 <span className="ml-1 text-xs font-normal text-stone-400">MXN</span>
               </p>
@@ -275,7 +275,7 @@ function ComboModal({
                 <button
                   onClick={() => setQty(q => q + 1)}
                   aria-label="Agregar una unidad"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-[#D1400F]/10 text-[#D1400F] transition-all active:scale-90"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-[#FACC15]/10 text-yellow-700 dark:text-yellow-400 transition-all active:scale-90"
                 >
                   <Plus className="h-4 w-4" />
                 </button>
@@ -290,7 +290,7 @@ function ComboModal({
           ) : canOrder ? (
             <button
               onClick={handleAdd}
-              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#D1400F] px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#D1400F]/30 transition-all hover:bg-[#B03508] active:scale-95"
+              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#FACC15] px-5 py-3.5 text-sm font-bold text-stone-950 shadow-lg shadow-[#FACC15]/30 transition-all hover:bg-[#EAB308] active:scale-95"
             >
               <ShoppingBag className="h-4 w-4" />
               Agregar paquete a mi pedido
@@ -343,7 +343,7 @@ export function PaquetesSection({
           {onSeeAll && (
             <button
               onClick={onSeeAll}
-              className="ml-auto inline-flex items-center gap-0.5 text-xs font-semibold text-stone-400 transition-colors hover:text-[#D1400F]"
+              className="ml-auto inline-flex items-center gap-0.5 text-xs font-semibold text-stone-400 transition-colors hover:text-yellow-700 dark:hover:text-yellow-400"
             >
               Ver sección
             </button>

@@ -27,18 +27,18 @@ function ColumnHeader({ area, count }: { area: 'hot' | 'cold'; count: number }) 
       className={cn(
         'sticky top-0 z-10 mb-3 flex items-center justify-between rounded-xl px-4 py-2.5 backdrop-blur',
         isHot
-          ? 'bg-[#D1400F]/15 ring-1 ring-[#D1400F]/30'
+          ? 'bg-[#FACC15]/15 ring-1 ring-[#FACC15]/30'
           : 'bg-sky-500/15 ring-1 ring-sky-400/30',
       )}
     >
-      <span className={cn('flex items-center gap-2 text-sm font-bold', isHot ? 'text-orange-200' : 'text-sky-200')}>
+      <span className={cn('flex items-center gap-2 text-sm font-bold', isHot ? 'text-yellow-300' : 'text-sky-200')}>
         {isHot ? <Flame className="h-4 w-4" /> : <Snowflake className="h-4 w-4" />}
         POS {isHot ? 'Caliente' : 'Frío'}
       </span>
       <span
         className={cn(
           'rounded-full px-2 py-0.5 text-[11px] font-bold',
-          isHot ? 'bg-[#D1400F] text-white' : 'bg-sky-500 text-white',
+          isHot ? 'bg-[#FACC15] text-stone-950' : 'bg-sky-500 text-stone-950',
         )}
       >
         {count} comanda(s)
@@ -51,7 +51,7 @@ export function KitchenPOSColumns({ hot, cold, hotCount, coldCount }: KitchenPOS
   return (
     <div className="grid gap-4 lg:grid-cols-2">
       <section
-        className="rounded-2xl border border-[#D1400F]/20 bg-black/20 p-3"
+        className="rounded-2xl border border-[#EAB308]/20 bg-black/20 p-3"
         aria-label="POS Caliente"
       >
         <ColumnHeader area="hot" count={hotCount} />

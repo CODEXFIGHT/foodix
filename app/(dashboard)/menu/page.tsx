@@ -77,7 +77,7 @@ function FieldSelect({
       <SelectTrigger
         className={cn(
           'h-11 rounded-xl border-input bg-background text-sm font-medium',
-          'focus:ring-2 focus:ring-[#D1400F] focus:ring-offset-0 focus:border-[#D1400F]',
+          'focus:ring-2 focus:ring-[#CA8A04] focus:ring-offset-0 focus:border-[#CA8A04]',
           className,
         )}
       >
@@ -88,10 +88,10 @@ function FieldSelect({
           <SelectItem
             key={opt.value || SELECT_EMPTY}
             value={opt.value === '' ? SELECT_EMPTY : opt.value}
-            className="rounded-lg focus:bg-orange-50 focus:text-[#C2410C] data-[state=checked]:text-[#D1400F] dark:focus:bg-orange-500/10 dark:focus:text-orange-300"
+            className="rounded-lg focus:bg-amber-50 focus:text-yellow-800 data-[state=checked]:text-yellow-700 dark:focus:bg-amber-500/10 dark:focus:text-yellow-400"
           >
             <span className="flex items-center gap-2">
-              {opt.icon && <opt.icon className="h-4 w-4 shrink-0 text-[#D1400F]" />}
+              {opt.icon && <opt.icon className="h-4 w-4 shrink-0 text-yellow-700 dark:text-yellow-400" />}
               <span className="flex flex-col">
                 <span>{opt.label}</span>
                 {opt.hint && <span className="text-xs text-muted-foreground">{opt.hint}</span>}
@@ -132,7 +132,7 @@ function CategoryPanel({
   const [editingId, setEditingId] = useState<number | null>(null)
   const [showForm, setShowForm] = useState(false)
   const [deleteId, setDeleteId] = useState<number | null>(null)
-  const [form, setForm] = useState({ name: '', color: '#D1400F', station: 'hot' as 'hot'|'cold'|'both' })
+  const [form, setForm] = useState({ name: '', color: '#FACC15', station: 'hot' as 'hot'|'cold'|'both' })
 
   const handleSave = async () => {
     if (!form.name.trim()) return
@@ -147,7 +147,7 @@ function CategoryPanel({
         onSelect(cat.id)
       }
       setShowForm(false)
-      setForm({ name: '', color: '#D1400F', station: 'hot' })
+      setForm({ name: '', color: '#FACC15', station: 'hot' })
     } catch {
       toast.error('Error al guardar categoría')
     }
@@ -173,7 +173,7 @@ function CategoryPanel({
           size="sm"
           variant="ghost"
           className="h-7 w-7 p-0"
-          onClick={() => { setEditingId(null); setForm({ name: '', color: '#D1400F', station: 'hot' }); setShowForm(true) }}
+          onClick={() => { setEditingId(null); setForm({ name: '', color: '#FACC15', station: 'hot' }); setShowForm(true) }}
         >
           <Plus className="h-4 w-4" />
         </Button>
@@ -185,7 +185,7 @@ function CategoryPanel({
         className={cn(
           'w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors',
           selectedId === null
-            ? 'bg-[#D1400F] text-white'
+            ? 'bg-[#FACC15] text-stone-950'
             : 'hover:bg-muted text-muted-foreground',
         )}
       >
@@ -200,7 +200,7 @@ function CategoryPanel({
             key={cat.id}
             className={cn(
               'group flex items-center gap-2 px-3 py-2 rounded-lg transition-colors cursor-pointer',
-              selectedId === cat.id ? 'bg-muted ring-1 ring-[#D1400F]' : 'hover:bg-muted',
+              selectedId === cat.id ? 'bg-muted ring-1 ring-[#FACC15]' : 'hover:bg-muted',
             )}
             onClick={() => onSelect(cat.id)}
           >
@@ -264,7 +264,7 @@ function CategoryPanel({
           <div className="flex gap-2">
             <Button
               size="sm"
-              className="h-7 text-xs bg-[#D1400F] hover:bg-[#B03508]"
+              className="h-7 text-xs bg-[#FACC15] hover:bg-[#EAB308]"
               onClick={handleSave}
               disabled={createCategory.isPending || updateCategory.isPending}
             >
@@ -383,7 +383,7 @@ function ProductCard({
              product.station_override === 'both' ? '🔥🧊' : ''}
           </span>
         </div>
-        <p className="text-[#D1400F] font-bold text-sm mt-0.5">{MXN(product.price)}</p>
+        <p className="text-yellow-700 dark:text-yellow-400 font-bold text-sm mt-0.5">{MXN(product.price)}</p>
         {product.description && (
           <p className="text-muted-foreground text-xs mt-1 line-clamp-2">{product.description}</p>
         )}
@@ -420,7 +420,7 @@ function ProductPreview({
 }) {
   const station = stationOverride || category?.station
   const stMeta =
-    station === 'hot' ? { label: 'Caliente', cls: 'bg-orange-500' }
+    station === 'hot' ? { label: 'Caliente', cls: 'bg-amber-500' }
     : station === 'cold' ? { label: 'Frío', cls: 'bg-sky-500' }
     : null
 
@@ -439,7 +439,7 @@ function ProductPreview({
           )}
           <div className="absolute top-2 left-2 flex flex-col items-start gap-1">
             {badge && (
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#D1400F] text-white shadow">{badge}</span>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#FACC15] text-stone-950 shadow">{badge}</span>
             )}
             {stMeta && (
               <span className={cn('text-[10px] font-bold px-2 py-0.5 rounded-full text-white shadow', stMeta.cls)}>{stMeta.label}</span>
@@ -450,8 +450,8 @@ function ProductPreview({
             <span className="text-[9px] font-medium text-white/70 ml-0.5">MXN</span>
           </span>
         </div>
-        <div className="bg-[#D1400F] px-3 py-2.5">
-          <h3 className="text-center text-sm font-bold uppercase tracking-wide text-white line-clamp-2">
+        <div className="bg-[#FACC15] px-3 py-2.5">
+          <h3 className="text-center text-sm font-bold uppercase tracking-wide text-stone-950 line-clamp-2">
             {name?.trim() || 'Nombre del platillo'}
           </h3>
         </div>
@@ -771,7 +771,7 @@ function ProductModal({
                 <div key={`p-${i}`} className="relative w-20 h-20 rounded-lg overflow-hidden border bg-muted flex-shrink-0">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={pf.preview} alt="" className="w-full h-full object-cover" />
-                  <span className="absolute bottom-0 inset-x-0 bg-[#D1400F]/80 text-white text-[9px] text-center">nueva</span>
+                  <span className="absolute bottom-0 inset-x-0 bg-[#FACC15]/80 text-stone-950 text-[9px] text-center">nueva</span>
                   <button type="button" onClick={() => removePending(i)}
                     className="absolute top-0.5 right-0.5 bg-black/60 rounded-full p-0.5 text-white">
                     <X className="h-3 w-3" />
@@ -801,7 +801,7 @@ function ProductModal({
                 {...getRootProps()}
                 className={cn(
                   'border-2 border-dashed rounded-xl p-3 transition-colors',
-                  isDragActive ? 'border-[#D1400F] bg-[#D1400F]/5' : 'border-border',
+                  isDragActive ? 'border-[#EAB308] bg-[#FACC15]/5' : 'border-border',
                 )}
               >
                 <input {...getInputProps()} />
@@ -857,12 +857,12 @@ function ProductModal({
               <Label className="flex items-center justify-between">
                 <span>Precio MXN {isOpen ? '' : '*'}</span>
                 {isKg && (
-                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#D1400F]">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-yellow-700 dark:text-yellow-400">
                     <Scale className="h-3 w-3" /> Se usa el precio por KG
                   </span>
                 )}
                 {isOpen && (
-                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#D1400F]">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-yellow-700 dark:text-yellow-400">
                     <Banknote className="h-3 w-3" /> Se captura al vender
                   </span>
                 )}
@@ -870,7 +870,7 @@ function ProductModal({
               <div className="relative">
                 <span className={cn(
                   'pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-base font-semibold',
-                  isKg || isOpen ? 'text-muted-foreground/50' : 'text-[#D1400F]',
+                  isKg || isOpen ? 'text-muted-foreground/50' : 'text-yellow-700 dark:text-yellow-400',
                 )}>$</span>
                 <Input
                   type="number"
@@ -906,9 +906,9 @@ function ProductModal({
               <label
                 className={cn(
                   "flex items-center gap-3 p-3 rounded-xl border-2 cursor-pointer transition-all duration-200 select-none",
-                  "hover:bg-orange-50/50 hover:border-orange-250 dark:hover:bg-orange-950/20 dark:hover:border-orange-900/50",
+                  "hover:bg-amber-50/50 hover:border-amber-250 dark:hover:bg-amber-950/20 dark:hover:border-amber-900/50",
                   watch('station') === 'hot'
-                    ? "border-orange-500 bg-orange-50/70 text-orange-700 dark:border-orange-500 dark:bg-orange-950/40 dark:text-orange-300 shadow-sm"
+                    ? "border-amber-500 bg-amber-50/70 text-yellow-800 dark:border-amber-500 dark:bg-amber-950/40 dark:text-yellow-400 shadow-sm"
                     : "border-input bg-background text-muted-foreground"
                 )}
               >
@@ -920,7 +920,7 @@ function ProductModal({
                 />
                 <div className={cn(
                   "p-2 rounded-lg transition-colors duration-200",
-                  watch('station') === 'hot' ? "bg-orange-500 text-white" : "bg-muted text-muted-foreground"
+                  watch('station') === 'hot' ? "bg-amber-500 text-stone-950" : "bg-muted text-muted-foreground"
                 )}>
                   <Flame className="h-5 w-5" />
                 </div>
@@ -971,7 +971,7 @@ function ProductModal({
                   onClick={generateWithAI}
                   disabled={aiLoading}
                   aria-label="Rellenar con inteligencia artificial"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full text-white shadow bg-gradient-to-r from-[#D1400F] via-fuchsia-500 to-indigo-500 animate-ai-flow hover:brightness-110 active:scale-95 transition disabled:opacity-70"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full text-white shadow bg-gradient-to-r from-[#FACC15] via-fuchsia-500 to-indigo-500 animate-ai-flow hover:brightness-110 active:scale-95 transition disabled:opacity-70"
                 >
                   <Sparkles className="h-3.5 w-3.5" /> {aiLoading ? 'Generando…' : 'Rellenar con IA'}
                 </button>
@@ -1005,13 +1005,13 @@ function ProductModal({
                   {[0, 1, 2, 3, 4].map(i => (
                     <span
                       key={i}
-                      className="w-1.5 h-full rounded-full bg-gradient-to-t from-[#D1400F] via-fuchsia-500 to-indigo-500 animate-ai-bar"
+                      className="w-1.5 h-full rounded-full bg-gradient-to-t from-[#FACC15] via-fuchsia-500 to-indigo-500 animate-ai-bar"
                       style={{ animationDelay: `${i * 120}ms` }}
                     />
                   ))}
                 </div>
                 <p
-                  className="text-sm font-bold bg-gradient-to-r from-[#D1400F] via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent animate-ai-flow"
+                  className="text-sm font-bold bg-gradient-to-r from-[#FACC15] via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent animate-ai-flow"
                   style={{ backgroundSize: '220% 220%' }}
                 >
                   Generando con IA…
@@ -1033,8 +1033,8 @@ function ProductModal({
                     className={cn(
                       'text-xs px-2.5 py-1 rounded-full border transition-colors',
                       allergens.includes(a)
-                        ? 'bg-[#D1400F] text-white border-[#D1400F]'
-                        : 'bg-background text-muted-foreground border-input hover:border-[#D1400F]/50',
+                        ? 'bg-[#FACC15] text-stone-950 border-[#EAB308]'
+                        : 'bg-background text-muted-foreground border-input hover:border-[#EAB308]/50',
                     )}
                   >
                     {a}
@@ -1072,14 +1072,14 @@ function ProductModal({
                 variant="outline"
                 size="sm"
                 onClick={() => setScannerActive(a => !a)}
-                className={cn(scannerActive && 'border-[#D1400F] text-[#D1400F]')}
+                className={cn(scannerActive && 'border-[#EAB308] text-yellow-700 dark:text-yellow-400')}
               >
                 <Barcode className="h-4 w-4 mr-1.5" />
                 {scannerActive ? 'Escaneando…' : 'Escanear'}
               </Button>
             </div>
             {scannerActive && (
-              <p className="text-xs text-[#D1400F] animate-pulse">
+              <p className="text-xs text-yellow-700 dark:text-yellow-400 animate-pulse">
                 Scanner activo — apunta el lector al código
               </p>
             )}
@@ -1098,12 +1098,12 @@ function ProductModal({
               ]}
             />
             {isKg && (
-              <div className="mt-3 rounded-xl border border-[#D1400F]/30 bg-orange-50/60 p-3 dark:border-[#D1400F]/25 dark:bg-orange-500/10">
-                <Label className="flex items-center gap-1.5 text-[#C2410C] dark:text-orange-300">
+              <div className="mt-3 rounded-xl border border-[#EAB308]/30 bg-amber-50/60 p-3 dark:border-[#EAB308]/25 dark:bg-amber-500/10">
+                <Label className="flex items-center gap-1.5 text-yellow-800 dark:text-yellow-400">
                   <Scale className="h-4 w-4" /> Precio por KG (base) *
                 </Label>
                 <div className="relative mt-1.5">
-                  <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-base font-semibold text-[#D1400F]">$</span>
+                  <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-base font-semibold text-yellow-700 dark:text-yellow-400">$</span>
                   <Input
                     type="number"
                     inputMode="decimal"
@@ -1183,7 +1183,7 @@ function ProductModal({
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="bg-[#D1400F] hover:bg-[#B03508]"
+              className="bg-[#FACC15] hover:bg-[#EAB308]"
             >
               {isSubmitting ? 'Guardando…' : editing ? 'Guardar cambios' : 'Crear producto'}
             </Button>
@@ -1272,13 +1272,13 @@ export default function MenuPage() {
     return (
       <div
         className={cn(
-          "relative flex items-center transition-all duration-300 ease-in-out rounded-xl border border-input bg-muted/40 hover:bg-muted/60 focus-within:bg-background focus-within:ring-2 focus-within:ring-[#D1400F] focus-within:border-[#D1400F]",
+          "relative flex items-center transition-all duration-300 ease-in-out rounded-xl border border-input bg-muted/40 hover:bg-muted/60 focus-within:bg-background focus-within:ring-2 focus-within:ring-[#CA8A04] focus-within:border-[#CA8A04]",
           isStickyVariant
             ? "w-full max-w-sm sm:max-w-md focus-within:max-w-xl"
             : "w-full sm:w-64 md:w-72 focus-within:sm:w-[380px] focus-within:md:w-[440px]"
         )}
       >
-        <Search className="absolute left-3.5 h-4 w-4 text-muted-foreground pointer-events-none transition-colors group-focus-within:text-[#D1400F]" />
+        <Search className="absolute left-3.5 h-4 w-4 text-muted-foreground pointer-events-none transition-colors group-focus-within:text-yellow-700" />
         <Input
           id={id}
           type="text"
@@ -1343,7 +1343,7 @@ export default function MenuPage() {
         actions={
           <Button
             onClick={() => { setEditingProduct(null); setModalOpen(true) }}
-            className="bg-[#D1400F] hover:bg-[#B03508]"
+            className="bg-[#FACC15] hover:bg-[#EAB308]"
           >
             <Plus className="h-4 w-4 mr-1.5" />
             Agregar Producto
@@ -1397,7 +1397,7 @@ export default function MenuPage() {
                 Agrega tu primer producto usando el botón de arriba
               </p>
               <Button
-                className="mt-4 bg-[#D1400F] hover:bg-[#B03508]"
+                className="mt-4 bg-[#FACC15] hover:bg-[#EAB308]"
                 onClick={() => { setEditingProduct(null); setModalOpen(true) }}
               >
                 <Plus className="h-4 w-4 mr-1.5" />
@@ -1413,7 +1413,7 @@ export default function MenuPage() {
               </p>
               <Button
                 variant="outline"
-                className="mt-4 border-[#D1400F] text-[#D1400F] hover:bg-[#D1400F]/10 hover:text-[#D1400F]"
+                className="mt-4 border-[#EAB308] text-yellow-700 dark:text-yellow-400 hover:bg-[#FACC15]/10 hover:text-yellow-700 dark:hover:text-yellow-400"
                 onClick={() => setSearchTerm('')}
               >
                 <X className="h-4 w-4 mr-1.5" />

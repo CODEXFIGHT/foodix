@@ -10,23 +10,23 @@
     --card-foreground: 20 14% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 14% 11%;
-    --primary: 15 87% 44%;           /* #D1400F */
-    --primary-foreground: 0 0% 100%;
+    --primary: 48 96% 53%;           /* #FACC15 amarillo dorado */
+    --primary-foreground: 20 14% 11%;  /* carbón sobre amarillo */
     --secondary: 30 10% 92%;
     --secondary-foreground: 20 14% 20%;
     --muted: 30 10% 92%;
     --muted-foreground: 25 5% 50%;   /* stone-500 */
-    --accent: 37 90% 55%;
+    --accent: 48 96% 53%;           /* amarillo dorado, unifica acentos */
     --accent-foreground: 20 14% 11%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 30 10% 90%;            /* stone-200 */
     --input: 30 10% 90%;
-    --ring: 15 87% 44%;
+    --ring: 41 96% 40%;              /* #CA8A04 dorado oscuro: foco visible en claro */
     --radius: 0.75rem;
     --sidebar-bg: #1C1917;           /* always dark sidebar */
     --sidebar-text: #E7E5E4;
-    --sidebar-active: #D1400F;
+    --sidebar-active: #FACC15;
   }
   /* Fuerza tokens de tema CLARO en un subárbol, aunque <html> tenga .dark.
      Se usa en pantallas de marca (login/PIN) que están diseñadas en claro. */
@@ -43,19 +43,19 @@
     --card-foreground: 20 14% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 14% 11%;
-    --primary: 15 87% 44%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 48 96% 53%;
+    --primary-foreground: 20 14% 11%;  /* carbón sobre amarillo */
     --secondary: 30 10% 92%;
     --secondary-foreground: 20 14% 20%;
     --muted: 30 10% 92%;
     --muted-foreground: 25 5% 50%;
-    --accent: 37 90% 55%;
+    --accent: 48 96% 53%;           /* amarillo dorado unificado */
     --accent-foreground: 20 14% 11%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 30 10% 90%;
     --input: 30 10% 90%;
-    --ring: 15 87% 44%;
+    --ring: 41 96% 40%;
   }
   .dark {
     --background: 0 0% 6%;
@@ -64,19 +64,19 @@
     --card-foreground: 30 10% 96%;
     --popover: 0 0% 10%;
     --popover-foreground: 30 10% 96%;
-    --primary: 15 87% 47%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 48 96% 51%;
+    --primary-foreground: 20 14% 11%;  /* carbón sobre amarillo */
     --secondary: 0 0% 16%;
     --secondary-foreground: 30 10% 90%;
     --muted: 0 0% 16%;
     --muted-foreground: 25 5% 55%;
-    --accent: 37 90% 55%;
+    --accent: 48 96% 51%;           /* amarillo dorado unificado para dark */
     --accent-foreground: 20 14% 11%;
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 15 87% 47%;
+    --ring: 48 96% 53%;
     --sidebar-bg: #111111;
   }
 }
@@ -383,8 +383,8 @@
   100% { opacity: 1; transform: translateY(0); letter-spacing: normal; }
 }
 @keyframes carta-chip-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgb(232 93 4 / 0.45); }
-  50%      { box-shadow: 0 0 0 6px rgb(232 93 4 / 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgb(245 158 11 / 0.45); }
+  50%      { box-shadow: 0 0 0 6px rgb(245 158 11 / 0); }
 }
 @keyframes carta-heat {
   0%, 100% { box-shadow: 0 0 0 0 rgb(239 68 68 / 0.0); }
@@ -396,8 +396,8 @@
 }
 /* Glow suave del logo DevHive al llegar al final de la carta. */
 @keyframes carta-logo-glow {
-  0%, 100% { filter: drop-shadow(0 0 0 rgb(232 93 4 / 0)); transform: scale(1); }
-  50%      { filter: drop-shadow(0 0 14px rgb(232 93 4 / 0.55)); transform: scale(1.06); }
+  0%, 100% { filter: drop-shadow(0 0 0 rgb(245 158 11 / 0)); transform: scale(1); }
+  50%      { filter: drop-shadow(0 0 14px rgb(245 158 11 / 0.55)); transform: scale(1.06); }
 }
 
 /* ─── Chatbot "Sol": botón, mensajes y chips ─── */
@@ -529,15 +529,15 @@
 }
 @keyframes section-arrival {
   0% {
-    box-shadow: inset 0 0 0 9999px rgb(232 93 4 / 0);
+    box-shadow: inset 0 0 0 9999px rgb(245 158 11 / 0);
     filter: saturate(1);
   }
   35% {
-    box-shadow: inset 0 0 0 9999px rgb(232 93 4 / 0.035);
+    box-shadow: inset 0 0 0 9999px rgb(245 158 11 / 0.035);
     filter: saturate(1.04);
   }
   100% {
-    box-shadow: inset 0 0 0 9999px rgb(232 93 4 / 0);
+    box-shadow: inset 0 0 0 9999px rgb(245 158 11 / 0);
     filter: saturate(1);
   }
 }

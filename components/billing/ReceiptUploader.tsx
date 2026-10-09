@@ -25,7 +25,7 @@ interface Props {
   className?: string
 }
 
-export function ReceiptUploader({ value, onChange, upload, brand = '#D1400F', className }: Props) {
+export function ReceiptUploader({ value, onChange, upload, brand = '#FACC15', className }: Props) {
   const fileInput = useRef<HTMLInputElement>(null)
   const cameraInput = useRef<HTMLInputElement>(null)
   const id = useId()

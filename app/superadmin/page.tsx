@@ -71,7 +71,7 @@ export default function SuperAdminPage() {
     { label: 'Activas',           value: metrics?.active ?? 0,                     accent: 'text-emerald-400' },
     { label: 'Ingreso mensual',   value: formatMXN(metrics?.monthly_revenue ?? 0) },
     { label: 'Por vencer / pago', value: (metrics?.past_due ?? 0) + (metrics?.pending_transfer ?? 0), accent: 'text-amber-400' },
-    { label: 'Disp. pendientes',  value: pendingDevices.length,                    accent: pendingDevices.length > 0 ? 'text-orange-400' : undefined },
+    { label: 'Disp. pendientes',  value: pendingDevices.length,                    accent: pendingDevices.length > 0 ? 'text-yellow-500' : undefined },
   ]
 
   return (
@@ -153,13 +153,13 @@ export default function SuperAdminPage() {
             {(metrics?.pending_transfer ?? 0) > 0 && (
               <Link
                 href="/superadmin/subscriptions?filter=pending_transfer"
-                className="flex items-center gap-3 rounded-xl border border-orange-500/30 bg-orange-500/[0.07] px-4 py-3 transition-colors hover:bg-orange-500/[0.12]"
+                className="flex items-center gap-3 rounded-xl border border-amber-500/30 bg-amber-500/[0.07] px-4 py-3 transition-colors hover:bg-amber-500/[0.12]"
               >
                 <Icons8Image src={ICONS8.bankTransfer} alt="Transferencias" size={22} className="flex-shrink-0" />
-                <span className="flex-1 text-sm text-orange-200">
-                  <strong className="text-orange-300">{metrics?.pending_transfer}</strong> transferencia(s) bancaria(s) por revisar
+                <span className="flex-1 text-sm text-yellow-300">
+                  <strong className="text-yellow-400">{metrics?.pending_transfer}</strong> transferencia(s) bancaria(s) por revisar
                 </span>
-                <ChevronRight className="h-4 w-4 text-orange-300/70 flex-shrink-0" />
+                <ChevronRight className="h-4 w-4 text-yellow-400/70 flex-shrink-0" />
               </Link>
             )}
 

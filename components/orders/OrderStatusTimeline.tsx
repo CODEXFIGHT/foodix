@@ -40,8 +40,8 @@ export function OrderStatusTimeline({ status }: { status: OrderStatus }) {
             <div className="flex flex-col items-center gap-1">
               <div className={cn(
                 'w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold transition-all',
-                done ? 'bg-green-500 text-white' :
-                active ? 'bg-[#D1400F] text-white ring-2 ring-[#D1400F]/30' :
+                done ? 'bg-green-500 text-stone-950' :
+                active ? 'bg-[#FACC15] text-stone-950 ring-2 ring-[#FACC15]/30' :
                 'bg-muted text-muted-foreground'
               )}>
                 {done ? <Check className="h-4 w-4" /> : idx + 1}

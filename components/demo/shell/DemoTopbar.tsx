@@ -110,7 +110,7 @@ export function DemoTopbar({ role }: { role: DemoRole }) {
           <DropdownMenuContent align="end" className="w-56">
             <DropdownMenuLabel>
               <p className="text-sm font-medium">{user.name}</p>
-              <span className="mt-1 inline-flex items-center gap-1 text-xs px-1.5 py-0.5 rounded-full bg-[#D1400F]/10 text-[#D1400F]">
+              <span className="mt-1 inline-flex items-center gap-1 text-xs px-1.5 py-0.5 rounded-full bg-[#FACC15]/10 text-yellow-400">
                 <Icons8Image src={avatarSrc} alt="role" size={12} />
                 {ROLE_LABEL[role]} · Demo
               </span>
@@ -124,7 +124,7 @@ export function DemoTopbar({ role }: { role: DemoRole }) {
               <DropdownMenuItem
                 key={r}
                 onClick={() => router.push(href)}
-                className={cn('cursor-pointer', r === role && 'text-[#D1400F] font-semibold')}
+                className={cn('cursor-pointer', r === role && 'text-yellow-400 font-semibold')}
               >
                 <Icon className="mr-2 h-4 w-4" />
                 {label}

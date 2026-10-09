@@ -58,7 +58,7 @@ export function TaxSettings({ branchId }: { branchId: number }) {
     <Card>
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center gap-2 text-base">
-          <Receipt className="h-4 w-4 text-[#D1400F]" />
+          <Receipt className="h-4 w-4 text-yellow-700 dark:text-yellow-400" />
           Impuestos (IVA)
         </CardTitle>
       </CardHeader>
@@ -102,7 +102,7 @@ export function TaxSettings({ branchId }: { branchId: number }) {
         <Button
           onClick={save}
           disabled={updateBranch.isPending}
-          className="bg-[#D1400F] hover:bg-[#B03508]"
+          className="bg-[#FACC15] hover:bg-[#EAB308]"
         >
           {updateBranch.isPending ? 'Guardando…' : 'Guardar cambios'}
         </Button>

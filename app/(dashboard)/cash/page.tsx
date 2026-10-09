@@ -99,7 +99,7 @@ export default function CashPage() {
               <Input type="number" inputMode="decimal" value={openAmount}
                 onChange={e => setOpenAmount(e.target.value)} placeholder="0.00" />
             </div>
-            <Button onClick={handleOpen} disabled={openCash.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">
+            <Button onClick={handleOpen} disabled={openCash.isPending} className="bg-[#FACC15] hover:bg-[#EAB308]">
               {openCash.isPending ? 'Abriendo…' : 'Abrir caja'}
             </Button>
           </CardContent>
@@ -216,7 +216,7 @@ export default function CashPage() {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setMoveOpen(false)}>Cancelar</Button>
-            <Button onClick={handleMovement} disabled={addMovement.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">
+            <Button onClick={handleMovement} disabled={addMovement.isPending} className="bg-[#FACC15] hover:bg-[#EAB308]">
               {addMovement.isPending ? 'Guardando…' : 'Registrar'}
             </Button>
           </DialogFooter>

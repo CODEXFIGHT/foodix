@@ -65,11 +65,11 @@ export function DeviceAlerts({ devices }: { devices: ConnectedDevice[] }) {
             className={cn(
               'flex items-center gap-3 rounded-xl border px-4 py-2.5 text-sm',
               isError
-                ? 'border-orange-500/30 bg-orange-500/[0.07] text-orange-200'
+                ? 'border-amber-500/30 bg-amber-500/[0.07] text-yellow-300'
                 : 'border-amber-500/25 bg-amber-500/[0.06] text-amber-200',
             )}
           >
-            <Icon className={cn('h-4 w-4 flex-shrink-0', isError ? 'text-orange-300' : 'text-amber-300')} />
+            <Icon className={cn('h-4 w-4 flex-shrink-0', isError ? 'text-yellow-400' : 'text-amber-300')} />
             <span className="min-w-0">{a.message}</span>
           </div>
         )

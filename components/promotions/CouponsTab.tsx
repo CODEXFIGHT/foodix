@@ -78,7 +78,7 @@ export function CouponsTab({ branchId }: { branchId: number | null }) {
   return (
     <div className="space-y-4">
       <div className="flex justify-end">
-        <Button onClick={openNew} className="bg-[#D1400F] hover:bg-[#B03508]"><Plus className="h-4 w-4 mr-1" /> Nuevo cupón</Button>
+        <Button onClick={openNew} className="bg-[#FACC15] hover:bg-[#EAB308]"><Plus className="h-4 w-4 mr-1" /> Nuevo cupón</Button>
       </div>
 
       {coupons.length === 0 ? (
@@ -90,7 +90,7 @@ export function CouponsTab({ branchId }: { branchId: number | null }) {
               <CardContent className="p-3.5 flex items-center justify-between gap-3 flex-wrap">
                 <div className="min-w-0">
                   <p className="font-bold flex items-center gap-1.5 font-mono">
-                    <Ticket className="h-4 w-4 text-[#D1400F]" /> {c.code}
+                    <Ticket className="h-4 w-4 text-yellow-700 dark:text-yellow-400" /> {c.code}
                   </p>
                   <p className="text-xs text-muted-foreground mt-0.5">
                     {c.type === 'discount_percent' ? `${c.value}% de descuento` : `$${c.value} MXN de descuento`}
@@ -137,7 +137,7 @@ export function CouponsTab({ branchId }: { branchId: number | null }) {
           </div>
           <DialogFooter>
             <Button variant="ghost" onClick={() => setOpen(false)}>Cancelar</Button>
-            <Button onClick={handleSave} className="bg-[#D1400F] hover:bg-[#B03508]">Crear cupón</Button>
+            <Button onClick={handleSave} className="bg-[#FACC15] hover:bg-[#EAB308]">Crear cupón</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

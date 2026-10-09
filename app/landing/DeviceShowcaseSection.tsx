@@ -380,7 +380,7 @@ export function DeviceShowcaseSection() {
     >
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-[#D1400F]/5 blur-[120px] dark:bg-[#D1400F]/8" />
+        <div className="absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-[#FACC15]/5 blur-[120px] dark:bg-[#FACC15]/8" />
         <div className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-amber-100/30 blur-3xl dark:bg-amber-500/5" />
       </div>
 
@@ -390,7 +390,7 @@ export function DeviceShowcaseSection() {
           'text-center max-w-2xl mx-auto transition-all duration-700 ease-out',
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
         )}>
-          <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-orange-50 text-[#D1400F] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-amber-50 text-yellow-700 dark:text-yellow-400 border border-amber-100 dark:bg-amber-500/10 dark:border-amber-500/20">
             <Monitor className="h-3.5 w-3.5" /> Capturas reales del sistema
           </span>
           <h2
@@ -398,7 +398,7 @@ export function DeviceShowcaseSection() {
             className="mt-5 font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-stone-900 dark:text-white"
           >
             Así se ve FoodIX{' '}
-            <span className="text-[#D1400F]">en acción</span>
+            <span className="text-yellow-700 dark:text-yellow-400">en acción</span>
           </h2>
           <p className="mt-4 text-stone-600 dark:text-zinc-400 text-base sm:text-lg leading-relaxed">
             Desde la MacBook del administrador, el celular del mesero y la tablet de cocina.
@@ -423,8 +423,8 @@ export function DeviceShowcaseSection() {
                 className={cn(
                   'inline-flex items-center gap-1.5 h-10 px-4 sm:px-5 rounded-full text-sm font-semibold transition-all duration-300 active:scale-95',
                   isActive
-                    ? 'bg-[#D1400F] text-white shadow-md shadow-[#D1400F]/25'
-                    : 'bg-white border border-stone-200 text-stone-600 hover:border-orange-200 hover:text-[#D1400F] dark:bg-[#161616] dark:border-white/15 dark:text-zinc-300 dark:hover:border-orange-500/40',
+                    ? 'bg-[#FACC15] text-stone-950 shadow-md shadow-[#FACC15]/25'
+                    : 'bg-white border border-stone-200 text-stone-600 hover:border-amber-200 hover:text-yellow-700 dark:bg-[#161616] dark:border-white/15 dark:text-zinc-300 dark:hover:border-amber-500/40',
                 )}
               >
                 <r.icon className="h-4 w-4" />
@@ -489,7 +489,7 @@ export function DeviceShowcaseSection() {
               >
                 <div className={cn(
                   'absolute inset-x-[10%] bottom-1 h-10 rounded-full blur-2xl transition-all duration-500',
-                  i === activeIdx ? 'bg-[#D1400F]/30 opacity-100' : 'bg-stone-300/20 opacity-0',
+                  i === activeIdx ? 'bg-[#FACC15]/30 opacity-100' : 'bg-stone-300/20 opacity-0',
                 )} />
                 <DeviceFrame device={screen.device}>
                   <Image
@@ -546,9 +546,9 @@ export function DeviceShowcaseSection() {
             <div className="mx-auto max-w-5xl rounded-[28px] border border-stone-200/70 bg-white/88 p-5 shadow-[0_24px_70px_rgba(28,25,23,0.08)] backdrop-blur-xl dark:border-white/10 dark:bg-black/85">
               <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
                 <div className="min-w-0 flex-1">
-                  <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-orange-100 bg-orange-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-[#D1400F] dark:border-orange-500/20 dark:bg-orange-500/10">
+                  <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-amber-100 bg-amber-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-yellow-700 dark:border-amber-500/20 dark:bg-amber-500/10">
                     <span>{roleCopy.eyebrow}</span>
-                    <span className="h-1 w-1 rounded-full bg-[#D1400F]" />
+                    <span className="h-1 w-1 rounded-full bg-[#FACC15]" />
                     <span>{activeIdx + 1}/{count}</span>
                   </div>
 
@@ -558,14 +558,14 @@ export function DeviceShowcaseSection() {
                       currentItem.device === 'macbook' && 'bg-stone-100 text-stone-600 dark:bg-[#161616] dark:text-zinc-300',
                       currentItem.device === 'iphone' && 'bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400',
                       currentItem.device === 'tablet' && 'bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300',
-                      currentItem.device === 'pos' && 'bg-orange-50 text-orange-600 dark:bg-orange-500/10 dark:text-orange-400',
+                      currentItem.device === 'pos' && 'bg-amber-50 text-yellow-600 dark:bg-amber-500/10 dark:text-yellow-500',
                     )}>
                       {currentItem.device === 'macbook' && <><Monitor className="h-3 w-3" /> MacBook Air</>}
                       {currentItem.device === 'iphone' && <><Smartphone className="h-3 w-3" /> iPhone</>}
                       {currentItem.device === 'tablet' && <><Tablet className="h-3 w-3" /> Android Tablet</>}
                       {currentItem.device === 'pos' && <><Printer className="h-3 w-3" /> Terminal POS</>}
                     </span>
-                    <span className="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-orange-50 text-[#D1400F] dark:bg-orange-500/10">
+                    <span className="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-amber-50 text-yellow-700 dark:bg-amber-500/10">
                       {currentItem.role === 'admin' ? 'Admin' : currentItem.role === 'mesero' ? 'Mesero' : currentItem.role === 'cocina' ? 'Cocina' : 'POS Android'}
                     </span>
                   </div>
@@ -591,7 +591,7 @@ export function DeviceShowcaseSection() {
                           setAutoplayEnabled((prev) => !prev)
                           setIsPaused(false)
                         }}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-stone-200 bg-white px-3 py-1.5 text-xs font-semibold text-stone-600 transition-colors hover:border-orange-200 hover:text-[#D1400F] dark:border-white/15 dark:bg-[#0a0a0a] dark:text-zinc-300"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-stone-200 bg-white px-3 py-1.5 text-xs font-semibold text-stone-600 transition-colors hover:border-amber-200 hover:text-yellow-700 dark:border-white/15 dark:bg-[#0a0a0a] dark:text-zinc-300"
                       >
                         {autoplayEnabled ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
                         {autoplayEnabled ? (isPaused ? 'Pausado' : 'Activo') : 'Apagado'}
@@ -601,7 +601,7 @@ export function DeviceShowcaseSection() {
                     <div className="mt-3 h-2 overflow-hidden rounded-full bg-stone-200 dark:bg-[#161616]">
                       <div
                         className={cn(
-                          'h-full rounded-full bg-[#D1400F]',
+                          'h-full rounded-full bg-[#FACC15]',
                           autoplayEnabled && !isPaused ? 'opacity-100' : 'opacity-40',
                         )}
                         style={{
@@ -641,7 +641,7 @@ export function DeviceShowcaseSection() {
                       className={cn(
                         'h-2 rounded-full transition-all duration-300',
                         i === activeIdx
-                          ? 'w-10 bg-[#D1400F]'
+                          ? 'w-10 bg-[#FACC15]'
                           : 'w-2 bg-stone-300 hover:bg-stone-400 dark:bg-zinc-800 dark:hover:bg-zinc-700',
                       )}
                     />
@@ -657,7 +657,7 @@ export function DeviceShowcaseSection() {
                       className={cn(
                         'rounded-2xl border px-3 py-3 text-left transition-all duration-300',
                         i === activeIdx
-                          ? 'border-orange-200 bg-orange-50 shadow-sm dark:border-orange-500/30 dark:bg-orange-500/10'
+                          ? 'border-amber-200 bg-amber-50 shadow-sm dark:border-amber-500/30 dark:bg-amber-500/10'
                           : 'border-stone-200 bg-white hover:border-stone-300 dark:border-white/10 dark:bg-black/50 dark:hover:border-white/20',
                       )}
                     >
@@ -686,10 +686,10 @@ export function DeviceShowcaseSection() {
             return (
               <div
                 key={device}
-                className="group text-center rounded-2xl border border-stone-100 bg-white/80 p-5 backdrop-blur-sm hover:border-orange-200 hover:shadow-lg transition-all duration-300 dark:border-white/10 dark:bg-black/80 dark:hover:border-orange-500/30"
+                className="group text-center rounded-2xl border border-stone-100 bg-white/80 p-5 backdrop-blur-sm hover:border-amber-200 hover:shadow-lg transition-all duration-300 dark:border-white/10 dark:bg-black/80 dark:hover:border-amber-500/30"
               >
-                <div className="mx-auto mb-3 h-12 w-12 rounded-xl bg-orange-50 grid place-items-center group-hover:scale-110 transition-transform dark:bg-orange-500/10">
-                  <Icon className="h-6 w-6 text-[#D1400F]" />
+                <div className="mx-auto mb-3 h-12 w-12 rounded-xl bg-amber-50 grid place-items-center group-hover:scale-110 transition-transform dark:bg-amber-500/10">
+                  <Icon className="h-6 w-6 text-yellow-700 dark:text-yellow-400" />
                 </div>
                 <p className="font-heading font-bold text-stone-900 dark:text-white">{labels[device]}</p>
                 <p className="text-xs text-stone-500 mt-1 dark:text-zinc-400">{items.length} pantallas</p>
@@ -717,7 +717,7 @@ export function DeviceShowcaseSection() {
             
             {/* Texto y especificaciones */}
             <div className="lg:col-span-7 space-y-4 text-left">
-              <div className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1 text-xs font-bold text-[#D1400F] dark:bg-orange-500/10">
+              <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-yellow-700 dark:bg-amber-500/10 dark:text-yellow-400">
                 <span>Hardware Certificado</span>
               </div>
               <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-stone-900 dark:text-white">

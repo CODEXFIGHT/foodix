@@ -23,7 +23,7 @@ export function DeviceSummaryCards({
     { label: 'Online', value: summary.online, accent: 'text-emerald-400' },
     { label: 'Inactivos', value: summary.idle, accent: summary.idle > 0 ? 'text-amber-400' : undefined },
     { label: 'Offline', value: summary.offline, accent: summary.offline > 0 ? 'text-red-400' : undefined },
-    { label: 'Con error', value: summary.error, accent: summary.error > 0 ? 'text-orange-400' : undefined },
+    { label: 'Con error', value: summary.error, accent: summary.error > 0 ? 'text-yellow-500' : undefined },
   ]
 
   return (

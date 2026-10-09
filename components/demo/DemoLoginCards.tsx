@@ -39,8 +39,8 @@ const ROLES: RoleCard[] = [
     desc: 'Dashboard, menú y reportes',
     path: '/demo/admin',
     Icon: ShieldCheck,
-    accent: 'bg-[#D1400F]',
-    glow: 'hover:shadow-[#D1400F]/20',
+    accent: 'bg-[#FACC15]',
+    glow: 'hover:shadow-[#FACC15]/20',
   },
   {
     role: 'waiter',
@@ -78,11 +78,11 @@ export function DemoLoginCards() {
     <section className="relative overflow-hidden rounded-2xl bg-[#0a0a0a] p-5 text-white shadow-xl ring-1 ring-white/10 animate-fade-in-up sm:p-6">
       {/* Glow de marca */}
       <div
-        className="pointer-events-none absolute -left-12 -top-12 h-44 w-44 rounded-full bg-[#D1400F]/25 blur-3xl"
+        className="pointer-events-none absolute -left-12 -top-12 h-44 w-44 rounded-full bg-[#FACC15]/25 blur-3xl"
         aria-hidden
       />
       <div className="relative space-y-1.5">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#D1400F]/15 px-2.5 py-1 text-xs font-semibold text-[#F5A623]">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FACC15]/15 px-2.5 py-1 text-xs font-semibold text-yellow-700 dark:text-yellow-400">
           <Sparkles className="h-3.5 w-3.5" />
           Prueba FoodIX gratis
         </span>
@@ -120,7 +120,7 @@ export function DemoLoginCards() {
               <span className="block truncate text-sm font-semibold text-white">{r.label}</span>
               <span className="block truncate text-xs text-white/55">{r.desc}</span>
             </span>
-            <ArrowRight className="h-4 w-4 shrink-0 text-white/30 transition-all group-hover:translate-x-0.5 group-hover:text-[#F5A623]" />
+            <ArrowRight className="h-4 w-4 shrink-0 text-white/30 transition-all group-hover:translate-x-0.5 group-hover:text-[#FACC15]" />
           </button>
         ))}
       </div>

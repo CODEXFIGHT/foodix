@@ -67,13 +67,13 @@ export function LoginHelpModal({ isOpen, onClose }: { isOpen: boolean; onClose: 
 
             <ModalBody className="pb-2">
               <section className="space-y-3">
-                <h3 className="text-xs font-bold uppercase tracking-wide text-[#D1400F]">
+                <h3 className="text-xs font-bold uppercase tracking-wide text-yellow-700 dark:text-yellow-400">
                   No puedo iniciar sesión
                 </h3>
                 <div className="space-y-3">
                   {LOGIN_ISSUES.map((issue) => (
                     <div key={issue.title} className="flex gap-3">
-                      <div className="h-8 w-8 rounded-lg bg-[#D1400F]/10 text-[#D1400F] grid place-items-center shrink-0">
+                      <div className="h-8 w-8 rounded-lg bg-[#FACC15]/10 text-yellow-700 dark:text-yellow-400 grid place-items-center shrink-0">
                         <issue.icon className="h-4 w-4" />
                       </div>
                       <div className="space-y-0.5">
@@ -86,7 +86,7 @@ export function LoginHelpModal({ isOpen, onClose }: { isOpen: boolean; onClose: 
               </section>
 
               <section className="space-y-2 rounded-xl bg-stone-100 dark:bg-stone-900/40 p-4 mt-2">
-                <h3 className="text-xs font-bold uppercase tracking-wide text-[#D1400F] flex items-center gap-1.5">
+                <h3 className="text-xs font-bold uppercase tracking-wide text-yellow-700 dark:text-yellow-400 flex items-center gap-1.5">
                   <Sparkles className="h-3.5 w-3.5" /> ¿Cómo funciona FoodIX?
                 </h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">
@@ -97,13 +97,13 @@ export function LoginHelpModal({ isOpen, onClose }: { isOpen: boolean; onClose: 
               </section>
 
               <section className="space-y-2 pt-1 pb-3">
-                <h3 className="text-xs font-bold uppercase tracking-wide text-[#D1400F]">
+                <h3 className="text-xs font-bold uppercase tracking-wide text-yellow-700 dark:text-yellow-400">
                   ¿Sigue sin funcionar?
                 </h3>
                 <div className="flex flex-col gap-2">
                   <a
                     href={`mailto:${SUPPORT.email}`}
-                    className="flex items-center gap-2 text-sm hover:text-[#D1400F] transition-colors"
+                    className="flex items-center gap-2 text-sm hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors"
                   >
                     <Mail className="h-4 w-4 text-muted-foreground" /> {SUPPORT.email}
                   </a>
@@ -111,7 +111,7 @@ export function LoginHelpModal({ isOpen, onClose }: { isOpen: boolean; onClose: 
                     href={`https://wa.me/${SUPPORT.whatsapp.replace(/[^0-9]/g, '')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm hover:text-[#D1400F] transition-colors"
+                    className="flex items-center gap-2 text-sm hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors"
                   >
                     <MessageCircle className="h-4 w-4 text-muted-foreground" /> {SUPPORT.whatsapp}
                   </a>

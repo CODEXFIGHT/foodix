@@ -36,7 +36,7 @@ export function DemoSidebar({ role }: { role: DemoRole }) {
     cn(
       'flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all w-full',
       active
-        ? 'border-l-2 border-l-[#D1400F] bg-[#D1400F]/10 text-[#D1400F] font-semibold pl-[10px]'
+        ? 'border-l-2 border-l-[#FACC15] bg-[#FACC15]/10 text-yellow-400 font-semibold pl-[10px]'
         : 'text-stone-400 hover:bg-white/5 hover:text-stone-200 border-l-2 border-l-transparent',
       collapsed && 'justify-center px-2 border-l-0 pl-2',
     )
@@ -67,7 +67,7 @@ export function DemoSidebar({ role }: { role: DemoRole }) {
                   <Link href={demoHref} title={collapsed ? label : undefined} className={itemClasses(active)}>
                     {icon}
                     {!collapsed && <span>{label}</span>}
-                    {active && !collapsed && <span className="ml-auto w-1.5 h-1.5 rounded-full bg-[#D1400F]" />}
+                    {active && !collapsed && <span className="ml-auto w-1.5 h-1.5 rounded-full bg-[#FACC15]" />}
                   </Link>
                 </li>
               )
@@ -110,7 +110,7 @@ export function DemoSidebar({ role }: { role: DemoRole }) {
                     const active = sub.demoHref ? pathname === sub.demoHref : false
                     const cls = cn(
                       'flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-colors w-full',
-                      active ? 'bg-[#D1400F]/10 text-[#D1400F]' : 'text-stone-500 hover:text-stone-200 hover:bg-white/5',
+                      active ? 'bg-[#FACC15]/10 text-yellow-400' : 'text-stone-500 hover:text-stone-200 hover:bg-white/5',
                     )
                     return (
                       <li key={sub.href}>

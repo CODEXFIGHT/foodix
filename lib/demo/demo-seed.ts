@@ -14,7 +14,7 @@ import type {
 } from './demo-types'
 
 export const DEMO_USERS: DemoUser[] = [
-  { id: 'u-admin', name: 'Admin Demo', role: 'admin', avatarColor: '#D1400F' },
+  { id: 'u-admin', name: 'Admin Demo', role: 'admin', avatarColor: '#FACC15' },
   { id: 'u-waiter', name: 'Mesero Demo', role: 'waiter', avatarColor: '#2563EB' },
   { id: 'u-kitchen', name: 'Cocina Demo', role: 'kitchen', avatarColor: '#16A34A' },
   { id: 'u-menu', name: 'Cliente', role: 'menu', avatarColor: '#9333EA' },

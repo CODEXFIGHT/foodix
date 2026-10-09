@@ -20,7 +20,7 @@ export const SUBSCRIPTION_STATUS_BADGE: Record<SubscriptionState, string> = {
   trial:                 'bg-blue-500/10 text-blue-400',
   past_due:              'bg-yellow-500/10 text-yellow-400',
   payment_failed:        'bg-red-500/10 text-red-400',
-  pending_bank_transfer: 'bg-orange-500/10 text-orange-400',
+  pending_bank_transfer: 'bg-amber-500/10 text-yellow-500',
   bank_transfer_review:  'bg-purple-500/10 text-purple-400',
   suspended:             'bg-yellow-500/10 text-yellow-400',
   canceled:              'bg-slate-500/10 text-slate-400',
@@ -48,7 +48,7 @@ export const SUBSCRIPTION_MESSAGE: Record<SubscriptionState, string> = {
 export const PLAN_BADGE: Record<string, string> = {
   trial:         'bg-slate-500/10 text-slate-400',
   starter:       'bg-blue-500/10 text-blue-400',
-  pro:           'bg-orange-500/10 text-orange-400',
+  pro:           'bg-amber-500/10 text-yellow-500',
   ai:            'bg-purple-500/10 text-purple-400',
   multisucursal: 'bg-yellow-500/10 text-yellow-400',
 }

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#D1400F',
+  themeColor: '#FACC15',
 }
 
 export default function TicketLayout({ children }: { children: React.ReactNode }) {

@@ -48,7 +48,7 @@ function StepCard({
   return (
     <div className="flex gap-4">
       <div className="flex flex-col items-center gap-1">
-        <div className="h-7 w-7 rounded-full bg-[#D1400F]/20 border border-[#D1400F]/40 text-[#D1400F] text-xs font-bold grid place-items-center shrink-0">
+        <div className="h-7 w-7 rounded-full bg-[#FACC15]/20 border border-[#EAB308]/40 text-yellow-400 text-xs font-bold grid place-items-center shrink-0">
           {step}
         </div>
         <div className="flex-1 w-px bg-white/5" />
@@ -64,7 +64,7 @@ function StepCard({
 function EnvRow({ name, desc }: { name: string; desc: string }) {
   return (
     <div className="flex flex-col sm:flex-row sm:items-center gap-1 py-2 border-b border-white/5 last:border-0">
-      <code className="text-xs bg-white/5 text-orange-300 rounded px-2 py-0.5 shrink-0">{name}</code>
+      <code className="text-xs bg-white/5 text-yellow-400 rounded px-2 py-0.5 shrink-0">{name}</code>
       <span className="text-xs text-neutral-500 sm:ml-3">{desc}</span>
     </div>
   )
@@ -124,7 +124,7 @@ export default function WhatsAppConfigPage() {
         <CopyField label="URL del Webhook (pegar en Wati)" value={`${typeof window !== 'undefined' ? window.location.origin : 'https://TU-DOMINIO.com'}/api/whatsapp/webhook`} />
         <p className="text-xs text-neutral-500">
           En Wati: <span className="text-neutral-300">Settings → Webhook URL</span> → pega esta URL y guarda.
-          El token de verificación es el valor de <code className="text-orange-300 text-[11px]">WATI_WEBHOOK_TOKEN</code> en tus variables de entorno.
+          El token de verificación es el valor de <code className="text-yellow-400 text-[11px]">WATI_WEBHOOK_TOKEN</code> en tus variables de entorno.
         </p>
         <Button
           size="sm"
@@ -215,8 +215,8 @@ export default function WhatsAppConfigPage() {
           <StepCard step={2} title="Obtén tus credenciales de Meta">
             <p>En el panel de tu app de Meta Developers:</p>
             <ul className="list-disc pl-4 space-y-1">
-              <li><span className="text-neutral-200">WhatsApp → Configuración</span> → copia el <span className="text-neutral-200">Phone Number ID</span> → <code className="text-orange-300 text-[11px]">WA_PHONE_NUMBER_ID</code></li>
-              <li><span className="text-neutral-200">WhatsApp → Configuración</span> → genera un <span className="text-neutral-200">Token de acceso permanente</span> → <code className="text-orange-300 text-[11px]">WA_ACCESS_TOKEN</code></li>
+              <li><span className="text-neutral-200">WhatsApp → Configuración</span> → copia el <span className="text-neutral-200">Phone Number ID</span> → <code className="text-yellow-400 text-[11px]">WA_PHONE_NUMBER_ID</code></li>
+              <li><span className="text-neutral-200">WhatsApp → Configuración</span> → genera un <span className="text-neutral-200">Token de acceso permanente</span> → <code className="text-yellow-400 text-[11px]">WA_ACCESS_TOKEN</code></li>
             </ul>
           </StepCard>
 
@@ -224,13 +224,13 @@ export default function WhatsAppConfigPage() {
             <p>En <span className="text-neutral-200">WhatsApp → Configuración → Webhooks</span>:</p>
             <ul className="list-disc pl-4 space-y-1">
               <li><span className="text-neutral-200">URL de devolución de llamada</span> → la URL del webhook de arriba</li>
-              <li><span className="text-neutral-200">Token de verificación</span> → el valor que definas en <code className="text-orange-300 text-[11px]">WA_WEBHOOK_TOKEN</code></li>
-              <li>Suscríbete a los eventos: <code className="text-orange-300 text-[11px]">messages</code></li>
+              <li><span className="text-neutral-200">Token de verificación</span> → el valor que definas en <code className="text-yellow-400 text-[11px]">WA_WEBHOOK_TOKEN</code></li>
+              <li>Suscríbete a los eventos: <code className="text-yellow-400 text-[11px]">messages</code></li>
             </ul>
           </StepCard>
 
           <StepCard step={4} title="Configura las variables de entorno">
-            <p>Agrega estas variables en tu <code className="text-orange-300 text-[11px]">.env.local</code> (desarrollo) y en Vercel (producción):</p>
+            <p>Agrega estas variables en tu <code className="text-yellow-400 text-[11px]">.env.local</code> (desarrollo) y en Vercel (producción):</p>
             <div className="mt-2 rounded-lg border border-white/10 bg-[#0a0a0a] divide-y divide-white/5 px-3">
               <EnvRow name="WA_PROVIDER" desc="Proveedor activo: 'meta' (gratis, recomendado) o 'wati'" />
               <EnvRow name="WA_WEBHOOK_TOKEN" desc="Token secreto que defines tú — lo pones en Meta o Wati para verificar el webhook" />
@@ -245,7 +245,7 @@ export default function WhatsAppConfigPage() {
 
           <StepCard step={5} title="Obtén el BACKEND_SERVICE_TOKEN">
             <p>Este token permite que el webhook cree pedidos en nombre de la sucursal sin una sesión de usuario.</p>
-            <p>Pídelo a tu equipo técnico o genéralo en el backend con un endpoint de tipo <code className="text-orange-300 text-[11px]">POST /service-tokens</code>.</p>
+            <p>Pídelo a tu equipo técnico o genéralo en el backend con un endpoint de tipo <code className="text-yellow-400 text-[11px]">POST /service-tokens</code>.</p>
           </StepCard>
 
           <StepCard step={6} title="Prueba el flujo completo">

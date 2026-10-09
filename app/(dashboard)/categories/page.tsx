@@ -42,7 +42,7 @@ export default function CategoriesPage() {
         title="Categorías"
         description={`${categories.length} categorías`}
         actions={
-          <Button asChild className="bg-[#D1400F] hover:bg-[#B03508]">
+          <Button asChild className="bg-[#FACC15] hover:bg-[#EAB308]">
             <Link href="/menu">
               <Plus className="h-4 w-4 mr-1.5" />
               Gestionar en Carta

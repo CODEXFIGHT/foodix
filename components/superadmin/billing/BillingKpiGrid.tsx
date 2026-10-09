@@ -57,12 +57,12 @@ export function BillingKpiGrid({ data, loading, onSelectBranch }: Props) {
         <Kpi icon={<CheckCircle2 />} label="Activos" value={kpis.active} accent="text-emerald-400" />
         <Kpi icon={<Clock />} label="Periodo de gracia" value={kpis.grace} accent="text-amber-400" />
         <Kpi icon={<AlertTriangle />} label="Por vencer" value={kpis.past_due} accent="text-yellow-400" />
-        <Kpi icon={<CalendarClock />} label="Vencen esta semana" value={kpis.due_this_week} accent="text-orange-400" />
+        <Kpi icon={<CalendarClock />} label="Vencen esta semana" value={kpis.due_this_week} accent="text-yellow-500" />
         <Kpi icon={<PauseCircle />} label="Suspendidos" value={kpis.suspended} accent="text-amber-400" />
         <Kpi icon={<CalendarCheck2 />} label="Pago adelantado" value={kpis.prepaid_clients} accent="text-blue-400" />
         <Kpi icon={<XCircle />} label="Cancelados" value={kpis.canceled} accent="text-neutral-400" />
         <Kpi icon={<AlertTriangle />} label="Expirados" value={kpis.expired} accent="text-red-400" />
-        <Kpi icon={<Banknote />} label="Pend. transferencia" value={kpis.pending_transfer} accent="text-orange-400" />
+        <Kpi icon={<Banknote />} label="Pend. transferencia" value={kpis.pending_transfer} accent="text-yellow-500" />
         <Kpi icon={<Clock />} label="En prueba" value={kpis.trial} accent="text-blue-400" />
       </div>
 

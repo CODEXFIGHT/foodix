@@ -78,7 +78,7 @@ export function StationOrderCard({
             if (isCancelled) return 'bg-red-50 text-red-500'
             if (isDelivered) return 'bg-stone-100 text-stone-400'
             if (item.station_status === 'pending') return 'bg-blue-50 text-blue-500'
-            if (item.station_status === 'preparing') return 'bg-orange-50 text-orange-500'
+            if (item.station_status === 'preparing') return 'bg-amber-50 text-yellow-400'
             return 'bg-emerald-50 text-emerald-500 font-semibold' // ready
           }
 
@@ -147,7 +147,7 @@ export function StationOrderCard({
                   <button
                     onClick={() => onAction(item.order_item_id, 'ready', itemStation)}
                     disabled={isUpdating}
-                    className="flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-lg bg-orange-500 hover:bg-orange-600 py-3 text-sm font-bold text-white transition-all active:scale-95 disabled:opacity-50"
+                    className="flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-lg bg-amber-500 hover:bg-amber-600 py-3 text-sm font-bold text-stone-950 transition-all active:scale-95 disabled:opacity-50"
                   >
                     <CookingPot className="h-4 w-4" />
                     Marcar listo
@@ -167,7 +167,7 @@ export function StationOrderCard({
                   <button
                     onClick={() => onAction(item.order_item_id, 'ready', itemStation)}
                     disabled={isUpdating}
-                    className="flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-lg bg-orange-500 hover:bg-orange-600 py-3 text-sm font-bold text-white transition-all active:scale-95 disabled:opacity-50"
+                    className="flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-lg bg-amber-500 hover:bg-amber-600 py-3 text-sm font-bold text-stone-950 transition-all active:scale-95 disabled:opacity-50"
                   >
                     <CookingPot className="h-4 w-4" />
                     Marcar listo

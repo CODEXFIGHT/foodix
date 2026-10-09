@@ -43,7 +43,7 @@ const FILTERS: { value: TrialFilter; label: string }[] = [
 const RISK_STYLE: Record<string, string> = {
   low:    'bg-emerald-500/10 text-emerald-400 border-emerald-500/25',
   medium: 'bg-amber-500/10 text-amber-400 border-amber-500/25',
-  high:   'bg-orange-500/10 text-orange-400 border-orange-500/25',
+  high:   'bg-amber-500/10 text-yellow-500 border-amber-500/25',
   block:  'bg-red-500/10 text-red-400 border-red-500/25',
 }
 

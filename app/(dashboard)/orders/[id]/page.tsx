@@ -231,7 +231,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
           <Button
             variant="outline"
             onClick={() => setSplitOpen(true)}
-            className="flex-1 min-w-[160px] h-12 text-base border-[#D1400F]/40 text-[#B03508] hover:bg-[#D1400F]/5"
+            className="flex-1 min-w-[160px] h-12 text-base border-[#EAB308]/40 text-yellow-800 dark:text-yellow-400 hover:bg-[#FACC15]/5"
           >
             <Split className="h-5 w-5 mr-1" />
             Dividir cuenta
@@ -266,7 +266,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
           <Button
             onClick={handleComplete}
             disabled={updateStatus.isPending}
-            className="flex-1 bg-[#D1400F] hover:bg-[#B03508]"
+            className="flex-1 bg-[#FACC15] hover:bg-[#EAB308]"
           >
             {updateStatus.isPending ? 'Completando…' : 'Completar pedido'}
           </Button>

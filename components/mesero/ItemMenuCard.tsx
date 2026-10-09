@@ -57,7 +57,7 @@ export function ItemMenuCard({ product, qtyInCart, onTap, onLongPress }: ItemMen
       className={cn(
         'relative flex min-h-[44px] items-center gap-3 rounded-2xl border p-3 text-left transition-colors touch-manipulation',
         available
-          ? 'border-stone-200 bg-white active:border-[#D1400F]/60 dark:border-stone-800 dark:bg-stone-950'
+          ? 'border-stone-200 bg-white active:border-[#CA8A04]/60 dark:border-stone-800 dark:bg-stone-950'
           : 'border-stone-200 bg-stone-50 opacity-60 dark:border-stone-800 dark:bg-stone-900',
       )}
     >
@@ -72,7 +72,7 @@ export function ItemMenuCard({ product, qtyInCart, onTap, onLongPress }: ItemMen
 
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-bold">{product.name}</p>
-        <p className="mt-0.5 text-sm font-extrabold text-[#D1400F]">{formatCurrency(product.price)}</p>
+        <p className="mt-0.5 text-sm font-extrabold text-yellow-700 dark:text-yellow-400">{formatCurrency(product.price)}</p>
         {(outOfStock || lowStock) && (
           <Chip
             size="sm"
@@ -86,7 +86,7 @@ export function ItemMenuCard({ product, qtyInCart, onTap, onLongPress }: ItemMen
       </div>
 
       {qtyInCart > 0 ? (
-        <Chip size="sm" className="h-8 w-8 shrink-0 bg-[#D1400F] text-sm font-bold text-white" classNames={{ content: 'px-0 w-full text-center' }}>
+        <Chip size="sm" className="h-8 w-8 shrink-0 bg-[#FACC15] text-sm font-bold text-stone-950" classNames={{ content: 'px-0 w-full text-center' }}>
           {qtyInCart}
         </Chip>
       ) : available ? (

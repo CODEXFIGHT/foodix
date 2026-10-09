@@ -79,7 +79,7 @@ export function TransferenciasTab({ branchId }: { branchId: number | null }) {
   return (
     <div className="space-y-3">
       <div className="flex justify-end">
-        <Button onClick={openNew} size="sm" className="bg-[#D1400F] hover:bg-[#B03508]"
+        <Button onClick={openNew} size="sm" className="bg-[#FACC15] hover:bg-[#EAB308]"
           disabled={warehouses.length < 2 || inventory.length === 0}>
           <Plus className="h-4 w-4 mr-1" /> Nueva transferencia
         </Button>
@@ -171,7 +171,7 @@ export function TransferenciasTab({ branchId }: { branchId: number | null }) {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setOpen(false)}>Cancelar</Button>
-            <Button onClick={handleCreate} disabled={create.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">Crear transferencia</Button>
+            <Button onClick={handleCreate} disabled={create.isPending} className="bg-[#FACC15] hover:bg-[#EAB308]">Crear transferencia</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

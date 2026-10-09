@@ -149,20 +149,20 @@ export function RestaurosRealExperienceSection({ supportWhatsapp }: { supportWha
     >
       <div id="operacion-real" className="scroll-mt-24" />
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-8 h-64 w-64 -translate-x-[58%] rounded-full bg-[#D1400F]/8 blur-3xl dark:bg-[#D1400F]/10" />
+        <div className="absolute left-1/2 top-8 h-64 w-64 -translate-x-[58%] rounded-full bg-[#FACC15]/8 blur-3xl dark:bg-[#FACC15]/10" />
         <div className="absolute -right-10 bottom-4 h-72 w-72 rounded-full bg-stone-200/40 blur-3xl dark:bg-white/5" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-5">
         <div className="relative overflow-hidden rounded-[32px] border border-stone-200/80 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04),0_24px_60px_-24px_rgba(0,0,0,0.14)] dark:border-white/10 dark:bg-[#0a0a0a] dark:shadow-[0_28px_70px_rgba(0,0,0,0.4)]">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(209,64,15,0.05),transparent_55%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(209,64,15,0.08),transparent_55%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.05),transparent_55%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.08),transparent_55%)]" />
           <div className="absolute inset-x-0 top-0 h-px bg-black/5 dark:bg-white/10" />
 
           <div className="relative px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12">
             <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-14">
               <div className={cn('max-w-xl', animate && 'transition-all duration-700 ease-out', visibleClass)}>
-                <span className="inline-flex items-center gap-2 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-xs font-semibold text-[#D1400F] dark:border-orange-500/20 dark:bg-orange-500/10 dark:text-orange-200">
-                  <span className="h-2 w-2 rounded-full bg-[#D1400F]" />
+                <span className="inline-flex items-center gap-2 rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-yellow-700 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-yellow-300">
+                  <span className="h-2 w-2 rounded-full bg-[#FACC15]" />
                   Operacion real en punto de venta
                 </span>
 
@@ -196,7 +196,7 @@ export function RestaurosRealExperienceSection({ supportWhatsapp }: { supportWha
                       )}
                       style={animate ? { transitionDelay: `${160 + index * 90}ms` } : undefined}
                     >
-                      <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#D1400F]/10 text-[#D1400F] ring-1 ring-orange-200/70 dark:bg-[#D1400F]/15 dark:ring-orange-500/20">
+                      <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#FACC15]/10 text-yellow-700 dark:text-yellow-400 ring-1 ring-amber-200/70 dark:bg-[#FACC15]/15 dark:ring-amber-500/20">
                         <Check className="h-3.5 w-3.5" />
                       </span>
                       {point}
@@ -207,7 +207,7 @@ export function RestaurosRealExperienceSection({ supportWhatsapp }: { supportWha
                 <div className={cn('mt-7 flex flex-wrap gap-3', animate && 'transition-all duration-700 ease-out', visibleClass)} style={animate ? { transitionDelay: '320ms' } : undefined}>
                   <a
                     href="#demo"
-                    className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-[#D1400F] px-6 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#B03508] hover:shadow-md active:scale-95"
+                    className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-[#FACC15] px-6 text-sm font-semibold text-stone-950 shadow-sm transition-all hover:bg-[#EAB308] hover:shadow-md active:scale-95"
                   >
                     <PlayCircle className="h-4 w-4" />
                     Ver demo
@@ -232,7 +232,7 @@ export function RestaurosRealExperienceSection({ supportWhatsapp }: { supportWha
                 )}
                 style={animate ? { transitionDelay: '160ms' } : undefined}
               >
-                <div className="absolute inset-x-4 top-8 h-48 rounded-full bg-[#D1400F]/15 blur-3xl dark:bg-[#D1400F]/16" ref={glowRef} />
+                <div className="absolute inset-x-4 top-8 h-48 rounded-full bg-[#FACC15]/15 blur-3xl dark:bg-[#FACC15]/16" ref={glowRef} />
                 <div
                   ref={imageCardRef}
                   className="relative mx-auto w-full max-w-[760px] rounded-[28px] border border-stone-200 bg-white p-2 shadow-[0_1px_3px_rgba(0,0,0,0.05),0_30px_60px_-24px_rgba(0,0,0,0.28)] will-change-transform dark:border-white/10 dark:bg-white/[0.03] dark:shadow-[0_30px_70px_rgba(0,0,0,0.45)]"
@@ -274,7 +274,7 @@ export function RestaurosRealExperienceSection({ supportWhatsapp }: { supportWha
                 <article
                   key={testimonial.business}
                   className={cn(
-                    'group rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-stone-300 hover:shadow-md dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:border-orange-500/25 dark:hover:bg-white/7',
+                    'group rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-stone-300 hover:shadow-md dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:border-amber-500/25 dark:hover:bg-white/7',
                     animate && 'duration-500 ease-out',
                     isVisible || !animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
                   )}

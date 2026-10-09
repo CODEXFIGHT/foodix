@@ -27,11 +27,11 @@ function DemoEndedNotice() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="w-[calc(100%-1.5rem)] overflow-hidden rounded-2xl border-white/10 bg-[#0a0a0a] text-white sm:max-w-sm">
         <div
-          className="pointer-events-none absolute -right-10 -top-12 h-36 w-36 rounded-full bg-[#D1400F]/30 blur-3xl"
+          className="pointer-events-none absolute -right-10 -top-12 h-36 w-36 rounded-full bg-[#FACC15]/30 blur-3xl"
           aria-hidden
         />
         <DialogHeader>
-          <div className="mx-auto mb-2 grid h-12 w-12 place-items-center rounded-2xl bg-[#D1400F]/15 text-[#F5A623]">
+          <div className="mx-auto mb-2 grid h-12 w-12 place-items-center rounded-2xl bg-[#FACC15]/15 text-yellow-700 dark:text-yellow-400">
             <Clock className="h-6 w-6" />
           </div>
           <DialogTitle className="text-center text-lg font-bold text-white">
@@ -44,7 +44,7 @@ function DemoEndedNotice() {
         </p>
         <Button
           onClick={() => setOpen(false)}
-          className="mt-2 w-full bg-[#D1400F] text-white transition-all hover:bg-[#B03508] active:scale-95"
+          className="mt-2 w-full bg-[#FACC15] text-stone-950 transition-all hover:bg-[#EAB308] active:scale-95"
         >
           Iniciar una nueva prueba
         </Button>
@@ -60,12 +60,12 @@ export default function DemoLoginPage() {
         {/* Marca */}
         <div className="space-y-2 text-center animate-scale-in">
           <div className="mx-auto flex h-16 items-center justify-center">
-            <div className="grid h-16 w-16 place-items-center rounded-2xl border border-stone-100/10 bg-[#D1400F] font-heading text-4xl font-bold text-white shadow-sm">
+            <div className="grid h-16 w-16 place-items-center rounded-2xl border border-stone-100/10 bg-[#FACC15] font-heading text-4xl font-bold text-stone-950 shadow-sm">
               R
             </div>
           </div>
           <h1 className="font-heading text-3xl font-bold">
-            Food<span className="text-[#D1400F]">IX</span><sup className="align-super text-[0.55em]">©</sup>
+            Food<span className="text-yellow-700 dark:text-yellow-400">IX</span><sup className="align-super text-[0.55em]">©</sup>
           </h1>
           <p className="text-sm text-muted-foreground">Tu restaurante, en orden</p>
         </div>
@@ -75,7 +75,7 @@ export default function DemoLoginPage() {
         <div className="text-center">
           <Link
             href="/login"
-            className="text-sm font-medium text-stone-500 transition-colors hover:text-[#D1400F]"
+            className="text-sm font-medium text-stone-500 transition-colors hover:text-yellow-700 dark:hover:text-yellow-400"
           >
             ¿Ya tienes cuenta? Inicia sesión real →
           </Link>

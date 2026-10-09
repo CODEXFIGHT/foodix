@@ -31,7 +31,7 @@ export function StationSyncIndicator({ lastUpdated, isError, station }: StationS
 
   if (secondsAgo > 15) {
     return (
-      <div className="fixed bottom-0 inset-x-0 h-8 bg-orange-900/90 flex items-center justify-center text-xs text-orange-300 font-semibold">
+      <div className="fixed bottom-0 inset-x-0 h-8 bg-amber-900/90 flex items-center justify-center text-xs text-yellow-400 font-semibold">
         ⚠ Verificando conexión… ({secondsAgo}s sin actualización)
       </div>
     )

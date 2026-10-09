@@ -22,7 +22,7 @@ const STATUS_BADGE: Record<string, string> = {
   rejected:             'bg-red-400/15 text-red-300',
   failed:               'bg-red-400/15 text-red-300',
   bank_transfer_review: 'bg-amber-400/15 text-amber-300',
-  pending_bank_transfer:'bg-orange-400/15 text-orange-300',
+  pending_bank_transfer:'bg-amber-400/15 text-yellow-400',
   pending:              'bg-amber-400/15 text-amber-300',
 }
 

@@ -43,7 +43,7 @@ function Section({ id, title, children }: { id: string; title: string; children:
   return (
     <section id={id} className="scroll-mt-24 mb-14">
       <div className="flex items-center gap-3 mb-6">
-        <span className="h-2 w-2 rounded-full bg-[#D1400F] shrink-0" />
+        <span className="h-2 w-2 rounded-full bg-[#FACC15] shrink-0" />
         <h2 className="text-xl sm:text-2xl font-extrabold text-stone-900 tracking-tight">
           {title}
         </h2>
@@ -85,7 +85,7 @@ function RoleBadge({ role, color }: { role: string; color: string }) {
 function Step({ n, children }: { n: number; children: React.ReactNode }) {
   return (
     <div className="flex gap-3 items-start">
-      <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#D1400F] text-white text-sm font-bold flex items-center justify-center shadow-sm shadow-[#D1400F]/30">
+      <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#FACC15] text-stone-950 text-sm font-bold flex items-center justify-center shadow-sm shadow-[#FACC15]/30">
         {n}
       </span>
       <p className="pt-0.5">{children}</p>
@@ -110,11 +110,11 @@ export default function ManualPage() {
               className="rounded-lg flex-shrink-0 shadow-sm"
             />
             <span className="inline-block font-bold text-lg animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-              Food<span className="text-[#D1400F]">IX</span><sup className="text-[0.55em] align-super">©</sup>
+              Food<span className="text-yellow-700 dark:text-yellow-400">IX</span><sup className="text-[0.55em] align-super">©</sup>
             </span>
             <span className="text-stone-400 text-sm hidden sm:block truncate">/ Manual de usuario</span>
           </div>
-          <Link href="/login" className="shrink-0 text-sm bg-[#D1400F] hover:bg-[#B03508] active:scale-95 px-4 py-1.5 rounded-lg font-semibold transition-all">
+          <Link href="/login" className="shrink-0 text-sm bg-[#FACC15] hover:bg-[#EAB308] active:scale-95 px-4 py-1.5 rounded-lg font-semibold transition-all">
             Ir al sistema →
           </Link>
         </div>
@@ -130,7 +130,7 @@ export default function ManualPage() {
                 <a
                   key={item.id}
                   href={`#${item.id}`}
-                  className="block rounded-lg px-2 py-1.5 text-sm text-stone-600 hover:bg-[#D1400F]/8 hover:text-[#D1400F] transition-colors"
+                  className="block rounded-lg px-2 py-1.5 text-sm text-stone-600 hover:bg-[#FACC15]/8 hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors"
                 >
                   {item.label}
                 </a>
@@ -142,7 +142,7 @@ export default function ManualPage() {
         {/* Content */}
         <main className="flex-1 max-w-3xl">
           {/* Hero */}
-          <div className="relative overflow-hidden bg-gradient-to-br from-[#D1400F] to-[#B03508] text-white rounded-3xl p-8 mb-10 shadow-xl shadow-orange-900/10 animate-fade-in-up">
+          <div className="relative overflow-hidden bg-gradient-to-br from-[#FACC15] to-[#EAB308] text-white rounded-3xl p-8 mb-10 shadow-xl shadow-amber-900/10 animate-fade-in-up">
             <div
               className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10"
               aria-hidden="true"
@@ -151,7 +151,7 @@ export default function ManualPage() {
               FoodIX · v{APP_VERSION}
             </span>
             <h1 className="relative text-3xl sm:text-4xl font-extrabold mb-2 tracking-tight">Manual de Usuario</h1>
-            <p className="relative text-orange-100 text-base sm:text-lg max-w-xl">
+            <p className="relative text-yellow-200 text-base sm:text-lg max-w-xl">
               Guía completa de la plataforma de gestión integral para restaurantes, cafeterías y taquerías
             </p>
           </div>
@@ -193,7 +193,7 @@ export default function ManualPage() {
             <div className="space-y-3">
               {[
                 {
-                  role: 'Administrador', color: '#D1400F', icon: ICONS8.adminAvatar,
+                  role: 'Administrador', color: '#FACC15', icon: ICONS8.adminAvatar,
                   desc: 'Acceso completo a la sucursal: pedidos, mesas, menú, ventas y configuración.',
                   puede: ['Ver dashboard con métricas del día', 'Crear, editar y eliminar productos y categorías', 'Ver reportes de ventas', 'Gestionar la configuración del negocio', 'Ver pedidos de todos los meseros', 'Compartir la Carta QR / enlace digital con el comensal'],
                 },
@@ -203,7 +203,7 @@ export default function ManualPage() {
                   puede: ['Ver y crear pedidos y cobrar', 'Ver el estado de las mesas', 'Gestionar domicilios y reservaciones', 'Consultar clientes', 'Operar la caja del turno', 'Mostrar la Carta QR al comensal (escanear o compartir enlace)'],
                 },
                 {
-                  role: 'Cocina', color: '#f59e0b', icon: ICONS8.cocinaAvatar,
+                  role: 'Cocina', color: '#FACC15', icon: ICONS8.cocinaAvatar,
                   desc: 'Ve los pedidos entrantes y actualiza su estado de preparación. Solo accede a las pantallas de cocina.',
                   puede: ['Ver pedidos en tiempo real', 'Marcar ítems como "Preparando" y "Listo"', 'Ver solo la estación que tenga asignada (caliente, fría o ambas)'],
                 },
@@ -244,7 +244,7 @@ export default function ManualPage() {
                 </p>
               </div>
               <div className="bg-white border rounded-xl p-4 shadow-sm">
-                <p className="font-bold text-sm text-[#D1400F] mb-1">⚡ Acceso Rápido (Meseros y Cocina)</p>
+                <p className="font-bold text-sm text-yellow-700 dark:text-yellow-400 mb-1">⚡ Acceso Rápido (Meseros y Cocina)</p>
                 <p className="text-xs text-stone-600 leading-relaxed">
                   Los empleados de piso y cocina inician sesión seleccionando su nombre e ingresando su <strong>PIN de 4 a 6 dígitos</strong> desde la pantalla de <strong>Acceso por PIN</strong>.
                 </p>
@@ -466,8 +466,8 @@ export default function ManualPage() {
             <h3 className="font-bold text-stone-900 mt-5 mb-2">Estados de un pedido</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
               {[
-                { status: 'Pendiente',    color: '#f59e0b', desc: 'Recién creado, esperando inicio en cocina' },
-                { status: 'Preparando',   color: '#D1400F', desc: 'Cocina inició la preparación' },
+                { status: 'Pendiente',    color: '#FACC15', desc: 'Recién creado, esperando inicio en cocina' },
+                { status: 'Preparando',   color: '#FACC15', desc: 'Cocina inició la preparación' },
                 { status: 'Listo',        color: '#3b82f6', desc: 'Preparación terminada, listo para entregar' },
                 { status: 'Entregado',    color: '#8b5cf6', desc: 'Mesero lo llevó a la mesa' },
                 { status: 'Completado',   color: '#16a34a', desc: 'Pedido finalizado, mesa liberada' },
@@ -1105,11 +1105,11 @@ export default function ManualPage() {
               {[
                 { status: 'Activa',                color: '#16a34a', desc: 'Al corriente, acceso total' },
                 { status: 'Prueba',                color: '#3b82f6', desc: 'Periodo de prueba vigente' },
-                { status: 'Por vencer',            color: '#f59e0b', desc: 'Acceso con aviso de renovación' },
+                { status: 'Por vencer',            color: '#FACC15', desc: 'Acceso con aviso de renovación' },
                 { status: 'Pago fallido',          color: '#dc2626', desc: 'Falló el cobro con tarjeta' },
-                { status: 'Transf. pendiente',     color: '#ea580c', desc: 'Esperando tu transferencia' },
+                { status: 'Transf. pendiente',     color: '#FACC15', desc: 'Esperando tu transferencia' },
                 { status: 'En revisión',           color: '#7c3aed', desc: 'Transferencia reportada, en revisión' },
-                { status: 'Suspendida',            color: '#f59e0b', desc: 'Acceso bloqueado temporalmente' },
+                { status: 'Suspendida',            color: '#FACC15', desc: 'Acceso bloqueado temporalmente' },
                 { status: 'Cancelada',             color: '#64748b', desc: 'No renovará al final del periodo' },
                 { status: 'Vencida',               color: '#dc2626', desc: 'Venció sin pago' },
               ].map(s => (
@@ -1272,7 +1272,7 @@ export default function ManualPage() {
                 },
               ].map(({ q, a }) => (
                 <details key={q} className="bg-white border rounded-xl shadow-sm group">
-                  <summary className="px-4 py-3 font-semibold text-stone-900 cursor-pointer hover:text-[#D1400F] transition-colors list-none flex items-center justify-between">
+                  <summary className="px-4 py-3 font-semibold text-stone-900 cursor-pointer hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors list-none flex items-center justify-between">
                     {q}
                     <span className="text-stone-400 group-open:rotate-180 transition-transform">▼</span>
                   </summary>
@@ -1286,7 +1286,7 @@ export default function ManualPage() {
           <div className="mt-12 pt-8 border-t text-center">
             <p className="text-stone-400 text-sm">
               ¿Necesitas más ayuda? Contáctanos en{' '}
-              <a href="mailto:restauros@atomicmail.io" className="text-[#D1400F] hover:underline">
+              <a href="mailto:restauros@atomicmail.io" className="text-yellow-700 dark:text-yellow-400 hover:underline">
                 restauros@atomicmail.io
               </a>
             </p>

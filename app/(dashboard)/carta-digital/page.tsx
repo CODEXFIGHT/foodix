@@ -74,7 +74,7 @@ export default function CartaDigitalPage() {
         {/* ── QR Card ── */}
         <div className="bg-card rounded-2xl border shadow-sm overflow-hidden animate-fade-in-up">
           {/* orange header */}
-          <div className="bg-[#D1400F] px-5 py-4 text-white text-center">
+          <div className="bg-[#FACC15] px-5 py-4 text-stone-950 text-center">
             <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm">
               <Icons8Image src={ICONS8.carta} alt="Menú por categorías" size={34} />
             </div>

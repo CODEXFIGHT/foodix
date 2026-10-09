@@ -34,7 +34,7 @@ export interface MenuCategory {
 // ── Shared configs exported for modal ──────────────────────────────────────
 
 export const BADGE_CONFIG: Record<BadgeType, { label: string; bg: string }> = {
-  Popular:      { label: 'Popular',      bg: 'bg-[#D1400F] text-white' },
+  Popular:      { label: 'Popular',      bg: 'bg-[#FACC15] text-stone-950' },
   Nuevo:        { label: 'Nuevo',        bg: 'bg-emerald-500 text-white' },
   Recomendado:  { label: 'Recomendado',  bg: 'bg-amber-500 text-white' },
   Especialidad: { label: 'Especialidad', bg: 'bg-purple-600 text-white' },
@@ -47,7 +47,7 @@ export const ALLERGEN_CONFIG: Record<string, { emoji: string; className: string 
   Huevo:      { emoji: '🥚', className: 'bg-yellow-50 text-yellow-700 border-yellow-200' },
   Pescado:    { emoji: '🐟', className: 'bg-cyan-50 text-cyan-700 border-cyan-200' },
   Mariscos:   { emoji: '🦐', className: 'bg-red-50 text-red-700 border-red-200' },
-  Cacahuates: { emoji: '🥜', className: 'bg-orange-50 text-orange-700 border-orange-200' },
+  Cacahuates: { emoji: '🥜', className: 'bg-amber-50 text-yellow-800 border-amber-200' },
   Nueces:     { emoji: '🌰', className: 'bg-stone-100 text-stone-700 border-stone-300' },
   Soya:       { emoji: '🫘', className: 'bg-green-50 text-green-700 border-green-200' },
   Apio:       { emoji: '🌿', className: 'bg-emerald-50 text-emerald-700 border-emerald-200' },

@@ -39,7 +39,7 @@ interface RoleMeta {
 }
 
 const ROLE_META: Partial<Record<DemoRole, RoleMeta>> = {
-  admin: { label: 'Admin Demo', Icon: ShieldCheck, accent: 'bg-[#D1400F]' },
+  admin: { label: 'Admin Demo', Icon: ShieldCheck, accent: 'bg-[#FACC15]' },
   waiter: { label: 'Mesero Demo', Icon: ConciergeBell, accent: 'bg-blue-600' },
   kitchen: { label: 'Cocina Demo', Icon: ChefHat, accent: 'bg-green-600' },
 }
@@ -74,7 +74,7 @@ export function DemoStartModal({ open, role, busy, onConfirm, onCancel }: Props)
       >
         {/* Glow naranja de marca */}
         <div
-          className="pointer-events-none absolute -right-10 -top-12 h-40 w-40 rounded-full bg-[#D1400F]/30 blur-3xl"
+          className="pointer-events-none absolute -right-10 -top-12 h-40 w-40 rounded-full bg-[#FACC15]/30 blur-3xl"
           aria-hidden
         />
 
@@ -84,7 +84,7 @@ export function DemoStartModal({ open, role, busy, onConfirm, onCancel }: Props)
               <meta.Icon className="h-5 w-5" />
             </div>
             <div className="min-w-0">
-              <p className="truncate text-xs font-medium uppercase tracking-wide text-[#F5A623]">
+              <p className="truncate text-xs font-medium uppercase tracking-wide text-yellow-700 dark:text-yellow-400">
                 {meta.label}
               </p>
               <DialogTitle className="text-left text-base font-bold text-white sm:text-lg">
@@ -104,7 +104,7 @@ export function DemoStartModal({ open, role, busy, onConfirm, onCancel }: Props)
               key={i}
               className="flex items-start gap-3 rounded-xl bg-white/[0.04] px-3 py-2.5 ring-1 ring-white/5"
             >
-              <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-[#D1400F]/15 text-[#F5A623]">
+              <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-[#FACC15]/15 text-yellow-700 dark:text-yellow-400">
                 <Icon className="h-4 w-4" />
               </span>
               <span className="text-sm leading-snug text-white/85">{text}</span>
@@ -124,7 +124,7 @@ export function DemoStartModal({ open, role, busy, onConfirm, onCancel }: Props)
           <Button
             onClick={onConfirm}
             disabled={busy}
-            className="w-full bg-[#D1400F] text-white shadow-lg shadow-[#D1400F]/20 transition-all hover:bg-[#B03508] active:scale-95 sm:w-auto"
+            className="w-full bg-[#FACC15] text-stone-950 shadow-lg shadow-[#FACC15]/20 transition-all hover:bg-[#EAB308] active:scale-95 sm:w-auto"
           >
             <Rocket className="h-4 w-4" />
             {busy ? 'Iniciando…' : 'Comenzar prueba'}

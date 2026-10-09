@@ -49,7 +49,7 @@ const AI_AGENTS = [
     tagline: 'Optimización de insumos, costos de platillos y mermas',
     icon: PieChart,
     badge: 'Costos & Rentabilidad',
-    color: '#D1400F',
+    color: '#FACC15',
     desc: 'Supervisa el costo real de cada platillo ingrediente por ingrediente. Detecta desviaciones de inventario, sugiere ajustes de precio y predice compras para evitar faltantes o mermas.',
     features: [
       'Cálculo de escandallo automático por receta',
@@ -72,11 +72,11 @@ export function AiAgentsSection() {
     <section id="agentes-ia" className="py-20 bg-stone-900 text-white dark:bg-black border-y border-stone-800 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-5">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D1400F]/20 border border-[#D1400F]/40 text-[#D1400F] text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FACC15]/20 border border-[#EAB308]/40 text-yellow-400 text-xs font-bold uppercase tracking-wider mb-4">
             <Bot className="w-4 h-4" /> Empleados Virtuales FoodIX
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white tracking-tight">
-            Inteligencia Artificial trabajando en tu restaurante <span className="text-[#D1400F]">24/7</span>
+            Inteligencia Artificial trabajando en tu restaurante <span className="text-yellow-400">24/7</span>
           </h2>
           <p className="mt-4 text-stone-300 text-base sm:text-lg">
             Agentes virtuales especializados que automatizan ventas por WhatsApp, agendan reservas y optimizan los costos de tus platillos.
@@ -96,7 +96,7 @@ export function AiAgentsSection() {
                 className={cn(
                   'flex items-center gap-2.5 px-5 py-3 rounded-2xl font-bold text-sm transition-all duration-300 shrink-0 border',
                   isActive
-                    ? 'bg-[#D1400F] text-white border-[#D1400F] shadow-lg shadow-[#D1400F]/25 scale-105'
+                    ? 'bg-[#FACC15] text-stone-950 border-[#EAB308] shadow-lg shadow-[#FACC15]/25 scale-105'
                     : 'bg-stone-800/80 text-stone-400 border-stone-700 hover:border-stone-600 hover:text-white'
                 )}
               >
@@ -113,7 +113,10 @@ export function AiAgentsSection() {
           <div className="lg:col-span-7 space-y-6">
             <div className="flex items-center gap-3">
               <span
-                className="px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wider"
+                /* Texto carbón sobre el color del agente: son tonos brillantes
+                   (#25D366 verde, #3B82F6 azul, #FACC15 ámbar) y el blanco no
+                   alcanza contraste AA sobre ninguno. */
+                className="px-3 py-1 rounded-full text-xs font-bold text-stone-950 uppercase tracking-wider"
                 style={{ backgroundColor: currentAgent.color }}
               >
                 {currentAgent.badge}
@@ -142,7 +145,7 @@ export function AiAgentsSection() {
             <div className="pt-4">
               <a
                 href="#precios"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-white bg-[#D1400F] hover:bg-[#B03508] transition-all shadow-md active:scale-95"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-stone-950 bg-[#FACC15] hover:bg-[#EAB308] transition-all shadow-md active:scale-95"
               >
                 Activar Agente IA en tu plan <ArrowRight className="w-4 h-4" />
               </a>
@@ -153,7 +156,7 @@ export function AiAgentsSection() {
           <div className="lg:col-span-5 bg-stone-900 rounded-2xl border border-stone-700 p-5 space-y-4 shadow-inner">
             <div className="flex items-center justify-between border-b border-stone-800 pb-3">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-[#D1400F] flex items-center justify-center font-bold text-white text-xs">
+                <div className="w-8 h-8 rounded-full bg-[#FACC15] flex items-center justify-center font-bold text-stone-950 text-xs">
                   Sol
                 </div>
                 <div>
@@ -171,7 +174,7 @@ export function AiAgentsSection() {
               <div className="bg-stone-800 text-stone-200 p-3 rounded-2xl rounded-tl-none max-w-[85%] border border-stone-700/60">
                 <p className="font-medium">{currentAgent.demoBubble.user}</p>
               </div>
-              <div className="bg-[#D1400F]/20 text-stone-100 p-3 rounded-2xl rounded-tr-none ml-auto max-w-[85%] border border-[#D1400F]/30 shadow-sm">
+              <div className="bg-[#FACC15]/20 text-stone-100 p-3 rounded-2xl rounded-tr-none ml-auto max-w-[85%] border border-[#EAB308]/30 shadow-sm">
                 <p className="font-medium">{currentAgent.demoBubble.agent}</p>
               </div>
             </div>

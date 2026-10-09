@@ -32,7 +32,7 @@ export function BranchAddressTicker({ address }: BranchAddressTickerProps) {
 
   return (
     <div className="mt-0.5 flex min-w-0 items-center gap-1.5 text-stone-400" title={address}>
-      <MapPin className="h-3.5 w-3.5 shrink-0 text-[#D1400F]" aria-hidden="true" />
+      <MapPin className="h-3.5 w-3.5 shrink-0 text-yellow-700 dark:text-yellow-400" aria-hidden="true" />
       <div ref={viewportRef} className="min-w-0 max-w-[min(78vw,34rem)] overflow-hidden text-xs leading-5" aria-label={`Dirección: ${address}`}>
         {isOverflowing ? (
           <div className="address-ticker-track flex w-max gap-8 whitespace-nowrap" style={{ animationDuration: duration }}>

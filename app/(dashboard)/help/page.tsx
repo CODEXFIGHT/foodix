@@ -96,13 +96,13 @@ export default function HelpPage() {
       {/* Primeros pasos */}
       {!query && (
         <section className="space-y-3">
-          <h2 className="text-sm font-semibold flex items-center gap-2"><Rocket className="h-4 w-4 text-[#D1400F]" /> Primeros pasos</h2>
+          <h2 className="text-sm font-semibold flex items-center gap-2"><Rocket className="h-4 w-4 text-yellow-700 dark:text-yellow-400" /> Primeros pasos</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {FIRST_STEPS.map(s => (
               <Link key={s.href} href={s.href}>
-                <Card className="h-full transition-colors hover:border-[#D1400F]/40">
+                <Card className="h-full transition-colors hover:border-[#EAB308]/40">
                   <CardContent className="p-4">
-                    <s.icon className="h-5 w-5 text-[#D1400F]" />
+                    <s.icon className="h-5 w-5 text-yellow-700 dark:text-yellow-400" />
                     <p className="mt-2 text-sm font-medium">{s.label}</p>
                     <p className="text-xs text-muted-foreground">{s.desc}</p>
                   </CardContent>
@@ -115,7 +115,7 @@ export default function HelpPage() {
 
       {/* FAQ */}
       <section className="space-y-3">
-        <h2 className="text-sm font-semibold flex items-center gap-2"><LifeBuoy className="h-4 w-4 text-[#D1400F]" /> Preguntas frecuentes</h2>
+        <h2 className="text-sm font-semibold flex items-center gap-2"><LifeBuoy className="h-4 w-4 text-yellow-700 dark:text-yellow-400" /> Preguntas frecuentes</h2>
         {faqs.length === 0 ? (
           <p className="text-sm text-muted-foreground">No encontramos resultados para “{query}”. Prueba otras palabras o contacta a soporte.</p>
         ) : (
@@ -141,7 +141,7 @@ export default function HelpPage() {
 
       {/* Atajos */}
       <section className="space-y-3">
-        <h2 className="text-sm font-semibold flex items-center gap-2"><Keyboard className="h-4 w-4 text-[#D1400F]" /> Atajos del sistema</h2>
+        <h2 className="text-sm font-semibold flex items-center gap-2"><Keyboard className="h-4 w-4 text-yellow-700 dark:text-yellow-400" /> Atajos del sistema</h2>
         <div className="rounded-xl border overflow-hidden">
           {SHORTCUTS.map(s => (
             <div key={s.keys} className="flex items-center justify-between px-4 py-2.5 text-sm border-b last:border-0">
@@ -156,7 +156,7 @@ export default function HelpPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Card>
           <CardContent className="p-4 space-y-3">
-            <h2 className="text-sm font-semibold flex items-center gap-2"><Activity className="h-4 w-4 text-[#D1400F]" /> Estado del sistema</h2>
+            <h2 className="text-sm font-semibold flex items-center gap-2"><Activity className="h-4 w-4 text-yellow-700 dark:text-yellow-400" /> Estado del sistema</h2>
             <Row label="Versión instalada" value={APP_VERSION} />
             <Row label="Última actualización" value={APP_RELEASE_DATE} />
             <Row
@@ -169,19 +169,19 @@ export default function HelpPage() {
                 </span>
               }
             />
-            <Row label="Licencia" value={<Link href="/billing" className="text-[#D1400F] hover:underline">Ver en Mi Suscripción</Link>} />
+            <Row label="Licencia" value={<Link href="/billing" className="text-yellow-700 dark:text-yellow-400 hover:underline">Ver en Mi Suscripción</Link>} />
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4 space-y-3">
-            <h2 className="text-sm font-semibold flex items-center gap-2"><MessageCircle className="h-4 w-4 text-[#D1400F]" /> Contacto de soporte</h2>
+            <h2 className="text-sm font-semibold flex items-center gap-2"><MessageCircle className="h-4 w-4 text-yellow-700 dark:text-yellow-400" /> Contacto de soporte</h2>
             <p className="text-sm text-muted-foreground">¿No resolviste tu duda? Escríbenos y te ayudamos.</p>
-            <a href={`mailto:${SUPPORT.email}`} className="flex items-center gap-2 text-sm hover:text-[#D1400F] transition-colors">
+            <a href={`mailto:${SUPPORT.email}`} className="flex items-center gap-2 text-sm hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors">
               <Mail className="h-4 w-4 text-muted-foreground" /> {SUPPORT.email}
             </a>
             <a href={`https://wa.me/${SUPPORT.whatsapp.replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer"
-               className="flex items-center gap-2 text-sm hover:text-[#D1400F] transition-colors">
+               className="flex items-center gap-2 text-sm hover:text-yellow-700 dark:hover:text-yellow-400 transition-colors">
               <MessageCircle className="h-4 w-4 text-muted-foreground" /> {SUPPORT.whatsapp}
             </a>
             <p className="text-xs text-muted-foreground pt-1">{SUPPORT.company} · Soporte de lunes a sábado</p>

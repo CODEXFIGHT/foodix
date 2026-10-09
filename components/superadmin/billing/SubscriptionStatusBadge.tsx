@@ -18,7 +18,7 @@ const DOT: Record<SubscriptionState, string> = {
   trial:                 'bg-blue-400',
   past_due:              'bg-amber-400',
   payment_failed:        'bg-red-400',
-  pending_bank_transfer: 'bg-orange-400',
+  pending_bank_transfer: 'bg-amber-400',
   bank_transfer_review:  'bg-purple-400',
   suspended:             'bg-amber-400',
   canceled:              'bg-slate-400',

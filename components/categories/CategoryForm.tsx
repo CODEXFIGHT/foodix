@@ -30,7 +30,7 @@ export function CategoryForm({ category, onDone }: CategoryFormProps) {
     resolver: zodResolver(categorySchema),
     defaultValues: {
       name: category?.name ?? '',
-      color: category?.color ?? '#D1400F',
+      color: category?.color ?? '#FACC15',
       menu_group: category?.menu_group ?? 'alimento',
     },
     mode: 'onChange',
@@ -88,7 +88,7 @@ export function CategoryForm({ category, onDone }: CategoryFormProps) {
                   className={
                     'h-10 rounded-md border text-sm font-medium transition-colors ' +
                     (menuGroup === opt.value
-                      ? 'border-[#D1400F] bg-[#D1400F]/10 text-[#D1400F]'
+                      ? 'border-[#EAB308] bg-[#FACC15]/10 text-yellow-700 dark:text-yellow-400'
                       : 'border-input bg-background text-muted-foreground hover:bg-accent')
                   }
                 >
@@ -107,7 +107,7 @@ export function CategoryForm({ category, onDone }: CategoryFormProps) {
               type="submit"
               size="sm"
               disabled={!isValid || loading}
-              className="bg-[#D1400F] hover:bg-[#B03508]"
+              className="bg-[#FACC15] hover:bg-[#EAB308]"
             >
               <Check className="h-4 w-4 mr-1" />
               {category ? 'Guardar' : 'Crear'}

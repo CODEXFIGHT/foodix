@@ -51,7 +51,7 @@ export function ProveedoresTab({ branchId }: { branchId: number | null }) {
   return (
     <div className="space-y-3">
       <div className="flex justify-end">
-        <Button onClick={openNew} size="sm" className="bg-[#D1400F] hover:bg-[#B03508]">
+        <Button onClick={openNew} size="sm" className="bg-[#FACC15] hover:bg-[#EAB308]">
           <Plus className="h-4 w-4 mr-1" /> Nuevo proveedor
         </Button>
       </div>
@@ -100,7 +100,7 @@ export function ProveedoresTab({ branchId }: { branchId: number | null }) {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setOpen(false)}>Cancelar</Button>
-            <Button onClick={handleSave} disabled={!form.name.trim() || create.isPending || update.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">Guardar</Button>
+            <Button onClick={handleSave} disabled={!form.name.trim() || create.isPending || update.isPending} className="bg-[#FACC15] hover:bg-[#EAB308]">Guardar</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

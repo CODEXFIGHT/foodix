@@ -235,7 +235,7 @@ export default function TicketDesignPage() {
               <p className="text-xs text-muted-foreground">Mensaje que aparece al final del ticket.</p>
             </div>
 
-            <Button onClick={handleSave} disabled={saving} className="bg-[#D1400F] hover:bg-[#B03508]">
+            <Button onClick={handleSave} disabled={saving} className="bg-[#FACC15] hover:bg-[#EAB308]">
               <Save className="mr-2 h-4 w-4" />
               {saving ? 'Guardando…' : 'Guardar cambios'}
             </Button>
@@ -285,7 +285,7 @@ export default function TicketDesignPage() {
             </Button>
             <Button
               type="button"
-              className="bg-[#D1400F] hover:bg-[#B03508]"
+              className="bg-[#FACC15] hover:bg-[#EAB308]"
               onClick={() => {
                 setShowPrintConfirm(false)
                 handleTestPrint()

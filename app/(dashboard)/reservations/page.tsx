@@ -87,7 +87,7 @@ export default function ReservationsPage() {
       <PageHeader
         title="Reservaciones"
         description="Agenda de reservas por día"
-        actions={<Button onClick={openNew} className="bg-[#D1400F] hover:bg-[#B03508]"><Plus className="h-4 w-4 mr-1" />Nueva</Button>}
+        actions={<Button onClick={openNew} className="bg-[#FACC15] hover:bg-[#EAB308]"><Plus className="h-4 w-4 mr-1" />Nueva</Button>}
       />
 
       <div className="flex items-center gap-2">
@@ -159,7 +159,7 @@ export default function ReservationsPage() {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setOpen(false)}>Cancelar</Button>
-            <Button onClick={handleCreate} disabled={create.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">Crear</Button>
+            <Button onClick={handleCreate} disabled={create.isPending} className="bg-[#FACC15] hover:bg-[#EAB308]">Crear</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

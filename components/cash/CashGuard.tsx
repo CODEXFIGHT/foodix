@@ -74,7 +74,7 @@ export function CashGuardProvider({ children }: { children: React.ReactNode }) {
           </p>
           <DialogFooter className="gap-2 sm:gap-2">
             <Button variant="outline" onClick={() => setBlockedOpen(false)}>Cancelar</Button>
-            <Button onClick={openCashRegister} className="bg-[#D1400F] hover:bg-[#B03508]">
+            <Button onClick={openCashRegister} className="bg-[#FACC15] hover:bg-[#EAB308]">
               Abrir caja ahora
             </Button>
           </DialogFooter>

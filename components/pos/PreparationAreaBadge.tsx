@@ -24,8 +24,8 @@ const META: Record<PreparationArea, { label: string; classes: string; Icon: type
     label: 'Caliente',
     Icon: Flame,
     classes:
-      'bg-orange-50 text-[#C2410C] ring-1 ring-orange-200/70 ' +
-      'dark:bg-orange-500/10 dark:text-orange-300 dark:ring-orange-500/20',
+      'bg-amber-50 text-yellow-800 ring-1 ring-amber-200/70 ' +
+      'dark:bg-amber-500/10 dark:text-yellow-400 dark:ring-amber-500/20',
   },
   cold: {
     label: 'Frío',

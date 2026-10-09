@@ -8,7 +8,9 @@
  * de marca: nítidas a cualquier tamaño y carga instantánea, sin imágenes.
  */
 
-export const BRAND = '#D1400F'
+export const BRAND = '#FACC15'
+/** Dorado oscuro para TEXTO sobre fondos claros (WCAG AA). */
+export const BRAND_TEXT = '#A16207'
 export const SIDEBAR = '#1c1917'
 
 /* ─── Ventana tipo navegador que envuelve cada pantalla ─── */
@@ -45,7 +47,7 @@ export function AppShell({ active, children }: { active: string; children: React
       {/* Sidebar */}
       <aside className="w-[26%] shrink-0 flex flex-col py-2.5 px-2 gap-0.5" style={{ background: SIDEBAR }}>
         <div className="flex items-center gap-1.5 px-1.5 pb-2.5 mb-1 border-b border-white/5">
-          <span className="h-4 w-4 rounded-md grid place-items-center text-[8px] font-bold text-white" style={{ background: BRAND }}>F</span>
+          <span className="h-4 w-4 rounded-md grid place-items-center text-[8px] font-bold text-[#1C1917]" style={{ background: BRAND }}>F</span>
           <span className="text-[8px] font-bold text-white truncate">Mariscos El Puerto</span>
         </div>
         {NAV.map(n => {
@@ -54,11 +56,11 @@ export function AppShell({ active, children }: { active: string; children: React
             <div
               key={n.l}
               className="relative flex items-center gap-1.5 rounded-md px-1.5 py-[3px]"
-              style={on ? { background: 'rgba(209,64,15,0.18)' } : undefined}
+              style={on ? { background: 'rgba(250,204,21,0.18)' } : undefined}
             >
               {on && <span className="absolute left-0 top-1 bottom-1 w-[2px] rounded-full" style={{ background: BRAND }} />}
               <span className="text-[7px] leading-none w-2.5 text-center">{n.i}</span>
-              <span className="text-[7px] font-semibold" style={{ color: on ? '#fdba74' : 'rgba(255,255,255,0.55)' }}>{n.l}</span>
+              <span className="text-[7px] font-semibold" style={{ color: on ? '#FCD34D' : 'rgba(255,255,255,0.55)' }}>{n.l}</span>
               {on && <span className="ml-auto h-1 w-1 rounded-full" style={{ background: BRAND }} />}
             </div>
           )
@@ -77,7 +79,7 @@ export function AppShell({ active, children }: { active: string; children: React
           <div className="flex items-center gap-1.5">
             <span className="text-[6px] text-stone-400 border border-stone-200 rounded px-1 py-[1px]">🖨 Impresora</span>
             <span className="text-[7px]">☀️</span>
-            <span className="h-2.5 w-2.5 rounded-full bg-orange-200 grid place-items-center text-[5px]">👤</span>
+            <span className="h-2.5 w-2.5 rounded-full bg-amber-200 grid place-items-center text-[5px]">👤</span>
           </div>
         </div>
         <div className="flex-1 p-2.5 min-h-0">{children}</div>
@@ -96,7 +98,7 @@ export function PageHead({ title, sub, action, ghost }: { title: string; sub: st
       </div>
       <div className="flex items-center gap-1">
         {ghost && <span className="text-[6px] font-semibold text-stone-600 border border-stone-200 rounded-md px-1.5 py-[3px]">{ghost}</span>}
-        {action && <span className="text-[6px] font-semibold text-white rounded-md px-1.5 py-[3px]" style={{ background: BRAND }}>{action}</span>}
+        {action && <span className="text-[6px] font-semibold text-[#1C1917] rounded-md px-1.5 py-[3px]" style={{ background: BRAND }}>{action}</span>}
       </div>
     </div>
   )
@@ -109,7 +111,7 @@ export function Bar({ h, c = '#d6d3d1' }: { h: number; c?: string }) {
 /* ─── 1. Dashboard ─── */
 export function DashboardScreen() {
   const kpis = [
-    { l: 'Ventas Hoy', v: '$8,450', s: '24 pedidos', c: BRAND, chip: '🧮', bg: '#fff7ed' },
+    { l: 'Ventas Hoy', v: '$8,450', s: '24 pedidos', c: BRAND, chip: '🧮', bg: '#FFFBEB' },
     { l: 'Pedidos Activos', v: '5', s: 'preparando', c: '#3b82f6', chip: '🧾', bg: '#eff6ff' },
     { l: 'Mesas Ocupadas', v: '4/10', s: '6 libres', c: '#22c55e', chip: '🍽️', bg: '#f0fdf4' },
     { l: 'Ticket Promedio', v: '$352', s: 'de hoy', c: '#a855f7', chip: '🧾', bg: '#faf5ff' },
@@ -136,13 +138,13 @@ export function DashboardScreen() {
           <div className="col-span-2 rounded-lg bg-white border border-stone-100 p-1.5 flex flex-col">
             <p className="text-[6px] font-semibold text-stone-500 mb-1">Ventas — últimos 7 días</p>
             <div className="flex-1 flex items-end gap-1">
-              {[42, 60, 48, 78, 55, 70, 92].map((h, i) => <Bar key={i} h={h} c={i % 3 === 0 ? BRAND : '#fed7aa'} />)}
+              {[42, 60, 48, 78, 55, 70, 92].map((h, i) => <Bar key={i} h={h} c={i % 3 === 0 ? BRAND : '#FDE68A'} />)}
             </div>
           </div>
           <div className="rounded-lg bg-white border border-stone-100 p-1.5">
             <p className="text-[6px] font-semibold text-stone-500 mb-1.5">Acciones rápidas</p>
             {['+ Nuevo pedido', 'Ver mesas', 'Ver pedidos', 'Reportes'].map((a, i) => (
-              <div key={a} className="rounded bg-stone-50 border border-stone-100 px-1 py-[3px] mb-1 text-[5.5px] font-medium text-stone-600" style={i === 0 ? { color: BRAND } : undefined}>{a}</div>
+              <div key={a} className="rounded bg-stone-50 border border-stone-100 px-1 py-[3px] mb-1 text-[5.5px] font-medium text-stone-600" style={i === 0 ? { color: BRAND_TEXT } : undefined}>{a}</div>
             ))}
           </div>
         </div>
@@ -155,7 +157,7 @@ export function DashboardScreen() {
 export function PosScreen() {
   const orders = [
     { n: 5, st: 'Completado', c: '#22c55e', t: 'Mesa 1 · 1 artículo · hace 2 h', d: 'Tostada de camarón', p: '$135.00', q: '1 pza' },
-    { n: 4, st: 'Preparando', c: BRAND, t: 'Mesa 3 · 2 artículos · hace 12 min', d: 'Camarones empanizados', p: '$215.00', q: '2 pzas' },
+    { n: 4, st: 'Preparando', c: BRAND_TEXT, t: 'Mesa 3 · 2 artículos · hace 12 min', d: 'Camarones empanizados', p: '$215.00', q: '2 pzas' },
     { n: 3, st: 'Listo', c: '#3b82f6', t: 'Mesa 2 · 2 artículos · hace 18 min', d: 'Tostada de ceviche', p: '$195.00', q: '2 pzas' },
     { n: 2, st: 'Pendiente', c: '#eab308', t: 'Mesa 5 · 5 artículos · hace 24 min', d: 'Coctel grande de pulpo', p: '$748.20', q: '5 pzas' },
   ]
@@ -164,7 +166,7 @@ export function PosScreen() {
       <AppShell active="Pedidos">
         <PageHead title="Pedidos" sub="4 pedidos activos" action="+ Nuevo Pedido" />
         <div className="grid grid-cols-4 gap-1.5 mb-1.5">
-          {[['⏰', '2', 'Pendientes', '#eab308'], ['🍳', '1', 'Preparando', BRAND], ['✅', '1', 'Listos', '#3b82f6'], ['🟢', '24', 'Hoy', '#22c55e']].map(([ic, v, l, c]) => (
+          {[['⏰', '2', 'Pendientes', '#eab308'], ['🍳', '1', 'Preparando', BRAND_TEXT], ['✅', '1', 'Listos', '#3b82f6'], ['🟢', '24', 'Hoy', '#22c55e']].map(([ic, v, l, c]) => (
             <div key={l} className="rounded-lg bg-white border border-stone-100 p-1.5 flex items-center gap-1">
               <span className="text-[7px]">{ic}</span>
               <div><p className="text-[9px] font-extrabold leading-none" style={{ color: c }}>{v}</p><p className="text-[5px] text-stone-400 mt-0.5">{l}</p></div>
@@ -173,7 +175,7 @@ export function PosScreen() {
         </div>
         <div className="flex gap-1 mb-1.5">
           {[['Todos', 4], ['Pendiente', 2], ['Preparando', 1], ['Listo', 1], ['Completado', 1]].map(([l, n], i) => (
-            <span key={l as string} className="text-[5.5px] font-medium rounded-full px-1.5 py-[2px]" style={i === 0 ? { background: '#fff7ed', color: BRAND } : { background: '#f5f5f4', color: '#78716c' }}>{l} {n}</span>
+            <span key={l as string} className="text-[5.5px] font-medium rounded-full px-1.5 py-[2px]" style={i === 0 ? { background: '#FFFBEB', color: BRAND_TEXT } : { background: '#f5f5f4', color: '#78716c' }}>{l} {n}</span>
           ))}
         </div>
         <div className="space-y-1">
@@ -200,10 +202,10 @@ export function PosScreen() {
 /* ─── 3. Cocina KDS ─── */
 export function KitchenScreen() {
   const Ticket = ({ n, mesa, mins, items, urgent }: { n: number; mesa: string; mins: string; items: string[]; urgent?: boolean }) => (
-    <div className="rounded-md p-1.5 shadow-sm" style={{ background: 'rgba(255,255,255,0.97)', borderTop: `2px solid ${urgent ? '#ef4444' : '#f59e0b'}` }}>
+    <div className="rounded-md p-1.5 shadow-sm" style={{ background: 'rgba(255,255,255,0.97)', borderTop: `2px solid ${urgent ? '#ef4444' : '#FACC15'}` }}>
       <div className="flex justify-between items-center mb-1">
         <span className="text-[6px] font-extrabold text-stone-800">#{n} · {mesa}</span>
-        <span className="text-[6px] font-bold" style={{ color: urgent ? '#ef4444' : '#f59e0b' }}>{mins}</span>
+        <span className="text-[6px] font-bold" style={{ color: urgent ? '#ef4444' : '#FACC15' }}>{mins}</span>
       </div>
       {items.map((it, i) => (
         <div key={i} className="flex items-center gap-1 mb-0.5">
@@ -236,10 +238,10 @@ export function KitchenScreen() {
 /* ─── 4. Mesas ─── */
 export function TablesScreen() {
   const tables = [
-    { n: 1, p: 4, st: 'Libre', c: '#22c55e' }, { n: 2, p: 4, st: 'Ocupada', c: BRAND },
+    { n: 1, p: 4, st: 'Libre', c: '#22c55e' }, { n: 2, p: 4, st: 'Ocupada', c: BRAND_TEXT },
     { n: 3, p: 2, st: 'Libre', c: '#22c55e' }, { n: 4, p: 2, st: 'Reservada', c: '#3b82f6' },
-    { n: 5, p: 6, st: 'Ocupada', c: BRAND }, { n: 6, p: 4, st: 'Libre', c: '#22c55e' },
-    { n: 7, p: 4, st: 'Libre', c: '#22c55e' }, { n: 8, p: 8, st: 'Ocupada', c: BRAND },
+    { n: 5, p: 6, st: 'Ocupada', c: BRAND_TEXT }, { n: 6, p: 4, st: 'Libre', c: '#22c55e' },
+    { n: 7, p: 4, st: 'Libre', c: '#22c55e' }, { n: 8, p: 8, st: 'Ocupada', c: BRAND_TEXT },
     { n: 9, p: 2, st: 'Libre', c: '#22c55e' }, { n: 10, p: 4, st: 'Libre', c: '#22c55e' },
   ]
   return (
@@ -292,7 +294,7 @@ export function ReportsScreen() {
         <div className="rounded-lg bg-white border border-stone-100 p-1.5 flex flex-col" style={{ height: 'calc(100% - 86px)' }}>
           <p className="text-[6px] font-semibold text-stone-500 mb-1">Ingresos diarios — últimos 30 días</p>
           <div className="flex-1 flex items-end gap-[2px]">
-            {[40, 55, 48, 70, 62, 80, 58, 72, 90, 66, 78, 52, 84, 60, 95, 70, 88, 64, 76, 58].map((h, i) => <Bar key={i} h={h} c={i % 2 ? BRAND : '#fdba74'} />)}
+            {[40, 55, 48, 70, 62, 80, 58, 72, 90, 66, 78, 52, 84, 60, 95, 70, 88, 64, 76, 58].map((h, i) => <Bar key={i} h={h} c={i % 2 ? BRAND : '#FCD34D'} />)}
           </div>
         </div>
       </AppShell>
@@ -310,8 +312,8 @@ export function CartaScreen() {
           {/* QR */}
           <div className="rounded-lg overflow-hidden border border-stone-100 bg-white flex flex-col">
             <div className="text-center py-1.5" style={{ background: BRAND }}>
-              <p className="text-[7px] font-extrabold text-white leading-none">Código QR</p>
-              <p className="text-[5px] text-white/80 mt-0.5">Muéstralo al comensal</p>
+              <p className="text-[7px] font-extrabold text-[#1C1917] leading-none">Código QR</p>
+              <p className="text-[5px] text-[#1C1917]/75 mt-0.5">Muéstralo al comensal</p>
             </div>
             <div className="flex-1 grid place-items-center p-1.5">
               <div className="grid grid-cols-7 gap-[1px] p-1.5 bg-white rounded border border-stone-200">
@@ -331,7 +333,7 @@ export function CartaScreen() {
             </div>
             <div className="text-[5.5px] font-semibold text-stone-600 border border-stone-200 rounded-md px-1.5 py-[3px] text-center">⧉ Copiar enlace</div>
             <div className="text-[5.5px] font-semibold text-stone-600 border border-stone-200 rounded-md px-1.5 py-[3px] text-center">↗ Compartir carta</div>
-            <div className="text-[5.5px] font-semibold text-white rounded-md px-1.5 py-[3px] text-center" style={{ background: BRAND }}>↗ Abrir carta en nueva pestaña</div>
+            <div className="text-[5.5px] font-semibold text-[#1C1917] rounded-md px-1.5 py-[3px] text-center" style={{ background: BRAND }}>↗ Abrir carta en nueva pestaña</div>
             <div className="grid grid-cols-3 gap-1 mt-auto">
               {[['2', 'Categorías'], ['12', 'Platillos'], ['1', 'Promos']].map(([v, l]) => (
                 <div key={l} className="rounded-md bg-white border border-stone-100 py-1 text-center">

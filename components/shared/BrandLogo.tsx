@@ -69,7 +69,7 @@ export function BrandLogo({
         <span className={cn('relative inline-block font-bold tracking-tight truncate', nameClassName)}>
           {forceFoodIX || !branch?.name ? (
             <span className="inline-block animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-              Food<span className="text-[#D1400F]">IX</span><sup className="text-[0.55em] align-super">©</sup>
+              Food<span className="text-yellow-700 dark:text-yellow-400">IX</span><sup className="text-[0.55em] align-super">©</sup>
             </span>
           ) : branch.name}
         </span>

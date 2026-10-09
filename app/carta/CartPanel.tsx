@@ -64,7 +64,7 @@ function CartItemRow({
         ) : (
           <p className="text-[11px] text-stone-400">${item.unitPrice.toFixed(2)} c/u</p>
         )}
-        <p className="text-sm font-extrabold text-[#D1400F]">
+        <p className="text-sm font-extrabold text-yellow-700 dark:text-yellow-400">
           ${(item.unitPrice * item.quantity).toFixed(2)}
         </p>
       </div>
@@ -80,7 +80,7 @@ function CartItemRow({
         <span className="text-sm font-bold w-5 text-center text-stone-800">{item.quantity}</span>
         <button
           onClick={() => onUpdateQty(item.quantity + 1)}
-          className="w-7 h-7 rounded-full bg-[#D1400F]/10 text-[#D1400F] flex items-center justify-center transition-all active:scale-90 hover:bg-[#D1400F]/20"
+          className="w-7 h-7 rounded-full bg-[#FACC15]/10 text-yellow-700 dark:text-yellow-400 flex items-center justify-center transition-all active:scale-90 hover:bg-[#FACC15]/20"
         >
           <Plus className="h-3 w-3" />
         </button>
@@ -145,20 +145,20 @@ export function CartPanel() {
       >
         <button
           onClick={() => setIsOpen(true)}
-          className="w-full bg-[#D1400F] rounded-2xl flex items-center justify-between px-5 py-3.5 shadow-xl shadow-[#D1400F]/35 active:scale-[0.98] transition-transform"
+          className="w-full bg-[#FACC15] rounded-2xl flex items-center justify-between px-5 py-3.5 shadow-xl shadow-[#FACC15]/35 active:scale-[0.98] transition-transform"
         >
           <div className="flex items-center gap-3">
             <div className="relative">
-              <ClipboardList className="h-5 w-5 text-white" />
-              <span className="absolute -top-2 -right-2 w-4 h-4 bg-white text-[#D1400F] text-[9px] font-extrabold rounded-full flex items-center justify-center leading-none">
+              <ClipboardList className="h-5 w-5 text-stone-950" />
+              <span className="absolute -top-2 -right-2 w-4 h-4 bg-white text-yellow-700 text-[9px] font-extrabold rounded-full flex items-center justify-center leading-none">
                 {count > 9 ? '9+' : count}
               </span>
             </div>
-            <span className="text-white font-bold text-sm">Ver mi pedido</span>
+            <span className="text-stone-950 font-bold text-sm">Ver mi pedido</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-white font-extrabold text-base">${total.toFixed(2)}</span>
-            <ChevronUp className="h-4 w-4 text-white/70" />
+            <span className="text-stone-950 font-extrabold text-base">${total.toFixed(2)}</span>
+            <ChevronUp className="h-4 w-4 text-stone-950/70" />
           </div>
         </button>
       </div>
@@ -217,8 +217,8 @@ export function CartPanel() {
           {/* footer: table + notes + total + CTA */}
           <div className="shrink-0 border-t border-stone-100 px-5 pt-4 pb-5 space-y-3 bg-[#FAFAF8]">
             {/* table number */}
-            <div className="flex items-center gap-2.5 bg-white border border-stone-200 rounded-xl px-3.5 py-2.5 focus-within:border-[#D1400F] focus-within:ring-2 focus-within:ring-[#D1400F]/20 transition-all">
-              <MapPin className="h-4 w-4 text-[#D1400F] shrink-0" />
+            <div className="flex items-center gap-2.5 bg-white border border-stone-200 rounded-xl px-3.5 py-2.5 focus-within:border-[#CA8A04] focus-within:ring-2 focus-within:ring-[#CA8A04]/20 transition-all">
+              <MapPin className="h-4 w-4 text-yellow-700 shrink-0" />
               <input
                 type="text"
                 inputMode="numeric"
@@ -230,7 +230,7 @@ export function CartPanel() {
             </div>
 
             {/* notes */}
-            <div className="flex items-start gap-2.5 bg-white border border-stone-200 rounded-xl px-3.5 py-2.5 focus-within:border-[#D1400F]/60 transition-all">
+            <div className="flex items-start gap-2.5 bg-white border border-stone-200 rounded-xl px-3.5 py-2.5 focus-within:border-[#CA8A04]/60 transition-all">
               <MessageSquare className="h-4 w-4 text-stone-400 shrink-0 mt-0.5" />
               <textarea
                 value={notes}
@@ -245,7 +245,7 @@ export function CartPanel() {
             <div className="flex items-center justify-between pt-1">
               <div>
                 <p className="text-[11px] text-stone-400 font-medium uppercase tracking-wide">Total</p>
-                <p className="text-2xl font-extrabold text-[#D1400F] leading-none">
+                <p className="text-2xl font-extrabold text-yellow-700 leading-none">
                   ${total.toFixed(2)}
                   <span className="text-xs font-normal text-stone-400 ml-1">MXN</span>
                 </p>
@@ -253,7 +253,7 @@ export function CartPanel() {
               <button
                 onClick={handleSend}
                 disabled={sending}
-                className="flex items-center gap-2 bg-[#D1400F] text-white font-bold text-sm px-5 py-3 rounded-2xl shadow-lg shadow-[#D1400F]/30 active:scale-95 transition-all disabled:opacity-60 hover:bg-[#B03508]"
+                className="flex items-center gap-2 bg-[#FACC15] text-stone-950 font-bold text-sm px-5 py-3 rounded-2xl shadow-lg shadow-[#FACC15]/30 active:scale-95 transition-all disabled:opacity-60 hover:bg-[#EAB308]"
               >
                 <Send className="h-4 w-4" />
                 {sending ? 'Enviando…' : 'Enviar al mesero'}

@@ -103,7 +103,7 @@ export function CombosTab({ branchId }: { branchId: number | null }) {
   return (
     <div className="space-y-4">
       <div className="flex justify-end">
-        <Button onClick={openNew} className="bg-[#D1400F] hover:bg-[#B03508]"><Plus className="h-4 w-4 mr-1" /> Nuevo combo</Button>
+        <Button onClick={openNew} className="bg-[#FACC15] hover:bg-[#EAB308]"><Plus className="h-4 w-4 mr-1" /> Nuevo combo</Button>
       </div>
 
       {combos.length === 0 ? (
@@ -115,12 +115,12 @@ export function CombosTab({ branchId }: { branchId: number | null }) {
               <CardContent className="p-4 space-y-2">
                 <div className="flex items-start justify-between gap-2">
                   <div className="min-w-0">
-                    <p className="font-bold truncate flex items-center gap-1.5"><Package className="h-4 w-4 text-[#D1400F]" /> {c.name}</p>
+                    <p className="font-bold truncate flex items-center gap-1.5"><Package className="h-4 w-4 text-yellow-700 dark:text-yellow-400" /> {c.name}</p>
                     {c.description && <p className="text-xs text-muted-foreground mt-0.5">{c.description}</p>}
                   </div>
                   <Badge variant={c.active ? 'success' : 'muted'}>{c.active ? 'Activo' : 'Inactivo'}</Badge>
                 </div>
-                <p className="text-lg font-extrabold text-[#D1400F]">{formatCurrency(c.price)}</p>
+                <p className="text-lg font-extrabold text-yellow-700 dark:text-yellow-400">{formatCurrency(c.price)}</p>
                 <ul className="text-xs text-muted-foreground space-y-0.5">
                   {c.items.map(i => <li key={i.id}>{i.quantity}× {i.name ?? `Producto #${i.product_id}`}</li>)}
                 </ul>
@@ -174,7 +174,7 @@ export function CombosTab({ branchId }: { branchId: number | null }) {
           </div>
           <DialogFooter>
             <Button variant="ghost" onClick={() => setOpen(false)}>Cancelar</Button>
-            <Button onClick={handleSave} className="bg-[#D1400F] hover:bg-[#B03508]">Guardar</Button>
+            <Button onClick={handleSave} className="bg-[#FACC15] hover:bg-[#EAB308]">Guardar</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

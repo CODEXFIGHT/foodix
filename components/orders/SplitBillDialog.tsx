@@ -138,7 +138,7 @@ export function SplitBillDialog({ order, open, onOpenChange }: SplitBillDialogPr
       <DialogContent className="max-w-lg max-h-[92vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <ModeIcon className="h-5 w-5 text-[#D1400F]" /> Dividir cuenta
+            <ModeIcon className="h-5 w-5 text-yellow-700 dark:text-yellow-400" /> Dividir cuenta
           </DialogTitle>
           <DialogDescription>
             Total a dividir: <span className="font-semibold text-foreground">{formatCurrency(total)}</span>
@@ -157,7 +157,7 @@ export function SplitBillDialog({ order, open, onOpenChange }: SplitBillDialogPr
                 onClick={() => setMode(m.value)}
                 className={cn(
                   'flex flex-col items-center gap-1 rounded-xl border-2 p-2.5 text-[11px] font-medium transition-all',
-                  active ? 'border-[#D1400F] bg-[#D1400F]/5 text-[#D1400F]' : 'hover:border-primary/40 text-muted-foreground',
+                  active ? 'border-[#EAB308] bg-[#FACC15]/5 text-yellow-700 dark:text-yellow-400' : 'hover:border-primary/40 text-muted-foreground',
                 )}
               >
                 <Icon className="h-5 w-5" />
@@ -240,7 +240,7 @@ export function SplitBillDialog({ order, open, onOpenChange }: SplitBillDialogPr
                     onClick={() => setActiveGroup(i)}
                     className={cn(
                       'flex items-center gap-1.5 rounded-full border-2 px-3 py-1.5 text-xs font-semibold transition-all',
-                      activeGroup === i ? 'border-[#D1400F] bg-[#D1400F]/10 text-[#B03508]' : 'border-border text-muted-foreground hover:bg-muted',
+                      activeGroup === i ? 'border-[#EAB308] bg-[#FACC15]/10 text-yellow-800 dark:text-yellow-400' : 'border-border text-muted-foreground hover:bg-muted',
                     )}
                   >
                     {g.label}
@@ -258,7 +258,7 @@ export function SplitBillDialog({ order, open, onOpenChange }: SplitBillDialogPr
               </div>
 
               <p className="text-xs text-muted-foreground">
-                Asignando a <span className="font-semibold text-[#B03508]">{groups[activeGroup]?.label}</span>. Toca + en cada producto.
+                Asignando a <span className="font-semibold text-yellow-800 dark:text-yellow-400">{groups[activeGroup]?.label}</span>. Toca + en cada producto.
               </p>
 
               <div className="space-y-1.5 max-h-[40vh] overflow-y-auto pr-1">
@@ -312,7 +312,7 @@ export function SplitBillDialog({ order, open, onOpenChange }: SplitBillDialogPr
           <Button
             onClick={handleConfirm}
             disabled={!validation.ok || createSplits.isPending}
-            className="flex-1 bg-[#D1400F] hover:bg-[#B03508]"
+            className="flex-1 bg-[#FACC15] hover:bg-[#EAB308]"
           >
             {createSplits.isPending ? 'Dividiendo…' : 'Dividir cuenta'}
           </Button>

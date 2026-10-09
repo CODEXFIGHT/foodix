@@ -187,7 +187,7 @@ export default function RegisterPage() {
           Volver
         </Link>
         <span className="font-heading text-lg font-extrabold text-stone-900">
-          Food<span className="text-[#D1400F]">IX</span>
+          Food<span className="text-yellow-700 dark:text-yellow-400">IX</span>
         </span>
       </header>
 
@@ -201,7 +201,7 @@ export default function RegisterPage() {
               <p className="mx-auto max-w-md text-sm leading-relaxed text-stone-600 sm:text-base">
                 {TRIAL_COPY.registerSub}
               </p>
-              <p className="text-xs font-semibold uppercase tracking-wide text-[#D1400F]">{TRIAL_PERKS_LINE}</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-yellow-700 dark:text-yellow-400">{TRIAL_PERKS_LINE}</p>
             </div>
           )}
 
@@ -225,10 +225,10 @@ export default function RegisterPage() {
                   serverErrorAction={
                     errorCode === 'email_taken' ? (
                       <>
-                        <Link href="/login" className="text-xs font-bold text-[#D1400F] hover:underline">
+                        <Link href="/login" className="text-xs font-bold text-yellow-700 hover:underline">
                           Iniciar sesión
                         </Link>
-                        <Link href="/login?recuperar=1" className="text-xs font-bold text-[#D1400F] hover:underline">
+                        <Link href="/login?recuperar=1" className="text-xs font-bold text-yellow-700 hover:underline">
                           Recuperar contraseña
                         </Link>
                       </>
@@ -303,7 +303,7 @@ export default function RegisterPage() {
                   </h2>
                   <p className="text-sm leading-relaxed text-stone-600">{TRIAL_COPY.notEligible}</p>
                   <div className="flex flex-col gap-2">
-                    <Button asChild className="h-11 bg-[#D1400F] hover:bg-[#B03508]">
+                    <Button asChild className="h-11 bg-[#FACC15] hover:bg-[#EAB308]">
                       <Link href="/landing#precios">Ver planes</Link>
                     </Button>
                     <Button asChild variant="outline" className="h-11">
@@ -321,7 +321,7 @@ export default function RegisterPage() {
           {stage !== 'done' && (
             <p className="text-center text-sm text-stone-600">
               ¿Ya tienes cuenta?{' '}
-              <Link href="/login" className="font-bold text-[#D1400F] hover:underline">
+              <Link href="/login" className="font-bold text-yellow-700 dark:text-yellow-400 hover:underline">
                 Inicia sesión
               </Link>
             </p>

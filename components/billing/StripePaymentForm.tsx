@@ -44,7 +44,7 @@ function InnerForm({ onClose }: { onClose: () => void }) {
           onClick={handlePay}
           disabled={!stripe || submitting}
           loading={submitting}
-          className="bg-[#D1400F] hover:bg-[#B03508] text-white"
+          className="bg-[#FACC15] hover:bg-[#EAB308] text-stone-950"
         >
           {submitting ? 'Procesando…' : 'Pagar suscripción'}
         </Button>
@@ -92,7 +92,7 @@ export function StripePaymentForm({ onClose }: { onClose: () => void }) {
         onClick={start}
         disabled={createSub.isPending}
         loading={createSub.isPending}
-        className="bg-[#D1400F] hover:bg-[#B03508] text-white"
+        className="bg-[#FACC15] hover:bg-[#EAB308] text-stone-950"
       >
         {createSub.isPending ? 'Preparando pago…' : 'Pagar con tarjeta (formulario seguro)'}
       </Button>

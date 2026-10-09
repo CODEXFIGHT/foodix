@@ -23,12 +23,12 @@ export default function PrivacidadPage() {
               className="rounded-lg flex-shrink-0 shadow-sm"
             />
             <Link href="/" className="inline-block font-bold animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-              Food<span className="text-[#D1400F]">IX</span><sup className="text-[0.55em] align-super">©</sup>
+              Food<span className="text-yellow-700 dark:text-yellow-400">IX</span><sup className="text-[0.55em] align-super">©</sup>
             </Link>
             <span className="text-stone-400">/</span>
             <span className="text-stone-300 text-sm truncate">Aviso de Privacidad</span>
           </div>
-          <Link href="/login" className="text-sm bg-[#D1400F] hover:bg-[#B03508] px-4 py-1.5 rounded-lg font-medium transition-colors shrink-0">
+          <Link href="/login" className="text-sm bg-[#FACC15] hover:bg-[#EAB308] px-4 py-1.5 rounded-lg font-medium transition-colors shrink-0">
             Ir al sistema →
           </Link>
         </div>
@@ -49,7 +49,7 @@ export default function PrivacidadPage() {
                 en términos de la Ley Federal de Protección de Datos Personales en Posesión de los
                 Particulares (LFPDPPP) y su Reglamento.
               </p>
-              <p>Contacto de privacidad: <a href="mailto:restauros@atomicmail.io" className="text-[#D1400F]">restauros@atomicmail.io</a></p>
+              <p>Contacto de privacidad: <a href="mailto:restauros@atomicmail.io" className="text-yellow-700 dark:text-yellow-400">restauros@atomicmail.io</a></p>
             </section>
 
             <section>
@@ -160,7 +160,7 @@ export default function PrivacidadPage() {
               </ul>
               <p className="mt-2">
                 Si no desea que sus datos sean tratados para las finalidades secundarias, puede
-                manifestarlo enviando un correo a <a href="mailto:restauros@atomicmail.io" className="text-[#D1400F]">restauros@atomicmail.io</a>.
+                manifestarlo enviando un correo a <a href="mailto:restauros@atomicmail.io" className="text-yellow-700 dark:text-yellow-400">restauros@atomicmail.io</a>.
               </p>
             </section>
 
@@ -186,7 +186,7 @@ export default function PrivacidadPage() {
                 al tratamiento de sus datos personales. Para ejercer estos derechos:
               </p>
               <ol className="list-decimal list-inside ml-4 space-y-1">
-                <li>Envíe un correo a <a href="mailto:restauros@atomicmail.io" className="text-[#D1400F]">restauros@atomicmail.io</a></li>
+                <li>Envíe un correo a <a href="mailto:restauros@atomicmail.io" className="text-yellow-700 dark:text-yellow-400">restauros@atomicmail.io</a></li>
                 <li>Con el asunto: &quot;Ejercicio de Derechos ARCO&quot;</li>
                 <li>Indique el derecho que desea ejercer y los datos afectados</li>
                 <li>Adjunte copia de identificación oficial vigente</li>

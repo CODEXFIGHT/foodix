@@ -123,11 +123,11 @@ export function PrinterSettings() {
                   title={disabled ? 'No disponible en este dispositivo/navegador' : undefined}
                   className={cn(
                     'flex items-start gap-2 p-3 border-2 rounded-xl text-left transition-all',
-                    active ? 'border-[#D1400F] bg-[#D1400F]/5' : 'hover:border-primary/40',
+                    active ? 'border-[#EAB308] bg-[#FACC15]/5' : 'hover:border-primary/40',
                     disabled && 'opacity-40 cursor-not-allowed hover:border-border',
                   )}
                 >
-                  <Icon className={cn('h-4 w-4 mt-0.5 shrink-0', active && 'text-[#D1400F]')} />
+                  <Icon className={cn('h-4 w-4 mt-0.5 shrink-0', active && 'text-yellow-700')} />
                   <div>
                     <p className="text-sm font-semibold">{m.label}</p>
                     <p className="text-xs text-muted-foreground leading-tight">{m.hint}</p>

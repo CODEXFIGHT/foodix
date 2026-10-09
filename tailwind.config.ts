@@ -7,7 +7,17 @@ import type { Config } from "tailwindcss";
 import { heroui } from "@heroui/react";
 
 const config: Config = {
-  darkMode: ["class"],
+  // Variante `dark` a medida: además de requerir un ancestro `.dark` (en
+  // <html>), se anula dentro de cualquier subárbol `.theme-light`.
+  //
+  // Por qué: las pantallas de acceso muestran su propio fondo claro con
+  // tokens de tema claro (`app/(auth)/layout.tsx` fuerza `.theme-light`), pero
+  // las utilidades `dark:*` dependen de `<html class="dark">`, no de esos
+  // tokens. Con `darkMode: "class"` un `dark:text-yellow-400` seguía
+  // aplicándose sobre el fondo claro y dejaba texto amarillo casi invisible
+  // (contraste 1.47:1). Con esta variante, dentro de `.theme-light` los
+  // `dark:*` quedan inertes y solo cuenta el estilo base.
+  darkMode: ["variant", "&:is(.dark *):not(:is(.theme-light *))"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -56,9 +66,10 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
         brand: {
-          DEFAULT: "#D1400F",
-          hover: "#B03508",
-          accent: "#F5A623",
+          DEFAULT: "#FACC15",   // amarillo dorado (golden yellow)
+          hover: "#EAB308",     // dorado profundo para hover
+          accent: "#FDE68A",    // dorado claro para fondos suaves
+          ink: "#0A0A0A",       // carbón: texto sobre amarillo (WCAG AAA)
         },
       },
       borderRadius: {
@@ -80,14 +91,14 @@ const config: Config = {
             background: "#F7F4F0",
             foreground: "#1C1917",
             primary: {
-              DEFAULT: "#D1400F",
-              foreground: "#FFFFFF",
-            },
-            secondary: {
-              DEFAULT: "#F5A623",
+              DEFAULT: "#FACC15", // amarillo dorado + texto carbón = contraste AAA
               foreground: "#1C1917",
             },
-            focus: "#D1400F",
+            secondary: {
+              DEFAULT: "#EAB308",
+              foreground: "#1C1917",
+            },
+            focus: "#CA8A04", // dorado oscuro: visible sobre fondos claros (≥3:1)
           },
         },
         dark: {
@@ -95,14 +106,14 @@ const config: Config = {
             background: "#0F0F0F",
             foreground: "#F5F5F4",
             primary: {
-              DEFAULT: "#D1400F",
-              foreground: "#FFFFFF",
-            },
-            secondary: {
-              DEFAULT: "#F5A623",
+              DEFAULT: "#FACC15",
               foreground: "#1C1917",
             },
-            focus: "#D1400F",
+            secondary: {
+              DEFAULT: "#EAB308",
+              foreground: "#1C1917",
+            },
+            focus: "#EAB308",
           },
         },
       },

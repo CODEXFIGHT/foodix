@@ -16,7 +16,7 @@ import { cn } from '@/lib/utils/cn'
 
 const STATUS_META: Record<OrderStatus, { icon: string; iconBg: string; borderColor: string }> = {
   pending:   { icon: ICONS8.pending,   iconBg: 'bg-amber-100 dark:bg-amber-900/30',   borderColor: 'border-l-amber-400' },
-  preparing: { icon: ICONS8.preparing, iconBg: 'bg-orange-100 dark:bg-orange-900/30', borderColor: 'border-l-[#D1400F]' },
+  preparing: { icon: ICONS8.preparing, iconBg: 'bg-amber-100 dark:bg-amber-900/30', borderColor: 'border-l-[#FACC15]' },
   ready:     { icon: ICONS8.ready,     iconBg: 'bg-blue-100 dark:bg-blue-900/30',     borderColor: 'border-l-blue-400' },
   delivered: { icon: ICONS8.delivered, iconBg: 'bg-purple-100 dark:bg-purple-900/30', borderColor: 'border-l-purple-400' },
   completed: { icon: ICONS8.completed, iconBg: 'bg-green-100 dark:bg-green-900/30',   borderColor: 'border-l-green-500' },

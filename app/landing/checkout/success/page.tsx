@@ -42,7 +42,7 @@ export default async function CheckoutSuccessPage({
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link
             href="/login"
-            className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-xl text-sm font-semibold text-white bg-[#D1400F] hover:bg-[#B03508] transition-all active:scale-95 shadow-sm"
+            className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-xl text-sm font-semibold text-stone-950 bg-[#FACC15] hover:bg-[#EAB308] transition-all active:scale-95 shadow-sm"
           >
             Iniciar sesión
           </Link>
@@ -55,7 +55,7 @@ export default async function CheckoutSuccessPage({
         </div>
 
         <p className="mt-6 text-xs text-stone-400">
-          ¿Dudas? Escríbenos a <a href="mailto:restauros@atomicmail.io" className="text-[#D1400F] hover:underline">restauros@atomicmail.io</a>
+          ¿Dudas? Escríbenos a <a href="mailto:restauros@atomicmail.io" className="text-yellow-700 dark:text-yellow-400 hover:underline">restauros@atomicmail.io</a>
         </p>
       </div>
     </div>

@@ -34,7 +34,7 @@ const ROLE_CONFIGS: Record<UserRole, RoleConfig> = {
     subtitle: 'Analítica en tiempo real, proyección de ventas e inventario',
     badge: 'Admin Copilot',
     icon: Shield,
-    badgeColor: 'bg-orange-500/10 text-[#D1400F] border-orange-500/20',
+    badgeColor: 'bg-amber-500/10 text-yellow-400 border-amber-500/20',
     insights: [
       {
         icon: TrendingUp,
@@ -93,7 +93,7 @@ const ROLE_CONFIGS: Record<UserRole, RoleConfig> = {
       },
       {
         icon: AlertTriangle,
-        color: 'text-orange-400',
+        color: 'text-yellow-500',
         title: 'Mesa 5 pendiente de cuenta',
         desc: 'Lleva 14 min sin consumo adicional. Acércate con la terminal Smart POS para acelerar el cobro.',
       },
@@ -194,16 +194,16 @@ export function RoleAiAssistant({ role, className, defaultOpen = false }: RoleAi
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="group inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-stone-900 text-white border border-stone-700 shadow-xl hover:border-[#D1400F] hover:shadow-orange-500/20 transition-all duration-300 active:scale-95 dark:bg-black dark:border-stone-800"
+          className="group inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-stone-900 text-white border border-stone-700 shadow-xl hover:border-[#EAB308] hover:shadow-amber-500/20 transition-all duration-300 active:scale-95 dark:bg-black dark:border-stone-800"
         >
           <div className="relative">
-            <div className="w-7 h-7 rounded-xl bg-[#D1400F] flex items-center justify-center font-bold text-xs text-white">
+            <div className="w-7 h-7 rounded-xl bg-[#FACC15] flex items-center justify-center font-bold text-xs text-stone-950">
               Sol
             </div>
             <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-stone-900 animate-pulse" />
           </div>
           <div className="text-left leading-tight">
-            <p className="text-xs font-extrabold text-white group-hover:text-[#D1400F] transition-colors flex items-center gap-1">
+            <p className="text-xs font-extrabold text-white group-hover:text-yellow-400 transition-colors flex items-center gap-1">
               Asistente Sol IA <Sparkles className="w-3 h-3 text-amber-400" />
             </p>
             <p className="text-[10px] text-stone-400">{config.badge}</p>
@@ -218,7 +218,7 @@ export function RoleAiAssistant({ role, className, defaultOpen = false }: RoleAi
           {/* Header */}
           <div className="p-4 bg-gradient-to-r from-stone-900 via-stone-900 to-black border-b border-stone-800 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-2xl bg-[#D1400F] flex items-center justify-center font-black text-sm text-white shadow-md shadow-[#D1400F]/30">
+              <div className="w-9 h-9 rounded-2xl bg-[#FACC15] flex items-center justify-center font-black text-sm text-stone-950 shadow-md shadow-[#FACC15]/30">
                 Sol
               </div>
               <div>
@@ -245,7 +245,7 @@ export function RoleAiAssistant({ role, className, defaultOpen = false }: RoleAi
             {/* Insights Proactivos por Rol */}
             <div className="space-y-2.5">
               <p className="text-[10px] font-bold uppercase tracking-wider text-stone-400 flex items-center gap-1.5">
-                <RoleIcon className="w-3.5 h-3.5 text-[#D1400F]" /> Sugerencias en tiempo real
+                <RoleIcon className="w-3.5 h-3.5 text-yellow-400" /> Sugerencias en tiempo real
               </p>
               {config.insights.map((item, i) => {
                 const Icon = item.icon
@@ -275,7 +275,7 @@ export function RoleAiAssistant({ role, className, defaultOpen = false }: RoleAi
                     key={chip}
                     type="button"
                     onClick={() => handleSend(chip)}
-                    className="text-[11px] font-medium px-3 py-1.5 rounded-xl bg-stone-800 hover:bg-[#D1400F] hover:text-white text-stone-300 border border-stone-700 transition-all text-left"
+                    className="text-[11px] font-medium px-3 py-1.5 rounded-xl bg-stone-800 hover:bg-[#FACC15] hover:text-stone-950 text-stone-300 border border-stone-700 transition-all text-left"
                   >
                     {chip}
                   </button>
@@ -293,7 +293,7 @@ export function RoleAiAssistant({ role, className, defaultOpen = false }: RoleAi
                       'p-3 rounded-2xl max-w-[90%] leading-relaxed text-xs',
                       m.sender === 'user'
                         ? 'ml-auto bg-stone-800 text-stone-200 border border-stone-700 rounded-tr-none'
-                        : 'bg-[#D1400F]/20 text-stone-100 border border-[#D1400F]/30 rounded-tl-none'
+                        : 'bg-[#FACC15]/20 text-stone-100 border border-[#EAB308]/30 rounded-tl-none'
                     )}
                   >
                     {m.text}
@@ -301,7 +301,7 @@ export function RoleAiAssistant({ role, className, defaultOpen = false }: RoleAi
                 ))}
                 {loading && (
                   <div className="flex items-center gap-2 text-stone-400 text-xs italic">
-                    <span className="w-2 h-2 rounded-full bg-[#D1400F] animate-ping" /> Sol IA está analizando...
+                    <span className="w-2 h-2 rounded-full bg-[#FACC15] animate-ping" /> Sol IA está analizando...
                   </div>
                 )}
               </div>
@@ -316,12 +316,12 @@ export function RoleAiAssistant({ role, className, defaultOpen = false }: RoleAi
               onChange={e => setInputText(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && handleSend()}
               placeholder={`Preguntar a Sol IA (${role})...`}
-              className="flex-1 bg-stone-800 border border-stone-700 rounded-xl px-3 py-2 text-xs text-white placeholder-stone-400 focus:outline-none focus:border-[#D1400F]"
+              className="flex-1 bg-stone-800 border border-stone-700 rounded-xl px-3 py-2 text-xs text-white placeholder-stone-400 focus:outline-none focus:border-[#CA8A04]"
             />
             <button
               type="button"
               onClick={() => handleSend()}
-              className="p-2 rounded-xl bg-[#D1400F] text-white hover:bg-[#B03508] transition-colors"
+              className="p-2 rounded-xl bg-[#FACC15] text-stone-950 hover:bg-[#EAB308] transition-colors"
             >
               <Send className="w-4 h-4" />
             </button>

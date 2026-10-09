@@ -51,8 +51,8 @@ export function DemoPersistentToast() {
         className="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full bg-[#1C1917] px-4 py-2.5 text-sm font-medium text-white shadow-xl ring-1 ring-white/10 transition-all hover:scale-105 active:scale-95 animate-fade-in-up"
       >
         <span className="relative flex h-2.5 w-2.5">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#D1400F] opacity-60" />
-          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#D1400F]" />
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#FACC15] opacity-60" />
+          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#FACC15]" />
         </span>
         Modo demo
         <ChevronUp className="h-4 w-4 opacity-70" />
@@ -64,7 +64,7 @@ export function DemoPersistentToast() {
     <div className="fixed bottom-0 left-0 right-0 z-50 w-full animate-fade-in-up sm:bottom-4 sm:right-4 sm:left-auto sm:w-[calc(100%-2rem)] sm:max-w-md">
       <div className="relative overflow-hidden rounded-t-2xl sm:rounded-2xl bg-[#1C1917] p-4 pb-5 sm:pb-4 text-white shadow-2xl ring-1 ring-white/10">
         <div
-          className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[#D1400F]/30 blur-2xl"
+          className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[#FACC15]/30 blur-2xl"
           aria-hidden
         />
         <button
@@ -76,7 +76,7 @@ export function DemoPersistentToast() {
         </button>
 
         <div className="flex items-start gap-3 pr-6">
-          <div className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[#D1400F]/20 text-[#F5A623]">
+          <div className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[#FACC15]/20 text-yellow-700 dark:text-yellow-400">
             <Info className="h-5 w-5" />
           </div>
           <div className="space-y-1">
@@ -92,8 +92,8 @@ export function DemoPersistentToast() {
           <a
             href="/landing#descargas"
             className={cn(
-              'inline-flex items-center gap-1.5 rounded-lg bg-[#D1400F] px-3 py-1.5 text-xs font-semibold',
-              'text-white transition-all hover:bg-[#B03508] active:scale-95',
+              'inline-flex items-center gap-1.5 rounded-lg bg-[#FACC15] px-3 py-1.5 text-xs font-semibold',
+              'text-stone-950 transition-all hover:bg-[#EAB308] active:scale-95',
             )}
           >
             <Smartphone className="h-3.5 w-3.5" />

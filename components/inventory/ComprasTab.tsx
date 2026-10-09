@@ -103,7 +103,7 @@ export function ComprasTab({ branchId }: { branchId: number | null }) {
   return (
     <div className="space-y-3">
       <div className="flex justify-end">
-        <Button onClick={openNew} size="sm" className="bg-[#D1400F] hover:bg-[#B03508]" disabled={inventory.length === 0}>
+        <Button onClick={openNew} size="sm" className="bg-[#FACC15] hover:bg-[#EAB308]" disabled={inventory.length === 0}>
           <Plus className="h-4 w-4 mr-1" /> Nueva compra
         </Button>
       </div>
@@ -179,12 +179,12 @@ export function ComprasTab({ branchId }: { branchId: number | null }) {
             <Button variant="outline" size="sm" onClick={addLine}><Plus className="h-3.5 w-3.5 mr-1" /> Agregar insumo</Button>
 
             <div className="flex justify-between font-semibold border-t pt-2">
-              <span>Total</span><span className="text-[#D1400F]">{formatCurrency(total)}</span>
+              <span>Total</span><span className="text-yellow-700 dark:text-yellow-400">{formatCurrency(total)}</span>
             </div>
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setOpen(false)}>Cancelar</Button>
-            <Button onClick={handleCreate} disabled={create.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">Crear compra</Button>
+            <Button onClick={handleCreate} disabled={create.isPending} className="bg-[#FACC15] hover:bg-[#EAB308]">Crear compra</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
