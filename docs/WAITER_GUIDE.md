@@ -1,4 +1,4 @@
-# Guía de Mesero — RestaurOS
+# Guía de Mesero — FoodIX
 
 Todo lo que necesitas para atender mesas, tomar pedidos y cobrar. Lenguaje directo y al grano.
 

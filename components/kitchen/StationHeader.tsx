@@ -46,7 +46,7 @@ export function StationHeader({ station, activeCount, lastUpdated }: StationHead
             R
           </div>
           <span className="hidden text-sm font-semibold sm:inline-block text-stone-800 animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-            Restaur<span className="text-[#E85D04]">OS</span><sup className="text-[0.55em] align-super">©</sup>
+            Food<span className="text-[#E85D04]">IX</span><sup className="text-[0.55em] align-super">©</sup>
           </span>
         </div>
 

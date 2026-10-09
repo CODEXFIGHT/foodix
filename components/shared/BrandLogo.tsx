@@ -54,19 +54,22 @@ export function BrandLogo({
           style={{ width: size, height: size }}
         />
       ) : (
-        <div
-          className="rounded-lg bg-[#E85D04] text-white font-bold flex items-center justify-center font-heading flex-shrink-0 shadow-sm border border-stone-100/10"
-          style={{ width: size, height: size, fontSize: `${size * 0.55}px` }}
-        >
-          R
-        </div>
+        <Image
+          src="/brand/foodix-icon.svg"
+          alt="FoodIX"
+          width={size}
+          height={size}
+          unoptimized
+          className="rounded-lg flex-shrink-0 shadow-sm"
+          style={{ width: size, height: size }}
+        />
       )}
 
       {showName && (
         <span className={cn('relative inline-block font-bold tracking-tight truncate', nameClassName)}>
           {forceFoodIX || !branch?.name ? (
             <span className="inline-block animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-              Restaur<span className="text-[#E85D04]">OS</span><sup className="text-[0.55em] align-super">©</sup>
+              Food<span className="text-[#E85D04]">IX</span><sup className="text-[0.55em] align-super">©</sup>
             </span>
           ) : branch.name}
         </span>

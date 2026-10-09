@@ -49,8 +49,8 @@ export async function POST(req: Request) {
     title: body.title || 'FoodIX · Notificación de prueba',
     body: body.body || `Listo. Las notificaciones push están activas${body.role ? ` para ${body.role}` : ''} en este dispositivo.`,
     url: body.url || '/',
-    icon: '/icon.png',
-    badge: '/icon.png',
+    icon: '/icons/icon-192.png',
+    badge: '/icons/icon-192.png',
     tag: 'restauros-test',
   })
 

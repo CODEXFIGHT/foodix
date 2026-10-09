@@ -1,4 +1,4 @@
-# WhatsApp con Twilio — RestaurOS Pro
+# WhatsApp con Twilio — FoodIX Pro
 
 Pedidos por WhatsApp directo a cocina, **exclusivo del Plan Pro**. El cliente
 escribe al número de WhatsApp del restaurante, el bot le muestra el menú, arma el
@@ -109,13 +109,13 @@ Twilio firma cada request con `X-Twilio-Signature`; el webhook la valida con
 
 1. Inicia sesión como **admin** del restaurante.
 2. En la barra superior, pulsa el ícono de **WhatsApp** (verde).
-3. Se abre el panel lateral **"WhatsApp RestaurOS Pro"**:
+3. Se abre el panel lateral **"WhatsApp FoodIX Pro"**:
    - **Sandbox**: escanea el QR con el teléfono que usará WhatsApp y envía
      `join <palabra>`. Luego pulsa **Ya me uní** para marcar el canal como conectado.
    - **Conectado**: muestra ícono de éxito, número conectado y última sincronización.
    - Botón rojo **Cerrar sesión de WhatsApp** limpia el estado de conexión.
 4. Si la sucursal **no es Pro**, el panel muestra el upsell:
-   _"WhatsApp IA está disponible únicamente en RestaurOS Pro"_.
+   _"WhatsApp IA está disponible únicamente en FoodIX Pro"_.
 
 > En **producción** se usa un número de WhatsApp Business aprobado por Meta/Twilio
 > en lugar del sandbox; el flujo del panel es el mismo.
@@ -131,7 +131,7 @@ del cliente. Estado inicial: **Nuevo (pending)**. También dispara el push a coc
 
 ---
 
-## 6. Chatbot WhatsApp RestaurOS — flujo conversacional
+## 6. Chatbot WhatsApp FoodIX — flujo conversacional
 
 El bot (`lib/server/whatsappFlow.ts`) es una máquina de estados por chat
 (`branch_slug` + teléfono). Twilio no soporta listas/botones interactivos fuera
@@ -175,7 +175,7 @@ Bot:     ━━━━━━━━━━━━━━━━━━
 
 Cliente: 1
 Bot:     ━━━━━━━━━━━━━━━━━━
-         🍽️ RestaurOS
+         🍽️ FoodIX
          ━━━━━━━━━━━━━━━━━━
 
          *Tacos de pastor*
@@ -204,7 +204,7 @@ Bot:     ¿A qué nombre ponemos el pedido?
 
 Cliente: Juan
 Bot:     ━━━━━━━━━━━━━━━━━━
-         🍽️ RestaurOS
+         🍽️ FoodIX
          ━━━━━━━━━━━━━━━━━━
 
          ✅ Pedido confirmado — #123

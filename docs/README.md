@@ -1,6 +1,6 @@
-# Documentación de RestaurOS
+# Documentación de FoodIX
 
-**RestaurOS** es el sistema operativo para restaurantes de **DevHive Software**: punto de venta (POS), cocina (KDS), caja y turnos, carta digital QR, inventario, clientes, reportes y un panel SaaS de administración de suscripciones (Billing CRM).
+**FoodIX** es el sistema operativo para restaurantes de **DevHive Software**: punto de venta (POS), cocina (KDS), caja y turnos, carta digital QR, inventario, clientes, reportes y un panel SaaS de administración de suscripciones (Billing CRM).
 
 > Versión documentada: **1.0.0-beta.117** · Última actualización: **2026-07-10**
 
@@ -93,4 +93,4 @@ para mobile y desktop. Consulta la
 [sección de Carta digital](USER_MANUAL.md#16-usar-la-carta-como-cliente) y la
 [guía del administrador](ADMIN_GUIDE.md#carta-digital-pública).
 
-© 2026 DevHive Software · RestaurOS. Documentación de uso bajo licencia comercial.
+© 2026 DevHive Software · FoodIX. Documentación de uso bajo licencia comercial.

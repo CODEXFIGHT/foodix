@@ -1,5 +1,5 @@
 /**
- * Planes públicos de RestaurOS — fuente única usada por la landing y el checkout.
+ * Planes públicos de FoodIX — fuente única usada por la landing y el checkout.
  * Los montos están en MXN (pesos enteros). El checkout los convierte a centavos.
  */
 export type PlanId = 'starter' | 'pro' | 'ai' | 'multisucursal'
@@ -108,7 +108,7 @@ export const PLANS: LandingPlan[] = [
       'Analítica de clientes',
     ],
     summary:
-      'Mientras tú cocinas, RestaurOS toma pedidos por WhatsApp y los manda directo a cocina: el cliente ve el menú, arma su carrito con ayuda del asistente y confirma — sin comisiones por pedido propio.',
+      'Mientras tú cocinas, FoodIX toma pedidos por WhatsApp y los manda directo a cocina: el cliente ve el menú, arma su carrito con ayuda del asistente y confirma — sin comisiones por pedido propio.',
     highlights: [
       { icon: '💬', title: 'WhatsApp AI Waiter (Próximamente)', desc: 'Tu asistente virtual atiende, recomienda y confirma pedidos por WhatsApp las 24 horas.' },
       { icon: '🤖', title: 'Recomendaciones inteligentes', desc: 'Sugiere combos y bebidas automáticamente para subir el ticket promedio.' },

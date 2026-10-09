@@ -1,7 +1,7 @@
 {
   "id": "/",
-  "name": "RestaurOS — Gestión de Restaurantes",
-  "short_name": "RestaurOS",
+  "name": "FoodIX — Gestión de Restaurantes",
+  "short_name": "FoodIX",
   "description": "Sistema moderno de gestión para restaurantes, cafeterías y negocios de alimentos.",
   "start_url": "/",
   "scope": "/",
@@ -14,8 +14,9 @@
   "categories": ["business", "productivity"],
   "prefer_related_applications": false,
   "icons": [
-    { "src": "/icon.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/icon.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
     { "src": "/apple-icon.png", "sizes": "180x180", "type": "image/png" }
   ]
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { PageTransition } from '@/components/shared/PageTransition'
 
@@ -13,14 +14,16 @@ export default function PrivacidadPage() {
       <header className="bg-[#1C1917] text-white">
         <div className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between gap-3">
           <div className="flex items-center gap-3 min-w-0">
-            <div
-              className="rounded-lg bg-[#E85D04] text-white font-bold flex items-center justify-center font-heading flex-shrink-0 shadow-sm border border-stone-100/10"
-              style={{ width: 28, height: 28, fontSize: `${28 * 0.55}px` }}
-            >
-              R
-            </div>
+            <Image
+              src="/brand/foodix-icon.svg"
+              alt="FoodIX"
+              width={28}
+              height={28}
+              unoptimized
+              className="rounded-lg flex-shrink-0 shadow-sm"
+            />
             <Link href="/" className="inline-block font-bold animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-              Restaur<span className="text-[#E85D04]">OS</span><sup className="text-[0.55em] align-super">©</sup>
+              Food<span className="text-[#E85D04]">IX</span><sup className="text-[0.55em] align-super">©</sup>
             </Link>
             <span className="text-stone-400">/</span>
             <span className="text-stone-300 text-sm truncate">Aviso de Privacidad</span>

@@ -103,7 +103,7 @@ function mailLogo(): string {
     </td>
     <td style="vertical-align:middle;">
       <div style="font-family:{$font};font-size:20px;font-weight:800;color:{$ink};letter-spacing:-0.4px;line-height:1.1;">
-        Restaur<span style="color:{$b};">OS</span>
+        Food<span style="color:{$b};">IX</span>
       </div>
       <div style="font-family:{$font};font-size:11px;color:{$muted};line-height:1.4;margin-top:2px;">
         Tu restaurante, en orden

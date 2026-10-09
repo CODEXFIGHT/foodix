@@ -1,6 +1,6 @@
-# Despliegue (producción) — RestaurOS
+# Despliegue (producción) — FoodIX
 
-Cómo publicar RestaurOS. El **frontend** va en **Vercel**; el **backend PHP + MySQL** en hosting propio.
+Cómo publicar FoodIX. El **frontend** va en **Vercel**; el **backend PHP + MySQL** en hosting propio.
 
 > Ver también el [checklist heredado](DEPLOY-CHECKLIST.md).
 

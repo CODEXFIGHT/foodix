@@ -1,9 +1,9 @@
 <?php
 /**
- * RestaurOS — Sistema de gestión para restaurantes
+ * FoodIX — Sistema de gestión para restaurantes
  * Conexión PDO a la base de datos MySQL.
  *
- * @package   RestaurOS
+ * @package   FoodIX
  * @author    Carlos Jaime López Martínez
  * @copyright 2026 DevHive Software. Todos los derechos reservados.
  * @license   Propietario — uso bajo licencia comercial.

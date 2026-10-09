@@ -1,4 +1,4 @@
-# Guía de Caja — RestaurOS
+# Guía de Caja — FoodIX
 
 Cómo operar la **caja y los turnos**. La caja no es un rol aparte: la operan **admin** y **mesero**. Es **obligatoria** para cobrar.
 
@@ -6,7 +6,7 @@ Cómo operar la **caja y los turnos**. La caja no es un rol aparte: la operan **
 
 ## ¿Por qué es obligatoria?
 
-RestaurOS bloquea **cobrar, registrar pagos y mover efectivo** si no hay una **caja abierta (turno)**. Así, cada venta queda ligada a un **usuario + POS**, y el corte del día cuadra sin mezclar turnos.
+FoodIX bloquea **cobrar, registrar pagos y mover efectivo** si no hay una **caja abierta (turno)**. Así, cada venta queda ligada a un **usuario + POS**, y el corte del día cuadra sin mezclar turnos.
 
 ```mermaid
 flowchart LR

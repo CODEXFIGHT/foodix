@@ -1,4 +1,4 @@
-# Stack técnico y arquitectura — RestaurOS
+# Stack técnico y arquitectura — FoodIX
 
 Documento de referencia técnica: todo el stack de desarrollo, cómo se integran las
 piezas y los flujos principales del sistema, con diagramas. Para guías de uso
@@ -26,7 +26,7 @@ endpoint ver [API.md](API.md).
 
 ## 1. Resumen
 
-RestaurOS es un **monolito frontend en Next.js** (desplegado en Vercel) que habla,
+FoodIX es un **monolito frontend en Next.js** (desplegado en Vercel) que habla,
 por HTTP + JWT, con un **backend PHP puro** (sin framework, sin ORM) desplegado en
 hosting compartido (`tallercheck.mx`), respaldado por **MySQL 8**. No hay
 WebSockets ni SSE: todo lo "en tiempo real" (KDS, Device Center, sesión de
@@ -393,7 +393,7 @@ graph LR
   una vez sin error (patrón usado desde la migración `22-branch-tax-config.sql`
   en adelante).
 - **Design tokens en HSL** (`app/globals.css`, tema claro/oscuro) — color de
-  marca `#E85D04` ("RestaurOS Orange"). Detalle completo en el
+  marca `#E85D04` ("FoodIX Orange"). Detalle completo en el
   [README](../README.md#paleta-de-colores).
 - **Degradación silenciosa de IA**: cualquier punto que use OpenRouter
   (descripciones de menú, fallback de WhatsApp, voz del mesero) nunca rompe el

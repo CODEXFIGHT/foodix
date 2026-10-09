@@ -1,6 +1,6 @@
 <?php
 /**
- * RestaurOS — Endpoint de provisión (EJEMPLO DE REFERENCIA)
+ * FoodIX — Endpoint de provisión (EJEMPLO DE REFERENCIA)
  * ─────────────────────────────────────────────────────────────────────────────
  * Este archivo NO se ejecuta desde el repo Next.js. Es una plantilla para tu
  * backend PHP en tallercheck.mx. Recíbelo en la URL que pondrás en la variable

@@ -1,5 +1,5 @@
 -- ============================================================
--- RestaurOS — Schema Supabase
+-- FoodIX — Schema Supabase
 -- Ejecutar en el SQL Editor del dashboard de Supabase
 -- ============================================================
 -- IMPORTANTE: Los usuarios se crean con email ficticio del dominio

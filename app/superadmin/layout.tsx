@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useAuthStore } from '@/lib/stores/authStore'
 import { Icons8Image } from '@/components/shared/Icons8Image'
 import { ICONS8 } from '@/lib/constants/icons'
@@ -130,12 +131,14 @@ function UserFooter({ onLogoutStart }: { onLogoutStart: () => void }) {
 function BrandHeader() {
   return (
     <div className="flex items-center gap-2.5 px-4 h-14 border-b border-white/10">
-      <div
-        className="rounded-lg bg-[#E85D04] text-white font-bold flex items-center justify-center font-heading flex-shrink-0 shadow-sm border border-stone-100/10"
-        style={{ width: 26, height: 26, fontSize: `${26 * 0.7}px` }}
-      >
-        R
-      </div>
+      <Image
+        src="/brand/foodix-icon.svg"
+        alt="FoodIX"
+        width={26}
+        height={26}
+        unoptimized
+        className="rounded-lg flex-shrink-0 shadow-sm"
+      />
       <div className="flex flex-col leading-none">
         <span className="text-white font-semibold text-sm tracking-tight">
           FoodIX<sup className="text-[0.55em] align-super">©</sup>
@@ -300,14 +303,16 @@ export default function SuperAdminLayout({ children }: { children: React.ReactNo
           <div className="flex-1 flex flex-col overflow-hidden">
             <header className="h-14 flex-shrink-0 sticky top-0 z-30 border-b border-white/10 flex items-center px-4 lg:px-6 gap-3 bg-black/80 backdrop-blur supports-[backdrop-filter]:bg-black/60">
             <div className="flex items-center gap-2.5 min-w-0">
-              {/* Logo oficial de RestaurOS */}
+              {/* Logo oficial de FoodIX */}
               <div className="flex items-center gap-2 flex-shrink-0">
-                <div
-                  className="rounded-lg bg-[#E85D04] text-white font-bold flex items-center justify-center font-heading flex-shrink-0 shadow-sm border border-stone-100/10"
-                  style={{ width: 24, height: 24, fontSize: `${24 * 0.7}px` }}
-                >
-                  R
-                </div>
+                <Image
+                  src="/brand/foodix-icon.svg"
+                  alt="FoodIX"
+                  width={24}
+                  height={24}
+                  unoptimized
+                  className="rounded-lg flex-shrink-0 shadow-sm"
+                />
                 <span className="text-white font-semibold text-sm tracking-tight hidden min-[360px]:inline-block animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
                   Food<span className="text-[#E85D04]">IX</span>
                   <sup className="text-[0.55em] align-super">©</sup>

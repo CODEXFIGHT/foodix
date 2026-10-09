@@ -1,5 +1,5 @@
 /**
- * RestaurOS — GET /api/whatsapp/cron/inactivity
+ * FoodIX — GET /api/whatsapp/cron/inactivity
  *
  * Recordatorio proactivo de inactividad del bot de WhatsApp: si un cliente
  * dejó un pedido a medias y no ha respondido en N minutos, le manda un

@@ -187,7 +187,7 @@ export default function RegisterPage() {
           Volver
         </Link>
         <span className="font-heading text-lg font-extrabold text-stone-900">
-          Restaur<span className="text-[#E85D04]">OS</span>
+          Food<span className="text-[#E85D04]">IX</span>
         </span>
       </header>
 

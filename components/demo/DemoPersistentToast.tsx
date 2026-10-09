@@ -1,5 +1,5 @@
 /**
- * RestaurOS — Modo Demo
+ * FoodIX — Modo Demo
  * Banner persistente, premium y minimizable. Informa que es un demo y
  * recomienda el kiosko Android. No es invasivo y respeta móvil.
  *
@@ -80,10 +80,10 @@ export function DemoPersistentToast() {
             <Info className="h-5 w-5" />
           </div>
           <div className="space-y-1">
-            <p className="text-sm font-semibold leading-snug">Estás usando RestaurOS en modo demo</p>
+            <p className="text-sm font-semibold leading-snug">Estás usando FoodIX en modo demo</p>
             <p className="text-xs leading-relaxed text-white/70">
               Para una experiencia completa en restaurante, recomendamos un kiosko con Android OS e
-              instalar <span className="font-medium text-white">RestaurOS Android</span>.
+              instalar <span className="font-medium text-white">FoodIX Android</span>.
             </p>
           </div>
         </div>
@@ -97,10 +97,10 @@ export function DemoPersistentToast() {
             )}
           >
             <Smartphone className="h-3.5 w-3.5" />
-            Conocer RestaurOS Android
+            Conocer FoodIX Android
           </a>
           <a
-            href="mailto:restauros@atomicmail.io?subject=Solicitar%20instalaci%C3%B3n%20RestaurOS"
+            href="mailto:restauros@atomicmail.io?subject=Solicitar%20instalaci%C3%B3n%20FoodIX"
             className="inline-flex items-center rounded-lg bg-white/10 px-3 py-1.5 text-xs font-semibold text-white transition-all hover:bg-white/20 active:scale-95"
           >
             Solicitar instalación

@@ -43,7 +43,7 @@ function Wordmark() {
     <Link href="/landing" className="flex items-center gap-2">
       <span className="h-8 w-8 rounded-xl bg-[#E85D04] text-white font-bold grid place-items-center font-heading">F</span>
       <span className="inline-block font-heading font-bold text-lg text-stone-900 animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-        Restaur<span className="text-[#E85D04]">OS</span><sup className="text-[0.55em] align-super">©</sup>
+        Food<span className="text-[#E85D04]">IX</span><sup className="text-[0.55em] align-super">©</sup>
       </span>
     </Link>
   )

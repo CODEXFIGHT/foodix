@@ -122,7 +122,7 @@ async function cleanChrome(page) {
         const text = (el.textContent || '').trim()
         if (!text) continue
         const style = window.getComputedStyle(el)
-        const isDemoToast = text.includes('Modo demo') || text.includes('Estás usando RestaurOS en modo demo')
+        const isDemoToast = text.includes('Modo demo') || text.includes('Estás usando FoodIX en modo demo')
         if (isDemoToast && style.position === 'fixed') {
           el.style.display = 'none'
         }

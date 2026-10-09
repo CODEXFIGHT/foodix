@@ -1,6 +1,6 @@
-# Manual de Usuario — RestaurOS
+# Manual de Usuario — FoodIX
 
-Guía completa, en lenguaje sencillo, para operar tu restaurante con RestaurOS desde el primer día.
+Guía completa, en lenguaje sencillo, para operar tu restaurante con FoodIX desde el primer día.
 
 > ¿Buscas algo específico? Usa el **Centro de Ayuda** (`/help`) dentro de la app o el [FAQ](FAQ.md).
 
@@ -30,7 +30,7 @@ Guía completa, en lenguaje sencillo, para operar tu restaurante con RestaurOS d
 
 ## 1. Primer inicio de sesión
 
-1. Abre RestaurOS en tu navegador o en la app de tablet/POS.
+1. Abre FoodIX en tu navegador o en la app de tablet/POS.
 2. Escribe tu **usuario** y **contraseña** (te los da el administrador).
 3. Pulsa **Ingresar**.
 
@@ -121,7 +121,7 @@ Son opciones que cambian un producto (ej. *Término de la carne*, *Extra queso*,
 
 > **Obligatorio antes de cobrar.** Menú → **Caja**.
 
-RestaurOS exige una **caja abierta** (turno) para cobrar, registrar pagos o mover efectivo. Sin caja, esas acciones se bloquean con un aviso.
+FoodIX exige una **caja abierta** (turno) para cobrar, registrar pagos o mover efectivo. Sin caja, esas acciones se bloquean con un aviso.
 
 1. Entra a **Caja**.
 2. Pulsa **Abrir caja**.
@@ -186,7 +186,7 @@ El total se calcula solo, ya con cualquier **promoción automática** aplicada (
 
 1. El sistema muestra el **efectivo esperado** (fondo + ventas en efectivo + entradas − salidas).
 2. Captura el **efectivo contado** en caja.
-3. RestaurOS calcula la **diferencia**.
+3. FoodIX calcula la **diferencia**.
 4. Confirma: el turno se cierra.
 
 Después de cerrar, **no podrás cobrar** hasta abrir un nuevo turno.
@@ -294,7 +294,7 @@ Las direcciones largas se desplazan automáticamente sin ocultar su contenido.
 
 > Solo **Admin**. Menú → ícono de WhatsApp. Requiere **Plan AI o MultiSucursal**.
 
-RestaurOS recibe pedidos automáticos por WhatsApp con un flujo pensado para ser rápido y sin fricción:
+FoodIX recibe pedidos automáticos por WhatsApp con un flujo pensado para ser rápido y sin fricción:
 
 1. Conecta tu WhatsApp escaneando el QR de activación; el sistema **detecta la conexión sola** en cuanto llega el primer mensaje real.
 2. El cliente ve el catálogo priorizado (Recomendados → Más vendidos → categorías) en bloques de 10, con "*ver más*" para avanzar.

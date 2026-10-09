@@ -51,7 +51,7 @@ export async function POST(req: Request) {
     const status = await res.json()
     if (!status.plan_pro) {
       return NextResponse.json(
-        { error: 'plan_not_pro', message: 'WhatsApp IA está disponible únicamente en RestaurOS Pro' },
+        { error: 'plan_not_pro', message: 'WhatsApp IA está disponible únicamente en FoodIX Pro' },
         { status: 403 },
       )
     }

@@ -1,5 +1,5 @@
 /**
- * RestaurOS — Generación asistida de contenido de producto (servidor).
+ * FoodIX — Generación asistida de contenido de producto (servidor).
  *
  * Recibe el nombre (y categoría) de un platillo y devuelve una descripción
  * apetitosa y una lista de ingredientes. La clave y el proveedor de IA viven

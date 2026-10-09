@@ -1,5 +1,5 @@
 /**
- * RestaurOS — GET /api/cron/subscription-check
+ * FoodIX — GET /api/cron/subscription-check
  *
  * Tarea diaria (Vercel Cron) que mantiene el ciclo de vida de las suscripciones:
  *   1. Pide al backend PHP que auto-expire las suscripciones vencidas (lo que
@@ -103,8 +103,8 @@ export async function GET(req: Request) {
       title: r.title,
       body: r.body,
       url: r.url || '/billing',
-      icon: '/icon.png',
-      badge: '/icon.png',
+      icon: '/icons/icon-192.png',
+      badge: '/icons/icon-192.png',
       tag: r.tag || `sub-reminder-${r.branch_id}`,
     })
 

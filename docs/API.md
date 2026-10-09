@@ -1,6 +1,6 @@
 # API REST (backend PHP)
 
-Referencia de los endpoints del backend de RestaurOS. El backend es un router PHP plano (`php-backend/index.php`) que despacha por el **primer segmento** de la ruta a `routes/<recurso>.php`.
+Referencia de los endpoints del backend de FoodIX. El backend es un router PHP plano (`php-backend/index.php`) que despacha por el **primer segmento** de la ruta a `routes/<recurso>.php`.
 
 > [← Volver al índice](README.md) · Relacionado: [Arquitectura](ARCHITECTURE.md)
 

@@ -3,6 +3,7 @@
 import { Suspense, useState, useEffect, useRef, useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { toast } from 'sonner'
@@ -347,11 +348,16 @@ function LoginForm() {
         {/* Barra superior: wordmark + logo R y enlace de ayuda */}
         <header className="fixed top-0 inset-x-0 z-40 border-b border-stone-200 bg-white/80 backdrop-blur-sm px-6 py-4 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2">
-            <div className="h-7 w-7 rounded-lg bg-[#E85D04] text-white font-bold grid place-items-center font-heading text-sm shrink-0">
-              R
-            </div>
+            <Image
+              src="/brand/foodix-icon.svg"
+              alt="FoodIX"
+              width={28}
+              height={28}
+              unoptimized
+              className="h-7 w-7 rounded-lg shrink-0"
+            />
             <span className="relative inline-block text-lg font-bold font-heading leading-none animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-              Restaur<span className="text-[#E85D04]">OS</span><sup className="ml-0.5 align-super text-[0.55em] font-bold text-muted-foreground">&copy;</sup>
+              Food<span className="text-[#E85D04]">IX</span><sup className="ml-0.5 align-super text-[0.55em] font-bold text-muted-foreground">&copy;</sup>
             </span>
           </div>
           <button
@@ -370,15 +376,18 @@ function LoginForm() {
               {/* Logo dinámico: por defecto la marca FoodIX, o el del restaurante escrito */}
               <div className="h-14 flex items-center">
                 {brandSrc === ICONS8.brand ? (
-                  <div
+                  <Image
                     key="default-logo"
+                    src="/brand/foodix-icon.svg"
+                    alt="FoodIX"
+                    width={56}
+                    height={56}
+                    unoptimized
                     className={cn(
-                      'h-14 w-14 rounded-2xl bg-[#E85D04] text-white font-bold grid place-items-center font-heading text-3xl shadow-sm transition-opacity duration-200',
+                      'h-14 w-14 rounded-2xl shadow-sm transition-opacity duration-200',
                       brandFading ? 'opacity-0' : 'opacity-100',
                     )}
-                  >
-                    R
-                  </div>
+                  />
                 ) : (
                   <Icons8Image
                     key={brandSrc}
@@ -409,7 +418,7 @@ function LoginForm() {
                       aria-hidden="true"
                       className="inline-block animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]"
                     >
-                      Restaur<span className="text-[#E85D04]">OS</span>
+                      Food<span className="text-[#E85D04]">IX</span>
                       <sup className="ml-0.5 align-super text-[0.5em] font-bold text-muted-foreground">&copy;</sup>
                     </span>
                   </h1>

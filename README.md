@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="app/icon.svg" width="96" height="96" alt="FoodIX" />
+<img src="public/brand/foodix-icon.svg" width="96" height="96" alt="FoodIX" />
 
 # FoodIX
 
@@ -63,7 +63,7 @@ FoodIX es una plataforma web de gestión integral (POS + operación) que reempla
 - 📡 **Device Center**: monitoreo en tiempo real de los dispositivos conectados por establecimiento (kioskos, pantallas de cocina, tablets, cajas, lectores, POS-8360, impresoras), con estado online/idle/offline/error, heartbeat, alertas y registro manual de periféricos
 
 **Cambios recientes en la interfaz:**
-- 🔤 **Rediseño premium FoodIX**: tipografía Playfair Display (títulos) + Inter (cuerpo), token `--font-playfair-display` integrado en globals.css y tailwind.config.ts, nombre de marca cambiado de RestaurOS a FoodIX en todo el producto, landing y assets.
+- 🔤 **Tipografía renovada FoodIX**: Plus Jakarta Sans (títulos) + Inter (cuerpo), sin serif; tokens `--font-plus-jakarta-sans` y `--font-inter` cargados en layout.tsx y mapeados en tailwind.config.ts. Marca unificada como FoodIX en todo el producto, landing y assets.
 - 🔤 **Planes renombrados**: Starter / Pro / AI / MultiSucursal (antes Trial/Basic/Pro/Enterprise), con `licenseForPlan()`/`requirePlanFeature()` como fuente única de verdad de límites y funciones por plan, y `FeatureLock` en el frontend para las funciones gateadas (Promociones, Inventario, WhatsApp)
 - 💬 **Rediseño del bot de WhatsApp**: multi-ítem por mensaje, catálogo priorizado y paginado, cero preguntas de fricción (ver arriba) — ahora exclusivo del **Plan AI**
 - 🏷️ **Ejecución real de Promociones/Combos/Cupones/Lealtad**: antes solo existía el CRUD; ahora se aplican automáticamente al cobrar, tanto en POS como en pedidos por WhatsApp, con selector de combos en **Nuevo Pedido** y desglose auditable en el detalle del pedido y el ticket
@@ -194,9 +194,9 @@ Glows usados en la carta digital y para diferenciar las estaciones de cocina.
 | Token | Valor | Notas |
 |-------|-------|-------|
 | `--radius` | `0.75rem` | Radio base; deriva `lg` / `md - 2px` / `sm - 4px` |
-| `font-sans` | DM Sans | Texto de interfaz (`--font-dm-sans`) |
-| `font-heading` | Playfair Display + Plus Jakarta Sans | Títulos (`--font-playfair-display`, fallback `--font-plus-jakarta-sans`) |
-| `font-body` | DM Sans + Inter | Cuerpo (`--font-dm-sans`, interconectado con sistema)
+| `font-sans` | Inter | Texto de interfaz (`--font-inter`) |
+| `font-heading` | Plus Jakarta Sans + Inter | Títulos (`--font-plus-jakarta-sans`, fallback `--font-inter`) |
+| `font-body` | Inter | Cuerpo (`--font-inter`)
 
 > Los valores de origen viven en HSL dentro de `:root`, `.dark` y `.theme-light`
 > (esta última fuerza tokens claros en pantallas de marca como login/PIN). Los

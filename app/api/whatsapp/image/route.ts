@@ -8,7 +8,7 @@
  * proxy, `MediaUrl`/`image.link` apuntando a un .webp hace que el mensaje de
  * imagen falle en silencio (nunca llega al cliente, sin error visible).
  *
- * Solo reenvía imágenes del propio backend de RestaurOS (mismo host que
+ * Solo reenvía imágenes del propio backend de FoodIX (mismo host que
  * `BACKEND_BASE_URL`) — evita que esta ruta se use como proxy abierto para
  * bajar cualquier URL arbitraria (SSRF).
  */

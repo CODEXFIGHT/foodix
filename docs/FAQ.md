@@ -1,4 +1,4 @@
-# Preguntas Frecuentes (FAQ) — RestaurOS
+# Preguntas Frecuentes (FAQ) — FoodIX
 
 Respuestas rápidas y sencillas. ¿No encuentras tu duda? Abre el **Centro de Ayuda** (`/help`) o revisa [Solución de Problemas](TROUBLESHOOTING.md).
 
@@ -72,7 +72,7 @@ Admin → *Modificadores*: crea grupos (término, extras…) y asígnalos a los 
 ## Conexión y errores
 
 **¿Qué hago si falla el internet?**
-RestaurOS requiere conexión. Espera a que vuelva: al reconectar, las pantallas operativas se actualizan solas. Evita cobrar sin conexión.
+FoodIX requiere conexión. Espera a que vuelva: al reconectar, las pantallas operativas se actualizan solas. Evita cobrar sin conexión.
 
 **La aplicación se congeló.**
 Recarga la página (F5) o reinicia la app. Si persiste, cierra sesión y vuelve a entrar.

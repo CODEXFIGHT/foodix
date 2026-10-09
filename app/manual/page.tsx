@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Lightbulb, AlertTriangle } from 'lucide-react'
 import { Icons8Image } from '@/components/shared/Icons8Image'
@@ -100,14 +101,16 @@ export default function ManualPage() {
       <header className="sticky top-0 z-30 bg-[#1C1917]/95 backdrop-blur-sm text-white border-b border-white/5 shadow-lg">
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
           <div className="flex items-center gap-3 min-w-0">
-            <div
-              className="rounded-lg bg-[#E85D04] text-white font-bold flex items-center justify-center font-heading flex-shrink-0 shadow-sm border border-stone-100/10"
-              style={{ width: 32, height: 32, fontSize: `${32 * 0.55}px` }}
-            >
-              R
-            </div>
+            <Image
+              src="/brand/foodix-icon.svg"
+              alt="FoodIX"
+              width={32}
+              height={32}
+              unoptimized
+              className="rounded-lg flex-shrink-0 shadow-sm"
+            />
             <span className="inline-block font-bold text-lg animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-              Restaur<span className="text-[#E85D04]">OS</span><sup className="text-[0.55em] align-super">©</sup>
+              Food<span className="text-[#E85D04]">IX</span><sup className="text-[0.55em] align-super">©</sup>
             </span>
             <span className="text-stone-400 text-sm hidden sm:block truncate">/ Manual de usuario</span>
           </div>

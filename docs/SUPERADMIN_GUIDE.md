@@ -1,4 +1,4 @@
-# Guía de SuperAdmin — RestaurOS
+# Guía de SuperAdmin — FoodIX
 
 El **SuperAdmin** es el dueño del SaaS: administra **todas** las sucursales (clientes), sus **licencias** y sus **cobros** desde el panel global `/superadmin`.
 

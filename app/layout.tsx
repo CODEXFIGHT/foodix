@@ -7,7 +7,7 @@
  */
 
 import type { Metadata, Viewport } from 'next'
-import { DM_Sans, Plus_Jakarta_Sans, Playfair_Display, Inter } from 'next/font/google'
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 import 'animate.css'
 import './globals.css'
 import { ThemeProvider } from '@/components/layout/ThemeProvider'
@@ -31,25 +31,17 @@ const SOURCE_NOTICE = `
   ============================================================
 `
 
-// Fuente principal (cuerpo): se precarga para no bloquear el primer render.
-const dmSans = DM_Sans({
+// Fuente principal (cuerpo): Inter, máxima legibilidad en pantalla. Se
+// precarga para no bloquear el primer render.
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-dm-sans',
+  variable: '--font-inter',
   display: 'swap',
   preload: true,
 })
 
-// Fuente de títulos premium (restaurantes): Playfair Display da elegancia
-// editorial. NO se precarga para no competir con Inter en la carga inicial.
-const playfairDisplay = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-playfair-display',
-  display: 'swap',
-  preload: false,
-})
-
-// Fuente de encabezados moderna: vigor y legibilidad en UI.
+// Fuente de encabezados: Plus Jakarta Sans, vigor y legibilidad en UI.
+// NO se precarga para no competir con Inter en la carga inicial.
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
@@ -114,13 +106,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_MX',
     siteName: 'CodexFight',
-    images: [{ url: '/icon.png', width: 192, height: 192, alt: 'FoodIX' }],
+    images: [{ url: '/icons/icon-512.png', width: 512, height: 512, alt: 'FoodIX' }],
   },
   twitter: {
     card: 'summary',
     title: 'FoodIX — Sistema de Gestión para Restaurantes',
     description: 'Control total de tu restaurante: pedidos, mesas, cocina y ventas en un solo lugar.',
-    images: ['/icon.png'],
+    images: ['/icons/icon-512.png'],
   },
 }
 
@@ -133,7 +125,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://tallercheck.mx" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://i.ibb.co" />
       </head>
-      <body className={`${playfairDisplay.variable} ${dmSans.variable} ${plusJakartaSans.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${plusJakartaSans.variable} font-sans antialiased`}>
         <div hidden aria-hidden="true" suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: `<!--${SOURCE_NOTICE}-->` }} />
         <CodexFightBanner />

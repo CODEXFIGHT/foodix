@@ -1,5 +1,5 @@
 /**
- * RestaurOS — POST /api/push/notify-kitchen
+ * FoodIX — POST /api/push/notify-kitchen
  *
  * Entrega un push a la cocina cuando entra un nuevo pedido. El backend PHP
  * recopila las suscripciones de la sucursal (cocina + admin) y delega aquí el
@@ -68,11 +68,11 @@ export async function POST(req: Request) {
 
   const n = body.notification ?? {}
   const payload = JSON.stringify({
-    title: n.title || 'RestaurOS · Nuevo pedido',
+    title: n.title || 'FoodIX · Nuevo pedido',
     body: n.body || 'Tienes una nueva comanda en cocina.',
     url: n.url || '/kitchen',
-    icon: '/icon.png',
-    badge: '/icon.png',
+    icon: '/icons/icon-192.png',
+    badge: '/icons/icon-192.png',
     tag: n.tag || 'kitchen-order',
   })
 

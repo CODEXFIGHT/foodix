@@ -1,4 +1,4 @@
-# Solución de Problemas — RestaurOS
+# Solución de Problemas — FoodIX
 
 Formato: **Síntoma → Causa posible → Solución → Prevención**. Para dudas simples ve al [FAQ](FAQ.md).
 
@@ -73,7 +73,7 @@ Formato: **Síntoma → Causa posible → Solución → Prevención**. Para duda
 ### 🔄 Error de sincronización
 - **Síntoma:** datos desfasados entre dispositivos.
 - **Causa:** red intermitente o pantalla en segundo plano.
-- **Solución:** recarga; al recuperar foco, RestaurOS vuelve a sincronizar.
+- **Solución:** recarga; al recuperar foco, FoodIX vuelve a sincronizar.
 - **Prevención:** mantén las pantallas activas durante la operación.
 
 ### 💳 Licencia vencida / suscripción suspendida

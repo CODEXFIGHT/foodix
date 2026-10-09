@@ -1,4 +1,4 @@
-# Guía de Administrador — RestaurOS
+# Guía de Administrador — FoodIX
 
 El **Admin** configura y opera todo su restaurante (una sucursal). Esta guía resume cada módulo. Para el flujo paso a paso de venta, ve al [Manual de Usuario](USER_MANUAL.md).
 

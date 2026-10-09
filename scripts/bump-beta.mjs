@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * RestaurOS — Auto-incremento de versión beta.
+ * FoodIX — Auto-incremento de versión beta.
  * Sube el número de beta en package.json (1.0.0-beta.N → 1.0.0-beta.(N+1)) y
  * mantiene en sincronía el fallback de lib/constants/version.ts.
  *

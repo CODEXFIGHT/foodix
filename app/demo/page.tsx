@@ -65,7 +65,7 @@ export default function DemoLoginPage() {
             </div>
           </div>
           <h1 className="font-heading text-3xl font-bold">
-            Restaur<span className="text-[#E85D04]">OS</span><sup className="align-super text-[0.55em]">©</sup>
+            Food<span className="text-[#E85D04]">IX</span><sup className="align-super text-[0.55em]">©</sup>
           </h1>
           <p className="text-sm text-muted-foreground">Tu restaurante, en orden</p>
         </div>

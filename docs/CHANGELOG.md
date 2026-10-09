@@ -1,6 +1,6 @@
 # Changelog
 
-Historial de versiones de **RestaurOS**. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/) y versionado semántico.
+Historial de versiones de **FoodIX**. El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/) y versionado semántico.
 
 > Versión actual: **1.0.0-beta.117** · 2026-07-10
 > [← Volver al índice de documentación](README.md)

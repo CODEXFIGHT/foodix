@@ -1,5 +1,5 @@
 /**
- * RestaurOS — Service Worker (Web Push)
+ * FoodIX — Service Worker (Web Push)
  *
  * Maneja:
  *  - Ciclo de vida (install / activate) con actualización inmediata.
@@ -47,11 +47,11 @@ self.addEventListener('push', (event) => {
     payload = { body: event.data ? event.data.text() : '' }
   }
 
-  const title = payload.title || 'RestaurOS'
+  const title = payload.title || 'FoodIX'
   const options = {
     body: payload.body || 'Tienes una nueva notificación.',
-    icon: payload.icon || '/icon.png',
-    badge: payload.badge || '/icon.png',
+    icon: payload.icon || '/icons/icon-192.png',
+    badge: payload.badge || '/icons/icon-192.png',
     tag: payload.tag || 'restauros-notification',
     renotify: true,
     data: {

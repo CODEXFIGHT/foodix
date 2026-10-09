@@ -1,4 +1,4 @@
-# Arquitectura — RestaurOS
+# Arquitectura — FoodIX
 
 Visión técnica del sistema para desarrolladores.
 
@@ -9,7 +9,7 @@ Visión técnica del sistema para desarrolladores.
 
 ## Resumen
 
-RestaurOS es una app **Next.js 15 (App Router, React 19)** en el frontend y un **backend en PHP puro** sobre **MySQL**. El frontend habla con el backend vía REST bajo el prefijo `/backend` (proxy). Hospedaje en **Vercel** (frontend + crons); el backend PHP corre en hosting propio.
+FoodIX es una app **Next.js 15 (App Router, React 19)** en el frontend y un **backend en PHP puro** sobre **MySQL**. El frontend habla con el backend vía REST bajo el prefijo `/backend` (proxy). Hospedaje en **Vercel** (frontend + crons); el backend PHP corre en hosting propio.
 
 ```mermaid
 flowchart TB
