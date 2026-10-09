@@ -38,7 +38,7 @@ export function DemoMobileNav({ role }: { role: DemoRole }) {
   const tabClasses = (active: boolean) =>
     cn(
       'flex-shrink-0 min-w-[76px] flex-1 flex flex-col items-center py-2 gap-0.5 transition-colors relative',
-      active ? 'text-[#E85D04]' : 'text-muted-foreground',
+      active ? 'text-[#D1400F]' : 'text-muted-foreground',
     )
 
   return (
@@ -51,7 +51,7 @@ export function DemoMobileNav({ role }: { role: DemoRole }) {
               <>
                 <Icons8Image src={iconSrc} alt={label} size={20} className={cn(!active && 'opacity-70')} />
                 <span className="text-[10px] font-medium">{label}</span>
-                {active && <span className="w-1.5 h-1.5 rounded-full bg-[#E85D04] mt-0.5" />}
+                {active && <span className="w-1.5 h-1.5 rounded-full bg-[#D1400F] mt-0.5" />}
               </>
             )
             return demoHref ? (
@@ -75,7 +75,7 @@ export function DemoMobileNav({ role }: { role: DemoRole }) {
           >
             <Menu className="h-5 w-5" />
             <span className="text-[10px] font-medium">Más</span>
-            {isMoreActive && <span className="w-1.5 h-1.5 rounded-full bg-[#E85D04] mt-0.5" />}
+            {isMoreActive && <span className="w-1.5 h-1.5 rounded-full bg-[#D1400F] mt-0.5" />}
           </button>
         </div>
       </nav>
@@ -84,7 +84,7 @@ export function DemoMobileNav({ role }: { role: DemoRole }) {
         <DialogContent className="sm:max-w-md bg-[#0c0a09]/95 backdrop-blur-md border-white/10 text-white max-h-[85vh] overflow-y-auto scrollbar-thin">
           <DialogHeader className="pb-4 border-b border-white/5">
             <DialogTitle className="text-white text-lg font-bold flex items-center gap-2 font-heading">
-              <Menu className="h-5 w-5 text-[#E85D04]" />
+              <Menu className="h-5 w-5 text-[#D1400F]" />
               Menú completo
             </DialogTitle>
             <DialogDescription className="text-stone-400 text-xs">
@@ -98,7 +98,7 @@ export function DemoMobileNav({ role }: { role: DemoRole }) {
               const cls = cn(
                 'flex flex-col items-center justify-center p-3 rounded-xl border transition-all duration-150 text-center gap-1.5 cursor-pointer',
                 active
-                  ? 'border-[#E85D04]/50 shadow-[0_0_12px_rgba(232,93,4,0.15)] text-[#E85D04] bg-[#E85D04]/5 font-semibold'
+                  ? 'border-[#D1400F]/50 shadow-[0_0_12px_rgba(209,64,15,0.15)] text-[#D1400F] bg-[#D1400F]/5 font-semibold'
                   : 'border-white/5 bg-stone-900/40 hover:bg-stone-800/80 text-stone-300',
               )
               const inner = (

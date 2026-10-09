@@ -47,7 +47,7 @@ export function WhatsAppOrderTypeSettings({ branchId }: { branchId: number }) {
     <Card>
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center gap-2 text-base">
-          <MessageCircle className="h-4 w-4 text-[#E85D04]" />
+          <MessageCircle className="h-4 w-4 text-[#D1400F]" />
           Pedidos por WhatsApp
         </CardTitle>
       </CardHeader>
@@ -60,7 +60,7 @@ export function WhatsAppOrderTypeSettings({ branchId }: { branchId: number }) {
           <Button
             type="button"
             variant={orderType === 'pickup' ? 'default' : 'outline'}
-            className={cn('flex-1', orderType === 'pickup' && 'bg-[#E85D04] hover:bg-[#C44D00]')}
+            className={cn('flex-1', orderType === 'pickup' && 'bg-[#D1400F] hover:bg-[#B03508]')}
             disabled={updateBranch.isPending}
             onClick={() => save('pickup')}
           >
@@ -70,7 +70,7 @@ export function WhatsAppOrderTypeSettings({ branchId }: { branchId: number }) {
           <Button
             type="button"
             variant={orderType === 'delivery' ? 'default' : 'outline'}
-            className={cn('flex-1', orderType === 'delivery' && 'bg-[#E85D04] hover:bg-[#C44D00]')}
+            className={cn('flex-1', orderType === 'delivery' && 'bg-[#D1400F] hover:bg-[#B03508]')}
             disabled={updateBranch.isPending}
             onClick={() => save('delivery')}
           >

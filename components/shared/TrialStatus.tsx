@@ -71,7 +71,7 @@ export function TrialBadge({ className }: { className?: string }) {
           ? 'border-red-300 bg-red-50 text-red-700 dark:border-red-500/40 dark:bg-red-500/10 dark:text-red-300'
           : urgency === 'warning'
             ? 'border-amber-300 bg-amber-50 text-amber-800 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-300'
-            : 'border-orange-200 bg-orange-50 text-[#E85D04] dark:border-orange-500/30 dark:bg-orange-500/10 dark:text-orange-300',
+            : 'border-orange-200 bg-orange-50 text-[#D1400F] dark:border-orange-500/30 dark:bg-orange-500/10 dark:text-orange-300',
         className,
       )}
     >
@@ -134,7 +134,7 @@ export function TrialBanner() {
           className={cn(
             'whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-bold transition-colors',
             urgency === 'info'
-              ? 'bg-[#E85D04] text-white hover:bg-[#C44D00]'
+              ? 'bg-[#D1400F] text-white hover:bg-[#B03508]'
               : 'bg-white/95 text-stone-900 hover:bg-white',
           )}
         >
@@ -170,7 +170,7 @@ export function TrialExpiredScreen() {
     <div className="min-h-screen flex items-center justify-center bg-stone-50 p-4 dark:bg-[#0a0a0a]">
       <div className="w-full max-w-lg rounded-2xl border border-stone-200 bg-white p-8 text-center shadow-sm dark:border-white/10 dark:bg-[#111]">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50 dark:bg-orange-500/10">
-          <CalendarClock className="h-7 w-7 text-[#E85D04]" aria-hidden="true" />
+          <CalendarClock className="h-7 w-7 text-[#D1400F]" aria-hidden="true" />
         </div>
 
         <h1 className="mt-5 font-heading text-2xl font-extrabold text-stone-900 dark:text-white">
@@ -187,7 +187,7 @@ export function TrialExpiredScreen() {
 
         <div className="mt-6 flex flex-col gap-3">
           {isAdmin && (
-            <Button asChild className="h-11 bg-[#E85D04] hover:bg-[#C44D00]">
+            <Button asChild className="h-11 bg-[#D1400F] hover:bg-[#B03508]">
               <Link href="/billing">{TRIAL_CTA.plans}</Link>
             </Button>
           )}
@@ -243,7 +243,7 @@ export function TrialWelcomeCard({
         </div>
       </dl>
 
-      <Button onClick={onContinue} className="mt-6 h-12 w-full bg-[#E85D04] text-base hover:bg-[#C44D00]">
+      <Button onClick={onContinue} className="mt-6 h-12 w-full bg-[#D1400F] text-base hover:bg-[#B03508]">
         {ctaLabel}
       </Button>
     </div>

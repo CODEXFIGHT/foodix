@@ -78,7 +78,7 @@ export function KgPriceDialog({ product, open, onOpenChange, onConfirm }: KgPric
       <DialogContent className="max-h-[92vh] overflow-y-auto sm:max-w-sm">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <span className="text-[10px] font-bold uppercase tracking-wide text-[#E85D04] bg-orange-50 dark:bg-orange-950/30 px-1.5 py-0.5 rounded">
+            <span className="text-[10px] font-bold uppercase tracking-wide text-[#D1400F] bg-orange-50 dark:bg-orange-950/30 px-1.5 py-0.5 rounded">
               Por kilogramo
             </span>
           </DialogTitle>
@@ -103,11 +103,11 @@ export function KgPriceDialog({ product, open, onOpenChange, onConfirm }: KgPric
           </div>
 
           {/* Total en grande */}
-          <div className="rounded-2xl border-2 border-[#E85D04]/40 bg-orange-50/50 dark:bg-orange-950/10 py-3 text-center">
+          <div className="rounded-2xl border-2 border-[#D1400F]/40 bg-orange-50/50 dark:bg-orange-950/10 py-3 text-center">
             <p className="text-xs font-medium text-muted-foreground">
               Total {valid ? `(${weight} kg × ${formatCurrency(ppk)})` : ''}
             </p>
-            <p className="text-4xl font-extrabold tabular-nums text-[#E85D04] mt-1">
+            <p className="text-4xl font-extrabold tabular-nums text-[#D1400F] mt-1">
               {formatCurrency(total)}
             </p>
           </div>
@@ -131,7 +131,7 @@ export function KgPriceDialog({ product, open, onOpenChange, onConfirm }: KgPric
         </div>
 
         <DialogFooter>
-          <Button onClick={handleConfirm} disabled={!valid} className="w-full h-12 text-base bg-[#E85D04] hover:bg-[#C44D00]">
+          <Button onClick={handleConfirm} disabled={!valid} className="w-full h-12 text-base bg-[#D1400F] hover:bg-[#B03508]">
             Agregar{valid ? ` · ${formatCurrency(total)}` : ''}
           </Button>
         </DialogFooter>
@@ -149,7 +149,7 @@ function FieldChip({ label, value, active, onClick }: {
       onClick={onClick}
       className={cn(
         'rounded-xl border-2 p-2.5 text-left transition-all',
-        active ? 'border-[#E85D04] bg-orange-50/60 dark:bg-orange-950/20' : 'border-border hover:border-[#E85D04]/40',
+        active ? 'border-[#D1400F] bg-orange-50/60 dark:bg-orange-950/20' : 'border-border hover:border-[#D1400F]/40',
       )}
     >
       <p className="text-[11px] font-medium text-muted-foreground">{label}</p>

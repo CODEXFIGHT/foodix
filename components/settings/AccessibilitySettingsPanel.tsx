@@ -73,7 +73,7 @@ export function AccessibilitySettingsPanel({
               onClick={() => applyMode(mode)}
               className={cn(
                 'rounded-xl border p-3 text-left transition-all',
-                active ? 'border-[#E85D04] bg-[#E85D04]/10 text-[#E85D04]' : 'hover:border-[#E85D04]/40',
+                active ? 'border-[#D1400F] bg-[#D1400F]/10 text-[#D1400F]' : 'hover:border-[#D1400F]/40',
                 dark && !active && 'border-white/10 bg-black/20 text-neutral-300 hover:bg-white/5',
               )}
             >
@@ -100,7 +100,7 @@ export function AccessibilitySettingsPanel({
           size="sm"
           isSelected={settings.highContrast}
           onValueChange={checked => update({ ...settings, highContrast: checked })}
-          classNames={{ wrapper: 'group-data-[selected=true]:bg-[#E85D04]' }}
+          classNames={{ wrapper: 'group-data-[selected=true]:bg-[#D1400F]' }}
         />
       </div>
 
@@ -131,7 +131,7 @@ function ScaleControl({
     <div className={cn('rounded-lg border bg-background p-3', dark && 'border-white/10 bg-black/20')}>
       <div className="mb-2 flex items-center justify-between gap-2">
         <span className="flex items-center gap-1.5 text-sm font-semibold">{icon}{label}</span>
-        <span className={cn('text-xs font-bold text-[#E85D04]')}>{Math.round(value * 100)}%</span>
+        <span className={cn('text-xs font-bold text-[#D1400F]')}>{Math.round(value * 100)}%</span>
       </div>
       <input
         type="range"
@@ -140,7 +140,7 @@ function ScaleControl({
         step={5}
         value={Math.round(value * 100)}
         onChange={e => onChange(Number(e.target.value) / 100)}
-        className="w-full accent-[#E85D04]"
+        className="w-full accent-[#D1400F]"
       />
     </div>
   )

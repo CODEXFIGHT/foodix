@@ -106,7 +106,7 @@ function ContentSkeleton() {
 function FullSkeleton() {
   return (
     <div className="min-h-[60vh] grid place-items-center">
-      <div className="h-8 w-8 animate-spin rounded-full border-2 border-[#E85D04] border-t-transparent" />
+      <div className="h-8 w-8 animate-spin rounded-full border-2 border-[#D1400F] border-t-transparent" />
     </div>
   )
 }

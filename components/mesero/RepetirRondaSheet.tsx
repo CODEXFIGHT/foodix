@@ -95,7 +95,7 @@ export function RepetirRondaSheet({ open, onClose, items, onRepeat }: RepetirRon
                     className={cn(
                       'flex min-h-[44px] w-full items-center gap-3 rounded-xl border p-3 text-left transition-colors active:scale-[0.99] touch-manipulation',
                       justAdded
-                        ? 'border-[#E85D04]/50 bg-[#E85D04]/5'
+                        ? 'border-[#D1400F]/50 bg-[#D1400F]/5'
                         : 'border-stone-200 bg-white dark:border-stone-800 dark:bg-stone-950',
                     )}
                   >
@@ -106,13 +106,13 @@ export function RepetirRondaSheet({ open, onClose, items, onRepeat }: RepetirRon
                       </p>
                       {label && <p className="truncate text-xs text-muted-foreground">{label}</p>}
                     </div>
-                    <span className="shrink-0 text-sm font-semibold text-[#E85D04]">
+                    <span className="shrink-0 text-sm font-semibold text-[#D1400F]">
                       {formatCurrency(item.unit_price)}
                     </span>
                     <span
                       className={cn(
                         'grid h-8 w-8 shrink-0 place-items-center rounded-full',
-                        justAdded ? 'bg-[#E85D04] text-white' : 'bg-stone-100 text-stone-500 dark:bg-stone-800',
+                        justAdded ? 'bg-[#D1400F] text-white' : 'bg-stone-100 text-stone-500 dark:bg-stone-800',
                       )}
                     >
                       {justAdded ? <Check className="h-4 w-4" /> : <Plus className="h-4 w-4" />}

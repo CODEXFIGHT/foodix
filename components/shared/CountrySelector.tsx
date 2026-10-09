@@ -133,7 +133,7 @@ export function CountrySelector({ className }: { className?: string }) {
                   className={cn(
                     'w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium transition-colors text-left',
                     isSelected
-                      ? 'bg-orange-50 text-[#E85D04] font-bold dark:bg-orange-500/10'
+                      ? 'bg-orange-50 text-[#D1400F] font-bold dark:bg-orange-500/10'
                       : 'text-stone-700 hover:bg-stone-50 dark:text-zinc-300 dark:hover:bg-white/5'
                   )}
                 >
@@ -141,7 +141,7 @@ export function CountrySelector({ className }: { className?: string }) {
                     <span className="text-base leading-none">{c.flag}</span>
                     <span>{c.name}</span>
                   </span>
-                  {isSelected && <Check className="w-3.5 h-3.5 text-[#E85D04]" />}
+                  {isSelected && <Check className="w-3.5 h-3.5 text-[#D1400F]" />}
                 </button>
               )
             })}

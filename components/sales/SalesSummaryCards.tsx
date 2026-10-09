@@ -11,7 +11,7 @@ interface SalesSummaryCardsProps {
 
 export function SalesSummaryCards({ today, week, month }: SalesSummaryCardsProps) {
   const cards = [
-    { label: 'Hoy',         summary: today, icon: Calendar,    bg: 'bg-[#E85D04]/10', iconColor: 'text-[#E85D04]' },
+    { label: 'Hoy',         summary: today, icon: Calendar,    bg: 'bg-[#D1400F]/10', iconColor: 'text-[#D1400F]' },
     { label: 'Esta semana', summary: week,  icon: TrendingUp,  bg: 'bg-blue-500/10',  iconColor: 'text-blue-600' },
     { label: 'Este mes',    summary: month, icon: ShoppingBag, bg: 'bg-purple-500/10', iconColor: 'text-purple-600' },
   ]

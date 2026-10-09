@@ -96,7 +96,7 @@ export function ProductViewer({
 
   return (
     <div
-      className="fixed inset-0 z-[70] flex flex-col bg-gradient-to-b from-[#E85D04] to-[#C44D00] text-white animate-fade-in"
+      className="fixed inset-0 z-[70] flex flex-col bg-gradient-to-b from-[#D1400F] to-[#B03508] text-white animate-fade-in"
       role="dialog"
       aria-modal="true"
       aria-label={item.name}
@@ -165,7 +165,7 @@ export function ProductViewer({
       </div>
 
       {/* Bloque fijo: nombre + descripción + acción */}
-      <div className="shrink-0 bg-gradient-to-t from-[#C44D00] to-[#C44D00]/85 px-4 pt-3 pb-2 border-t border-white/10">
+      <div className="shrink-0 bg-gradient-to-t from-[#B03508] to-[#B03508]/85 px-4 pt-3 pb-2 border-t border-white/10">
         <div className="mx-auto w-full max-w-md">
           <div className="text-center mb-3">
             <h2 className="text-lg sm:text-xl font-extrabold uppercase tracking-wide leading-tight line-clamp-2">{item.name}</h2>
@@ -184,7 +184,7 @@ export function ProductViewer({
               ) : modifiers ? (
                 <button
                   onClick={() => onAdd(item)}
-                  className="h-12 px-5 rounded-xl bg-white text-[#C44D00] text-sm font-extrabold flex items-center gap-2 hover:bg-white/90 active:scale-[0.98] transition-all shadow-lg"
+                  className="h-12 px-5 rounded-xl bg-white text-[#B03508] text-sm font-extrabold flex items-center gap-2 hover:bg-white/90 active:scale-[0.98] transition-all shadow-lg"
                 >
                   <SlidersHorizontal className="h-4 w-4" /> Elegir opciones
                 </button>
@@ -201,7 +201,7 @@ export function ProductViewer({
                   <button
                     onClick={() => onAdd(item)}
                     aria-label="Agregar uno"
-                    className="w-11 h-11 rounded-full bg-white text-[#C44D00] flex items-center justify-center active:scale-90 transition-all shadow-lg"
+                    className="w-11 h-11 rounded-full bg-white text-[#B03508] flex items-center justify-center active:scale-90 transition-all shadow-lg"
                   >
                     <Plus className="h-5 w-5" />
                   </button>
@@ -209,7 +209,7 @@ export function ProductViewer({
               ) : (
                 <button
                   onClick={() => onAdd(item)}
-                  className="h-12 px-5 rounded-xl bg-white text-[#C44D00] text-sm font-extrabold flex items-center gap-2 hover:bg-white/90 active:scale-[0.98] transition-all shadow-lg"
+                  className="h-12 px-5 rounded-xl bg-white text-[#B03508] text-sm font-extrabold flex items-center gap-2 hover:bg-white/90 active:scale-[0.98] transition-all shadow-lg"
                 >
                   <ShoppingCart className="h-4 w-4" /> Agregar al pedido
                 </button>

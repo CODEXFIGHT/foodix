@@ -148,13 +148,13 @@ export function ModifierGroupForm({
                   onClick={() => toggleProduct(p.id)}
                   className={cn(
                     'w-full flex items-center justify-between px-3 py-2 text-sm text-left transition-colors',
-                    productIds.includes(p.id) ? 'bg-[#E85D04]/5' : 'hover:bg-muted',
+                    productIds.includes(p.id) ? 'bg-[#D1400F]/5' : 'hover:bg-muted',
                   )}
                 >
                   <span>{p.name}</span>
                   <span className={cn(
                     'w-4 h-4 rounded border flex items-center justify-center text-[10px]',
-                    productIds.includes(p.id) ? 'bg-[#E85D04] border-[#E85D04] text-white' : 'border-muted-foreground/40',
+                    productIds.includes(p.id) ? 'bg-[#D1400F] border-[#D1400F] text-white' : 'border-muted-foreground/40',
                   )}>
                     {productIds.includes(p.id) && '✓'}
                   </span>
@@ -169,7 +169,7 @@ export function ModifierGroupForm({
 
         <DialogFooter>
           <Button variant="outline" onClick={() => onOpenChange(false)}>Cancelar</Button>
-          <Button onClick={handleSubmit} disabled={!valid || saving} className="bg-[#E85D04] hover:bg-[#C44D00]">
+          <Button onClick={handleSubmit} disabled={!valid || saving} className="bg-[#D1400F] hover:bg-[#B03508]">
             {saving ? 'Guardando…' : 'Guardar'}
           </Button>
         </DialogFooter>

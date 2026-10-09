@@ -39,8 +39,8 @@ const ROLES: RoleCard[] = [
     desc: 'Dashboard, menú y reportes',
     path: '/demo/admin',
     Icon: ShieldCheck,
-    accent: 'bg-[#E85D04]',
-    glow: 'hover:shadow-[#E85D04]/20',
+    accent: 'bg-[#D1400F]',
+    glow: 'hover:shadow-[#D1400F]/20',
   },
   {
     role: 'waiter',
@@ -78,11 +78,11 @@ export function DemoLoginCards() {
     <section className="relative overflow-hidden rounded-2xl bg-[#0a0a0a] p-5 text-white shadow-xl ring-1 ring-white/10 animate-fade-in-up sm:p-6">
       {/* Glow de marca */}
       <div
-        className="pointer-events-none absolute -left-12 -top-12 h-44 w-44 rounded-full bg-[#E85D04]/25 blur-3xl"
+        className="pointer-events-none absolute -left-12 -top-12 h-44 w-44 rounded-full bg-[#D1400F]/25 blur-3xl"
         aria-hidden
       />
       <div className="relative space-y-1.5">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#E85D04]/15 px-2.5 py-1 text-xs font-semibold text-[#F5A623]">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#D1400F]/15 px-2.5 py-1 text-xs font-semibold text-[#F5A623]">
           <Sparkles className="h-3.5 w-3.5" />
           Prueba FoodIX gratis
         </span>

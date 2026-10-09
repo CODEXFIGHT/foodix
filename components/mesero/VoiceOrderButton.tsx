@@ -102,7 +102,7 @@ export function VoiceOrderButton({ mesaId, onResolved }: VoiceOrderButtonProps) 
         'fixed bottom-24 right-3 z-40 grid h-14 w-14 place-items-center rounded-full border shadow-lg transition-all active:scale-95',
         listening
           ? 'animate-pulse border-red-500 bg-red-500 text-white'
-          : 'border-[#E85D04]/30 bg-white text-[#E85D04] dark:bg-stone-950',
+          : 'border-[#D1400F]/30 bg-white text-[#D1400F] dark:bg-stone-950',
         parseVoz.isPending && 'opacity-70',
       )}
     >

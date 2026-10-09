@@ -315,7 +315,7 @@ export function YouTubePlayer({ videoId, title }: { videoId: string; title: stri
       aria-label={title}
       className={cn(
         'group relative aspect-video w-full select-none overflow-hidden rounded-2xl bg-black shadow-xl shadow-stone-300/40 outline-none',
-        'border border-stone-200 focus-visible:ring-2 focus-visible:ring-[#E85D04] focus-visible:ring-offset-2',
+        'border border-stone-200 focus-visible:ring-2 focus-visible:ring-[#D1400F] focus-visible:ring-offset-2',
         'dark:border-white/10 dark:shadow-black/40 dark:focus-visible:ring-offset-black',
         isFullscreen && 'rounded-none border-0',
       )}
@@ -352,7 +352,7 @@ export function YouTubePlayer({ videoId, title }: { videoId: string; title: stri
           playing && !buffering ? 'scale-90 opacity-0' : 'scale-100 opacity-100',
         )}
       >
-        <span className="grid h-16 w-16 place-items-center rounded-full bg-[#E85D04]/95 text-white shadow-[0_10px_40px_rgba(232,93,4,0.45)] backdrop-blur-sm sm:h-20 sm:w-20">
+        <span className="grid h-16 w-16 place-items-center rounded-full bg-[#D1400F]/95 text-white shadow-[0_10px_40px_rgba(209,64,15,0.45)] backdrop-blur-sm sm:h-20 sm:w-20">
           {buffering
             ? <Loader2 className="h-7 w-7 animate-spin sm:h-8 sm:w-8" />
             : <Play className="ml-1 h-7 w-7 fill-white sm:h-9 sm:w-9" />}
@@ -394,7 +394,7 @@ export function YouTubePlayer({ videoId, title }: { videoId: string; title: stri
             '[&::-webkit-slider-thumb]:h-3.5 [&::-webkit-slider-thumb]:w-3.5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-md',
             '[&::-moz-range-thumb]:h-3.5 [&::-moz-range-thumb]:w-3.5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-white',
           )}
-          style={{ background: `linear-gradient(to right, #E85D04 ${pct}%, rgba(255,255,255,0.28) ${pct}%)` }}
+          style={{ background: `linear-gradient(to right, #D1400F ${pct}%, rgba(255,255,255,0.28) ${pct}%)` }}
         />
 
         <div className="mt-2 flex items-center gap-1.5 sm:gap-2">

@@ -126,7 +126,7 @@ export function Topbar() {
                 <span className={cn(
                   'mt-1 inline-flex items-center gap-1 text-xs px-1.5 py-0.5 rounded-full',
                   user?.role === 'superadmin' ? 'bg-yellow-100 text-yellow-700' :
-                  user?.role === 'admin'      ? 'bg-[#E85D04]/10 text-[#E85D04]' :
+                  user?.role === 'admin'      ? 'bg-[#D1400F]/10 text-[#D1400F]' :
                   user?.role === 'cocina'     ? 'bg-orange-100 text-orange-700' :
                   'bg-blue-100 text-blue-700',
                 )}>

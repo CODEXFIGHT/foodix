@@ -87,13 +87,13 @@ function leadsNotifyByEmail(string $name, string $whatsapp, string $message): bo
 
     $html = <<<HTML
 <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#1c1917">
-  <div style="background:#E85D04;color:#fff;padding:18px 22px;border-radius:12px 12px 0 0">
+  <div style="background:#D1400F;color:#fff;padding:18px 22px;border-radius:12px 12px 0 0">
     <h2 style="margin:0;font-size:18px">Nueva solicitud de cotización · FoodIX</h2>
   </div>
   <div style="border:1px solid #eee;border-top:none;padding:22px;border-radius:0 0 12px 12px">
     <p style="margin:0 0 6px"><strong>Nombre:</strong> {$safeName}</p>
     <p style="margin:0 0 6px"><strong>WhatsApp:</strong> {$safeWa}
-      &nbsp;<a href="https://wa.me/{$waDigits}" style="color:#E85D04">Abrir chat</a></p>
+      &nbsp;<a href="https://wa.me/{$waDigits}" style="color:#D1400F">Abrir chat</a></p>
     <p style="margin:14px 0 4px"><strong>Mensaje:</strong></p>
     <div style="background:#faf9f7;border:1px solid #eee;border-radius:8px;padding:12px;font-size:14px;line-height:1.5">{$safeMsg}</div>
     <p style="margin:18px 0 0;font-size:12px;color:#999">Recibido el {$when} desde la landing de FoodIX.</p>

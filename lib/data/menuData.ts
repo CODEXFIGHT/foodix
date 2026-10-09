@@ -34,7 +34,7 @@ export interface MenuCategory {
 // ── Shared configs exported for modal ──────────────────────────────────────
 
 export const BADGE_CONFIG: Record<BadgeType, { label: string; bg: string }> = {
-  Popular:      { label: 'Popular',      bg: 'bg-[#E85D04] text-white' },
+  Popular:      { label: 'Popular',      bg: 'bg-[#D1400F] text-white' },
   Nuevo:        { label: 'Nuevo',        bg: 'bg-emerald-500 text-white' },
   Recomendado:  { label: 'Recomendado',  bg: 'bg-amber-500 text-white' },
   Especialidad: { label: 'Especialidad', bg: 'bg-purple-600 text-white' },

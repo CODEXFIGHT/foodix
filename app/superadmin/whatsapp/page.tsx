@@ -48,7 +48,7 @@ function StepCard({
   return (
     <div className="flex gap-4">
       <div className="flex flex-col items-center gap-1">
-        <div className="h-7 w-7 rounded-full bg-[#E85D04]/20 border border-[#E85D04]/40 text-[#E85D04] text-xs font-bold grid place-items-center shrink-0">
+        <div className="h-7 w-7 rounded-full bg-[#D1400F]/20 border border-[#D1400F]/40 text-[#D1400F] text-xs font-bold grid place-items-center shrink-0">
           {step}
         </div>
         <div className="flex-1 w-px bg-white/5" />

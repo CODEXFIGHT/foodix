@@ -37,8 +37,8 @@ if (!defined('SUPPORT_EMAIL')) {
 }
 
 // ── Paleta de marca (una sola fuente para todas las plantillas) ──────────────
-const MAIL_BRAND       = '#E85D04';
-const MAIL_BRAND_DARK  = '#C44D00';
+const MAIL_BRAND       = '#D1400F';
+const MAIL_BRAND_DARK  = '#B03508';
 const MAIL_INK         = '#1C1917';
 const MAIL_BODY        = '#44403C';
 const MAIL_MUTED       = '#78716C';

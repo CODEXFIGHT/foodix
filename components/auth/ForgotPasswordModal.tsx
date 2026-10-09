@@ -38,8 +38,8 @@ export function ForgotPasswordModal({ isOpen, onClose }: { isOpen: boolean; onCl
             </ModalHeader>
 
             <ModalBody className="pb-2">
-              <div className="flex gap-3 rounded-xl bg-[#E85D04]/8 p-4">
-                <div className="h-9 w-9 shrink-0 rounded-lg bg-[#E85D04]/15 text-[#E85D04] grid place-items-center">
+              <div className="flex gap-3 rounded-xl bg-[#D1400F]/8 p-4">
+                <div className="h-9 w-9 shrink-0 rounded-lg bg-[#D1400F]/15 text-[#D1400F] grid place-items-center">
                   <UserCog className="h-4.5 w-4.5" />
                 </div>
                 <div className="space-y-1">
@@ -80,13 +80,13 @@ export function ForgotPasswordModal({ isOpen, onClose }: { isOpen: boolean; onCl
               </div>
 
               <section className="space-y-2 rounded-xl bg-stone-100 dark:bg-stone-900/40 p-4 mt-1 mb-3">
-                <h3 className="text-xs font-bold uppercase tracking-wide text-[#E85D04]">
+                <h3 className="text-xs font-bold uppercase tracking-wide text-[#D1400F]">
                   Contactar soporte
                 </h3>
                 <div className="flex flex-col gap-2">
                   <a
                     href={`mailto:${SUPPORT.email}`}
-                    className="flex items-center gap-2 text-sm hover:text-[#E85D04] transition-colors"
+                    className="flex items-center gap-2 text-sm hover:text-[#D1400F] transition-colors"
                   >
                     <Mail className="h-4 w-4 text-muted-foreground" /> {SUPPORT.email}
                   </a>
@@ -94,7 +94,7 @@ export function ForgotPasswordModal({ isOpen, onClose }: { isOpen: boolean; onCl
                     href={`https://wa.me/${SUPPORT.whatsapp.replace(/[^0-9]/g, '')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm hover:text-[#E85D04] transition-colors"
+                    className="flex items-center gap-2 text-sm hover:text-[#D1400F] transition-colors"
                   >
                     <MessageCircle className="h-4 w-4 text-muted-foreground" /> {SUPPORT.whatsapp}
                   </a>

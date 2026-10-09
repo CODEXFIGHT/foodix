@@ -47,7 +47,7 @@ export function LoginBackdrop() {
       {SPRINKLES.map(({ Icon, top, left, size, rotate, brand }, i) => (
         <Icon
           key={i}
-          className={brand ? 'text-[#E85D04]' : 'text-stone-900'}
+          className={brand ? 'text-[#D1400F]' : 'text-stone-900'}
           style={{
             position: 'absolute',
             top,

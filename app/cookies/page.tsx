@@ -23,12 +23,12 @@ export default function CookiesPage() {
               className="rounded-lg flex-shrink-0 shadow-sm"
             />
             <Link href="/" className="inline-block font-bold animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-              Food<span className="text-[#E85D04]">IX</span><sup className="text-[0.55em] align-super">©</sup>
+              Food<span className="text-[#D1400F]">IX</span><sup className="text-[0.55em] align-super">©</sup>
             </Link>
             <span className="text-stone-400">/</span>
             <span className="text-stone-300 text-sm truncate">Política de Cookies</span>
           </div>
-          <Link href="/login" className="text-sm bg-[#E85D04] hover:bg-[#C44D00] px-4 py-1.5 rounded-lg font-medium transition-colors shrink-0">
+          <Link href="/login" className="text-sm bg-[#D1400F] hover:bg-[#B03508] px-4 py-1.5 rounded-lg font-medium transition-colors shrink-0">
             Ir al sistema →
           </Link>
         </div>
@@ -136,7 +136,7 @@ export default function CookiesPage() {
                 FoodIX utiliza imágenes externas del servicio <strong>Icons8</strong> (img.icons8.com)
                 para la interfaz gráfica. Este servicio puede establecer sus propias cookies o registrar
                 las solicitudes de imagen. Recomendamos revisar la{' '}
-                <a href="https://icons8.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#E85D04]">
+                <a href="https://icons8.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#D1400F]">
                   política de privacidad de Icons8
                 </a>.
               </p>
@@ -144,7 +144,7 @@ export default function CookiesPage() {
                 Durante la contratación de una suscripción, el pago se realiza a través de{' '}
                 <strong>Stripe</strong>, que puede establecer sus propias cookies necesarias para
                 procesar el cobro de forma segura. Consulte la{' '}
-                <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#E85D04]">
+                <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#D1400F]">
                   política de privacidad de Stripe
                 </a>.
               </p>
@@ -195,7 +195,7 @@ export default function CookiesPage() {
               <h2 className="text-lg font-bold text-stone-900 mb-2">Contacto</h2>
               <p>
                 Para cualquier pregunta sobre nuestra política de cookies, escríbenos a{' '}
-                <a href="mailto:foodix@atomicmail.io" className="text-[#E85D04]">foodix@atomicmail.io</a>.
+                <a href="mailto:foodix@atomicmail.io" className="text-[#D1400F]">foodix@atomicmail.io</a>.
               </p>
             </section>
           </div>

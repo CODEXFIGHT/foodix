@@ -23,12 +23,12 @@ export default function TerminosPage() {
               className="rounded-lg flex-shrink-0 shadow-sm"
             />
             <Link href="/" className="inline-block font-bold animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-              Food<span className="text-[#E85D04]">IX</span><sup className="text-[0.55em] align-super">©</sup>
+              Food<span className="text-[#D1400F]">IX</span><sup className="text-[0.55em] align-super">©</sup>
             </Link>
             <span className="text-stone-400">/</span>
             <span className="text-stone-300 text-sm truncate">Términos y Condiciones</span>
           </div>
-          <Link href="/login" className="text-sm bg-[#E85D04] hover:bg-[#C44D00] px-4 py-1.5 rounded-lg font-medium transition-colors shrink-0">
+          <Link href="/login" className="text-sm bg-[#D1400F] hover:bg-[#B03508] px-4 py-1.5 rounded-lg font-medium transition-colors shrink-0">
             Ir al sistema →
           </Link>
         </div>
@@ -164,7 +164,7 @@ export default function TerminosPage() {
                 vigencia limitada, control de acceso por rol y por dispositivo aprobado, límite de
                 intentos de inicio de sesión, consultas parametrizadas contra inyección de SQL y
                 validación/optimización de las imágenes cargadas. El detalle completo se describe en el{' '}
-                <a href="/privacidad" className="text-[#E85D04]">Aviso de Privacidad</a>.
+                <a href="/privacidad" className="text-[#D1400F]">Aviso de Privacidad</a>.
               </p>
               <p className="mt-2">
                 Cuando el Cliente capture datos personales de sus propios comensales o destinatarios
@@ -246,8 +246,8 @@ export default function TerminosPage() {
                 Para cualquier consulta sobre estos términos, contáctenos en:
               </p>
               <ul className="list-none ml-4 space-y-1 mt-2">
-                <li>📧 <a href="mailto:restauros@atomicmail.io" className="text-[#E85D04]">restauros@atomicmail.io</a></li>
-                <li>🌐 <a href="/manual" className="text-[#E85D04]">Manual de usuario</a></li>
+                <li>📧 <a href="mailto:restauros@atomicmail.io" className="text-[#D1400F]">restauros@atomicmail.io</a></li>
+                <li>🌐 <a href="/manual" className="text-[#D1400F]">Manual de usuario</a></li>
               </ul>
             </section>
           </div>

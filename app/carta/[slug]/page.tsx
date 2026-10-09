@@ -172,11 +172,11 @@ function SortDropdown({ value, onChange }: { value: SortKey; onChange: (k: SortK
         aria-label="Ordenar platillos"
         className={cn(
           'inline-flex items-center gap-2 pl-3 pr-2.5 py-2 rounded-xl border bg-white text-xs font-semibold text-stone-700 shadow-sm transition-all',
-          'focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E85D04]/40',
-          open ? 'border-[#E85D04] ring-2 ring-[#E85D04]/30' : 'border-stone-200 hover:border-stone-300',
+          'focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D1400F]/40',
+          open ? 'border-[#D1400F] ring-2 ring-[#D1400F]/30' : 'border-stone-200 hover:border-stone-300',
         )}
       >
-        <ArrowDownUp className="h-3.5 w-3.5 text-[#E85D04]" />
+        <ArrowDownUp className="h-3.5 w-3.5 text-[#D1400F]" />
         <span className="whitespace-nowrap">{SORT_LABEL[value]}</span>
         <ChevronDown className={cn('h-3.5 w-3.5 text-stone-400 transition-transform duration-200', open && 'rotate-180')} />
       </button>
@@ -197,7 +197,7 @@ function SortDropdown({ value, onChange }: { value: SortKey; onChange: (k: SortK
                 onClick={() => { onChange(k); setOpen(false) }}
                 className={cn(
                   'flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-sm transition-colors',
-                  isActive ? 'bg-[#E85D04]/10 text-[#E85D04] font-bold' : 'text-stone-600 font-medium hover:bg-stone-100',
+                  isActive ? 'bg-[#D1400F]/10 text-[#D1400F] font-bold' : 'text-stone-600 font-medium hover:bg-stone-100',
                 )}
               >
                 {SORT_LABEL[k]}
@@ -587,7 +587,7 @@ export default function CartaSucursalPage() {
       if (list?.length) out.push({ id: String(c.id), name: c.name, color: c.color, items: list })
     })
     const orphan = byCat.get('∅')
-    if (orphan?.length) out.push({ id: '∅', name: 'Otros', color: '#E85D04', items: orphan })
+    if (orphan?.length) out.push({ id: '∅', name: 'Otros', color: '#D1400F', items: orphan })
     return out
   }, [limited, data])
   const useGrouped = sort === 'default' && selectedCat == null
@@ -731,7 +731,7 @@ export default function CartaSucursalPage() {
   if (status === 'loading') {
     return (
       <div className="min-h-screen flex items-center justify-center bg-stone-50">
-        <div className="animate-spin h-8 w-8 border-2 border-[#E85D04] border-t-transparent rounded-full" />
+        <div className="animate-spin h-8 w-8 border-2 border-[#D1400F] border-t-transparent rounded-full" />
       </div>
     )
   }
@@ -750,7 +750,7 @@ export default function CartaSucursalPage() {
     return (
       <main className="min-h-[100dvh] bg-gradient-to-b from-stone-100 to-stone-50 text-stone-900">
         <header className="relative overflow-hidden bg-gradient-to-b from-[#241F1B] to-[#151210] text-white shadow-[0_12px_32px_-14px_rgba(0,0,0,0.7)]">
-          <div aria-hidden className="pointer-events-none absolute -top-20 -left-12 h-44 w-44 rounded-full bg-[#E85D04]/25 blur-3xl" />
+          <div aria-hidden className="pointer-events-none absolute -top-20 -left-12 h-44 w-44 rounded-full bg-[#D1400F]/25 blur-3xl" />
           <div className="relative mx-auto flex min-h-16 max-w-3xl items-center gap-3 px-5 py-4">
             {data.branch.logo_url ? (
               // eslint-disable-next-line @next/next/no-img-element
@@ -771,10 +771,10 @@ export default function CartaSucursalPage() {
 
         <section className="mx-auto flex min-h-[calc(100dvh-81px)] max-w-3xl items-center justify-center px-5 py-12 text-center">
           <div className="w-full max-w-md rounded-[2rem] border border-stone-200/80 bg-white px-6 py-10 shadow-[0_20px_60px_-24px_rgba(28,25,23,0.28)] sm:px-10">
-            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#E85D04]/10 text-[#E85D04]">
+            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#D1400F]/10 text-[#D1400F]">
               <PauseCircle className="h-9 w-9" strokeWidth={1.8} aria-hidden />
             </div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E85D04]">Un momento, por favor</p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D1400F]">Un momento, por favor</p>
             <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-stone-900 sm:text-3xl">Esta carta está en pausa</h2>
             <p className="mx-auto mt-4 max-w-sm text-sm leading-6 text-stone-500 sm:text-base">
               {data.pause_message ?? 'Esta carta está temporalmente en pausa. Gracias por visitarnos; esperamos atenderte muy pronto.'}
@@ -782,7 +782,7 @@ export default function CartaSucursalPage() {
             {data.branch.phone && (
               <a
                 href={`tel:${data.branch.phone.replace(/[^+\d]/g, '')}`}
-                className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#E85D04] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-[#E85D04]/20 transition hover:bg-[#C44D00] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#E85D04]/25"
+                className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#D1400F] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-[#D1400F]/20 transition hover:bg-[#B03508] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#D1400F]/25"
               >
                 <Phone className="h-4 w-4" aria-hidden />
                 Comunicarme con el establecimiento
@@ -822,7 +822,7 @@ export default function CartaSucursalPage() {
         {...(reveal ? { 'data-reveal': '' } : {})}
         style={reveal ? { transitionDelay: stagger } : { animationDelay: stagger }}
         className={cn(
-          'group relative w-full flex flex-col text-left bg-white rounded-[1.25rem] overflow-hidden border border-stone-200/60 shadow-[0_4px_16px_-6px_rgba(28,25,23,0.18)] hover:shadow-[0_18px_36px_-12px_rgba(28,25,23,0.32)] hover:-translate-y-1 active:scale-[.965] active:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E85D04]/50 transition-all duration-300 ease-out',
+          'group relative w-full flex flex-col text-left bg-white rounded-[1.25rem] overflow-hidden border border-stone-200/60 shadow-[0_4px_16px_-6px_rgba(28,25,23,0.18)] hover:shadow-[0_18px_36px_-12px_rgba(28,25,23,0.32)] hover:-translate-y-1 active:scale-[.965] active:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D1400F]/50 transition-all duration-300 ease-out',
           reveal ? 'carta-reveal' : 'animate-fade-in-up',
         )}
       >
@@ -882,7 +882,7 @@ export default function CartaSucursalPage() {
 
         {/* Banda con el nombre (estilo Vips) — degradado diagonal + sheen
             superior fino para un acabado más pulido. */}
-        <div className="relative flex min-h-[3.25rem] flex-1 flex-col justify-center bg-gradient-to-br from-[#F26611] via-[#E85D04] to-[#C44D00] px-3 py-2.5 transition-colors duration-200 group-active:from-[#C44D00] group-active:to-[#A83E00]">
+        <div className="relative flex min-h-[3.25rem] flex-1 flex-col justify-center bg-gradient-to-br from-[#F26611] via-[#D1400F] to-[#B03508] px-3 py-2.5 transition-colors duration-200 group-active:from-[#B03508] group-active:to-[#A83E00]">
           <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/25" />
           <h3 className="text-center text-sm font-bold uppercase leading-tight tracking-wide text-white line-clamp-2">
             {highlight(item.name, query.trim())}
@@ -904,13 +904,13 @@ export default function CartaSucursalPage() {
       >
         {/* Halo cálido de marca detrás del logo + hairline inferior en degradado:
             dan profundidad y un acabado premium sin recargar (solo decorativos). */}
-        <div aria-hidden className="pointer-events-none absolute -top-20 -left-12 h-44 w-44 rounded-full bg-[#E85D04]/25 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#E85D04]/45 to-transparent" />
+        <div aria-hidden className="pointer-events-none absolute -top-20 -left-12 h-44 w-44 rounded-full bg-[#D1400F]/25 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#D1400F]/45 to-transparent" />
 
         <div className="relative mx-auto flex min-h-16 max-w-7xl items-center gap-3 px-4 py-3 lg:px-6">
           {data.branch.logo_url ? (
             <div className="relative shrink-0">
-              <span aria-hidden className="absolute inset-0 rounded-full bg-[#E85D04]/40 blur-md" />
+              <span aria-hidden className="absolute inset-0 rounded-full bg-[#D1400F]/40 blur-md" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={data.branch.logo_url}
@@ -975,7 +975,7 @@ export default function CartaSucursalPage() {
             <Search
               className={cn(
                 'absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 transition-all duration-300',
-                searchFocused ? 'h-5 w-5 text-[#E85D04]' : 'h-4 w-4',
+                searchFocused ? 'h-5 w-5 text-[#D1400F]' : 'h-4 w-4',
               )}
             />
             <input
@@ -988,7 +988,7 @@ export default function CartaSucursalPage() {
               enterKeyHint="search"
               placeholder={placeholder}
               className={cn(
-                'w-full rounded-2xl border border-stone-200 bg-white text-stone-900 font-semibold placeholder:text-stone-400 placeholder:font-semibold focus:outline-none focus:ring-4 focus:ring-[#E85D04]/20 focus:border-[#E85D04]/50 transition-all duration-300 ease-out',
+                'w-full rounded-2xl border border-stone-200 bg-white text-stone-900 font-semibold placeholder:text-stone-400 placeholder:font-semibold focus:outline-none focus:ring-4 focus:ring-[#D1400F]/20 focus:border-[#D1400F]/50 transition-all duration-300 ease-out',
                 searchFocused ? 'pl-12 pr-12 py-4 text-base shadow-lg' : 'pl-10 pr-10 py-3 text-sm shadow-sm',
               )}
             />
@@ -1015,7 +1015,7 @@ export default function CartaSucursalPage() {
                   onClick={() => setGroup(t.value)}
                   className={cn(
                     'flex items-center justify-center gap-1.5 h-10 rounded-xl text-sm font-semibold transition-colors',
-                    group === t.value ? 'bg-white text-[#E85D04] shadow-sm animate-carta-pop' : 'text-stone-500 hover:text-stone-700',
+                    group === t.value ? 'bg-white text-[#D1400F] shadow-sm animate-carta-pop' : 'text-stone-500 hover:text-stone-700',
                   )}
                 >
                   <t.Icon className="h-4 w-4" /> {t.label}
@@ -1081,7 +1081,7 @@ export default function CartaSucursalPage() {
       {/* Encabezado de sección + orden */}
       <div className={cn('max-w-6xl w-full mx-auto px-4 pt-4 flex items-end justify-between gap-3', searching && 'hidden md:flex')}>
         <div key={filterKey} className="min-w-0 animate-carta-section">
-          <p className="text-xs uppercase tracking-[0.2em] text-[#E85D04] font-bold">Carta</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-[#D1400F] font-bold">Carta</p>
           <h2 className="text-2xl font-extrabold text-stone-900 truncate">{sectionLabel}</h2>
           {soloPaquetes ? (
             <span className="text-xs text-stone-400 font-medium">
@@ -1124,7 +1124,7 @@ export default function CartaSucursalPage() {
           {(group != null || selectedCat != null || badge != null || query.trim() !== '') && (
             <button
               onClick={() => { setGroup(null); setSelectedCat(null); setBadge(null); setQuery('') }}
-              className="mt-4 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#E85D04] text-white text-sm font-semibold shadow"
+              className="mt-4 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#D1400F] text-white text-sm font-semibold shadow"
             >
               <X className="h-4 w-4" /> Limpiar filtros
             </button>
@@ -1165,7 +1165,7 @@ export default function CartaSucursalPage() {
                     </span>
                     <button
                       onClick={() => setSelectedCat(sec.id === '∅' ? null : Number(sec.id))}
-                      className="ml-auto inline-flex items-center gap-0.5 text-xs font-semibold text-stone-400 hover:text-[#E85D04] transition-colors"
+                      className="ml-auto inline-flex items-center gap-0.5 text-xs font-semibold text-stone-400 hover:text-[#D1400F] transition-colors"
                     >
                       Ver sección <ChevronRight className="h-3.5 w-3.5" />
                     </button>
@@ -1188,7 +1188,7 @@ export default function CartaSucursalPage() {
           {/* Loader elegante mientras se cargan más platillos. */}
           {loadingMore && (
             <div className="flex flex-col items-center justify-center gap-2 py-8 animate-fade-in" role="status" aria-live="polite">
-              <div className="animate-spin h-7 w-7 border-2 border-[#E85D04] border-t-transparent rounded-full" />
+              <div className="animate-spin h-7 w-7 border-2 border-[#D1400F] border-t-transparent rounded-full" />
               <p className="text-xs font-medium text-stone-400">Cargando más platillos…</p>
             </div>
           )}

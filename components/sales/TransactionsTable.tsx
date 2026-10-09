@@ -71,7 +71,7 @@ export function TransactionsTable({ orders, pageSize = 10 }: TransactionsTablePr
               <span>{order.table_name}</span>
               <span>{formatDate(order.created_at)}</span>
             </div>
-            <p className="mt-1 font-bold text-[#E85D04]">{formatCurrency(order.total)}</p>
+            <p className="mt-1 font-bold text-[#D1400F]">{formatCurrency(order.total)}</p>
           </div>
         ))}
       </div>

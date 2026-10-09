@@ -18,7 +18,7 @@ Construido con **Next.js 15** y un backend **PHP 8 + MySQL** en producción.
 [![Tailwind](https://img.shields.io/badge/Tailwind-v3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![PHP](https://img.shields.io/badge/PHP-8.1+-777BB4?style=flat-square&logo=php&logoColor=white)](https://php.net)
 [![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://mysql.com)
-[![License](https://img.shields.io/badge/license-Proprietary-E85D04?style=flat-square)](#)
+[![License](https://img.shields.io/badge/license-Proprietary-D1400F?style=flat-square)](#)
 
 <br/>
 
@@ -26,8 +26,8 @@ Construido con **Next.js 15** y un backend **PHP 8 + MySQL** en producción.
 
 <br/>
 
-<!-- Brand strip — FoodIX Orange -->
-![](https://placehold.co/680x8/E85D04/E85D04.png)
+<!-- Brand strip — FoodIX Paprika -->
+![](https://placehold.co/680x8/D1400F/D1400F.png)
 
 </div>
 
@@ -63,6 +63,7 @@ FoodIX es una plataforma web de gestión integral (POS + operación) que reempla
 - 📡 **Device Center**: monitoreo en tiempo real de los dispositivos conectados por establecimiento (kioskos, pantallas de cocina, tablets, cajas, lectores, POS-8360, impresoras), con estado online/idle/offline/error, heartbeat, alertas y registro manual de periféricos
 
 **Cambios recientes en la interfaz:**
+- 🎨 **Paleta Paprika**: el color de marca pasa de naranja brillante a rojo-paprika `#D1400F` (hover `#B03508`, dark `#E04410`), más apetitoso y con contraste AA sobre blanco; aplica a botones, inputs, foco, sidebar activo e íconos de marca.
 - 🔤 **Tipografía renovada FoodIX**: Plus Jakarta Sans (títulos) + Inter (cuerpo), sin serif; tokens `--font-plus-jakarta-sans` y `--font-inter` cargados en layout.tsx y mapeados en tailwind.config.ts. Marca unificada como FoodIX en todo el producto, landing y assets.
 - 🔤 **Planes renombrados**: Starter / Pro / AI / MultiSucursal (antes Trial/Basic/Pro/Enterprise), con `licenseForPlan()`/`requirePlanFeature()` como fuente única de verdad de límites y funciones por plan, y `FeatureLock` en el frontend para las funciones gateadas (Promociones, Inventario, WhatsApp)
 - 💬 **Rediseño del bot de WhatsApp**: multi-ítem por mensaje, catálogo priorizado y paginado, cero preguntas de fricción (ver arriba) — ahora exclusivo del **Plan AI**
@@ -123,20 +124,20 @@ FoodIX es una plataforma web de gestión integral (POS + operación) que reempla
 El sistema de diseño de FoodIX se basa en **design tokens** (CSS variables en
 HSL) con tema **claro** y **oscuro**, expuestos a Tailwind en
 [`tailwind.config.ts`](tailwind.config.ts) y definidos en
-[`app/globals.css`](app/globals.css). El color de marca es **FoodIX Orange**
-(`#E85D04`), acompañado de una base cálida _stone/off-white_.
+[`app/globals.css`](app/globals.css). El color de marca es **FoodIX Paprika**
+(`#D1400F`), acompañado de una base cálida _stone/off-white_.
 
-### Marca · FoodIX Orange
+### Marca · FoodIX Paprika
 
 | | Color | Hex | Uso |
 |---|-------|-----|-----|
-| ![](https://placehold.co/18x18/E85D04/E85D04.png) | **Orange 500** _(primary)_ | `#E85D04` | Color principal, CTAs, foco, sidebar activo |
-| ![](https://placehold.co/18x18/C44D00/C44D00.png) | Orange 600 _(hover)_ | `#C44D00` | Hover de botones de marca |
+| ![](https://placehold.co/18x18/D1400F/D1400F.png) | **Paprika 500** _(primary)_ | `#D1400F` | Color principal, CTAs, foco, sidebar activo |
+| ![](https://placehold.co/18x18/B03508/B03508.png) | Paprika 600 _(hover)_ | `#B03508` | Hover de botones de marca |
 | ![](https://placehold.co/18x18/F5A623/F5A623.png) | Amber _(brand accent)_ | `#F5A623` | Acentos, gradientes, badges destacados |
-| ![](https://placehold.co/18x18/FA6005/FA6005.png) | Orange _(dark primary)_ | `#FA6005` | Primary en tema oscuro |
+| ![](https://placehold.co/18x18/FA6005/FA6005.png) | Paprika _(dark primary)_ | `#E04410` | Primary en tema oscuro |
 
 ```css
-brand: { DEFAULT: "#E85D04", hover: "#C44D00", accent: "#F5A623" }
+brand: { DEFAULT: "#D1400F", hover: "#B03508", accent: "#F5A623" }
 ```
 
 ### Tema claro
@@ -146,7 +147,7 @@ brand: { DEFAULT: "#E85D04", hover: "#C44D00", accent: "#F5A623" }
 | ![](https://placehold.co/18x18/F7F4F0/F7F4F0.png) | `--background` | `#F7F4F0` | `40 25% 97%` | Fondo cálido off-white |
 | ![](https://placehold.co/18x18/1C1917/1C1917.png) | `--foreground` | `#1C1917` | `20 14% 11%` | Texto principal (stone-900) |
 | ![](https://placehold.co/18x18/FFFFFF/FFFFFF.png) | `--card` / `--popover` | `#FFFFFF` | `0 0% 100%` | Superficies, tarjetas, menús |
-| ![](https://placehold.co/18x18/E85D04/E85D04.png) | `--primary` / `--ring` | `#E85D04` | `22 96% 47%` | Acción principal y anillo de foco |
+| ![](https://placehold.co/18x18/D1400F/D1400F.png) | `--primary` / `--ring` | `#D1400F` | `15 87% 44%` | Acción principal y anillo de foco |
 | ![](https://placehold.co/18x18/ECE7E2/ECE7E2.png) | `--secondary` / `--muted` | `#ECE7E2` | `30 10% 92%` | Fondos secundarios y atenuados |
 | ![](https://placehold.co/18x18/867E79/867E79.png) | `--muted-foreground` | `#867E79` | `25 5% 50%` | Texto secundario (stone-500) |
 | ![](https://placehold.co/18x18/F4A425/F4A425.png) | `--accent` | `#F4A425` | `37 90% 55%` | Acento ámbar |
@@ -160,7 +161,7 @@ brand: { DEFAULT: "#E85D04", hover: "#C44D00", accent: "#F5A623" }
 | ![](https://placehold.co/18x18/0F0F0F/0F0F0F.png) | `--background` | `#0F0F0F` | `0 0% 6%` | Fondo casi negro |
 | ![](https://placehold.co/18x18/F5F3F0/F5F3F0.png) | `--foreground` | `#F5F3F0` | `30 10% 96%` | Texto principal |
 | ![](https://placehold.co/18x18/1A1A1A/1A1A1A.png) | `--card` / `--popover` | `#1A1A1A` | `0 0% 10%` | Superficies elevadas |
-| ![](https://placehold.co/18x18/FA6005/FA6005.png) | `--primary` / `--ring` | `#FA6005` | `22 96% 50%` | Acción principal (más brillante) |
+| ![](https://placehold.co/18x18/FA6005/FA6005.png) | `--primary` / `--ring` | `#E04410` | `15 87% 47%` | Acción principal (más brillante) |
 | ![](https://placehold.co/18x18/292929/292929.png) | `--secondary` / `--muted` | `#292929` | `0 0% 16%` | Fondos secundarios y atenuados |
 | ![](https://placehold.co/18x18/938B84/938B84.png) | `--muted-foreground` | `#938B84` | `25 5% 55%` | Texto secundario |
 | ![](https://placehold.co/18x18/F4A425/F4A425.png) | `--accent` | `#F4A425` | `37 90% 55%` | Acento ámbar |
@@ -176,7 +177,7 @@ La barra lateral mantiene una identidad oscura fija en ambos temas.
 | ![](https://placehold.co/18x18/1C1917/1C1917.png) | `--sidebar-bg` _(claro)_ | `#1C1917` | Fondo de la sidebar en tema claro |
 | ![](https://placehold.co/18x18/111111/111111.png) | `--sidebar-bg` _(oscuro)_ | `#111111` | Fondo de la sidebar en tema oscuro |
 | ![](https://placehold.co/18x18/E7E5E4/E7E5E4.png) | `--sidebar-text` | `#E7E5E4` | Texto e iconos de la sidebar |
-| ![](https://placehold.co/18x18/E85D04/E85D04.png) | `--sidebar-active` | `#E85D04` | Ítem de navegación activo |
+| ![](https://placehold.co/18x18/D1400F/D1400F.png) | `--sidebar-active` | `#D1400F` | Ítem de navegación activo |
 
 ### Acentos de estaciones KDS y carta digital
 

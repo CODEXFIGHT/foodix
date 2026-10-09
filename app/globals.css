@@ -10,7 +10,7 @@
     --card-foreground: 20 14% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 14% 11%;
-    --primary: 22 96% 47%;           /* #E85D04 */
+    --primary: 15 87% 44%;           /* #D1400F */
     --primary-foreground: 0 0% 100%;
     --secondary: 30 10% 92%;
     --secondary-foreground: 20 14% 20%;
@@ -22,11 +22,11 @@
     --destructive-foreground: 0 0% 100%;
     --border: 30 10% 90%;            /* stone-200 */
     --input: 30 10% 90%;
-    --ring: 22 96% 47%;
+    --ring: 15 87% 44%;
     --radius: 0.75rem;
     --sidebar-bg: #1C1917;           /* always dark sidebar */
     --sidebar-text: #E7E5E4;
-    --sidebar-active: #E85D04;
+    --sidebar-active: #D1400F;
   }
   /* Fuerza tokens de tema CLARO en un subárbol, aunque <html> tenga .dark.
      Se usa en pantallas de marca (login/PIN) que están diseñadas en claro. */
@@ -43,7 +43,7 @@
     --card-foreground: 20 14% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 14% 11%;
-    --primary: 22 96% 47%;
+    --primary: 15 87% 44%;
     --primary-foreground: 0 0% 100%;
     --secondary: 30 10% 92%;
     --secondary-foreground: 20 14% 20%;
@@ -55,7 +55,7 @@
     --destructive-foreground: 0 0% 100%;
     --border: 30 10% 90%;
     --input: 30 10% 90%;
-    --ring: 22 96% 47%;
+    --ring: 15 87% 44%;
   }
   .dark {
     --background: 0 0% 6%;
@@ -64,7 +64,7 @@
     --card-foreground: 30 10% 96%;
     --popover: 0 0% 10%;
     --popover-foreground: 30 10% 96%;
-    --primary: 22 96% 50%;
+    --primary: 15 87% 47%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 16%;
     --secondary-foreground: 30 10% 90%;
@@ -76,7 +76,7 @@
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 22 96% 50%;
+    --ring: 15 87% 47%;
     --sidebar-bg: #111111;
   }
 }

@@ -142,11 +142,11 @@ export function ModificadorSheet({ product, groups, open, onOpenChange, onConfir
         <button
           type="button"
           onClick={applyLastConfig}
-          className="mt-3 flex min-h-[44px] w-full items-center gap-2 rounded-xl border border-[#E85D04]/30 bg-[#E85D04]/5 px-3 py-2 text-left transition-colors active:scale-[0.99] touch-manipulation"
+          className="mt-3 flex min-h-[44px] w-full items-center gap-2 rounded-xl border border-[#D1400F]/30 bg-[#D1400F]/5 px-3 py-2 text-left transition-colors active:scale-[0.99] touch-manipulation"
         >
-          <RotateCcw className="h-4 w-4 shrink-0 text-[#E85D04]" />
+          <RotateCcw className="h-4 w-4 shrink-0 text-[#D1400F]" />
           <span className="min-w-0 flex-1">
-            <span className="block text-xs font-bold text-[#E85D04]">Repetir última</span>
+            <span className="block text-xs font-bold text-[#D1400F]">Repetir última</span>
             <span className="block truncate text-xs text-muted-foreground">{lastConfigLabel}</span>
           </span>
         </button>
@@ -174,7 +174,7 @@ export function ModificadorSheet({ product, groups, open, onOpenChange, onConfir
                     onClick={() => toggle(group, idx)}
                     className={cn(
                       'flex min-h-[44px] items-center justify-between gap-2 rounded-lg border-2 p-2.5 text-left text-sm transition-all touch-manipulation',
-                      active ? 'border-[#E85D04] bg-[#E85D04]/5' : 'border-transparent bg-muted/40 hover:border-primary/40',
+                      active ? 'border-[#D1400F] bg-[#D1400F]/5' : 'border-transparent bg-muted/40 hover:border-primary/40',
                     )}
                   >
                     <span className="truncate">{opt.name}</span>
@@ -204,7 +204,7 @@ export function ModificadorSheet({ product, groups, open, onOpenChange, onConfir
                     className={cn(
                       'min-h-[44px] rounded-full border px-3 py-1.5 text-xs font-semibold transition-all active:scale-95 touch-manipulation',
                       active
-                        ? 'border-[#E85D04] bg-[#E85D04] text-white shadow-sm'
+                        ? 'border-[#D1400F] bg-[#D1400F] text-white shadow-sm'
                         : 'border-stone-200 text-stone-600 hover:bg-stone-50 dark:border-stone-700 dark:text-stone-300 dark:hover:bg-stone-900',
                     )}
                   >

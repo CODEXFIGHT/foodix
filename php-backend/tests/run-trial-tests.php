@@ -536,7 +536,7 @@ test('Extra · el correo del código se arma completo y con la marca', function 
     check(str_contains($html, '2px dashed'), 'el código va en un recuadro punteado');
     check(str_contains($html, 'text-align:center') || str_contains($html, 'align="center"'), 'el bloque del código está centrado');
     check(str_contains($html, 'font-size:40px'), 'el código se muestra en grande');
-    check(str_contains($html, 'Food<span style="color:#E85D04;">IX</span>'), 'lleva el logo/wordmark de FoodIX');
+    check(str_contains($html, 'Food<span style="color:#D1400F;">IX</span>'), 'lleva el logo/wordmark de FoodIX');
     check(!str_contains($html, '<img'), 'el logo no depende de imágenes externas');
 
     // Pie

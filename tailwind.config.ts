@@ -56,8 +56,8 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
         brand: {
-          DEFAULT: "#E85D04",
-          hover: "#C44D00",
+          DEFAULT: "#D1400F",
+          hover: "#B03508",
           accent: "#F5A623",
         },
       },
@@ -80,14 +80,14 @@ const config: Config = {
             background: "#F7F4F0",
             foreground: "#1C1917",
             primary: {
-              DEFAULT: "#E85D04",
+              DEFAULT: "#D1400F",
               foreground: "#FFFFFF",
             },
             secondary: {
               DEFAULT: "#F5A623",
               foreground: "#1C1917",
             },
-            focus: "#E85D04",
+            focus: "#D1400F",
           },
         },
         dark: {
@@ -95,14 +95,14 @@ const config: Config = {
             background: "#0F0F0F",
             foreground: "#F5F5F4",
             primary: {
-              DEFAULT: "#E85D04",
+              DEFAULT: "#D1400F",
               foreground: "#FFFFFF",
             },
             secondary: {
               DEFAULT: "#F5A623",
               foreground: "#1C1917",
             },
-            focus: "#E85D04",
+            focus: "#D1400F",
           },
         },
       },

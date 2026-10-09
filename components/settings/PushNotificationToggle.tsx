@@ -60,7 +60,7 @@ export function PushNotificationToggle({
   return (
     <div className={cn('rounded-xl border bg-card p-4 shadow-sm', compact && 'p-3', className)}>
       <div className="flex items-start gap-3">
-        <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E85D04]/10 text-[#E85D04]">
+        <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#D1400F]/10 text-[#D1400F]">
           <Bell className="h-4 w-4" />
         </span>
         <div className="min-w-0 flex-1">
@@ -77,7 +77,7 @@ export function PushNotificationToggle({
                 isDisabled={disabled}
                 onValueChange={handleToggle}
                 aria-label={`Activar notificaciones para ${label}`}
-                classNames={{ wrapper: 'group-data-[selected=true]:bg-[#E85D04]' }}
+                classNames={{ wrapper: 'group-data-[selected=true]:bg-[#D1400F]' }}
               />
             </div>
           </div>

@@ -17,7 +17,7 @@ import {
 import { decodeTicket, type TicketPayload } from '@/lib/printing/ticketLink'
 import { PRODUCT_URL } from '@/lib/constants/version'
 
-const ORANGE = '#E85D04'
+const ORANGE = '#D1400F'
 
 function money(n: number, cur = '$'): string {
   return `${cur}${Number(n ?? 0).toFixed(2)}`
@@ -49,7 +49,7 @@ export default function TicketPage() {
   if (t === undefined) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-stone-100 dark:bg-stone-950">
-        <div className="h-9 w-9 animate-spin rounded-full border-2 border-[#E85D04] border-t-transparent" />
+        <div className="h-9 w-9 animate-spin rounded-full border-2 border-[#D1400F] border-t-transparent" />
       </div>
     )
   }
@@ -57,7 +57,7 @@ export default function TicketPage() {
   if (t === null) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center gap-3 bg-stone-100 px-6 text-center dark:bg-stone-950">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#E85D04]/10 text-[#E85D04]">
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#D1400F]/10 text-[#D1400F]">
           <Receipt className="h-8 w-8" />
         </div>
         <h1 className="text-lg font-bold text-stone-800 dark:text-stone-100">Ticket no válido</h1>
@@ -88,7 +88,7 @@ export default function TicketPage() {
       <div className="mx-auto w-full max-w-md">
         {/* Marca FoodIX (se oculta al imprimir) */}
         <div className="mb-4 flex items-center justify-center gap-2 print:hidden">
-          <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[#E85D04] text-[11px] font-black text-white">F</span>
+          <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[#D1400F] text-[11px] font-black text-white">F</span>
           <span className="text-sm font-semibold tracking-tight text-stone-500 dark:text-stone-400">FoodIX</span>
         </div>
 
@@ -135,7 +135,7 @@ export default function TicketPage() {
             <ul className="space-y-3">
               {t.it.map((it, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-6 min-w-6 items-center justify-center rounded-md bg-[#E85D04]/10 px-1.5 text-xs font-bold text-[#E85D04]">
+                  <span className="mt-0.5 flex h-6 min-w-6 items-center justify-center rounded-md bg-[#D1400F]/10 px-1.5 text-xs font-bold text-[#D1400F]">
                     {it.q}×
                   </span>
                   <div className="min-w-0 flex-1">
@@ -169,7 +169,7 @@ export default function TicketPage() {
             )}
             <div className="mt-3 flex items-center justify-between">
               <span className="text-base font-extrabold">TOTAL</span>
-              <span className="text-2xl font-extrabold tabular-nums text-[#E85D04]">{money(t.tt, cur)}</span>
+              <span className="text-2xl font-extrabold tabular-nums text-[#D1400F]">{money(t.tt, cur)}</span>
             </div>
 
             {t.pm && t.pm.length > 0 && (
@@ -188,7 +188,7 @@ export default function TicketPage() {
           {/* Pie de marca */}
           <div className="border-t border-stone-100 bg-stone-50 px-6 py-4 text-center">
             <p className="text-xs font-semibold text-stone-500">
-              Generado con <span className="text-[#E85D04]">FoodIX</span>
+              Generado con <span className="text-[#D1400F]">FoodIX</span>
             </p>
             <a href={PRODUCT_URL} target="_blank" rel="noopener noreferrer"
               className="text-[11px] text-stone-400 underline-offset-2 hover:underline">
@@ -201,7 +201,7 @@ export default function TicketPage() {
         {/* Acciones (ocultas al imprimir) */}
         <div className="mt-5 flex gap-3 print:hidden">
           <button onClick={() => window.print()}
-            className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-[#E85D04] px-4 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#cf5303]">
+            className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-[#D1400F] px-4 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#cf5303]">
             <Printer className="h-4 w-4" /> Imprimir / PDF
           </button>
           <button onClick={share}

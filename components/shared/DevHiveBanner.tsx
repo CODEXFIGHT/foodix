@@ -16,7 +16,7 @@ export function CodexFightBanner() {
     if ((window as unknown as { __codexfight?: boolean }).__codexfight) return
     ;(window as unknown as { __codexfight?: boolean }).__codexfight = true
 
-    const brand = 'color:#E85D04;font-size:22px;font-weight:800'
+    const brand = 'color:#D1400F;font-size:22px;font-weight:800'
     const muted = 'color:#78716c;font-size:12px'
     const warn = 'color:#dc2626;font-size:16px;font-weight:700'
 

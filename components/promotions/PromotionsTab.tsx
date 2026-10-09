@@ -94,7 +94,7 @@ export function PromotionsTab({ branchId }: { branchId: number | null }) {
   return (
     <div className="space-y-4">
       <div className="flex justify-end">
-        <Button onClick={openNew} className="bg-[#E85D04] hover:bg-[#C44D00]"><Plus className="h-4 w-4 mr-1" /> Nueva promoción</Button>
+        <Button onClick={openNew} className="bg-[#D1400F] hover:bg-[#B03508]"><Plus className="h-4 w-4 mr-1" /> Nueva promoción</Button>
       </div>
 
       {promotions.length === 0 ? (
@@ -105,7 +105,7 @@ export function PromotionsTab({ branchId }: { branchId: number | null }) {
             <Card key={p.id} className={!p.active ? 'opacity-60' : undefined}>
               <CardContent className="p-3.5 flex items-center justify-between gap-3 flex-wrap">
                 <div className="min-w-0">
-                  <p className="font-bold flex items-center gap-1.5"><Tag className="h-4 w-4 text-[#E85D04]" /> {p.name}</p>
+                  <p className="font-bold flex items-center gap-1.5"><Tag className="h-4 w-4 text-[#D1400F]" /> {p.name}</p>
                   <p className="text-xs text-muted-foreground mt-0.5">
                     {p.type === 'discount_percent' ? `${p.value}% de descuento` : `$${p.value} MXN de descuento`}
                     {p.days_of_week && ` · ${p.days_of_week.map(d => DAYS.find(x => x.value === d)?.label).join(', ')}`}
@@ -151,7 +151,7 @@ export function PromotionsTab({ branchId }: { branchId: number | null }) {
                 {DAYS.map(d => (
                   <button
                     key={d.value} type="button" onClick={() => toggleDay(d.value)}
-                    className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition-all ${days.includes(d.value) ? 'border-[#E85D04] bg-[#E85D04]/10 text-[#C44D00]' : 'border-stone-200 text-stone-500 hover:bg-stone-50'}`}
+                    className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition-all ${days.includes(d.value) ? 'border-[#D1400F] bg-[#D1400F]/10 text-[#B03508]' : 'border-stone-200 text-stone-500 hover:bg-stone-50'}`}
                   >
                     {d.label}
                   </button>
@@ -165,7 +165,7 @@ export function PromotionsTab({ branchId }: { branchId: number | null }) {
           </div>
           <DialogFooter>
             <Button variant="ghost" onClick={() => setOpen(false)}>Cancelar</Button>
-            <Button onClick={handleSave} className="bg-[#E85D04] hover:bg-[#C44D00]">Guardar</Button>
+            <Button onClick={handleSave} className="bg-[#D1400F] hover:bg-[#B03508]">Guardar</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

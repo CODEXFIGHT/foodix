@@ -77,7 +77,7 @@ function AdminContent() {
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             <Kpi icon={DollarSign} label="Ventas de hoy" value={formatMoney(salesToday, restaurant.currency)} accent="text-green-600" />
             <Kpi icon={ClipboardList} label="Órdenes activas" value={String(activeOrders.length)} accent="text-blue-600" />
-            <Kpi icon={Armchair} label="Mesas ocupadas" value={`${occupied}/${tables.length}`} accent="text-[#E85D04]" />
+            <Kpi icon={Armchair} label="Mesas ocupadas" value={`${occupied}/${tables.length}`} accent="text-[#D1400F]" />
             <Kpi icon={UtensilsCrossed} label="Productos" value={String(products.length)} accent="text-purple-600" />
           </div>
 
@@ -92,7 +92,7 @@ function AdminContent() {
                     <div key={c.id} className="flex items-center gap-3">
                       <span className="w-24 sm:w-32 shrink-0 truncate text-xs text-stone-600">{c.emoji} {c.name}</span>
                       <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-stone-100">
-                        <div className="h-full rounded-full bg-[#E85D04] transition-all" style={{ width: `${pct}%` }} />
+                        <div className="h-full rounded-full bg-[#D1400F] transition-all" style={{ width: `${pct}%` }} />
                       </div>
                       <span className="w-8 shrink-0 text-right text-xs font-medium text-stone-500">{count}</span>
                     </div>
@@ -226,7 +226,7 @@ function MenuManager({
                     <p className="truncate text-sm font-semibold">{p.name}</p>
                     <p className="line-clamp-1 text-xs text-stone-500">{p.description || '—'}</p>
                     <div className="mt-1 flex items-center gap-2">
-                      <p className="text-sm font-bold text-[#E85D04]">{formatMoney(p.price)}</p>
+                      <p className="text-sm font-bold text-[#D1400F]">{formatMoney(p.price)}</p>
                       <PreparationAreaBadge area={p.station} />
                     </div>
                   </div>
@@ -301,7 +301,7 @@ function TablesManager() {
 
   const statusStyle: Record<string, string> = {
     free: 'border-stone-200 bg-white',
-    occupied: 'border-[#E85D04]/40 bg-[#E85D04]/5',
+    occupied: 'border-[#D1400F]/40 bg-[#D1400F]/5',
     billing: 'border-amber-400 bg-amber-50',
   }
 
@@ -324,7 +324,7 @@ function TablesManager() {
                 </Badge>
               </div>
               <p className="mt-1 text-xs text-stone-500">{t.zone} · {t.seats} pers.</p>
-              {order && <p className="mt-1 text-sm font-bold text-[#E85D04]">{formatMoney(tot.total, restaurant.currency)}</p>}
+              {order && <p className="mt-1 text-sm font-bold text-[#D1400F]">{formatMoney(tot.total, restaurant.currency)}</p>}
             </button>
           )
         })}

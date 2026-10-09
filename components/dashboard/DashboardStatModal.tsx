@@ -99,7 +99,7 @@ function OrderRow({ order }: { order: Order }) {
         </div>
         <div className="text-right shrink-0">
           <p className="font-bold text-stone-900 dark:text-stone-100 text-sm">{formatCurrency(order.total)}</p>
-          <ArrowRight className="h-3 w-3 text-stone-300 ml-auto mt-0.5 group-hover:text-[#E85D04] transition-colors" />
+          <ArrowRight className="h-3 w-3 text-stone-300 ml-auto mt-0.5 group-hover:text-[#D1400F] transition-colors" />
         </div>
       </div>
     </Link>
@@ -141,7 +141,7 @@ function VentasContent({ orders, summary }: { orders: Order[]; summary: SalesSum
       {/* KPIs rápidos */}
       <div className="grid grid-cols-3 gap-3">
         {[
-          { label: 'Ingresos', value: formatCurrency(summary?.today.revenue ?? 0), color: 'text-[#E85D04]' },
+          { label: 'Ingresos', value: formatCurrency(summary?.today.revenue ?? 0), color: 'text-[#D1400F]' },
           { label: 'Pedidos', value: String(summary?.today.order_count ?? 0), color: 'text-blue-500' },
           { label: 'Esta semana', value: formatCurrency(summary?.week.revenue ?? 0), color: 'text-green-500' },
         ].map(k => (
@@ -213,7 +213,7 @@ function TablesContent({ tables, orders }: { tables: Table[]; orders: Order[] })
     <div className="space-y-2">
       <div className="grid grid-cols-3 gap-2 mb-4">
         {[
-          { label: 'Ocupadas', value: tables.filter(t => t.status === 'ocupada').length, color: 'text-[#E85D04]' },
+          { label: 'Ocupadas', value: tables.filter(t => t.status === 'ocupada').length, color: 'text-[#D1400F]' },
           { label: 'Libres', value: tables.filter(t => t.status === 'libre').length, color: 'text-green-500' },
           { label: 'Total', value: tables.length, color: 'text-stone-500' },
         ].map(k => (
@@ -234,20 +234,20 @@ function TablesContent({ tables, orders }: { tables: Table[]; orders: Order[] })
             <div key={table.id} className={cn(
               'rounded-xl border p-3 space-y-1.5',
               isOccupied
-                ? 'bg-[#E85D04]/8 border-[#E85D04]/30 dark:bg-[#E85D04]/10'
+                ? 'bg-[#D1400F]/8 border-[#D1400F]/30 dark:bg-[#D1400F]/10'
                 : 'bg-stone-50 dark:bg-stone-800/30 border-stone-200 dark:border-stone-700',
             )}>
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-sm text-stone-900 dark:text-stone-100">{table.name}</span>
                 <span className={cn(
                   'h-2 w-2 rounded-full',
-                  isOccupied ? 'bg-[#E85D04]' : 'bg-green-500',
+                  isOccupied ? 'bg-[#D1400F]' : 'bg-green-500',
                 )} />
               </div>
               {tableOrder ? (
                 <>
                   <p className="text-xs text-stone-500">Pedido #{tableOrder.id}</p>
-                  <p className="text-xs font-bold text-[#E85D04]">{formatCurrency(tableOrder.total)}</p>
+                  <p className="text-xs font-bold text-[#D1400F]">{formatCurrency(tableOrder.total)}</p>
                   <p className="text-[10px] text-stone-400">{timeAgo(tableOrder.created_at)}</p>
                 </>
               ) : (
@@ -359,12 +359,12 @@ function PlatillosContent({ orders }: { orders: Order[] }) {
     <div className="space-y-1.5">
       {pending.map((item, i) => (
         <div key={i} className="flex items-center gap-3 bg-orange-50 dark:bg-orange-950/20 border border-orange-100 dark:border-orange-900/30 rounded-xl px-4 py-3">
-          <ChefHat className="h-4 w-4 text-[#E85D04] shrink-0" />
+          <ChefHat className="h-4 w-4 text-[#D1400F] shrink-0" />
           <div className="flex-1 min-w-0">
             <p className="font-medium text-sm text-stone-900 dark:text-stone-100 truncate">{item.name}</p>
             <p className="text-xs text-stone-400">Pedido #{item.orderID} · {item.table}</p>
           </div>
-          <span className="text-sm font-bold text-[#E85D04] shrink-0">×{item.qty}</span>
+          <span className="text-sm font-bold text-[#D1400F] shrink-0">×{item.qty}</span>
         </div>
       ))}
     </div>
@@ -374,7 +374,7 @@ function PlatillosContent({ orders }: { orders: Order[] }) {
 // ── Config de cada modal ──────────────────────────────────────────────────────
 
 const MODAL_CONFIG: Record<StatModalType, { title: string; icon: React.ReactNode }> = {
-  ventas:    { title: 'Ventas de hoy',          icon: <Wallet className="h-5 w-5 text-[#E85D04]" /> },
+  ventas:    { title: 'Ventas de hoy',          icon: <Wallet className="h-5 w-5 text-[#D1400F]" /> },
   activos:   { title: 'Pedidos activos',         icon: <Package className="h-5 w-5 text-blue-500" /> },
   mesas:     { title: 'Estado de mesas',         icon: <UtensilsCrossed className="h-5 w-5 text-green-500" /> },
   ticket:    { title: 'Ticket promedio',         icon: <Receipt className="h-5 w-5 text-purple-500" /> },
@@ -382,7 +382,7 @@ const MODAL_CONFIG: Record<StatModalType, { title: string; icon: React.ReactNode
   cobrados:  { title: 'Cobrados hoy',            icon: <CheckCircle2 className="h-5 w-5 text-green-500" /> },
   pickup:    { title: 'Pickup hoy',              icon: <ShoppingBag className="h-5 w-5 text-blue-500" /> },
   delivery:  { title: 'Domicilio hoy',           icon: <Truck className="h-5 w-5 text-indigo-500" /> },
-  platillos: { title: 'Platillos pendientes',    icon: <ChefHat className="h-5 w-5 text-[#E85D04]" /> },
+  platillos: { title: 'Platillos pendientes',    icon: <ChefHat className="h-5 w-5 text-[#D1400F]" /> },
 }
 
 const todayKey = () => new Date().toDateString()

@@ -115,9 +115,9 @@ export default function DashboardPage() {
       label: 'Platillos pendientes',
       value: pendingDishes,
       icon: ChefHat,
-      colorCls: 'text-[#E85D04] dark:text-orange-400',
+      colorCls: 'text-[#D1400F] dark:text-orange-400',
       bgCls: 'bg-orange-50 dark:bg-orange-950/10 border-orange-200 dark:border-orange-900/30',
-      iconColorCls: 'text-[#E85D04]',
+      iconColorCls: 'text-[#D1400F]',
       modal: 'platillos',
     },
   ]
@@ -178,9 +178,9 @@ export default function DashboardPage() {
               title="Ventas Hoy"
               value={formatCurrency(summary?.today.revenue ?? 0)}
               subtitle={`${summary?.today.order_count ?? 0} pedidos`}
-              icon={<Wallet className="h-8 w-8 text-[#E85D04]" />}
-              iconBg="bg-[#E85D04]/10"
-              borderColor="border-l-4 border-l-[#E85D04]"
+              icon={<Wallet className="h-8 w-8 text-[#D1400F]" />}
+              iconBg="bg-[#D1400F]/10"
+              borderColor="border-l-4 border-l-[#D1400F]"
               onClick={() => setModalType('ventas')}
             />
           </motion.div>
@@ -286,7 +286,7 @@ export default function DashboardPage() {
             <Button as={Link} href="/tables" color="primary" radius="lg" className="w-full justify-start font-medium h-11 sm:col-span-2 lg:col-span-1" startContent={<HandPlatter className="h-4 w-4" />}>
               Tomar pedido (modo mesero)
             </Button>
-            <Button as={Link} href="/orders/new" variant="bordered" radius="lg" className="w-full justify-start" startContent={<Plus className="h-4 w-4 text-[#E85D04]" />}>
+            <Button as={Link} href="/orders/new" variant="bordered" radius="lg" className="w-full justify-start" startContent={<Plus className="h-4 w-4 text-[#D1400F]" />}>
               Nuevo pedido
             </Button>
             <Button as={Link} href="/tables" variant="bordered" radius="lg" className="w-full justify-start" startContent={<UtensilsCrossed className="h-4 w-4 text-blue-600" />}>

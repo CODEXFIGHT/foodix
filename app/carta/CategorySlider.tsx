@@ -73,7 +73,7 @@ export const CategorySlider = memo(function CategorySlider({ categories, activeI
       {canScrollLeft && <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-stone-100 to-transparent" />}
       {canScrollRight && <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-stone-100 to-transparent" />}
       {canScrollLeft && (
-        <button type="button" aria-label="Desplazar categorías a la izquierda" onClick={() => scrollByPage(-1)} className="absolute left-1 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-stone-200 bg-white/95 text-stone-600 shadow-md hover:text-[#E85D04] focus-visible:ring-2 focus-visible:ring-[#E85D04]/50 md:grid">
+        <button type="button" aria-label="Desplazar categorías a la izquierda" onClick={() => scrollByPage(-1)} className="absolute left-1 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-stone-200 bg-white/95 text-stone-600 shadow-md hover:text-[#D1400F] focus-visible:ring-2 focus-visible:ring-[#D1400F]/50 md:grid">
           <ChevronLeft className="h-5 w-5" />
         </button>
       )}
@@ -85,7 +85,7 @@ export const CategorySlider = memo(function CategorySlider({ categories, activeI
           role="tab"
           onClick={() => onChange(null)}
           onKeyDown={event => moveWithKeyboard(event, -1)}
-          className={cn('min-h-11 shrink-0 rounded-full border px-4 text-sm font-bold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E85D04]/50 active:scale-[.98]', activeId === null ? 'border-[#E85D04] bg-[#E85D04] text-white shadow-md' : 'border-stone-200 bg-white text-stone-600 hover:border-[#E85D04]/40 hover:text-[#E85D04]')}
+          className={cn('min-h-11 shrink-0 rounded-full border px-4 text-sm font-bold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D1400F]/50 active:scale-[.98]', activeId === null ? 'border-[#D1400F] bg-[#D1400F] text-white shadow-md' : 'border-stone-200 bg-white text-stone-600 hover:border-[#D1400F]/40 hover:text-[#D1400F]')}
         >
           Todos
         </button>
@@ -101,8 +101,8 @@ export const CategorySlider = memo(function CategorySlider({ categories, activeI
               aria-selected={active}
               onClick={() => onChange(active ? null : category.id)}
               onKeyDown={event => moveWithKeyboard(event, index)}
-              className={cn('min-h-11 max-w-[220px] shrink-0 truncate rounded-full border px-4 text-sm font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E85D04]/50 active:scale-[.98]', active ? 'border-transparent text-white shadow-md' : 'border-stone-200 bg-white text-stone-600 hover:border-[#E85D04]/40 hover:text-[#E85D04]')}
-              style={active ? { backgroundColor: category.color || '#E85D04' } : undefined}
+              className={cn('min-h-11 max-w-[220px] shrink-0 truncate rounded-full border px-4 text-sm font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D1400F]/50 active:scale-[.98]', active ? 'border-transparent text-white shadow-md' : 'border-stone-200 bg-white text-stone-600 hover:border-[#D1400F]/40 hover:text-[#D1400F]')}
+              style={active ? { backgroundColor: category.color || '#D1400F' } : undefined}
             >
               {category.name}
             </button>
@@ -110,7 +110,7 @@ export const CategorySlider = memo(function CategorySlider({ categories, activeI
         })}
       </div>
       {canScrollRight && (
-        <button type="button" aria-label="Desplazar categorías a la derecha" onClick={() => scrollByPage(1)} className="absolute right-1 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-stone-200 bg-white/95 text-stone-600 shadow-md hover:text-[#E85D04] focus-visible:ring-2 focus-visible:ring-[#E85D04]/50 md:grid">
+        <button type="button" aria-label="Desplazar categorías a la derecha" onClick={() => scrollByPage(1)} className="absolute right-1 top-1/2 z-20 hidden h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-stone-200 bg-white/95 text-stone-600 shadow-md hover:text-[#D1400F] focus-visible:ring-2 focus-visible:ring-[#D1400F]/50 md:grid">
           <ChevronRight className="h-5 w-5" />
         </button>
       )}

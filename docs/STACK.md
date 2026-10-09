@@ -393,7 +393,7 @@ graph LR
   una vez sin error (patrón usado desde la migración `22-branch-tax-config.sql`
   en adelante).
 - **Design tokens en HSL** (`app/globals.css`, tema claro/oscuro) — color de
-  marca `#E85D04` ("FoodIX Orange"). Detalle completo en el
+  marca `#D1400F` ("FoodIX Paprika"). Detalle completo en el
   [README](../README.md#paleta-de-colores).
 - **Degradación silenciosa de IA**: cualquier punto que use OpenRouter
   (descripciones de menú, fallback de WhatsApp, voz del mesero) nunca rompe el

@@ -333,7 +333,7 @@ function NewOrderInner() {
             <div className={cn(
               'w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all shrink-0',
               i < step ? 'bg-green-500 text-white' :
-              i === step ? 'bg-[#E85D04] text-white' :
+              i === step ? 'bg-[#D1400F] text-white' :
               'bg-muted text-muted-foreground',
             )}>
               {i < step ? <Check className="h-4 w-4" /> : i + 1}
@@ -359,10 +359,10 @@ function NewOrderInner() {
               onClick={() => { setSelectedTableId('takeaway'); setStep(1) }}
               className={cn(
                 'w-full flex items-center gap-4 p-5 border-2 rounded-2xl transition-all text-left bg-card min-h-[112px]',
-                selectedTableId === 'takeaway' ? 'border-[#E85D04] bg-[#E85D04]/5' : 'hover:border-primary/40',
+                selectedTableId === 'takeaway' ? 'border-[#D1400F] bg-[#D1400F]/5' : 'hover:border-primary/40',
               )}
             >
-              <span className="h-12 w-12 rounded-2xl bg-[#E85D04]/10 text-[#E85D04] flex items-center justify-center shrink-0">
+              <span className="h-12 w-12 rounded-2xl bg-[#D1400F]/10 text-[#D1400F] flex items-center justify-center shrink-0">
                 <Truck className="h-6 w-6" />
               </span>
               <div>
@@ -375,10 +375,10 @@ function NewOrderInner() {
               onClick={() => setSelectedTableId('delivery')}
               className={cn(
                 'w-full flex items-center gap-4 p-5 border-2 rounded-2xl transition-all text-left bg-card min-h-[112px]',
-                selectedTableId === 'delivery' ? 'border-[#E85D04] bg-[#E85D04]/5' : 'hover:border-primary/40',
+                selectedTableId === 'delivery' ? 'border-[#D1400F] bg-[#D1400F]/5' : 'hover:border-primary/40',
               )}
             >
-              <span className="h-12 w-12 rounded-2xl bg-[#E85D04]/10 text-[#E85D04] flex items-center justify-center shrink-0">
+              <span className="h-12 w-12 rounded-2xl bg-[#D1400F]/10 text-[#D1400F] flex items-center justify-center shrink-0">
                 <Bike className="h-6 w-6" />
               </span>
               <div>
@@ -401,7 +401,7 @@ function NewOrderInner() {
           {selectedTableId === 'delivery' && (
             <div className="space-y-3 rounded-xl border p-4 bg-muted/30">
               <div className="flex items-center gap-2">
-                <Bike className="h-4 w-4 text-[#E85D04]" />
+                <Bike className="h-4 w-4 text-[#D1400F]" />
                 <h3 className="font-semibold text-sm">Dirección de entrega</h3>
               </div>
 
@@ -623,7 +623,7 @@ function NewOrderInner() {
               </div>
 
               <Button
-                className="w-full bg-[#E85D04] hover:bg-[#C44D00]"
+                className="w-full bg-[#D1400F] hover:bg-[#B03508]"
                 disabled={!deliveryReady}
                 onClick={() => setStep(1)}
               >
@@ -647,7 +647,7 @@ function NewOrderInner() {
                   onClick={() => { setSelectedTableId(table.id); setStep(1) }}
                   className={cn(
                     'p-4 border-2 rounded-2xl transition-all text-left bg-card min-h-[92px]',
-                    selectedTableId === table.id ? 'border-[#E85D04] bg-[#E85D04]/5' :
+                    selectedTableId === table.id ? 'border-[#D1400F] bg-[#D1400F]/5' :
                     table.status === 'reservada' ? 'border-yellow-400 bg-yellow-50/50' :
                     'hover:border-primary/40',
                   )}
@@ -679,7 +679,7 @@ function NewOrderInner() {
           <div className="min-h-[500px] flex flex-col">
             <div className="sticky top-0 z-20 mb-4 rounded-2xl border bg-background/95 p-3 shadow-sm backdrop-blur">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#E85D04]/10 text-[#E85D04]">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#D1400F]/10 text-[#D1400F]">
                   {orderType === 'delivery' ? <Bike className="h-5 w-5" /> : orderType === 'takeaway' ? <Truck className="h-5 w-5" /> : <UtensilsCrossed className="h-5 w-5" />}
                 </span>
                 <div className="min-w-0">
@@ -690,7 +690,7 @@ function NewOrderInner() {
                   <span className="hidden sm:inline text-sm text-muted-foreground">
                     {items.reduce((s, i) => s + i.quantity, 0)} artículos
                   </span>
-                  <span className="text-base font-extrabold text-[#E85D04]">${total.toFixed(2)}</span>
+                  <span className="text-base font-extrabold text-[#D1400F]">${total.toFixed(2)}</span>
                 </div>
               </div>
               <button onClick={() => setStep(0)} className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground">
@@ -708,13 +708,13 @@ function NewOrderInner() {
             <Card className="sticky top-4 max-h-[calc(100vh-2rem)] overflow-hidden">
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm flex items-center gap-2">
-                  <ClipboardList className="h-4 w-4 text-[#E85D04]" />
+                  <ClipboardList className="h-4 w-4 text-[#D1400F]" />
                   Comanda ({items.reduce((s, i) => s + i.quantity, 0)})
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4 overflow-y-auto max-h-[calc(100vh-7rem)]">
                 <OrderSummary items={items} subtotal={subtotal} tax={tax} total={total} taxRate={branchTax.enabled ? branchTax.rate : undefined} editable compact onUpdateQty={updateQty} onRemove={removeItem} onUpdateNotes={updateItemNotes} onClearAll={() => setItems([])} />
-                <Button className="w-full h-12 bg-[#E85D04] hover:bg-[#C44D00]" disabled={items.length === 0} onClick={() => setStep(2)}>
+                <Button className="w-full h-12 bg-[#D1400F] hover:bg-[#B03508]" disabled={items.length === 0} onClick={() => setStep(2)}>
                   Revisar y enviar <ArrowRight className="h-4 w-4 ml-1" />
                 </Button>
               </CardContent>
@@ -728,7 +728,7 @@ function NewOrderInner() {
               <div className="lg:hidden fixed bottom-20 inset-x-4 z-40">
                 <button
                   onClick={() => setStep(2)}
-                  className="w-full bg-[#E85D04] text-white rounded-xl p-4 flex items-center justify-between shadow-lg"
+                  className="w-full bg-[#D1400F] text-white rounded-xl p-4 flex items-center justify-between shadow-lg"
                 >
                   <span className="flex items-center gap-2">
                     <ClipboardList className="h-5 w-5" />
@@ -761,7 +761,7 @@ function NewOrderInner() {
               )}
               {orderType === 'delivery' && composeAddress(delivery) && (
                 <p className="text-sm text-muted-foreground mb-3 flex gap-1.5">
-                  <Bike className="h-4 w-4 text-[#E85D04] shrink-0 mt-0.5" />
+                  <Bike className="h-4 w-4 text-[#D1400F] shrink-0 mt-0.5" />
                   <span className="text-foreground">{composeAddress(delivery)}</span>
                 </p>
               )}
@@ -789,7 +789,7 @@ function NewOrderInner() {
             <Button
               onClick={handleConfirm}
               disabled={items.length === 0 || submitting}
-              className="flex-1 bg-[#E85D04] hover:bg-[#C44D00]"
+              className="flex-1 bg-[#D1400F] hover:bg-[#B03508]"
             >
               <Check className="h-4 w-4 mr-1" />
               {submitting ? 'Creando…' : 'Confirmar Pedido'}

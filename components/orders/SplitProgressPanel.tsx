@@ -41,7 +41,7 @@ export function SplitProgressPanel({ order }: { order: Order }) {
     <div className="rounded-xl border bg-card p-4 space-y-3">
       <div className="flex items-center justify-between gap-2">
         <h3 className="flex items-center gap-2 font-semibold">
-          <SplitSquareHorizontal className="h-4 w-4 text-[#E85D04]" />
+          <SplitSquareHorizontal className="h-4 w-4 text-[#D1400F]" />
           Cuenta dividida
         </h3>
         <span className="text-sm font-medium text-muted-foreground">
@@ -53,7 +53,7 @@ export function SplitProgressPanel({ order }: { order: Order }) {
       <div className="space-y-1">
         <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
           <div
-            className={cn('h-full rounded-full transition-all', progress.allPaid ? 'bg-green-500' : 'bg-[#E85D04]')}
+            className={cn('h-full rounded-full transition-all', progress.allPaid ? 'bg-green-500' : 'bg-[#D1400F]')}
             style={{ width: `${progress.percent}%` }}
           />
         </div>

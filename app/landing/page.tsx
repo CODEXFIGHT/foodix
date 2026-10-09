@@ -27,7 +27,7 @@ import { AiAgentsSection } from './AiAgentsSection'
 import { CountrySelector } from '@/components/shared/CountrySelector'
 import { PLANS, formatPlanPrice, planDiscountPct, type LandingPlan } from './plans'
 
-const BRAND = '#E85D04'
+const BRAND = '#D1400F'
 const DEVHIVE_URL = 'https://codexfight.com/'
 const DEMO_URL = 'https://foodix.app/demo'
 // Video de presentación (YouTube). Pega aquí SOLO el ID del video — los 11
@@ -125,7 +125,7 @@ function Reveal({ children, className, delay = 0 }: { children: React.ReactNode;
 function BrandButton({ href, children, className, onNavigate }: { href: string; children: React.ReactNode; className?: string; onNavigate?: () => void }) {
   const classes = cn(
     'group inline-flex items-center justify-center gap-2 h-11 px-6 rounded-xl text-sm font-semibold text-white',
-    'bg-[#E85D04] hover:bg-[#C44D00] transition-all duration-300 active:scale-95 shadow-sm hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(232,93,4,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E85D04] focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black',
+    'bg-[#D1400F] hover:bg-[#B03508] transition-all duration-300 active:scale-95 shadow-sm hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(209,64,15,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D1400F] focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black',
     className,
   )
   if (href.startsWith('#')) {
@@ -147,7 +147,7 @@ function BrandButton({ href, children, className, onNavigate }: { href: string; 
 function GhostButton({ href, children, className, onNavigate }: { href: string; children: React.ReactNode; className?: string; onNavigate?: () => void }) {
   const classes = cn(
     'group inline-flex items-center justify-center gap-2 h-11 px-6 rounded-xl text-sm font-semibold',
-    'border border-stone-200 text-stone-700 hover:border-orange-200 hover:bg-orange-50/70 hover:text-[#E85D04] transition-all duration-300 active:scale-95 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E85D04] focus-visible:ring-offset-2',
+    'border border-stone-200 text-stone-700 hover:border-orange-200 hover:bg-orange-50/70 hover:text-[#D1400F] transition-all duration-300 active:scale-95 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D1400F] focus-visible:ring-offset-2',
     'dark:border-white/15 dark:text-zinc-200 dark:hover:border-orange-500/40 dark:hover:bg-orange-500/10 dark:focus-visible:ring-offset-black',
     className,
   )
@@ -192,7 +192,7 @@ function TrialSection() {
     <section id="prueba-gratis" className="scroll-mt-24 border-y border-stone-100 bg-stone-50/70 py-20 dark:border-white/10 dark:bg-white/[0.02]">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-xs font-semibold text-[#E85D04] dark:border-orange-500/20 dark:bg-orange-500/10">
+          <span className="inline-flex items-center gap-2 rounded-full border border-orange-100 bg-orange-50 px-3 py-1.5 text-xs font-semibold text-[#D1400F] dark:border-orange-500/20 dark:bg-orange-500/10">
             <Sparkles className="h-3.5 w-3.5" aria-hidden="true" /> Prueba gratuita
           </span>
           <h2 className="mt-5 font-heading text-3xl font-extrabold text-stone-900 sm:text-4xl dark:text-white">
@@ -209,7 +209,7 @@ function TrialSection() {
             <Reveal key={title} delay={i * 80}>
               <div className="h-full rounded-2xl border border-stone-100 bg-white p-6 hover-lift dark:border-white/10 dark:bg-[#0a0a0a]">
                 <div className="grid h-11 w-11 place-items-center rounded-xl bg-orange-50 dark:bg-orange-500/10">
-                  <Icon className="h-5 w-5 text-[#E85D04]" aria-hidden="true" />
+                  <Icon className="h-5 w-5 text-[#D1400F]" aria-hidden="true" />
                 </div>
                 <h3 className="mt-4 font-bold text-stone-900 dark:text-white">{title}</h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-stone-600 dark:text-zinc-400">{desc}</p>
@@ -253,7 +253,7 @@ function UnavailableButton({ children, className }: { children: React.ReactNode;
 /* ─── Botón externo (abre en nueva pestaña): demo, descargas, soporte ─── */
 function ExtButton({ href, children, className, variant = 'solid' }: { href: string; children: React.ReactNode; className?: string; variant?: 'solid' | 'ghost' | 'dark' }) {
   const styles = {
-    solid: 'bg-[#E85D04] hover:bg-[#C44D00] text-white shadow-sm hover:shadow-md',
+    solid: 'bg-[#D1400F] hover:bg-[#B03508] text-white shadow-sm hover:shadow-md',
     ghost: 'border border-stone-200 text-stone-700 hover:border-stone-300 hover:bg-stone-50 dark:border-white/15 dark:text-zinc-200 dark:hover:border-white/25 dark:hover:bg-white/5',
     dark: 'border border-white/20 text-white hover:bg-white/10',
   }[variant]
@@ -263,7 +263,7 @@ function ExtButton({ href, children, className, variant = 'solid' }: { href: str
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        'inline-flex items-center justify-center gap-2 h-11 px-6 rounded-xl text-sm font-semibold transition-all duration-300 active:scale-95 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E85D04] focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black',
+        'inline-flex items-center justify-center gap-2 h-11 px-6 rounded-xl text-sm font-semibold transition-all duration-300 active:scale-95 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D1400F] focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black',
         styles,
         className,
       )}
@@ -306,9 +306,9 @@ function ThemeToggle({ className }: { className?: string }) {
 function Wordmark({ light = false }: { light?: boolean }) {
   return (
     <span className="flex items-center gap-2">
-      <span className="h-8 w-8 rounded-xl bg-[#E85D04] text-white font-bold grid place-items-center font-heading">F</span>
+      <span className="h-8 w-8 rounded-xl bg-[#D1400F] text-white font-bold grid place-items-center font-heading">F</span>
       <span className={cn('inline-block font-heading font-bold text-lg animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]', light ? 'text-white' : 'text-stone-900 dark:text-white')}>
-        Food<span className="text-[#E85D04]">IX</span><sup className="text-[0.5em] align-super">©</sup>
+        Food<span className="text-[#D1400F]">IX</span><sup className="text-[0.5em] align-super">©</sup>
       </span>
     </span>
   )
@@ -393,7 +393,7 @@ function ScreensCarousel() {
             aria-label={`Ir a ${s.label}`}
             className={cn(
               'h-2 rounded-full transition-all',
-              i === idx ? 'w-6 bg-[#E85D04]' : 'w-2 bg-stone-300 hover:bg-stone-400 dark:bg-zinc-800 dark:hover:bg-zinc-700',
+              i === idx ? 'w-6 bg-[#D1400F]' : 'w-2 bg-stone-300 hover:bg-stone-400 dark:bg-zinc-800 dark:hover:bg-zinc-700',
             )}
           />
         ))}
@@ -550,7 +550,7 @@ function KioskAndroidSection() {
     <section id="kioskos" className="py-20 bg-stone-50/70 border-y border-stone-100 scroll-mt-24 dark:bg-white/[0.02] dark:border-white/10">
       <div className="max-w-6xl mx-auto px-5">
         <Reveal className="text-center max-w-2xl mx-auto">
-          <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-orange-50 text-[#E85D04] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-orange-50 text-[#D1400F] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
             <Smartphone className="h-3.5 w-3.5" /> App nativa Android
           </span>
           <h2 className="mt-5 font-heading font-extrabold text-3xl sm:text-4xl text-stone-900 dark:text-white">FoodIX para Kioskos Android</h2>
@@ -565,7 +565,7 @@ function KioskAndroidSection() {
           {KIOSK_DEVICES.map((d, i) => (
             <Reveal key={d.title} delay={i * 80}>
               <div className="h-full rounded-2xl border border-stone-200 bg-white p-5 hover:border-orange-200 hover:shadow-md transition-all dark:border-white/10 dark:bg-[#0a0a0a] dark:hover:border-orange-500/40">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-50 text-[#E85D04] dark:bg-orange-500/10">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-50 text-[#D1400F] dark:bg-orange-500/10">
                   <d.Icon className="h-5 w-5" />
                 </span>
                 <h3 className="mt-4 font-heading font-bold text-stone-900 dark:text-white">{d.title}</h3>
@@ -597,10 +597,10 @@ function KioskAndroidSection() {
           <Reveal delay={0}>
             <AppMock title="Login" tone="brand">
               <div className="h-full flex flex-col items-center justify-center gap-3">
-                <div className="h-12 w-12 rounded-2xl bg-[#E85D04] flex items-center justify-center text-white font-extrabold">F</div>
+                <div className="h-12 w-12 rounded-2xl bg-[#D1400F] flex items-center justify-center text-white font-extrabold">F</div>
                 <div className="h-8 w-full rounded-lg bg-stone-100" />
                 <div className="h-8 w-full rounded-lg bg-stone-100" />
-                <div className="h-9 w-full rounded-lg bg-[#E85D04]" />
+                <div className="h-9 w-full rounded-lg bg-[#D1400F]" />
               </div>
             </AppMock>
           </Reveal>
@@ -610,7 +610,7 @@ function KioskAndroidSection() {
                 <div className="grid grid-cols-2 gap-2 flex-1">
                   {Array.from({ length: 6 }).map((_, i) => <div key={i} className="rounded-lg bg-orange-50 border border-orange-100" />)}
                 </div>
-                <div className="h-9 rounded-lg bg-[#E85D04]" />
+                <div className="h-9 rounded-lg bg-[#D1400F]" />
               </div>
             </AppMock>
           </Reveal>
@@ -638,7 +638,7 @@ function KioskAndroidSection() {
                     className={cn(
                       'flex items-center justify-center rounded-lg border text-[10px] font-bold',
                       i % 4 === 0
-                        ? 'border-orange-200 bg-orange-50 text-[#E85D04]'
+                        ? 'border-orange-200 bg-orange-50 text-[#D1400F]'
                         : 'border-stone-200 bg-stone-50 text-stone-400',
                     )}
                   >
@@ -653,13 +653,13 @@ function KioskAndroidSection() {
               <div className="h-full flex flex-col gap-2">
                 <div className="rounded-lg border border-stone-100 bg-stone-50 p-2">
                   <div className="h-2 w-1/3 rounded bg-stone-200" />
-                  <div className="mt-2 h-4 w-1/2 rounded bg-[#E85D04]/80" />
+                  <div className="mt-2 h-4 w-1/2 rounded bg-[#D1400F]/80" />
                 </div>
                 <div className="grid flex-1 grid-cols-2 gap-2">
                   <div className="rounded-lg border border-stone-200 bg-white" />
                   <div className="rounded-lg border border-stone-200 bg-white" />
                 </div>
-                <div className="h-9 rounded-lg bg-[#E85D04]" />
+                <div className="h-9 rounded-lg bg-[#D1400F]" />
               </div>
             </AppMock>
           </Reveal>
@@ -689,7 +689,7 @@ function KioskAndroidSection() {
                       <div className="h-2 w-3/4 rounded bg-stone-200" />
                       <div className="h-2 w-1/3 rounded bg-orange-200" />
                     </div>
-                    <div className="h-4 w-8 rounded bg-[#E85D04]/15" />
+                    <div className="h-4 w-8 rounded bg-[#D1400F]/15" />
                   </div>
                 ))}
               </div>
@@ -698,9 +698,9 @@ function KioskAndroidSection() {
           <Reveal delay={240}>
             <AppMock title="Suscripción vencida" tone="dark">
               <div className="h-full flex flex-col items-center justify-center gap-3 text-center">
-                <div className="h-12 w-12 rounded-full bg-[#E85D04]/15 flex items-center justify-center text-[#E85D04]"><Lock className="h-6 w-6" /></div>
+                <div className="h-12 w-12 rounded-full bg-[#D1400F]/15 flex items-center justify-center text-[#D1400F]"><Lock className="h-6 w-6" /></div>
                 <p className="text-[11px] font-bold text-stone-700 leading-tight px-2">Suscripción vencida o dispositivo desactivado</p>
-                <div className="h-7 w-full rounded-lg bg-[#E85D04]" />
+                <div className="h-7 w-full rounded-lg bg-[#D1400F]" />
                 <div className="h-7 w-full rounded-lg border border-stone-200" />
               </div>
             </AppMock>
@@ -719,12 +719,12 @@ function KioskAndroidSection() {
                 <strong> instalación asistida</strong> por CodexFight.
           </p>
               <ul className="mt-5 space-y-2.5 text-sm text-stone-600 dark:text-zinc-400">
-                <li className="flex items-center gap-2"><Download className="h-4 w-4 text-[#E85D04]" /> APK directo para tablets y kioskos</li>
-                <li className="flex items-center gap-2"><Wifi className="h-4 w-4 text-[#E85D04]" /> Web / PWA sin instalar nada</li>
-                <li className="flex items-center gap-2"><HeadphonesIcon className="h-4 w-4 text-[#E85D04]" /> Instalación asistida y configuración del hardware</li>
+                <li className="flex items-center gap-2"><Download className="h-4 w-4 text-[#D1400F]" /> APK directo para tablets y kioskos</li>
+                <li className="flex items-center gap-2"><Wifi className="h-4 w-4 text-[#D1400F]" /> Web / PWA sin instalar nada</li>
+                <li className="flex items-center gap-2"><HeadphonesIcon className="h-4 w-4 text-[#D1400F]" /> Instalación asistida y configuración del hardware</li>
               </ul>
               <div className="mt-6 rounded-2xl border border-orange-200 bg-orange-50/70 p-5 shadow-sm dark:border-orange-500/20 dark:bg-orange-500/10">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#E85D04]">Equipo completo POS / Kiosko</p>
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#D1400F]">Equipo completo POS / Kiosko</p>
                 <h4 className="mt-2 font-heading text-xl font-extrabold text-stone-900 dark:text-white">También podemos equipar tu punto de venta</h4>
                 <p className="mt-2 text-sm leading-relaxed text-stone-600 dark:text-zinc-300">
                   Si necesitas el equipo completo de kiosko o POS, podemos cotizarlo para agregarlo a tu mensualidad
@@ -829,10 +829,10 @@ export default function LandingPage() {
   const navLinkClass = (href: string) => {
     const isActive = activeSection === getSectionId(href)
     return cn(
-      'relative rounded-full px-3 py-2 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E85D04] focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black',
+      'relative rounded-full px-3 py-2 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D1400F] focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black',
       isActive
-        ? 'bg-orange-50 text-[#E85D04] shadow-sm shadow-orange-100/60 dark:bg-orange-500/10 dark:shadow-none'
-        : 'text-stone-600 hover:bg-stone-50 hover:text-[#E85D04] dark:text-zinc-400 dark:hover:bg-white/5',
+        ? 'bg-orange-50 text-[#D1400F] shadow-sm shadow-orange-100/60 dark:bg-orange-500/10 dark:shadow-none'
+        : 'text-stone-600 hover:bg-stone-50 hover:text-[#D1400F] dark:text-zinc-400 dark:hover:bg-white/5',
     )
   }
 
@@ -851,7 +851,7 @@ export default function LandingPage() {
             {item.label}
           </a>
         ))}
-        <Link href="/manual" className="rounded-full px-3 py-2 text-stone-600 hover:bg-stone-50 hover:text-[#E85D04] transition-colors dark:text-zinc-400 dark:hover:bg-white/5">Manual</Link>
+        <Link href="/manual" className="rounded-full px-3 py-2 text-stone-600 hover:bg-stone-50 hover:text-[#D1400F] transition-colors dark:text-zinc-400 dark:hover:bg-white/5">Manual</Link>
       </div>
       <div className="flex items-center gap-2">
         <ThemeToggle />
@@ -864,7 +864,7 @@ export default function LandingPage() {
           aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={mobileMenuOpen}
           onClick={() => setMobileMenuOpen(open => !open)}
-          className="grid h-9 w-9 place-items-center rounded-xl border border-stone-200 text-stone-700 transition-all hover:bg-stone-50 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E85D04] focus-visible:ring-offset-2 md:hidden dark:border-white/15 dark:text-zinc-200 dark:hover:bg-white/5 dark:focus-visible:ring-offset-black"
+          className="grid h-9 w-9 place-items-center rounded-xl border border-stone-200 text-stone-700 transition-all hover:bg-stone-50 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D1400F] focus-visible:ring-offset-2 md:hidden dark:border-white/15 dark:text-zinc-200 dark:hover:bg-white/5 dark:focus-visible:ring-offset-black"
         >
           {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -904,10 +904,10 @@ export default function LandingPage() {
               {item.label}
             </a>
           ))}
-          <Link href="/manual" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-2 text-stone-600 hover:bg-stone-50 hover:text-[#E85D04] transition-colors dark:text-zinc-400 dark:hover:bg-white/5">
+          <Link href="/manual" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-2 text-stone-600 hover:bg-stone-50 hover:text-[#D1400F] transition-colors dark:text-zinc-400 dark:hover:bg-white/5">
             Manual
           </Link>
-          <Link href="/login" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-2 text-stone-600 hover:bg-stone-50 hover:text-[#E85D04] transition-colors dark:text-zinc-400 dark:hover:bg-white/5">
+          <Link href="/login" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-2 text-stone-600 hover:bg-stone-50 hover:text-[#D1400F] transition-colors dark:text-zinc-400 dark:hover:bg-white/5">
             Iniciar sesión
           </Link>
           <BrandButton href="/register" onNavigate={() => setMobileMenuOpen(false)} className="mt-1 h-10 w-full">
@@ -952,18 +952,18 @@ export default function LandingPage() {
       <section id="inicio" className="relative scroll-mt-24">
         {/* blobs animados */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -top-24 -left-20 h-72 w-72 rounded-full bg-[#E85D04]/8 blur-3xl animate-blob dark:bg-orange-500/10" />
+          <div className="absolute -top-24 -left-20 h-72 w-72 rounded-full bg-[#D1400F]/8 blur-3xl animate-blob dark:bg-orange-500/10" />
           <div className="absolute top-10 right-0 h-80 w-80 rounded-full bg-stone-200/40 blur-3xl animate-blob dark:bg-white/5" style={{ animationDelay: '4s' }} />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-5 pt-24 pb-12 lg:pt-28 grid lg:grid-cols-2 gap-12 items-center">
           <div key={`hero-copy-${heroAnimationKey}`} className="animate-fade-in-up">
-            <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-orange-50 text-[#E85D04] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#E85D04] animate-pulse" />
+            <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-orange-50 text-[#D1400F] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#D1400F] animate-pulse" />
               Sistema POS en la nube para restaurantes
             </span>
             <h1 className="mt-5 font-heading font-extrabold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.05] text-stone-900 dark:text-white">
-              ¡Cocina, sirve y crece con <span className="text-[#E85D04]">FoodIX</span>!
+              ¡Cocina, sirve y crece con <span className="text-[#D1400F]">FoodIX</span>!
               <span className="mt-3 block text-2xl font-bold sm:text-3xl lg:text-[2rem]">
                 Pruébalo gratis 14 días.
               </span>
@@ -980,12 +980,12 @@ export default function LandingPage() {
               <ExtButton href={DEMO_URL} variant="ghost"><PlayCircle className="h-4 w-4" /> Ver demostración</ExtButton>
               <GhostButton href="#pantallas">Ver cómo funciona <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" /></GhostButton>
             </div>
-            <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-[#E85D04]">{TRIAL_PERKS_LINE}</p>
+            <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-[#D1400F]">{TRIAL_PERKS_LINE}</p>
             {/* Prueba social estilo Fudo: rating + confianza */}
             <div className="mt-7 flex items-center gap-3">
               <div className="flex items-center gap-0.5">
                 {[0, 1, 2, 3, 4].map(i => (
-                  <Star key={i} className="h-4 w-4 fill-[#E85D04] text-[#E85D04]" />
+                  <Star key={i} className="h-4 w-4 fill-[#D1400F] text-[#D1400F]" />
                 ))}
               </div>
               <p className="text-sm text-stone-600 dark:text-zinc-400">
@@ -1023,7 +1023,7 @@ export default function LandingPage() {
           {STATS.map((s, i) => (
             <Reveal key={s.label} delay={(i % 4) * 70}>
               <div className="h-full rounded-2xl border border-stone-100 bg-white p-6 text-center hover-lift dark:border-white/10 dark:bg-[#0a0a0a]">
-                <p className="font-heading font-extrabold text-4xl sm:text-5xl text-[#E85D04] leading-none">{s.value}</p>
+                <p className="font-heading font-extrabold text-4xl sm:text-5xl text-[#D1400F] leading-none">{s.value}</p>
                 <p className="mt-2 font-bold text-stone-900 dark:text-white">{s.label}</p>
                 <p className="mt-1 text-xs text-stone-500 leading-relaxed dark:text-zinc-400">{s.sub}</p>
               </div>
@@ -1035,7 +1035,7 @@ export default function LandingPage() {
       {/* ── Cuatro pilares: una sola plataforma (estilo Fudo Pro) ── */}
       <section className="max-w-6xl mx-auto px-5 py-16 scroll-mt-24">
         <Reveal className="text-center max-w-2xl mx-auto">
-          <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-orange-50 text-[#E85D04] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-orange-50 text-[#D1400F] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
             <MonitorSmartphone className="h-3.5 w-3.5" /> Una sola plataforma
           </span>
           <h2 className="mt-5 font-heading font-extrabold text-3xl sm:text-4xl text-stone-900 dark:text-white">Gestión, cobros, delivery y Agentes IA en un solo lugar</h2>
@@ -1050,7 +1050,7 @@ export default function LandingPage() {
                   <div className="h-14 w-14 rounded-2xl bg-orange-50 grid place-items-center mb-5 transition-transform group-hover:scale-110 dark:bg-orange-500/10">
                     <Icons8Image src={p.icon} alt={p.title} size={30} />
                   </div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-[#E85D04]">{p.kicker}</p>
+                  <p className="text-xs font-bold uppercase tracking-wider text-[#D1400F]">{p.kicker}</p>
                   <h3 className="mt-1.5 font-heading font-extrabold text-xl text-stone-900 dark:text-white">{p.title}</h3>
                   <p className="mt-2 text-sm text-stone-600 leading-relaxed dark:text-zinc-400">{p.desc}</p>
                   <ul className="mt-5 space-y-2 border-t border-stone-100 dark:border-white/5 pt-5">
@@ -1106,7 +1106,7 @@ export default function LandingPage() {
       <section id="demo" className="py-20 bg-stone-50/70 border-y border-stone-100 scroll-mt-24 dark:bg-white/[0.02] dark:border-white/10">
         <div id="pantallas" className="scroll-mt-24" />
         <Reveal className="text-center max-w-2xl mx-auto px-5">
-          <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-orange-50 text-[#E85D04] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-orange-50 text-[#D1400F] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
             <Monitor className="h-3.5 w-3.5" /> Recorrido por el sistema
           </span>
           <h2 className="mt-5 font-heading font-extrabold text-3xl sm:text-4xl text-stone-900 dark:text-white">Conoce FoodIX por dentro</h2>
@@ -1132,7 +1132,7 @@ export default function LandingPage() {
       {/* ── Módulos principales ── */}
       <section id="modulos" className="max-w-6xl mx-auto px-5 py-20 scroll-mt-24">
         <Reveal className="text-center max-w-2xl mx-auto">
-          <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-orange-50 text-[#E85D04] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-orange-50 text-[#D1400F] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
             <ShieldCheck className="h-3.5 w-3.5" /> Módulos del sistema
           </span>
           <h2 className="mt-5 font-heading font-extrabold text-3xl sm:text-4xl text-stone-900 dark:text-white">Un módulo para cada parte de tu operación</h2>
@@ -1147,7 +1147,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="font-heading font-bold text-stone-900 dark:text-white">{m.name}</h3>
                 <p className="mt-1.5 text-sm text-stone-600 leading-relaxed dark:text-zinc-400">{m.desc}</p>
-                <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-[#E85D04]">
+                <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-[#D1400F]">
                   <Check className="h-3.5 w-3.5" /> {m.benefit}
                 </p>
               </div>
@@ -1203,7 +1203,7 @@ export default function LandingPage() {
         <Reveal className="text-center max-w-2xl mx-auto">
           <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-stone-900 dark:text-white">Elige el plan a la medida de tu restaurante</h2>
           <p className="mt-3 text-stone-600 dark:text-zinc-400">Sin contratos forzosos. Paga con tarjeta o transferencia SPEI. Cancela cuando quieras.</p>
-          <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-sm font-semibold text-[#E85D04] dark:border-orange-500/25 dark:bg-orange-500/10">
+          <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-sm font-semibold text-[#D1400F] dark:border-orange-500/25 dark:bg-orange-500/10">
             <Sparkles className="h-4 w-4" aria-hidden="true" />
             Prueba FoodIX durante 14 días antes de contratar
           </p>
@@ -1235,12 +1235,12 @@ export default function LandingPage() {
                 className={cn(
                   'relative h-full rounded-3xl bg-white p-8 transition-all dark:bg-[#0a0a0a]',
                   plan.featured
-                    ? 'border-2 border-[#E85D04]/30 shadow-xl shadow-orange-100/50 dark:shadow-orange-500/5'
+                    ? 'border-2 border-[#D1400F]/30 shadow-xl shadow-orange-100/50 dark:shadow-orange-500/5'
                     : 'border border-stone-200 hover:border-stone-300 dark:border-white/10 dark:hover:border-white/20',
                 )}
               >
                 {plan.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full bg-[#E85D04] text-white whitespace-nowrap">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 text-xs font-bold px-3 py-1 rounded-full bg-[#D1400F] text-white whitespace-nowrap">
                     <Star className="h-3 w-3 fill-white" /> Más popular
                   </span>
                 )}
@@ -1259,12 +1259,12 @@ export default function LandingPage() {
                   <p className="mt-4 text-base text-stone-400 line-through leading-none">{formatPlanPrice(plan.originalPrice)} MXN</p>
                 )}
                 <div className={cn('flex items-end gap-1', plan.originalPrice ? 'mt-0.5' : 'mt-4')}>
-                  <span className="font-heading font-extrabold text-5xl text-[#E85D04]">{formatPlanPrice(plan.price)}</span>
+                  <span className="font-heading font-extrabold text-5xl text-[#D1400F]">{formatPlanPrice(plan.price)}</span>
                   <span className="text-stone-500 dark:text-zinc-400 mb-1.5 text-sm">MXN / mes</span>
                 </div>
                 <p className="mt-1 text-xs text-stone-400">1 sucursal incluida · IVA incluido · cancela cuando quieras</p>
                 {plan.perBranch && (
-                  <p className="mt-2 flex items-start gap-1.5 text-xs font-semibold text-[#E85D04] bg-orange-50 border border-orange-100 rounded-lg px-2.5 py-1.5 dark:bg-orange-500/10 dark:border-orange-500/20">
+                  <p className="mt-2 flex items-start gap-1.5 text-xs font-semibold text-[#D1400F] bg-orange-50 border border-orange-100 rounded-lg px-2.5 py-1.5 dark:bg-orange-500/10 dark:border-orange-500/20">
                     <Star className="h-3.5 w-3.5 shrink-0 mt-0.5" />
                     <span>Sucursal adicional: <span className="whitespace-nowrap">+{formatPlanPrice(plan.perBranch)} MXN/mes</span></span>
                   </p>
@@ -1281,7 +1281,7 @@ export default function LandingPage() {
                 <button
                   type="button"
                   onClick={() => setDetailPlan(plan)}
-                  className="w-full mt-2.5 text-sm font-semibold text-stone-500 hover:text-[#E85D04] transition-colors inline-flex items-center justify-center gap-1"
+                  className="w-full mt-2.5 text-sm font-semibold text-stone-500 hover:text-[#D1400F] transition-colors inline-flex items-center justify-center gap-1"
                 >
                   Ver todo lo que incluye <ArrowRight className="h-3.5 w-3.5" />
                 </button>
@@ -1312,7 +1312,7 @@ export default function LandingPage() {
         </div>
         <p className="text-center text-xs text-stone-400 mt-6">
           ¿Necesitas una demo o cotización multi-sucursal? Escríbenos a{' '}
-          <a href="mailto:restauros@atomicmail.io" className="text-[#E85D04] hover:underline">restauros@atomicmail.io</a>
+          <a href="mailto:restauros@atomicmail.io" className="text-[#D1400F] hover:underline">restauros@atomicmail.io</a>
         </p>
       </section>
 
@@ -1330,7 +1330,7 @@ export default function LandingPage() {
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-semibold text-stone-900 dark:text-white [&::-webkit-details-marker]:hidden">
                 {item.q}
-                <ChevronRight className="h-5 w-5 shrink-0 text-[#E85D04] transition-transform group-open:rotate-90" />
+                <ChevronRight className="h-5 w-5 shrink-0 text-[#D1400F] transition-transform group-open:rotate-90" />
               </summary>
               <p className="pb-4 text-sm text-stone-600 leading-relaxed dark:text-zinc-400">{item.a}</p>
             </details>
@@ -1342,7 +1342,7 @@ export default function LandingPage() {
       <section id="contacto" className="max-w-6xl mx-auto px-5 pb-20 scroll-mt-24">
         <Reveal>
           <div className="relative overflow-hidden rounded-3xl bg-[#1C1917] px-8 py-14 text-center">
-            <div className="pointer-events-none absolute -top-16 -right-10 h-60 w-60 rounded-full bg-[#E85D04]/30 blur-3xl animate-blob" />
+            <div className="pointer-events-none absolute -top-16 -right-10 h-60 w-60 rounded-full bg-[#D1400F]/30 blur-3xl animate-blob" />
             <h2 className="relative font-heading font-extrabold text-3xl sm:text-4xl text-white">Empieza a ordenar la operación de tu restaurante</h2>
             <p className="relative mt-3 text-stone-300 max-w-lg mx-auto">
               FoodIX te ayuda a trabajar con más control, menos errores y una experiencia moderna para tu equipo.
@@ -1374,7 +1374,7 @@ export default function LandingPage() {
             </p>
             <p className="mt-4 text-sm text-stone-500">
               ✉️ Contacto:{' '}
-              <a href="mailto:restauros@atomicmail.io" className="text-[#E85D04] font-medium hover:underline">
+              <a href="mailto:restauros@atomicmail.io" className="text-[#D1400F] font-medium hover:underline">
                 restauros@atomicmail.io
               </a>
             </p>
@@ -1382,21 +1382,21 @@ export default function LandingPage() {
           <div>
             <p className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Producto</p>
             <ul className="space-y-2 text-sm text-stone-600 dark:text-zinc-400">
-              <li><a href="#beneficios" onClick={(e) => handleAnchorNavigation(e, '#beneficios')} className="hover:text-[#E85D04] transition-colors">Beneficios</a></li>
-              <li><a href="#pantallas" onClick={(e) => handleAnchorNavigation(e, '#pantallas')} className="hover:text-[#E85D04] transition-colors">Pantallas</a></li>
-              <li><a href="#modulos" onClick={(e) => handleAnchorNavigation(e, '#modulos')} className="hover:text-[#E85D04] transition-colors">Módulos</a></li>
-              <li><a href="#precios" onClick={(e) => handleAnchorNavigation(e, '#precios')} className="hover:text-[#E85D04] transition-colors">Precios</a></li>
-              <li><Link href="/register" className="hover:text-[#E85D04] transition-colors">Crear cuenta gratis</Link></li>
-              <li><Link href="/login" className="hover:text-[#E85D04] transition-colors">Iniciar sesión</Link></li>
+              <li><a href="#beneficios" onClick={(e) => handleAnchorNavigation(e, '#beneficios')} className="hover:text-[#D1400F] transition-colors">Beneficios</a></li>
+              <li><a href="#pantallas" onClick={(e) => handleAnchorNavigation(e, '#pantallas')} className="hover:text-[#D1400F] transition-colors">Pantallas</a></li>
+              <li><a href="#modulos" onClick={(e) => handleAnchorNavigation(e, '#modulos')} className="hover:text-[#D1400F] transition-colors">Módulos</a></li>
+              <li><a href="#precios" onClick={(e) => handleAnchorNavigation(e, '#precios')} className="hover:text-[#D1400F] transition-colors">Precios</a></li>
+              <li><Link href="/register" className="hover:text-[#D1400F] transition-colors">Crear cuenta gratis</Link></li>
+              <li><Link href="/login" className="hover:text-[#D1400F] transition-colors">Iniciar sesión</Link></li>
             </ul>
           </div>
           <div>
             <p className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Recursos</p>
             <ul className="space-y-2 text-sm text-stone-600 dark:text-zinc-400">
-              <li><Link href="/manual" className="hover:text-[#E85D04] transition-colors">Manual de usuario</Link></li>
-              <li><Link href="/privacidad" className="hover:text-[#E85D04] transition-colors">Privacidad</Link></li>
-              <li><Link href="/terminos" className="hover:text-[#E85D04] transition-colors">Términos</Link></li>
-              <li><Link href="/cookies" className="hover:text-[#E85D04] transition-colors">Cookies</Link></li>
+              <li><Link href="/manual" className="hover:text-[#D1400F] transition-colors">Manual de usuario</Link></li>
+              <li><Link href="/privacidad" className="hover:text-[#D1400F] transition-colors">Privacidad</Link></li>
+              <li><Link href="/terminos" className="hover:text-[#D1400F] transition-colors">Términos</Link></li>
+              <li><Link href="/cookies" className="hover:text-[#D1400F] transition-colors">Cookies</Link></li>
             </ul>
           </div>
         </div>
@@ -1410,7 +1410,7 @@ export default function LandingPage() {
             </a>
             <div className="flex items-center gap-4">
               <CountrySelector />
-              <a href={DEVHIVE_URL} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-[#E85D04] hover:underline">
+              <a href={DEVHIVE_URL} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-[#D1400F] hover:underline">
                 codexfight.com →
               </a>
             </div>
@@ -1481,7 +1481,7 @@ function PlanDetailsModal({ plan, onClose }: { plan: LandingPlan | null; onClose
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
               {plan.featured && (
-                <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-[#E85D04] text-white mb-1.5">
+                <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-[#D1400F] text-white mb-1.5">
                   <Star className="h-3 w-3 fill-white" /> Más popular
                 </span>
               )}
@@ -1503,14 +1503,14 @@ function PlanDetailsModal({ plan, onClose }: { plan: LandingPlan | null; onClose
             {plan.originalPrice && (
               <span className="text-base text-stone-400 line-through">{formatPlanPrice(plan.originalPrice)}</span>
             )}
-            <span className="font-heading font-extrabold text-4xl text-[#E85D04] leading-none">{formatPlanPrice(plan.price)}</span>
+            <span className="font-heading font-extrabold text-4xl text-[#D1400F] leading-none">{formatPlanPrice(plan.price)}</span>
             <span className="text-stone-500 text-sm mb-0.5">MXN / mes · incluye 1 sucursal · IVA incluido</span>
             {pct > 0 && (
               <span className="inline-flex items-center text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-green-100 text-green-700">-{pct}% promo</span>
             )}
           </div>
           {plan.perBranch && (
-            <p className="mt-2 flex items-start gap-1.5 text-xs font-semibold text-[#E85D04] bg-orange-50 border border-orange-100 rounded-lg px-2.5 py-1.5 dark:bg-orange-500/10 dark:border-orange-500/20">
+            <p className="mt-2 flex items-start gap-1.5 text-xs font-semibold text-[#D1400F] bg-orange-50 border border-orange-100 rounded-lg px-2.5 py-1.5 dark:bg-orange-500/10 dark:border-orange-500/20">
               <Star className="h-3.5 w-3.5 shrink-0 mt-0.5" />
               <span>¿Más sucursales? Cada sucursal adicional suma <span className="whitespace-nowrap">+{formatPlanPrice(plan.perBranch)} MXN/mes</span> a tu suscripción.</span>
             </p>

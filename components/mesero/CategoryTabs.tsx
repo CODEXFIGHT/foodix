@@ -28,7 +28,7 @@ export function CategoryTabs({ categories, activeId, onChange }: CategoryTabsPro
         variant={activeId === null ? 'solid' : 'flat'}
         size="lg"
         className="shrink-0 cursor-pointer font-semibold"
-        style={activeId === null ? { backgroundColor: '#E85D04', color: 'white' } : undefined}
+        style={activeId === null ? { backgroundColor: '#D1400F', color: 'white' } : undefined}
       >
         Todos
       </Chip>

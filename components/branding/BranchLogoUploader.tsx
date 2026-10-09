@@ -10,7 +10,7 @@ import { ICONS8 } from '@/lib/constants/icons'
 import { cn } from '@/lib/utils/cn'
 import { Button } from '@/components/ui/button'
 
-const ACCENT = '#E85D04'
+const ACCENT = '#D1400F'
 
 type Variant = 'light' | 'dark'
 
@@ -133,7 +133,7 @@ export function BranchLogoUploader({
         <div {...getRootProps()}
           className={cn(
             'border-2 border-dashed rounded-xl p-4 transition-colors',
-            isDragActive ? 'bg-[#E85D04]/5 border-[#E85D04]' : s.dropzoneIdle,
+            isDragActive ? 'bg-[#D1400F]/5 border-[#D1400F]' : s.dropzoneIdle,
           )}>
           <input {...getInputProps()} />
           <div className="flex flex-col sm:flex-row items-center gap-2 justify-center">

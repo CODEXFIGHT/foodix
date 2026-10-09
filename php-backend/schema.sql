@@ -80,7 +80,7 @@ CREATE TABLE categories (
   branch_id  INT         NOT NULL REFERENCES branches(id),
   name       VARCHAR(80) NOT NULL,
   emoji      VARCHAR(10),
-  color      VARCHAR(7)  NOT NULL DEFAULT '#E85D04',
+  color      VARCHAR(7)  NOT NULL DEFAULT '#D1400F',
   menu_group ENUM('alimento','bebida') NOT NULL DEFAULT 'alimento', -- agrupación de alto nivel en la carta pública
   sort_order INT         NOT NULL DEFAULT 0,
   active     TINYINT(1)  NOT NULL DEFAULT 1,

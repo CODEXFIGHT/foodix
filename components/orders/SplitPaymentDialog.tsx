@@ -130,7 +130,7 @@ export function SplitPaymentDialog({ order, split, open, onOpenChange }: SplitPa
             )}
             <div className="flex justify-between">
               <span className="text-muted-foreground">Por cobrar</span>
-              <span className="font-semibold text-[#E85D04]">{formatCurrency(remaining)}</span>
+              <span className="font-semibold text-[#D1400F]">{formatCurrency(remaining)}</span>
             </div>
           </div>
 
@@ -156,7 +156,7 @@ export function SplitPaymentDialog({ order, split, open, onOpenChange }: SplitPa
                         onClick={() => setRow(i, { method: m.value })}
                         className={cn(
                           'flex flex-col items-center gap-1 p-2 rounded-lg border-2 text-[10px] font-medium transition-all',
-                          active ? 'border-[#E85D04] bg-[#E85D04]/5 text-[#E85D04]' : 'hover:border-primary/40 text-muted-foreground',
+                          active ? 'border-[#D1400F] bg-[#D1400F]/5 text-[#D1400F]' : 'hover:border-primary/40 text-muted-foreground',
                         )}
                       >
                         <Icon className="h-4 w-4" />

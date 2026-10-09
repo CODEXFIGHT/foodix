@@ -8,7 +8,7 @@
  * de marca: nítidas a cualquier tamaño y carga instantánea, sin imágenes.
  */
 
-export const BRAND = '#E85D04'
+export const BRAND = '#D1400F'
 export const SIDEBAR = '#1c1917'
 
 /* ─── Ventana tipo navegador que envuelve cada pantalla ─── */
@@ -54,7 +54,7 @@ export function AppShell({ active, children }: { active: string; children: React
             <div
               key={n.l}
               className="relative flex items-center gap-1.5 rounded-md px-1.5 py-[3px]"
-              style={on ? { background: 'rgba(232,93,4,0.18)' } : undefined}
+              style={on ? { background: 'rgba(209,64,15,0.18)' } : undefined}
             >
               {on && <span className="absolute left-0 top-1 bottom-1 w-[2px] rounded-full" style={{ background: BRAND }} />}
               <span className="text-[7px] leading-none w-2.5 text-center">{n.i}</span>

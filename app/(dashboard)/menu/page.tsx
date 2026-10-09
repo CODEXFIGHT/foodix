@@ -77,7 +77,7 @@ function FieldSelect({
       <SelectTrigger
         className={cn(
           'h-11 rounded-xl border-input bg-background text-sm font-medium',
-          'focus:ring-2 focus:ring-[#E85D04] focus:ring-offset-0 focus:border-[#E85D04]',
+          'focus:ring-2 focus:ring-[#D1400F] focus:ring-offset-0 focus:border-[#D1400F]',
           className,
         )}
       >
@@ -88,10 +88,10 @@ function FieldSelect({
           <SelectItem
             key={opt.value || SELECT_EMPTY}
             value={opt.value === '' ? SELECT_EMPTY : opt.value}
-            className="rounded-lg focus:bg-orange-50 focus:text-[#C2410C] data-[state=checked]:text-[#E85D04] dark:focus:bg-orange-500/10 dark:focus:text-orange-300"
+            className="rounded-lg focus:bg-orange-50 focus:text-[#C2410C] data-[state=checked]:text-[#D1400F] dark:focus:bg-orange-500/10 dark:focus:text-orange-300"
           >
             <span className="flex items-center gap-2">
-              {opt.icon && <opt.icon className="h-4 w-4 shrink-0 text-[#E85D04]" />}
+              {opt.icon && <opt.icon className="h-4 w-4 shrink-0 text-[#D1400F]" />}
               <span className="flex flex-col">
                 <span>{opt.label}</span>
                 {opt.hint && <span className="text-xs text-muted-foreground">{opt.hint}</span>}
@@ -132,7 +132,7 @@ function CategoryPanel({
   const [editingId, setEditingId] = useState<number | null>(null)
   const [showForm, setShowForm] = useState(false)
   const [deleteId, setDeleteId] = useState<number | null>(null)
-  const [form, setForm] = useState({ name: '', color: '#E85D04', station: 'hot' as 'hot'|'cold'|'both' })
+  const [form, setForm] = useState({ name: '', color: '#D1400F', station: 'hot' as 'hot'|'cold'|'both' })
 
   const handleSave = async () => {
     if (!form.name.trim()) return
@@ -147,7 +147,7 @@ function CategoryPanel({
         onSelect(cat.id)
       }
       setShowForm(false)
-      setForm({ name: '', color: '#E85D04', station: 'hot' })
+      setForm({ name: '', color: '#D1400F', station: 'hot' })
     } catch {
       toast.error('Error al guardar categoría')
     }
@@ -173,7 +173,7 @@ function CategoryPanel({
           size="sm"
           variant="ghost"
           className="h-7 w-7 p-0"
-          onClick={() => { setEditingId(null); setForm({ name: '', color: '#E85D04', station: 'hot' }); setShowForm(true) }}
+          onClick={() => { setEditingId(null); setForm({ name: '', color: '#D1400F', station: 'hot' }); setShowForm(true) }}
         >
           <Plus className="h-4 w-4" />
         </Button>
@@ -185,7 +185,7 @@ function CategoryPanel({
         className={cn(
           'w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors',
           selectedId === null
-            ? 'bg-[#E85D04] text-white'
+            ? 'bg-[#D1400F] text-white'
             : 'hover:bg-muted text-muted-foreground',
         )}
       >
@@ -200,7 +200,7 @@ function CategoryPanel({
             key={cat.id}
             className={cn(
               'group flex items-center gap-2 px-3 py-2 rounded-lg transition-colors cursor-pointer',
-              selectedId === cat.id ? 'bg-muted ring-1 ring-[#E85D04]' : 'hover:bg-muted',
+              selectedId === cat.id ? 'bg-muted ring-1 ring-[#D1400F]' : 'hover:bg-muted',
             )}
             onClick={() => onSelect(cat.id)}
           >
@@ -264,7 +264,7 @@ function CategoryPanel({
           <div className="flex gap-2">
             <Button
               size="sm"
-              className="h-7 text-xs bg-[#E85D04] hover:bg-[#C44D00]"
+              className="h-7 text-xs bg-[#D1400F] hover:bg-[#B03508]"
               onClick={handleSave}
               disabled={createCategory.isPending || updateCategory.isPending}
             >
@@ -383,7 +383,7 @@ function ProductCard({
              product.station_override === 'both' ? '🔥🧊' : ''}
           </span>
         </div>
-        <p className="text-[#E85D04] font-bold text-sm mt-0.5">{MXN(product.price)}</p>
+        <p className="text-[#D1400F] font-bold text-sm mt-0.5">{MXN(product.price)}</p>
         {product.description && (
           <p className="text-muted-foreground text-xs mt-1 line-clamp-2">{product.description}</p>
         )}
@@ -439,7 +439,7 @@ function ProductPreview({
           )}
           <div className="absolute top-2 left-2 flex flex-col items-start gap-1">
             {badge && (
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#E85D04] text-white shadow">{badge}</span>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#D1400F] text-white shadow">{badge}</span>
             )}
             {stMeta && (
               <span className={cn('text-[10px] font-bold px-2 py-0.5 rounded-full text-white shadow', stMeta.cls)}>{stMeta.label}</span>
@@ -450,7 +450,7 @@ function ProductPreview({
             <span className="text-[9px] font-medium text-white/70 ml-0.5">MXN</span>
           </span>
         </div>
-        <div className="bg-[#E85D04] px-3 py-2.5">
+        <div className="bg-[#D1400F] px-3 py-2.5">
           <h3 className="text-center text-sm font-bold uppercase tracking-wide text-white line-clamp-2">
             {name?.trim() || 'Nombre del platillo'}
           </h3>
@@ -771,7 +771,7 @@ function ProductModal({
                 <div key={`p-${i}`} className="relative w-20 h-20 rounded-lg overflow-hidden border bg-muted flex-shrink-0">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={pf.preview} alt="" className="w-full h-full object-cover" />
-                  <span className="absolute bottom-0 inset-x-0 bg-[#E85D04]/80 text-white text-[9px] text-center">nueva</span>
+                  <span className="absolute bottom-0 inset-x-0 bg-[#D1400F]/80 text-white text-[9px] text-center">nueva</span>
                   <button type="button" onClick={() => removePending(i)}
                     className="absolute top-0.5 right-0.5 bg-black/60 rounded-full p-0.5 text-white">
                     <X className="h-3 w-3" />
@@ -801,7 +801,7 @@ function ProductModal({
                 {...getRootProps()}
                 className={cn(
                   'border-2 border-dashed rounded-xl p-3 transition-colors',
-                  isDragActive ? 'border-[#E85D04] bg-[#E85D04]/5' : 'border-border',
+                  isDragActive ? 'border-[#D1400F] bg-[#D1400F]/5' : 'border-border',
                 )}
               >
                 <input {...getInputProps()} />
@@ -857,12 +857,12 @@ function ProductModal({
               <Label className="flex items-center justify-between">
                 <span>Precio MXN {isOpen ? '' : '*'}</span>
                 {isKg && (
-                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#E85D04]">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#D1400F]">
                     <Scale className="h-3 w-3" /> Se usa el precio por KG
                   </span>
                 )}
                 {isOpen && (
-                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#E85D04]">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#D1400F]">
                     <Banknote className="h-3 w-3" /> Se captura al vender
                   </span>
                 )}
@@ -870,7 +870,7 @@ function ProductModal({
               <div className="relative">
                 <span className={cn(
                   'pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-base font-semibold',
-                  isKg || isOpen ? 'text-muted-foreground/50' : 'text-[#E85D04]',
+                  isKg || isOpen ? 'text-muted-foreground/50' : 'text-[#D1400F]',
                 )}>$</span>
                 <Input
                   type="number"
@@ -971,7 +971,7 @@ function ProductModal({
                   onClick={generateWithAI}
                   disabled={aiLoading}
                   aria-label="Rellenar con inteligencia artificial"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full text-white shadow bg-gradient-to-r from-[#E85D04] via-fuchsia-500 to-indigo-500 animate-ai-flow hover:brightness-110 active:scale-95 transition disabled:opacity-70"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full text-white shadow bg-gradient-to-r from-[#D1400F] via-fuchsia-500 to-indigo-500 animate-ai-flow hover:brightness-110 active:scale-95 transition disabled:opacity-70"
                 >
                   <Sparkles className="h-3.5 w-3.5" /> {aiLoading ? 'Generando…' : 'Rellenar con IA'}
                 </button>
@@ -1005,13 +1005,13 @@ function ProductModal({
                   {[0, 1, 2, 3, 4].map(i => (
                     <span
                       key={i}
-                      className="w-1.5 h-full rounded-full bg-gradient-to-t from-[#E85D04] via-fuchsia-500 to-indigo-500 animate-ai-bar"
+                      className="w-1.5 h-full rounded-full bg-gradient-to-t from-[#D1400F] via-fuchsia-500 to-indigo-500 animate-ai-bar"
                       style={{ animationDelay: `${i * 120}ms` }}
                     />
                   ))}
                 </div>
                 <p
-                  className="text-sm font-bold bg-gradient-to-r from-[#E85D04] via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent animate-ai-flow"
+                  className="text-sm font-bold bg-gradient-to-r from-[#D1400F] via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent animate-ai-flow"
                   style={{ backgroundSize: '220% 220%' }}
                 >
                   Generando con IA…
@@ -1033,8 +1033,8 @@ function ProductModal({
                     className={cn(
                       'text-xs px-2.5 py-1 rounded-full border transition-colors',
                       allergens.includes(a)
-                        ? 'bg-[#E85D04] text-white border-[#E85D04]'
-                        : 'bg-background text-muted-foreground border-input hover:border-[#E85D04]/50',
+                        ? 'bg-[#D1400F] text-white border-[#D1400F]'
+                        : 'bg-background text-muted-foreground border-input hover:border-[#D1400F]/50',
                     )}
                   >
                     {a}
@@ -1072,14 +1072,14 @@ function ProductModal({
                 variant="outline"
                 size="sm"
                 onClick={() => setScannerActive(a => !a)}
-                className={cn(scannerActive && 'border-[#E85D04] text-[#E85D04]')}
+                className={cn(scannerActive && 'border-[#D1400F] text-[#D1400F]')}
               >
                 <Barcode className="h-4 w-4 mr-1.5" />
                 {scannerActive ? 'Escaneando…' : 'Escanear'}
               </Button>
             </div>
             {scannerActive && (
-              <p className="text-xs text-[#E85D04] animate-pulse">
+              <p className="text-xs text-[#D1400F] animate-pulse">
                 Scanner activo — apunta el lector al código
               </p>
             )}
@@ -1098,12 +1098,12 @@ function ProductModal({
               ]}
             />
             {isKg && (
-              <div className="mt-3 rounded-xl border border-[#E85D04]/30 bg-orange-50/60 p-3 dark:border-[#E85D04]/25 dark:bg-orange-500/10">
+              <div className="mt-3 rounded-xl border border-[#D1400F]/30 bg-orange-50/60 p-3 dark:border-[#D1400F]/25 dark:bg-orange-500/10">
                 <Label className="flex items-center gap-1.5 text-[#C2410C] dark:text-orange-300">
                   <Scale className="h-4 w-4" /> Precio por KG (base) *
                 </Label>
                 <div className="relative mt-1.5">
-                  <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-base font-semibold text-[#E85D04]">$</span>
+                  <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-base font-semibold text-[#D1400F]">$</span>
                   <Input
                     type="number"
                     inputMode="decimal"
@@ -1183,7 +1183,7 @@ function ProductModal({
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="bg-[#E85D04] hover:bg-[#C44D00]"
+              className="bg-[#D1400F] hover:bg-[#B03508]"
             >
               {isSubmitting ? 'Guardando…' : editing ? 'Guardar cambios' : 'Crear producto'}
             </Button>
@@ -1272,13 +1272,13 @@ export default function MenuPage() {
     return (
       <div
         className={cn(
-          "relative flex items-center transition-all duration-300 ease-in-out rounded-xl border border-input bg-muted/40 hover:bg-muted/60 focus-within:bg-background focus-within:ring-2 focus-within:ring-[#E85D04] focus-within:border-[#E85D04]",
+          "relative flex items-center transition-all duration-300 ease-in-out rounded-xl border border-input bg-muted/40 hover:bg-muted/60 focus-within:bg-background focus-within:ring-2 focus-within:ring-[#D1400F] focus-within:border-[#D1400F]",
           isStickyVariant
             ? "w-full max-w-sm sm:max-w-md focus-within:max-w-xl"
             : "w-full sm:w-64 md:w-72 focus-within:sm:w-[380px] focus-within:md:w-[440px]"
         )}
       >
-        <Search className="absolute left-3.5 h-4 w-4 text-muted-foreground pointer-events-none transition-colors group-focus-within:text-[#E85D04]" />
+        <Search className="absolute left-3.5 h-4 w-4 text-muted-foreground pointer-events-none transition-colors group-focus-within:text-[#D1400F]" />
         <Input
           id={id}
           type="text"
@@ -1343,7 +1343,7 @@ export default function MenuPage() {
         actions={
           <Button
             onClick={() => { setEditingProduct(null); setModalOpen(true) }}
-            className="bg-[#E85D04] hover:bg-[#C44D00]"
+            className="bg-[#D1400F] hover:bg-[#B03508]"
           >
             <Plus className="h-4 w-4 mr-1.5" />
             Agregar Producto
@@ -1397,7 +1397,7 @@ export default function MenuPage() {
                 Agrega tu primer producto usando el botón de arriba
               </p>
               <Button
-                className="mt-4 bg-[#E85D04] hover:bg-[#C44D00]"
+                className="mt-4 bg-[#D1400F] hover:bg-[#B03508]"
                 onClick={() => { setEditingProduct(null); setModalOpen(true) }}
               >
                 <Plus className="h-4 w-4 mr-1.5" />
@@ -1413,7 +1413,7 @@ export default function MenuPage() {
               </p>
               <Button
                 variant="outline"
-                className="mt-4 border-[#E85D04] text-[#E85D04] hover:bg-[#E85D04]/10 hover:text-[#E85D04]"
+                className="mt-4 border-[#D1400F] text-[#D1400F] hover:bg-[#D1400F]/10 hover:text-[#D1400F]"
                 onClick={() => setSearchTerm('')}
               >
                 <X className="h-4 w-4 mr-1.5" />

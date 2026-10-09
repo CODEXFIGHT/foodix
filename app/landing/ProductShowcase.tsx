@@ -704,7 +704,7 @@ export function LandingProductShowcase() {
             className={cn(
               'snap-start shrink-0 inline-flex items-center gap-1.5 h-9 pl-2 pr-3.5 rounded-full text-xs font-semibold transition-all active:scale-95',
               i === active
-                ? 'bg-[#E85D04] text-white shadow-sm'
+                ? 'bg-[#D1400F] text-white shadow-sm'
                 : 'bg-white border border-stone-200 text-stone-600 hover:border-stone-300 hover:bg-stone-50 dark:bg-[#161616] dark:border-white/15 dark:text-zinc-300 dark:hover:bg-white/10',
             )}
           >
@@ -722,7 +722,7 @@ export function LandingProductShowcase() {
         </div>
         {/* Texto comercial */}
         <div className={cn(mockupRight ? 'lg:order-1' : 'lg:order-2')}>
-          <span className="inline-flex items-center gap-2 text-xs font-semibold pl-1.5 pr-3 py-1 rounded-full bg-orange-50 text-[#E85D04] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold pl-1.5 pr-3 py-1 rounded-full bg-orange-50 text-[#D1400F] border border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20">
             <Icons8Image src={item.icon} alt="" size={18} className="shrink-0" /> {item.tab}
           </span>
           <h3 className="mt-4 font-heading font-extrabold text-2xl sm:text-3xl text-stone-900 leading-tight dark:text-white">{item.title}</h3>
@@ -730,7 +730,7 @@ export function LandingProductShowcase() {
           <ul className="mt-5 space-y-2.5">
             {item.bullets.map(b => (
               <li key={b} className="flex items-start gap-2.5 text-sm text-stone-700 dark:text-zinc-300">
-                <span className="mt-0.5 h-4 w-4 shrink-0 rounded-full bg-orange-50 text-[#E85D04] grid place-items-center text-[10px] font-bold dark:bg-orange-500/15">✓</span>
+                <span className="mt-0.5 h-4 w-4 shrink-0 rounded-full bg-orange-50 text-[#D1400F] grid place-items-center text-[10px] font-bold dark:bg-orange-500/15">✓</span>
                 {b}
               </li>
             ))}
@@ -741,7 +741,7 @@ export function LandingProductShowcase() {
                 key={s.key}
                 onClick={() => setActive(i)}
                 aria-label={s.tab}
-                className={cn('h-1.5 rounded-full transition-all', i === active ? 'w-6 bg-[#E85D04]' : 'w-1.5 bg-stone-300 hover:bg-stone-400 dark:bg-zinc-800 dark:hover:bg-zinc-700')}
+                className={cn('h-1.5 rounded-full transition-all', i === active ? 'w-6 bg-[#D1400F]' : 'w-1.5 bg-stone-300 hover:bg-stone-400 dark:bg-zinc-800 dark:hover:bg-zinc-700')}
               />
             ))}
           </div>

@@ -72,7 +72,7 @@ export function PromoStrip({
       <button
         type="button"
         onClick={() => setDetailOpen(true)}
-        className="group relative flex w-full items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-[#E85D04] via-[#F26611] to-amber-500 px-4 py-3 text-left shadow-lg shadow-[#E85D04]/25 transition-transform active:scale-[.985]"
+        className="group relative flex w-full items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-[#D1400F] via-[#F26611] to-amber-500 px-4 py-3 text-left shadow-lg shadow-[#D1400F]/25 transition-transform active:scale-[.985]"
       >
         <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/30" />
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
@@ -99,7 +99,7 @@ export function PromoStrip({
             className="relative flex w-full max-w-md flex-col overflow-hidden rounded-t-3xl bg-[#FAFAF8] shadow-2xl animate-fade-in-up sm:rounded-3xl"
             style={{ maxHeight: '85dvh', paddingBottom: 'env(safe-area-inset-bottom)' }}
           >
-            <div className="flex shrink-0 items-center justify-between gap-3 bg-gradient-to-r from-[#E85D04] to-amber-500 px-5 py-4">
+            <div className="flex shrink-0 items-center justify-between gap-3 bg-gradient-to-r from-[#D1400F] to-amber-500 px-5 py-4">
               <div className="min-w-0">
                 <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">Promociones</p>
                 <h2 className="text-lg font-extrabold text-white">Descuentos de hoy</h2>
@@ -119,21 +119,21 @@ export function PromoStrip({
                   key={promo.id}
                   className={cn(
                     'rounded-2xl border bg-white p-3.5 shadow-sm',
-                    promo.active_now ? 'border-[#E85D04]/35' : 'border-stone-200 opacity-70',
+                    promo.active_now ? 'border-[#D1400F]/35' : 'border-stone-200 opacity-70',
                   )}
                 >
                   <div className="flex items-start gap-2.5">
                     <span
                       className={cn(
                         'mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full',
-                        promo.active_now ? 'bg-[#E85D04]/10 text-[#E85D04]' : 'bg-stone-100 text-stone-400',
+                        promo.active_now ? 'bg-[#D1400F]/10 text-[#D1400F]' : 'bg-stone-100 text-stone-400',
                       )}
                     >
                       <BadgePercent className="h-4 w-4" />
                     </span>
                     <div className="min-w-0 flex-1">
                       <p className="text-sm font-bold text-stone-800">{promo.name}</p>
-                      <p className="text-xs font-semibold text-[#E85D04]">{promoValueLabel(promo)}</p>
+                      <p className="text-xs font-semibold text-[#D1400F]">{promoValueLabel(promo)}</p>
                       <p className="mt-0.5 text-[11px] text-stone-500">
                         {scopeLabel(
                           promo,

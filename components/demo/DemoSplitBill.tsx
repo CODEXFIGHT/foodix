@@ -50,7 +50,7 @@ export function DemoSplitBill({ order, currency, onAllPaid }: {
           <span className="text-stone-500">{paid}/{splits.length} cobradas</span>
         </div>
         <div className="h-2 w-full overflow-hidden rounded-full bg-stone-100">
-          <div className={cn('h-full rounded-full transition-all', allPaid ? 'bg-green-500' : 'bg-[#E85D04]')} style={{ width: `${percent}%` }} />
+          <div className={cn('h-full rounded-full transition-all', allPaid ? 'bg-green-500' : 'bg-[#D1400F]')} style={{ width: `${percent}%` }} />
         </div>
 
         <div className="space-y-2">
@@ -147,7 +147,7 @@ function DemoSplitPlanner({ order, total, currency }: { order: DemoOrder; total:
           return (
             <button key={m.value} onClick={() => setMode(m.value)}
               className={cn('flex flex-col items-center gap-1 rounded-xl border-2 p-2 text-[11px] font-medium transition-all',
-                mode === m.value ? 'border-[#E85D04] bg-[#E85D04]/5 text-[#E85D04]' : 'border-stone-200 text-stone-500')}>
+                mode === m.value ? 'border-[#D1400F] bg-[#D1400F]/5 text-[#D1400F]' : 'border-stone-200 text-stone-500')}>
               <Icon className="h-4 w-4" /> {m.label}
             </button>
           )
@@ -192,7 +192,7 @@ function DemoSplitPlanner({ order, total, currency }: { order: DemoOrder; total:
           <div className="flex flex-wrap gap-1.5">
             {groups.map((g, i) => (
               <button key={i} onClick={() => setActive(i)}
-                className={cn('rounded-full border-2 px-3 py-1 text-xs font-semibold', active === i ? 'border-[#E85D04] bg-[#E85D04]/10 text-[#C44D00]' : 'border-stone-200 text-stone-500')}>
+                className={cn('rounded-full border-2 px-3 py-1 text-xs font-semibold', active === i ? 'border-[#D1400F] bg-[#D1400F]/10 text-[#B03508]' : 'border-stone-200 text-stone-500')}>
                 {g.label} · {formatMoney(groupTotal(g), currency)}
               </button>
             ))}

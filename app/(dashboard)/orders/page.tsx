@@ -24,7 +24,7 @@ import { cn } from '@/lib/utils/cn'
 const TABS: { value: string; label: string; statuses: OrderStatus[] | null; icon: string | null; dot?: string }[] = [
   { value: 'all',       label: 'Todos',          statuses: [...ACTIVE_ORDER_STATUSES], icon: null },
   { value: 'pending',   label: 'Nuevos',         statuses: ['pending'],      icon: ICONS8.pending,   dot: 'bg-amber-400' },
-  { value: 'preparing', label: 'En preparación', statuses: ['preparing'],    icon: ICONS8.preparing, dot: 'bg-[#E85D04]' },
+  { value: 'preparing', label: 'En preparación', statuses: ['preparing'],    icon: ICONS8.preparing, dot: 'bg-[#D1400F]' },
   { value: 'ready',     label: 'Listos',         statuses: ['ready'],        icon: ICONS8.ready,     dot: 'bg-blue-400' },
   { value: 'cancelled', label: 'Cancelados',     statuses: ['cancelled'],    icon: ICONS8.cancelled },
   { value: 'completed', label: 'Ticket Abierto', statuses: ['completed'],    icon: ICONS8.completed },
@@ -134,7 +134,7 @@ export default function OrdersPage() {
               <Button variant="outline">Historial</Button>
             </Link>
             <Link href="/orders/new">
-              <Button className="bg-[#E85D04] hover:bg-[#C44D00]">
+              <Button className="bg-[#D1400F] hover:bg-[#B03508]">
                 <Plus className="h-4 w-4 mr-1" />
                 Nuevo Pedido
               </Button>
@@ -146,7 +146,7 @@ export default function OrdersPage() {
       <div className="flex items-center justify-between gap-3 flex-wrap">
         <div className="flex gap-2 flex-wrap">
           <StatChip icon={ICONS8.pending}   label="Pendientes"  value={pendingCount}   accent="text-amber-500" />
-          <StatChip icon={ICONS8.preparing} label="Preparando"  value={preparingCount} accent="text-[#E85D04]" />
+          <StatChip icon={ICONS8.preparing} label="Preparando"  value={preparingCount} accent="text-[#D1400F]" />
           <StatChip icon={ICONS8.ready}     label="Listos"      value={readyCount}     accent="text-blue-500" />
           <StatChip icon={ICONS8.completed} label="Hoy"         value={completedToday} accent="text-green-600" />
         </div>
@@ -157,7 +157,7 @@ export default function OrdersPage() {
                 onClick={() => setChannel('all')}
                 className={cn(
                   'px-3 h-8 rounded-md text-xs font-medium transition-colors',
-                  channel === 'all' ? 'bg-[#E85D04] text-white' : 'text-muted-foreground hover:text-foreground',
+                  channel === 'all' ? 'bg-[#D1400F] text-white' : 'text-muted-foreground hover:text-foreground',
                 )}
               >
                 Todos los canales
@@ -168,7 +168,7 @@ export default function OrdersPage() {
                   onClick={() => setChannel(c)}
                   className={cn(
                     'px-3 h-8 rounded-md text-xs font-medium transition-colors',
-                    channel === c ? 'bg-[#E85D04] text-white' : 'text-muted-foreground hover:text-foreground',
+                    channel === c ? 'bg-[#D1400F] text-white' : 'text-muted-foreground hover:text-foreground',
                   )}
                 >
                   {CHANNEL_LABEL[c] ?? c}
@@ -185,7 +185,7 @@ export default function OrdersPage() {
                   onClick={() => setDayOnly(key === 'today')}
                   className={cn(
                     'px-3 h-8 rounded-md text-xs font-medium transition-colors',
-                    on ? 'bg-[#E85D04] text-white' : 'text-muted-foreground hover:text-foreground',
+                    on ? 'bg-[#D1400F] text-white' : 'text-muted-foreground hover:text-foreground',
                   )}
                 >
                   {label}
@@ -254,7 +254,7 @@ export default function OrdersPage() {
         {/* Portal a document.body: ancla el FAB al viewport (no al contenedor
             animado de PageTransition) para que quede fijo junto al bottom nav. */}
         <Link href="/orders/new" className="lg:hidden">
-          <button className="fixed bottom-20 right-4 w-14 h-14 bg-[#E85D04] text-white rounded-full shadow-xl flex items-center justify-center z-40 hover:bg-[#C44D00] active:scale-95 transition-all">
+          <button className="fixed bottom-20 right-4 w-14 h-14 bg-[#D1400F] text-white rounded-full shadow-xl flex items-center justify-center z-40 hover:bg-[#B03508] active:scale-95 transition-all">
             <Plus className="h-6 w-6" />
           </button>
         </Link>

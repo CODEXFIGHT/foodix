@@ -87,17 +87,17 @@ export function OrderSummary({
                 <p className="text-sm font-semibold leading-tight truncate">
                   {item.product_name}
                   {item.combo_id && (
-                    <span className="ml-1.5 align-middle rounded-full bg-[#E85D04]/10 px-1.5 py-0.5 text-[10px] font-semibold text-[#E85D04]">
+                    <span className="ml-1.5 align-middle rounded-full bg-[#D1400F]/10 px-1.5 py-0.5 text-[10px] font-semibold text-[#D1400F]">
                       Combo{item.combo_name ? `: ${item.combo_name}` : ''}
                     </span>
                   )}
                 </p>
                 {formatKgDetail(item) ? (
-                  <p className="text-xs font-medium text-[#E85D04]">{formatKgDetail(item)}</p>
+                  <p className="text-xs font-medium text-[#D1400F]">{formatKgDetail(item)}</p>
                 ) : (
                   <p className="text-xs text-muted-foreground">
                     {formatCurrency(item.unit_price)} c/u
-                    {item.price_type === 'open' && <span className="ml-1 text-[#E85D04]">· variable</span>}
+                    {item.price_type === 'open' && <span className="ml-1 text-[#D1400F]">· variable</span>}
                   </p>
                 )}
                 {((item.modifiers && item.modifiers.length > 0) || (item.selectedModifiers && item.selectedModifiers.length > 0)) && (
@@ -131,7 +131,7 @@ export function OrderSummary({
                       <button
                         onClick={() => onUpdateQty?.(item.uid, item.quantity + 1)}
                         aria-label="Agregar uno"
-                        className="w-8 h-8 rounded-full border border-[#E85D04] text-[#E85D04] flex items-center justify-center hover:bg-[#E85D04] hover:text-white"
+                        className="w-8 h-8 rounded-full border border-[#D1400F] text-[#D1400F] flex items-center justify-center hover:bg-[#D1400F] hover:text-white"
                       >
                         <Plus className="h-3 w-3" />
                       </button>
@@ -197,7 +197,7 @@ export function OrderSummary({
         <Separator />
         <div className="flex justify-between font-bold text-base pt-1">
           <span>Total</span>
-          <span className="text-[#E85D04]">{formatCurrency(total)}</span>
+          <span className="text-[#D1400F]">{formatCurrency(total)}</span>
         </div>
       </div>
     </div>
@@ -230,7 +230,7 @@ function OrderLineNote({ value, onChange }: { value: string; onChange: (v: strin
       onChange={e => onChange(e.target.value)}
       onBlur={() => { if (!value) setOpen(false) }}
       placeholder="Ej. sin cebolla, bien cocido…"
-      className="w-full text-xs rounded-md border bg-background px-2 py-1.5 outline-none focus:ring-1 focus:ring-[#E85D04]"
+      className="w-full text-xs rounded-md border bg-background px-2 py-1.5 outline-none focus:ring-1 focus:ring-[#D1400F]"
     />
   )
 }

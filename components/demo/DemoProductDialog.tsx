@@ -138,7 +138,7 @@ export function DemoProductDialog({ open, onOpenChange, product, categories, mod
                   onClick={() => setEmoji(e)}
                   className={cn(
                     'grid h-9 w-9 place-items-center rounded-lg border text-lg transition-all',
-                    emoji === e ? 'border-[#E85D04] bg-[#E85D04]/10 scale-110' : 'border-stone-200 hover:bg-stone-50',
+                    emoji === e ? 'border-[#D1400F] bg-[#D1400F]/10 scale-110' : 'border-stone-200 hover:bg-stone-50',
                   )}
                 >
                   {e}
@@ -157,7 +157,7 @@ export function DemoProductDialog({ open, onOpenChange, product, categories, mod
                   onClick={() => setStation(s)}
                   className={cn(
                     'flex-1 rounded-lg border px-3 py-2 text-sm font-medium transition-all',
-                    station === s ? 'border-[#E85D04] bg-[#E85D04]/10 text-[#C44D00]' : 'border-stone-200 text-stone-600 hover:bg-stone-50',
+                    station === s ? 'border-[#D1400F] bg-[#D1400F]/10 text-[#B03508]' : 'border-stone-200 text-stone-600 hover:bg-stone-50',
                   )}
                 >
                   {s === 'hot' ? '🔥 Caliente' : '❄️ Fría'}
@@ -178,7 +178,7 @@ export function DemoProductDialog({ open, onOpenChange, product, categories, mod
                     className={cn(
                       'rounded-full border px-3 py-1 text-xs font-medium transition-all',
                       modifierIds.includes(m.id)
-                        ? 'border-[#E85D04] bg-[#E85D04]/10 text-[#C44D00]'
+                        ? 'border-[#D1400F] bg-[#D1400F]/10 text-[#B03508]'
                         : 'border-stone-200 text-stone-500 hover:bg-stone-50',
                     )}
                   >

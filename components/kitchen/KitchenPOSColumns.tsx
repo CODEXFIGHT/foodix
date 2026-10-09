@@ -27,7 +27,7 @@ function ColumnHeader({ area, count }: { area: 'hot' | 'cold'; count: number }) 
       className={cn(
         'sticky top-0 z-10 mb-3 flex items-center justify-between rounded-xl px-4 py-2.5 backdrop-blur',
         isHot
-          ? 'bg-[#E85D04]/15 ring-1 ring-[#E85D04]/30'
+          ? 'bg-[#D1400F]/15 ring-1 ring-[#D1400F]/30'
           : 'bg-sky-500/15 ring-1 ring-sky-400/30',
       )}
     >
@@ -38,7 +38,7 @@ function ColumnHeader({ area, count }: { area: 'hot' | 'cold'; count: number }) 
       <span
         className={cn(
           'rounded-full px-2 py-0.5 text-[11px] font-bold',
-          isHot ? 'bg-[#E85D04] text-white' : 'bg-sky-500 text-white',
+          isHot ? 'bg-[#D1400F] text-white' : 'bg-sky-500 text-white',
         )}
       >
         {count} comanda(s)
@@ -51,7 +51,7 @@ export function KitchenPOSColumns({ hot, cold, hotCount, coldCount }: KitchenPOS
   return (
     <div className="grid gap-4 lg:grid-cols-2">
       <section
-        className="rounded-2xl border border-[#E85D04]/20 bg-black/20 p-3"
+        className="rounded-2xl border border-[#D1400F]/20 bg-black/20 p-3"
         aria-label="POS Caliente"
       >
         <ColumnHeader area="hot" count={hotCount} />

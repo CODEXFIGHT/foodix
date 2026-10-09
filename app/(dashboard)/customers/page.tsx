@@ -93,7 +93,7 @@ export default function CustomersPage() {
       <PageHeader
         title="Clientes"
         description="CRM, monedero y puntos de lealtad"
-        actions={<Button onClick={openNew} className="bg-[#E85D04] hover:bg-[#C44D00]"><Plus className="h-4 w-4 mr-1" />Nuevo</Button>}
+        actions={<Button onClick={openNew} className="bg-[#D1400F] hover:bg-[#B03508]"><Plus className="h-4 w-4 mr-1" />Nuevo</Button>}
       />
 
       <div className="relative">
@@ -103,7 +103,7 @@ export default function CustomersPage() {
 
       <div className="flex gap-1.5 flex-wrap">
         <button onClick={() => setSegment('all')}
-          className={`px-2.5 h-7 rounded-full text-xs font-medium border ${segment === 'all' ? 'bg-[#E85D04] text-white border-[#E85D04]' : 'text-muted-foreground border-border'}`}>
+          className={`px-2.5 h-7 rounded-full text-xs font-medium border ${segment === 'all' ? 'bg-[#D1400F] text-white border-[#D1400F]' : 'text-muted-foreground border-border'}`}>
           Todos ({allCustomers.length})
         </button>
         {(Object.keys(SEGMENT_LABEL) as CustomerSegment[]).map(s => {
@@ -111,7 +111,7 @@ export default function CustomersPage() {
           if (count === 0) return null
           return (
             <button key={s} onClick={() => setSegment(s)}
-              className={`px-2.5 h-7 rounded-full text-xs font-medium border ${segment === s ? 'bg-[#E85D04] text-white border-[#E85D04]' : 'text-muted-foreground border-border'}`}>
+              className={`px-2.5 h-7 rounded-full text-xs font-medium border ${segment === s ? 'bg-[#D1400F] text-white border-[#D1400F]' : 'text-muted-foreground border-border'}`}>
               {SEGMENT_LABEL[s].label} ({count})
             </button>
           )
@@ -175,7 +175,7 @@ export default function CustomersPage() {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setOpen(false)}>Cancelar</Button>
-            <Button onClick={handleSave} disabled={!form.name.trim() || create.isPending || update.isPending} className="bg-[#E85D04] hover:bg-[#C44D00]">Guardar</Button>
+            <Button onClick={handleSave} disabled={!form.name.trim() || create.isPending || update.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">Guardar</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
@@ -200,7 +200,7 @@ export default function CustomersPage() {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setWalletCust(null)}>Cancelar</Button>
-            <Button onClick={handleWallet} disabled={adjustWallet.isPending} className="bg-[#E85D04] hover:bg-[#C44D00]">Aplicar</Button>
+            <Button onClick={handleWallet} disabled={adjustWallet.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">Aplicar</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

@@ -105,7 +105,7 @@ export default function SalesPage() {
       {/* KPI summary */}
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
         {[
-          { label: 'Hoy', value: todaySummary?.today.revenue ?? 0, orders: todaySummary?.today.order_count ?? 0, icon: ICONS8.revenue, color: 'border-l-[#E85D04]' },
+          { label: 'Hoy', value: todaySummary?.today.revenue ?? 0, orders: todaySummary?.today.order_count ?? 0, icon: ICONS8.revenue, color: 'border-l-[#D1400F]' },
           { label: 'Esta semana', value: summary?.week.revenue ?? 0, orders: summary?.week.order_count ?? 0, icon: ICONS8.sales, color: 'border-l-blue-500' },
           { label: 'Este mes', value: summary?.month.revenue ?? 0, orders: summary?.month.order_count ?? 0, icon: ICONS8.ordersKpi, color: 'border-l-green-500' },
         ].map(kpi => (
@@ -129,7 +129,7 @@ export default function SalesPage() {
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="flex items-center gap-2 text-base">
-            <FileText className="h-4 w-4 text-[#E85D04]" />
+            <FileText className="h-4 w-4 text-[#D1400F]" />
             Reportes de ventas
           </CardTitle>
         </CardHeader>
@@ -151,7 +151,7 @@ export default function SalesPage() {
               type="button"
               onClick={exportPDF}
               disabled={generatingPdf || loadingSummary || loadingByCategory || fromDate > toDate}
-              className="h-10 gap-2 bg-[#E85D04] hover:bg-[#C44D00]"
+              className="h-10 gap-2 bg-[#D1400F] hover:bg-[#B03508]"
             >
               <FileText className="h-4 w-4" />
               {generatingPdf ? 'Generando…' : 'Generar PDF'}
@@ -263,7 +263,7 @@ export default function SalesPage() {
                       <div key={ch.channel} className="flex items-center gap-3">
                         <span className="text-sm font-medium w-24 shrink-0">{CHANNEL_LABEL[ch.channel] ?? ch.channel}</span>
                         <div className="flex-1 h-2 bg-muted rounded-full overflow-hidden">
-                          <div className="h-full rounded-full bg-[#E85D04]" style={{ width: `${(ch.revenue / maxRevenue) * 100}%` }} />
+                          <div className="h-full rounded-full bg-[#D1400F]" style={{ width: `${(ch.revenue / maxRevenue) * 100}%` }} />
                         </div>
                         <span className="text-sm font-semibold w-24 text-right">{formatCurrency(ch.revenue)}</span>
                         <span className="text-xs text-muted-foreground w-16 text-right">{ch.order_count} pedidos</span>

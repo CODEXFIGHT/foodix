@@ -135,7 +135,7 @@ export function ModifierDialog({
                       onClick={() => toggle(group, idx)}
                       className={cn(
                         'flex items-center justify-between gap-2 p-2.5 border-2 rounded-lg text-left text-sm transition-all',
-                        active ? 'border-[#E85D04] bg-[#E85D04]/5' : 'hover:border-primary/40',
+                        active ? 'border-[#D1400F] bg-[#D1400F]/5' : 'hover:border-primary/40',
                       )}
                     >
                       <span className="truncate">{opt.name}</span>
@@ -169,7 +169,7 @@ export function ModifierDialog({
                       className={cn(
                         'rounded-full border px-3 py-1.5 text-xs font-semibold transition-all active:scale-95 touch-manipulation',
                         active
-                          ? 'border-[#E85D04] bg-[#E85D04] text-white shadow-sm'
+                          ? 'border-[#D1400F] bg-[#D1400F] text-white shadow-sm'
                           : 'border-stone-200 dark:border-stone-700 text-stone-600 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-900'
                       )}
                     >
@@ -194,7 +194,7 @@ export function ModifierDialog({
         </div>
 
         <DialogFooter>
-          <Button onClick={handleConfirm} className="w-full bg-[#E85D04] hover:bg-[#C44D00]">
+          <Button onClick={handleConfirm} className="w-full bg-[#D1400F] hover:bg-[#B03508]">
             Agregar — {formatCurrency(product.price + extraPrice)}
           </Button>
         </DialogFooter>

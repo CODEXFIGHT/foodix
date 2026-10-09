@@ -47,7 +47,7 @@ export function DemoTimerBadge({ className }: { className?: string }) {
           ? 'bg-red-500/15 text-red-600 ring-red-500/30 animate-pulse'
           : warn
             ? 'bg-amber-500/15 text-amber-700 ring-amber-500/30'
-            : 'bg-[#E85D04]/10 text-[#C44D00] ring-[#E85D04]/25',
+            : 'bg-[#D1400F]/10 text-[#B03508] ring-[#D1400F]/25',
         className,
       )}
     >

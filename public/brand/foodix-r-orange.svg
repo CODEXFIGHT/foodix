@@ -2,7 +2,7 @@
   <defs>
     <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#F5A623"/>
-      <stop offset="1" stop-color="#E85D04"/>
+      <stop offset="1" stop-color="#D1400F"/>
     </linearGradient>
   </defs>
   <path d="M14 12h42c18.764 0 33 14.236 33 33 0 14.18-8.77 26.3-21.18 31.408L86 84H65l-29-22V12Z" fill="url(#g)"/>

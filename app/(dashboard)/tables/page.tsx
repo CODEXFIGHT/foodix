@@ -238,7 +238,7 @@ export default function TablesPage() {
           <button
             onClick={() => setShowAdd(true)}
             aria-label="Agregar mesa"
-            className="sm:hidden fixed right-4 bottom-20 z-50 h-14 w-14 rounded-full bg-[#E85D04] text-white shadow-lg flex items-center justify-center hover:bg-[#C44D00] active:scale-95 transition-all"
+            className="sm:hidden fixed right-4 bottom-20 z-50 h-14 w-14 rounded-full bg-[#D1400F] text-white shadow-lg flex items-center justify-center hover:bg-[#B03508] active:scale-95 transition-all"
             style={{ bottom: 'max(5rem, calc(env(safe-area-inset-bottom) + 5rem))' }}
           >
             <Plus className="h-6 w-6" />

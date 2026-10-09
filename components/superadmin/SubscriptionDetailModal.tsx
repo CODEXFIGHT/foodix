@@ -212,15 +212,15 @@ export function SubscriptionDetailModal({
                           'group relative overflow-visible flex flex-col items-start gap-1.5 rounded-xl border p-3 text-left transition-all duration-300 text-sm',
                           isCurrent
                             // Plan activo: orilla resaltada + glow + check.
-                            ? 'border-[#E85D04] bg-[#E85D04]/10 ring-2 ring-[#E85D04]/40 shadow-[0_0_0_1px_rgba(232,93,4,0.25),0_8px_24px_-8px_rgba(232,93,4,0.5)] cursor-default'
+                            ? 'border-[#D1400F] bg-[#D1400F]/10 ring-2 ring-[#D1400F]/40 shadow-[0_0_0_1px_rgba(209,64,15,0.25),0_8px_24px_-8px_rgba(209,64,15,0.5)] cursor-default'
                             : isActivating
-                              ? 'border-[#E85D04]/50 bg-[#E85D04]/[0.06] ring-1 ring-[#E85D04]/30 cursor-wait'
-                              : 'border-white/10 hover:border-[#E85D04]/40 hover:bg-white/[0.04] cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed',
+                              ? 'border-[#D1400F]/50 bg-[#D1400F]/[0.06] ring-1 ring-[#D1400F]/30 cursor-wait'
+                              : 'border-white/10 hover:border-[#D1400F]/40 hover:bg-white/[0.04] cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed',
                         )}
                       >
                         {/* Palomita del plan activo (entra con animación) */}
                         {isCurrent && !isActivating && (
-                          <span className="absolute -top-2 -right-2 z-20 h-6 w-6 rounded-full bg-[#E85D04] ring-2 ring-[#0a0a0a] grid place-items-center animate-fade-in-up shadow-lg shadow-[#E85D04]/20">
+                          <span className="absolute -top-2 -right-2 z-20 h-6 w-6 rounded-full bg-[#D1400F] ring-2 ring-[#0a0a0a] grid place-items-center animate-fade-in-up shadow-lg shadow-[#D1400F]/20">
                             <Check className="h-3.5 w-3.5 text-white stroke-[3px]" />
                           </span>
                         )}
@@ -228,7 +228,7 @@ export function SubscriptionDetailModal({
                         {/* Loader en tiempo real sobre la tarjeta que se está activando */}
                         {isActivating && (
                           <span className="absolute inset-0 z-10 grid place-items-center rounded-xl bg-[#0d0d0f]/70 backdrop-blur-[1px]">
-                            <span className="flex items-center gap-2 text-xs font-semibold text-[#E85D04]">
+                            <span className="flex items-center gap-2 text-xs font-semibold text-[#D1400F]">
                               <Loader2 className="h-4 w-4 animate-spin" /> Activando…
                             </span>
                           </span>
@@ -242,13 +242,13 @@ export function SubscriptionDetailModal({
                             </span>
                           )}
                           {isCurrent && !isActivating && (
-                            <span className="inline-flex items-center gap-1 text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-[#E85D04]/20 text-[#E85D04] border border-[#E85D04]/30 uppercase tracking-wide">
-                              <span className="h-1.5 w-1.5 rounded-full bg-[#E85D04] animate-pulse" /> Activo
+                            <span className="inline-flex items-center gap-1 text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-[#D1400F]/20 text-[#D1400F] border border-[#D1400F]/30 uppercase tracking-wide">
+                              <span className="h-1.5 w-1.5 rounded-full bg-[#D1400F] animate-pulse" /> Activo
                             </span>
                           )}
                         </div>
                         <p className="text-[11px] text-neutral-400 leading-snug">{p.desc}</p>
-                        <p className="text-xs font-semibold text-[#E85D04]">${p.price} MXN/mes</p>
+                        <p className="text-xs font-semibold text-[#D1400F]">${p.price} MXN/mes</p>
                       </button>
                     )
                   })}

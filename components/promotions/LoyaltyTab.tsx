@@ -91,7 +91,7 @@ export function LoyaltyTab({ branchId }: { branchId: number | null }) {
   return (
     <div className="space-y-4">
       <div className="flex justify-end">
-        <Button onClick={openNew} className="bg-[#E85D04] hover:bg-[#C44D00]"><Plus className="h-4 w-4 mr-1" /> Nueva regla</Button>
+        <Button onClick={openNew} className="bg-[#D1400F] hover:bg-[#B03508]"><Plus className="h-4 w-4 mr-1" /> Nueva regla</Button>
       </div>
 
       {rules.length === 0 ? (
@@ -102,7 +102,7 @@ export function LoyaltyTab({ branchId }: { branchId: number | null }) {
             <Card key={r.id} className={!r.active ? 'opacity-60' : undefined}>
               <CardContent className="p-3.5 flex items-center justify-between gap-3 flex-wrap">
                 <div className="min-w-0">
-                  <p className="font-bold flex items-center gap-1.5"><Gift className="h-4 w-4 text-[#E85D04]" /> {r.name}</p>
+                  <p className="font-bold flex items-center gap-1.5"><Gift className="h-4 w-4 text-[#D1400F]" /> {r.name}</p>
                   <p className="text-xs text-muted-foreground mt-0.5">
                     Compra {r.purchases_required} veces → {rewardLabel(r)}
                   </p>
@@ -154,7 +154,7 @@ export function LoyaltyTab({ branchId }: { branchId: number | null }) {
           </div>
           <DialogFooter>
             <Button variant="ghost" onClick={() => setOpen(false)}>Cancelar</Button>
-            <Button onClick={handleSave} className="bg-[#E85D04] hover:bg-[#C44D00]">Crear regla</Button>
+            <Button onClick={handleSave} className="bg-[#D1400F] hover:bg-[#B03508]">Crear regla</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

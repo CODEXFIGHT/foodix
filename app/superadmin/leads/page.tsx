@@ -113,7 +113,7 @@ export default function SuperAdminLeadsPage() {
             return (
               <Surface key={lead.id} className="p-4">
                 <div className="flex items-start gap-3">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#E85D04]/15 text-sm font-semibold text-orange-300">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#D1400F]/15 text-sm font-semibold text-orange-300">
                     {lead.name.slice(0, 2).toUpperCase()}
                   </div>
                   <div className="min-w-0 flex-1">

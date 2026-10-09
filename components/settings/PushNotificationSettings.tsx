@@ -30,7 +30,7 @@ export function PushNotificationSettings() {
     <Card>
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center gap-2 text-base">
-          <Bell className="h-4 w-4 text-[#E85D04]" />
+          <Bell className="h-4 w-4 text-[#D1400F]" />
           Notificaciones push
         </CardTitle>
       </CardHeader>

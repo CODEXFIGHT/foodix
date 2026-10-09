@@ -38,7 +38,7 @@ export function StepProgress({ current }: { current: number }) {
             <span
               className={cn(
                 'h-1.5 w-full rounded-full transition-colors',
-                state === 'done' ? 'bg-[#E85D04]' : state === 'current' ? 'bg-[#E85D04]/60' : 'bg-stone-200',
+                state === 'done' ? 'bg-[#D1400F]' : state === 'current' ? 'bg-[#D1400F]/60' : 'bg-stone-200',
               )}
             />
             <span
@@ -202,13 +202,13 @@ export function AccountStep({
         <label htmlFor="accept_terms" className="flex cursor-pointer items-start gap-2.5 text-sm text-stone-700">
           <input
             id="accept_terms" type="checkbox"
-            className="mt-0.5 h-4 w-4 shrink-0 accent-[#E85D04]"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-[#D1400F]"
             aria-describedby="err-accept_terms"
             {...register('accept_terms')}
           />
           <span>
             Acepto los{' '}
-            <Link href="/terminos" target="_blank" className="font-semibold text-[#E85D04] hover:underline">
+            <Link href="/terminos" target="_blank" className="font-semibold text-[#D1400F] hover:underline">
               términos y condiciones
             </Link>
           </span>
@@ -218,13 +218,13 @@ export function AccountStep({
         <label htmlFor="accept_privacy" className="flex cursor-pointer items-start gap-2.5 text-sm text-stone-700">
           <input
             id="accept_privacy" type="checkbox"
-            className="mt-0.5 h-4 w-4 shrink-0 accent-[#E85D04]"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-[#D1400F]"
             aria-describedby="err-accept_privacy"
             {...register('accept_privacy')}
           />
           <span>
             Acepto el{' '}
-            <Link href="/privacidad" target="_blank" className="font-semibold text-[#E85D04] hover:underline">
+            <Link href="/privacidad" target="_blank" className="font-semibold text-[#D1400F] hover:underline">
               aviso de privacidad
             </Link>
           </span>
@@ -235,7 +235,7 @@ export function AccountStep({
         <label htmlFor="marketing_opt_in" className="flex cursor-pointer items-start gap-2.5 text-sm text-stone-500">
           <input
             id="marketing_opt_in" type="checkbox"
-            className="mt-0.5 h-4 w-4 shrink-0 accent-[#E85D04]"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-[#D1400F]"
             {...register('marketing_opt_in')}
           />
           <span>Quiero recibir novedades y consejos de FoodIX (opcional)</span>
@@ -245,7 +245,7 @@ export function AccountStep({
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="h-12 w-full rounded-xl bg-[#E85D04] text-base font-semibold transition-all hover:bg-[#C44D00] active:scale-95"
+        className="h-12 w-full rounded-xl bg-[#D1400F] text-base font-semibold transition-all hover:bg-[#B03508] active:scale-95"
       >
         {isSubmitting ? (
           <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Creando tu cuenta…</>
@@ -302,7 +302,7 @@ export function EmailStep({
   return (
     <div className="space-y-5 text-center">
       <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50">
-        <MailCheck className="h-7 w-7 text-[#E85D04]" aria-hidden="true" />
+        <MailCheck className="h-7 w-7 text-[#D1400F]" aria-hidden="true" />
       </div>
 
       <div className="space-y-2">
@@ -322,7 +322,7 @@ export function EmailStep({
       <div className="flex flex-col gap-2">
         <Button
           type="button" onClick={onCheck} disabled={checking}
-          className="h-12 rounded-xl bg-[#E85D04] text-base hover:bg-[#C44D00]"
+          className="h-12 rounded-xl bg-[#D1400F] text-base hover:bg-[#B03508]"
         >
           {checking
             ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Verificando tu correo…</>
@@ -387,7 +387,7 @@ export function PhoneStep({
   return (
     <form onSubmit={submit} className="space-y-5 text-center" noValidate>
       <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50">
-        <ShieldCheck className="h-7 w-7 text-[#E85D04]" aria-hidden="true" />
+        <ShieldCheck className="h-7 w-7 text-[#D1400F]" aria-hidden="true" />
       </div>
 
       <div className="space-y-2">
@@ -422,7 +422,7 @@ export function PhoneStep({
       <div className="flex flex-col gap-2">
         <Button
           type="submit" disabled={code.length !== 6 || busy}
-          className="h-12 rounded-xl bg-[#E85D04] text-base hover:bg-[#C44D00]"
+          className="h-12 rounded-xl bg-[#D1400F] text-base hover:bg-[#B03508]"
         >
           {busy
             ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Validando código…</>
@@ -472,7 +472,7 @@ export function BusinessStep({
     <form onSubmit={submit} className="space-y-5" noValidate>
       <div className="space-y-2 text-center">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50">
-          <Store className="h-7 w-7 text-[#E85D04]" aria-hidden="true" />
+          <Store className="h-7 w-7 text-[#D1400F]" aria-hidden="true" />
         </div>
         <h2 className="font-heading text-xl font-extrabold text-stone-900">Configura tu restaurante</h2>
         <p className="text-sm text-stone-600">Así se verá en tu panel, tickets y carta digital.</p>
@@ -507,7 +507,7 @@ export function BusinessStep({
 
       <Button
         type="submit" disabled={busy || name.trim().length < 2}
-        className="h-12 w-full rounded-xl bg-[#E85D04] text-base font-semibold hover:bg-[#C44D00]"
+        className="h-12 w-full rounded-xl bg-[#D1400F] text-base font-semibold hover:bg-[#B03508]"
       >
         {busy
           ? <><Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> Activando tus 14 días gratis…</>

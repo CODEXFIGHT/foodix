@@ -28,15 +28,15 @@ export function RoiCalculator() {
   return (
     <section className="relative py-20 overflow-hidden bg-stone-900 text-white dark:bg-black border-y border-stone-800">
       {/* Glow ambiental */}
-      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-96 w-[600px] rounded-full bg-[#E85D04]/15 blur-3xl" />
+      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-96 w-[600px] rounded-full bg-[#D1400F]/15 blur-3xl" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E85D04]/20 border border-[#E85D04]/40 text-[#E85D04] text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D1400F]/20 border border-[#D1400F]/40 text-[#D1400F] text-xs font-bold uppercase tracking-wider mb-4">
             <Calculator className="w-3.5 h-3.5" /> Calculadora de Impacto Financiero
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white tracking-tight">
-            Descubre cuánto ahorra y gana tu restaurante con <span className="text-[#E85D04]">FoodIX</span>
+            Descubre cuánto ahorra y gana tu restaurante con <span className="text-[#D1400F]">FoodIX</span>
           </h2>
           <p className="mt-4 text-stone-300 text-base sm:text-lg">
             Calcula el retorno de inversión real ajustado al flujo diario de tu negocio.
@@ -59,7 +59,7 @@ export function RoiCalculator() {
                     className={cn(
                       'flex items-center gap-2.5 p-3 rounded-xl border text-left text-sm font-semibold transition-all duration-200',
                       businessType === b.id
-                        ? 'border-[#E85D04] bg-[#E85D04]/20 text-white shadow-lg shadow-[#E85D04]/10'
+                        ? 'border-[#D1400F] bg-[#D1400F]/20 text-white shadow-lg shadow-[#D1400F]/10'
                         : 'border-stone-700 bg-stone-900/50 text-stone-300 hover:border-stone-600 hover:bg-stone-800'
                     )}
                   >
@@ -76,7 +76,7 @@ export function RoiCalculator() {
                 <label className="text-xs font-bold uppercase tracking-wider text-stone-400">
                   2. Pedidos promedio por día
                 </label>
-                <span className="text-lg font-extrabold text-[#E85D04] bg-[#E85D04]/10 px-3 py-0.5 rounded-lg border border-[#E85D04]/30">
+                <span className="text-lg font-extrabold text-[#D1400F] bg-[#D1400F]/10 px-3 py-0.5 rounded-lg border border-[#D1400F]/30">
                   {dailyOrders} pedidos/día
                 </span>
               </div>
@@ -87,7 +87,7 @@ export function RoiCalculator() {
                 step="5"
                 value={dailyOrders}
                 onChange={e => setDailyOrders(Number(e.target.value))}
-                className="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-[#E85D04]"
+                className="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-[#D1400F]"
               />
               <div className="flex justify-between text-[11px] text-stone-500 mt-1">
                 <span>10 pedidos</span>
@@ -102,7 +102,7 @@ export function RoiCalculator() {
                 <label className="text-xs font-bold uppercase tracking-wider text-stone-400">
                   3. Ticket promedio estimado
                 </label>
-                <span className="text-lg font-extrabold text-[#E85D04] bg-[#E85D04]/10 px-3 py-0.5 rounded-lg border border-[#E85D04]/30">
+                <span className="text-lg font-extrabold text-[#D1400F] bg-[#D1400F]/10 px-3 py-0.5 rounded-lg border border-[#D1400F]/30">
                   ${avgTicket} MXN
                 </span>
               </div>
@@ -113,7 +113,7 @@ export function RoiCalculator() {
                 step="25"
                 value={avgTicket}
                 onChange={e => setAvgTicket(Number(e.target.value))}
-                className="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-[#E85D04]"
+                className="w-full h-2 bg-stone-700 rounded-lg appearance-none cursor-pointer accent-[#D1400F]"
               />
               <div className="flex justify-between text-[11px] text-stone-500 mt-1">
                 <span>$50 MXN</span>
@@ -137,7 +137,7 @@ export function RoiCalculator() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-4 rounded-xl bg-stone-800/80 border border-stone-700/70">
                 <div className="flex items-center gap-2 text-stone-400 text-xs font-semibold mb-1">
-                  <Clock className="w-4 h-4 text-[#E85D04]" /> Tiempo Ahorrado
+                  <Clock className="w-4 h-4 text-[#D1400F]" /> Tiempo Ahorrado
                 </div>
                 <p className="text-2xl font-black text-white">{hoursSavedPerWeek} hrs<span className="text-xs text-stone-400 font-normal">/semana</span></p>
                 <p className="text-[11px] text-stone-400 mt-1">En comandas, caja y cobros</p>
@@ -164,7 +164,7 @@ export function RoiCalculator() {
 
             <a
               href="/register"
-              className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-extrabold text-white bg-[#E85D04] hover:bg-[#C44D00] transition-all duration-300 active:scale-95 shadow-lg shadow-[#E85D04]/25"
+              className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-extrabold text-white bg-[#D1400F] hover:bg-[#B03508] transition-all duration-300 active:scale-95 shadow-lg shadow-[#D1400F]/25"
             >
               Comenzar prueba gratis <ChevronRight className="w-5 h-5" />
             </a>

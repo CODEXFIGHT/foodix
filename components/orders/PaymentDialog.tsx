@@ -216,7 +216,7 @@ export function PaymentDialog({ order, open, onOpenChange }: PaymentDialogProps)
             <Button
               type="button"
               onClick={handlePrint}
-              className="w-full sm:w-auto bg-[#E85D04] hover:bg-[#C44D00] h-11 flex-1 font-semibold text-sm"
+              className="w-full sm:w-auto bg-[#D1400F] hover:bg-[#B03508] h-11 flex-1 font-semibold text-sm"
             >
               Sí, imprimir ticket
             </Button>
@@ -240,7 +240,7 @@ export function PaymentDialog({ order, open, onOpenChange }: PaymentDialogProps)
             {order.paid > 0 && (
               <div className="flex justify-between"><span className="text-muted-foreground">Pagado antes</span><span>{formatCurrency(order.paid)}</span></div>
             )}
-            <div className="flex justify-between"><span className="text-muted-foreground">Por cobrar</span><span className="font-semibold text-[#E85D04]">{formatCurrency(remaining)}</span></div>
+            <div className="flex justify-between"><span className="text-muted-foreground">Por cobrar</span><span className="font-semibold text-[#D1400F]">{formatCurrency(remaining)}</span></div>
           </div>
 
           {/* Filas de pago */}
@@ -266,7 +266,7 @@ export function PaymentDialog({ order, open, onOpenChange }: PaymentDialogProps)
                         onClick={() => setRow(i, { method: m.value })}
                         className={cn(
                           'flex flex-col items-center gap-1 p-2 rounded-lg border-2 text-[10px] font-medium transition-all',
-                          active ? 'border-[#E85D04] bg-[#E85D04]/5 text-[#E85D04]' : 'hover:border-primary/40 text-muted-foreground',
+                          active ? 'border-[#D1400F] bg-[#D1400F]/5 text-[#D1400F]' : 'hover:border-primary/40 text-muted-foreground',
                           isKiosk && 'p-4 text-xs'
                         )}
                       >
@@ -364,7 +364,7 @@ export function PaymentDialog({ order, open, onOpenChange }: PaymentDialogProps)
           <Button
             onClick={handlePay}
             disabled={payOrder.isPending}
-            className={cn("w-full bg-[#E85D04] hover:bg-[#C44D00] text-base font-bold", isKiosk ? "h-14 text-lg" : "h-12")}
+            className={cn("w-full bg-[#D1400F] hover:bg-[#B03508] text-base font-bold", isKiosk ? "h-14 text-lg" : "h-12")}
           >
             {payOrder.isPending ? 'Procesando…' : `Cobrar ${formatCurrency(totalPaying)}`}
           </Button>

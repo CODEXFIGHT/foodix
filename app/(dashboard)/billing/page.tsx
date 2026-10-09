@@ -97,7 +97,7 @@ function CopyRow({ label, value }: { label: string; value: string }) {
           'shrink-0 h-8 w-8 rounded-lg grid place-items-center transition-all',
           copied
             ? 'bg-green-50 text-green-600 dark:bg-green-900/30'
-            : 'bg-stone-100 text-stone-400 hover:bg-orange-50 hover:text-[#E85D04] dark:bg-stone-800 dark:hover:bg-orange-900/20',
+            : 'bg-stone-100 text-stone-400 hover:bg-orange-50 hover:text-[#D1400F] dark:bg-stone-800 dark:hover:bg-orange-900/20',
         )}
       >
         {copied ? <CheckCircle2 className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
@@ -113,7 +113,7 @@ function PlanBadge({ plan }: { plan: string }) {
       'inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full border capitalize',
       premium
         ? 'bg-purple-500/10 text-purple-600 border-purple-200 dark:text-purple-400 dark:border-purple-500/30'
-        : 'bg-orange-500/10 text-[#E85D04] border-orange-200 dark:border-orange-500/30',
+        : 'bg-orange-500/10 text-[#D1400F] border-orange-200 dark:border-orange-500/30',
     )}>
       {premium && <Zap className="h-3 w-3" />}
       {plan}
@@ -357,8 +357,8 @@ export default function BillingPage() {
               className={cn(
                 'flex items-center gap-3 sm:flex-col sm:items-start rounded-2xl border p-4 sm:p-5 text-left transition-all',
                 showCardForm
-                  ? 'border-[#E85D04] bg-orange-50/50 dark:bg-orange-950/20'
-                  : 'bg-white dark:bg-stone-900 border-stone-200 dark:border-stone-800 hover:border-[#E85D04] hover:shadow-sm',
+                  ? 'border-[#D1400F] bg-orange-50/50 dark:bg-orange-950/20'
+                  : 'bg-white dark:bg-stone-900 border-stone-200 dark:border-stone-800 hover:border-[#D1400F] hover:shadow-sm',
               )}
             >
               <div className="h-10 w-10 rounded-xl bg-blue-50 dark:bg-blue-900/20 grid place-items-center shrink-0">
@@ -378,7 +378,7 @@ export default function BillingPage() {
             <button
               onClick={startTransfer}
               disabled={intentMut.isPending}
-              className="flex items-center gap-3 sm:flex-col sm:items-start rounded-2xl border bg-white dark:bg-stone-900 border-stone-200 dark:border-stone-800 p-4 sm:p-5 text-left hover:border-[#E85D04] hover:shadow-sm transition-all disabled:opacity-60"
+              className="flex items-center gap-3 sm:flex-col sm:items-start rounded-2xl border bg-white dark:bg-stone-900 border-stone-200 dark:border-stone-800 p-4 sm:p-5 text-left hover:border-[#D1400F] hover:shadow-sm transition-all disabled:opacity-60"
             >
               <div className="h-10 w-10 rounded-xl bg-green-50 dark:bg-green-900/20 grid place-items-center shrink-0">
                 <Building2 className="h-5 w-5 text-green-600" />
@@ -399,7 +399,7 @@ export default function BillingPage() {
               <button
                 onClick={payWithCard}
                 disabled={checkoutMut.isPending}
-                className="text-xs text-stone-400 hover:text-[#E85D04] underline disabled:opacity-60"
+                className="text-xs text-stone-400 hover:text-[#D1400F] underline disabled:opacity-60"
               >
                 {checkoutMut.isPending ? 'Redirigiendo…' : 'O usar el checkout alojado de Stripe'}
               </button>
@@ -431,8 +431,8 @@ export default function BillingPage() {
                 <span className="text-sm font-medium text-stone-500 ml-1">MXN / mes</span>
               </p>
             </div>
-            <div className="h-10 w-10 rounded-xl bg-[#E85D04]/10 grid place-items-center shrink-0">
-              <Building2 className="h-5 w-5 text-[#E85D04]" />
+            <div className="h-10 w-10 rounded-xl bg-[#D1400F]/10 grid place-items-center shrink-0">
+              <Building2 className="h-5 w-5 text-[#D1400F]" />
             </div>
           </div>
 
@@ -511,7 +511,7 @@ export default function BillingPage() {
               <Button
                 onClick={submitTransfer}
                 disabled={submitMut.isPending}
-                className="bg-[#E85D04] hover:bg-[#C44D00] text-white h-11 w-full sm:w-auto"
+                className="bg-[#D1400F] hover:bg-[#B03508] text-white h-11 w-full sm:w-auto"
               >
                 {submitMut.isPending ? 'Enviando…' : 'Reportar mi transferencia'}
               </Button>
@@ -556,7 +556,7 @@ export default function BillingPage() {
                 <div className="flex items-center gap-2 shrink-0">
                   {p.receipt_url && (
                     <a href={p.receipt_url} target="_blank" rel="noopener noreferrer"
-                      className="text-[#E85D04] text-xs underline">
+                      className="text-[#D1400F] text-xs underline">
                       Comprobante
                     </a>
                   )}
@@ -577,7 +577,7 @@ export default function BillingPage() {
 
       <p className="text-xs text-stone-400 dark:text-stone-600 text-center">
         ¿Dudas sobre tu plan? Escríbenos a{' '}
-        <a href="mailto:foodix@atomicmail.io" className="text-[#E85D04] hover:underline">foodix@atomicmail.io</a>
+        <a href="mailto:foodix@atomicmail.io" className="text-[#D1400F] hover:underline">foodix@atomicmail.io</a>
       </p>
     </div>
   )

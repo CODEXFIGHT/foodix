@@ -188,7 +188,7 @@ export default function TicketPreviewPage() {
                       onClick={() => toggleBranch(branch.id)}
                       className={cn(
                         'flex w-full items-center gap-3 rounded-xl border p-3 text-left transition-all',
-                        active ? 'border-[#E85D04] bg-[#E85D04]/10' : 'border-white/10 bg-white/[0.02] hover:bg-white/[0.05]',
+                        active ? 'border-[#D1400F] bg-[#D1400F]/10' : 'border-white/10 bg-white/[0.02] hover:bg-white/[0.05]',
                       )}
                     >
                       <BranchAvatar logoUrl={branch.logo_url} name={branch.name} size={34} />
@@ -196,7 +196,7 @@ export default function TicketPreviewPage() {
                         <span className="block truncate text-sm font-semibold text-white">{branch.name}</span>
                         <span className="block truncate text-xs text-neutral-500">/{branch.slug}</span>
                       </span>
-                      {active && <CheckCircle2 className="h-4 w-4 shrink-0 text-[#E85D04]" />}
+                      {active && <CheckCircle2 className="h-4 w-4 shrink-0 text-[#D1400F]" />}
                     </button>
                   )
                 })

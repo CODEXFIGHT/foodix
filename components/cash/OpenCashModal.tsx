@@ -81,7 +81,7 @@ export function OpenCashModal({ open, onOpenChange, reason, onOpened }: OpenCash
     <Dialog open={open} onOpenChange={(o) => !openCash.isPending && onOpenChange(o)}>
       <DialogContent className="sm:max-w-md p-0 overflow-hidden gap-0">
         {/* Encabezado de marca */}
-        <DialogHeader className="px-5 pt-5 pb-4 bg-gradient-to-br from-[#E85D04] to-[#C44D00] text-white">
+        <DialogHeader className="px-5 pt-5 pb-4 bg-gradient-to-br from-[#D1400F] to-[#B03508] text-white">
           <DialogTitle className="flex items-center gap-2 text-white text-lg">
             <Unlock className="h-5 w-5" /> Abrir caja · Iniciar turno
           </DialogTitle>
@@ -141,7 +141,7 @@ export function OpenCashModal({ open, onOpenChange, reason, onOpened }: OpenCash
             <Button
               onClick={handleOpen}
               disabled={openCash.isPending}
-              className="w-full h-12 text-base bg-[#E85D04] hover:bg-[#C44D00]"
+              className="w-full h-12 text-base bg-[#D1400F] hover:bg-[#B03508]"
             >
               {openCash.isPending ? 'Iniciando turno…' : 'Iniciar turno'}
             </Button>

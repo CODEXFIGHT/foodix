@@ -31,7 +31,7 @@ export function CashReportCard({ report, title }: { report: CashReport; title?: 
           ))}
           <div className="flex justify-between border-t pt-1.5 font-semibold">
             <span>Ventas totales</span>
-            <span className="text-[#E85D04]">{formatCurrency(report.total_sales)}</span>
+            <span className="text-[#D1400F]">{formatCurrency(report.total_sales)}</span>
           </div>
           <div className="flex justify-between text-muted-foreground">
             <span>Propinas</span>

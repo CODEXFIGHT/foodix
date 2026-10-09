@@ -39,7 +39,7 @@ function SubscriptionBlockedScreen({ status }: { status: SubscriptionState }) {
 
         <div className="flex flex-col gap-3 pt-2">
           {(user?.role === 'admin') && status !== 'terminated' && (
-            <Button asChild className="bg-[#E85D04] hover:bg-[#C44D00]">
+            <Button asChild className="bg-[#D1400F] hover:bg-[#B03508]">
               <a href="/billing">Ir a Mi Suscripción</a>
             </Button>
           )}

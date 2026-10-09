@@ -72,7 +72,7 @@ function VerifyInner() {
       <div className="w-full max-w-md rounded-2xl border border-stone-200 bg-white p-8 text-center shadow-sm">
         {state === 'working' && (
           <>
-            <Loader2 className="mx-auto h-8 w-8 animate-spin text-[#E85D04]" aria-hidden="true" />
+            <Loader2 className="mx-auto h-8 w-8 animate-spin text-[#D1400F]" aria-hidden="true" />
             <p role="status" className="mt-4 text-sm text-stone-600">Verificando tu correo…</p>
           </>
         )}
@@ -92,7 +92,7 @@ function VerifyInner() {
             <AlertCircle className="mx-auto h-10 w-10 text-destructive" aria-hidden="true" />
             <h1 className="mt-4 font-heading text-xl font-extrabold text-stone-900">No pudimos confirmar tu correo</h1>
             <p role="alert" className="mt-2 text-sm text-stone-600">{message}</p>
-            <Button asChild className="mt-6 h-11 w-full bg-[#E85D04] hover:bg-[#C44D00]">
+            <Button asChild className="mt-6 h-11 w-full bg-[#D1400F] hover:bg-[#B03508]">
               <Link href="/register">Volver al registro</Link>
             </Button>
           </>
@@ -107,7 +107,7 @@ export default function VerifyEmailPage() {
     <Suspense
       fallback={
         <div className="flex min-h-screen items-center justify-center">
-          <Loader2 className="h-8 w-8 animate-spin text-[#E85D04]" aria-hidden="true" />
+          <Loader2 className="h-8 w-8 animate-spin text-[#D1400F]" aria-hidden="true" />
         </div>
       }
     >

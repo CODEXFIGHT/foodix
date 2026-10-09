@@ -84,7 +84,7 @@ export function RecetasTab({ branchId }: { branchId: number | null }) {
               <Button variant="outline" size="sm" onClick={addRow} disabled={inventory.length === 0}>
                 <Plus className="h-3.5 w-3.5 mr-1" /> Agregar insumo
               </Button>
-              <Button size="sm" onClick={handleSave} disabled={saveRecipe.isPending} className="bg-[#E85D04] hover:bg-[#C44D00]">
+              <Button size="sm" onClick={handleSave} disabled={saveRecipe.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">
                 <Save className="h-3.5 w-3.5 mr-1" /> Guardar receta
               </Button>
             </div>

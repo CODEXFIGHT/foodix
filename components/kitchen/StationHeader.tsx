@@ -42,11 +42,11 @@ export function StationHeader({ station, activeCount, lastUpdated }: StationHead
       <div className="flex items-center gap-3 min-w-0">
         {/* Brand Logo "R" */}
         <div className="flex items-center gap-2 shrink-0">
-          <div className="grid h-8 w-8 place-items-center rounded-lg bg-[#E85D04] font-heading text-lg font-bold text-white select-none">
+          <div className="grid h-8 w-8 place-items-center rounded-lg bg-[#D1400F] font-heading text-lg font-bold text-white select-none">
             R
           </div>
           <span className="hidden text-sm font-semibold sm:inline-block text-stone-800 animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-            Food<span className="text-[#E85D04]">IX</span><sup className="text-[0.55em] align-super">©</sup>
+            Food<span className="text-[#D1400F]">IX</span><sup className="text-[0.55em] align-super">©</sup>
           </span>
         </div>
 

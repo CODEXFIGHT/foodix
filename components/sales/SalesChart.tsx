@@ -29,7 +29,7 @@ const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?:
     return (
       <div className="bg-popover border rounded-lg p-3 shadow-lg text-sm">
         <p className="font-medium mb-1">{label}</p>
-        <p className="text-[#E85D04]">
+        <p className="text-[#D1400F]">
           ${(payload[0].value as number).toFixed(2)} MXN
         </p>
       </div>
@@ -54,9 +54,9 @@ export function SalesChart({ data, type = 'bar' }: SalesChartProps) {
         <YAxis tick={{ fontSize: 11 }} tickFormatter={v => `$${(v / 1000).toFixed(0)}k`} className="text-muted-foreground" />
         <Tooltip content={<CustomTooltip />} />
         {type === 'bar' ? (
-          <Bar dataKey="revenue" fill="#E85D04" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="revenue" fill="#D1400F" radius={[4, 4, 0, 0]} />
         ) : (
-          <Line type="monotone" dataKey="revenue" stroke="#E85D04" strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="revenue" stroke="#D1400F" strokeWidth={2} dot={false} />
         )}
       </ChartComp>
     </ResponsiveContainer>

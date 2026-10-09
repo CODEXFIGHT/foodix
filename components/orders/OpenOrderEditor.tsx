@@ -400,7 +400,7 @@ export function OpenOrderEditor({ order, role }: OpenOrderEditorProps) {
             />
           </div>
           <Button
-            className="w-full bg-[#E85D04] hover:bg-[#C44D00] h-11"
+            className="w-full bg-[#D1400F] hover:bg-[#B03508] h-11"
             disabled={newItems.length === 0 || addItems.isPending}
             onClick={confirmAdd}
           >
@@ -468,7 +468,7 @@ export function OpenOrderEditor({ order, role }: OpenOrderEditorProps) {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setVarTarget(null)}>Cancelar</Button>
-            <Button className="bg-[#E85D04] hover:bg-[#C44D00]" onClick={confirmVarPrice} disabled={updateItem.isPending}>
+            <Button className="bg-[#D1400F] hover:bg-[#B03508]" onClick={confirmVarPrice} disabled={updateItem.isPending}>
               Guardar
             </Button>
           </DialogFooter>

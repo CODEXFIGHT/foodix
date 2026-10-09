@@ -206,24 +206,24 @@ export function DeviceCenter({ branchId = null }: { branchId?: number | null }) 
           onClick={() => setActiveTab('monitor')}
           className={cn(
             "pb-3 text-sm font-semibold transition-colors relative",
-            activeTab === 'monitor' ? "text-[#E85D04]" : "text-neutral-400 hover:text-white"
+            activeTab === 'monitor' ? "text-[#D1400F]" : "text-neutral-400 hover:text-white"
           )}
         >
           Monitoreo en vivo
           {activeTab === 'monitor' && (
-            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#E85D04]" />
+            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#D1400F]" />
           )}
         </button>
         <button
           onClick={() => setActiveTab('report')}
           className={cn(
             "pb-3 text-sm font-semibold transition-colors relative",
-            activeTab === 'report' ? "text-[#E85D04]" : "text-neutral-400 hover:text-white"
+            activeTab === 'report' ? "text-[#D1400F]" : "text-neutral-400 hover:text-white"
           )}
         >
           Reporte por Sucursal
           {activeTab === 'report' && (
-            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#E85D04]" />
+            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#D1400F]" />
           )}
         </button>
       </div>

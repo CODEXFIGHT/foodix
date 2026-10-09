@@ -276,7 +276,7 @@ export function ProductPicker({ items, onAdd, onRemove, onUpdateQty }: ProductPi
             onChange={e => setSearch(e.target.value)}
             placeholder="Buscar platillo, bebida, categoría o código…"
             aria-label="Buscar productos"
-            className="h-12 border-0 bg-muted/50 pl-10 pr-10 text-base shadow-none focus-visible:ring-1 focus-visible:ring-[#E85D04]"
+            className="h-12 border-0 bg-muted/50 pl-10 pr-10 text-base shadow-none focus-visible:ring-1 focus-visible:ring-[#D1400F]"
           />
           {search && (
             <button
@@ -304,7 +304,7 @@ export function ProductPicker({ items, onAdd, onRemove, onUpdateQty }: ProductPi
               onClick={() => setGroup(t.value)}
               className={cn(
                 'flex items-center justify-center gap-1.5 h-10 rounded-xl text-xs font-semibold transition-colors',
-                group === t.value ? 'bg-white text-[#E85D04] shadow-sm' : 'text-muted-foreground hover:text-foreground',
+                group === t.value ? 'bg-white text-[#D1400F] shadow-sm' : 'text-muted-foreground hover:text-foreground',
               )}
             >
               <t.Icon className="h-3.5 w-3.5" /> {t.label}
@@ -319,7 +319,7 @@ export function ProductPicker({ items, onAdd, onRemove, onUpdateQty }: ProductPi
           onClick={() => setSelectedCat(null)}
           className={cn(
             'flex-shrink-0 px-4 py-2 rounded-full text-xs font-semibold transition-colors',
-            selectedCat === null ? 'bg-[#E85D04] text-white' : 'bg-muted text-muted-foreground hover:bg-muted/80',
+            selectedCat === null ? 'bg-[#D1400F] text-white' : 'bg-muted text-muted-foreground hover:bg-muted/80',
           )}
         >
           Todos
@@ -344,7 +344,7 @@ export function ProductPicker({ items, onAdd, onRemove, onUpdateQty }: ProductPi
         <div className="mb-4 rounded-2xl border bg-[#FFF7ED] p-3 dark:bg-orange-950/20">
           <div className="mb-2 flex items-center justify-between gap-2">
             <p className="flex items-center gap-1.5 text-sm font-bold text-stone-900 dark:text-orange-100">
-              <Sparkles className="h-4 w-4 text-[#E85D04]" />
+              <Sparkles className="h-4 w-4 text-[#D1400F]" />
               Rápidos y populares
             </p>
             <span className="text-[11px] font-medium text-stone-500 dark:text-orange-200/70">1 toque para agregar</span>
@@ -355,12 +355,12 @@ export function ProductPicker({ items, onAdd, onRemove, onUpdateQty }: ProductPi
                 key={product.id}
                 type="button"
                 onClick={() => handleProductTap(product)}
-                className="min-w-[170px] max-w-[190px] rounded-xl border border-orange-200 bg-white p-2 text-left shadow-sm transition-all hover:border-[#E85D04] hover:shadow-md active:scale-[0.98] dark:border-orange-900/40 dark:bg-stone-950"
+                className="min-w-[170px] max-w-[190px] rounded-xl border border-orange-200 bg-white p-2 text-left shadow-sm transition-all hover:border-[#D1400F] hover:shadow-md active:scale-[0.98] dark:border-orange-900/40 dark:bg-stone-950"
               >
                 <span className="block truncate text-sm font-bold">{product.name}</span>
                 <span className="mt-1 flex items-center justify-between gap-2">
                   <span className="text-xs text-muted-foreground">{product.badge}</span>
-                  <span className="text-sm font-extrabold text-[#E85D04]">{formatCurrency(product.price)}</span>
+                  <span className="text-sm font-extrabold text-[#D1400F]">{formatCurrency(product.price)}</span>
                 </span>
               </button>
             ))}
@@ -387,8 +387,8 @@ export function ProductPicker({ items, onAdd, onRemove, onUpdateQty }: ProductPi
                 className={cn(
                   'group relative border rounded-2xl overflow-hidden bg-card flex flex-col transition-all shadow-sm',
                   !addable ? 'opacity-60 cursor-not-allowed' :
-                  qty > 0 ? 'border-[#E85D04] ring-2 ring-[#E85D04]/20 cursor-pointer shadow-md' :
-                  'hover:border-[#E85D04]/60 hover:shadow-md cursor-pointer active:scale-[0.99]',
+                  qty > 0 ? 'border-[#D1400F] ring-2 ring-[#D1400F]/20 cursor-pointer shadow-md' :
+                  'hover:border-[#D1400F]/60 hover:shadow-md cursor-pointer active:scale-[0.99]',
                 )}
                 onClick={() => handleProductTap(product)}
               >
@@ -405,12 +405,12 @@ export function ProductPicker({ items, onAdd, onRemove, onUpdateQty }: ProductPi
                     <div className="absolute inset-0 flex items-center justify-center text-4xl">{product.emoji ?? '🍽️'}</div>
                   )}
                   {product.badge && product.available && (
-                    <span className="absolute top-2 right-2 text-[10px] font-bold px-2 py-1 rounded-full bg-white/95 text-[#E85D04] shadow">
+                    <span className="absolute top-2 right-2 text-[10px] font-bold px-2 py-1 rounded-full bg-white/95 text-[#D1400F] shadow">
                       {product.badge}
                     </span>
                   )}
                   {qty > 0 && (
-                    <span className="absolute top-2 left-2 min-w-5 h-5 px-1 rounded-full bg-[#E85D04] text-white text-[11px] font-bold flex items-center justify-center shadow">{qty}</span>
+                    <span className="absolute top-2 left-2 min-w-5 h-5 px-1 rounded-full bg-[#D1400F] text-white text-[11px] font-bold flex items-center justify-center shadow">{qty}</span>
                   )}
                   {!product.available && (
                     <span className="absolute top-2 right-2 text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-red-100 text-red-700 shadow">Agotado</span>
@@ -440,7 +440,7 @@ export function ProductPicker({ items, onAdd, onRemove, onUpdateQty }: ProductPi
                       onClick={e => handleOpenModifiers(product, e)}
                       aria-label={`Personalizar ${product.name} (modificadores)`}
                       className={cn(
-                        "mt-1 flex items-center gap-1 text-[10px] font-semibold text-[#E85D04] bg-orange-50 dark:bg-orange-950/20 px-2 py-1 rounded border border-[#E85D04]/20 w-fit transition-colors hover:bg-orange-100 active:scale-95 dark:hover:bg-orange-900/30",
+                        "mt-1 flex items-center gap-1 text-[10px] font-semibold text-[#D1400F] bg-orange-50 dark:bg-orange-950/20 px-2 py-1 rounded border border-[#D1400F]/20 w-fit transition-colors hover:bg-orange-100 active:scale-95 dark:hover:bg-orange-900/30",
                         isKiosk && "text-xs px-2.5 py-1.5",
                       )}
                     >
@@ -459,7 +459,7 @@ export function ProductPicker({ items, onAdd, onRemove, onUpdateQty }: ProductPi
                         onClick={() => handleDecrease(product.id)}
                         aria-label={`Quitar uno de ${product.name}`}
                         className={cn(
-                          "rounded-full border border-[#E85D04] flex items-center justify-center text-[#E85D04] hover:bg-[#E85D04] hover:text-white transition-colors",
+                          "rounded-full border border-[#D1400F] flex items-center justify-center text-[#D1400F] hover:bg-[#D1400F] hover:text-white transition-colors",
                           isKiosk ? "w-11 h-11" : "w-9 h-9"
                         )}
                       >
@@ -470,7 +470,7 @@ export function ProductPicker({ items, onAdd, onRemove, onUpdateQty }: ProductPi
                         onClick={() => handleIncrease(product.id)}
                         aria-label={`Agregar uno de ${product.name}`}
                         className={cn(
-                          "rounded-full bg-[#E85D04] flex items-center justify-center text-white hover:bg-[#C44D00] transition-colors",
+                          "rounded-full bg-[#D1400F] flex items-center justify-center text-white hover:bg-[#B03508] transition-colors",
                           isKiosk ? "w-11 h-11" : "w-9 h-9"
                         )}
                       >
@@ -481,7 +481,7 @@ export function ProductPicker({ items, onAdd, onRemove, onUpdateQty }: ProductPi
                     <button
                       onClick={e => { e.stopPropagation(); handleProductTap(product) }}
                       className={cn(
-                        "mt-auto w-full rounded-xl bg-[#E85D04] py-2.5 text-sm font-bold text-white hover:bg-[#C44D00] transition-colors",
+                        "mt-auto w-full rounded-xl bg-[#D1400F] py-2.5 text-sm font-bold text-white hover:bg-[#B03508] transition-colors",
                         isKiosk ? "py-2.5 text-sm" : "py-2.5 text-sm"
                       )}
                     >

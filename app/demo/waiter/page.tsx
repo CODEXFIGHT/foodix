@@ -101,15 +101,15 @@ function WaiterContent() {
                 className={cn(
                   'rounded-xl border px-3 py-2 text-sm font-medium transition-all active:scale-95',
                   tableId === t.id
-                    ? 'border-[#E85D04] bg-[#E85D04] text-white shadow'
+                    ? 'border-[#D1400F] bg-[#D1400F] text-white shadow'
                     : tOrder
-                      ? 'border-[#E85D04]/40 bg-[#E85D04]/5 text-stone-700'
+                      ? 'border-[#D1400F]/40 bg-[#D1400F]/5 text-stone-700'
                       : 'border-stone-200 bg-white text-stone-600 hover:bg-stone-50',
                 )}
               >
                 {t.label}
                 {tOrder && tableId !== t.id && (
-                  <span className="ml-1.5 text-xs text-[#E85D04]">●</span>
+                  <span className="ml-1.5 text-xs text-[#D1400F]">●</span>
                 )}
               </button>
             )
@@ -131,7 +131,7 @@ function WaiterContent() {
               className={cn(
                 'flex-1 py-2.5 text-center text-sm font-semibold border-b-2 transition-all',
                 activeTab === 'menu'
-                  ? 'border-[#E85D04] text-[#E85D04]'
+                  ? 'border-[#D1400F] text-[#D1400F]'
                   : 'border-transparent text-stone-500 hover:text-stone-700',
               )}
             >
@@ -142,7 +142,7 @@ function WaiterContent() {
               className={cn(
                 'flex-1 py-2.5 text-center text-sm font-semibold border-b-2 transition-all flex items-center justify-center gap-1.5',
                 activeTab === 'ticket'
-                  ? 'border-[#E85D04] text-[#E85D04]'
+                  ? 'border-[#D1400F] text-[#D1400F]'
                   : 'border-transparent text-stone-500 hover:text-stone-700',
               )}
             >
@@ -169,14 +169,14 @@ function WaiterContent() {
                       <button
                         key={p.id}
                         onClick={() => setConfigProduct(p)}
-                        className="group flex items-center gap-3 rounded-xl border border-stone-200 bg-white p-3 text-left transition-all hover:border-[#E85D04]/40 hover:shadow-sm active:scale-[0.98]"
+                        className="group flex items-center gap-3 rounded-xl border border-stone-200 bg-white p-3 text-left transition-all hover:border-[#D1400F]/40 hover:shadow-sm active:scale-[0.98]"
                       >
                         <span className="text-2xl">{p.emoji}</span>
                         <div className="min-w-0 flex-1">
                           <p className="truncate text-sm font-semibold">{p.name}</p>
-                          <p className="text-sm font-bold text-[#E85D04]">{formatMoney(p.price)}</p>
+                          <p className="text-sm font-bold text-[#D1400F]">{formatMoney(p.price)}</p>
                         </div>
-                        <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-stone-100 text-stone-500 transition-colors group-hover:bg-[#E85D04] group-hover:text-white">
+                        <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-stone-100 text-stone-500 transition-colors group-hover:bg-[#D1400F] group-hover:text-white">
                           <Plus className="h-4 w-4" />
                         </span>
                       </button>
@@ -377,7 +377,7 @@ function ItemConfigDialog({
                     onClick={() => setSelected(p => p.includes(m.id) ? p.filter(x => x !== m.id) : [...p, m.id])}
                     className={cn(
                       'rounded-full border px-3 py-1 text-xs font-medium transition-all',
-                      selected.includes(m.id) ? 'border-[#E85D04] bg-[#E85D04]/10 text-[#C44D00]' : 'border-stone-200 text-stone-500 hover:bg-stone-50',
+                      selected.includes(m.id) ? 'border-[#D1400F] bg-[#D1400F]/10 text-[#B03508]' : 'border-stone-200 text-stone-500 hover:bg-stone-50',
                     )}
                   >
                     {m.name}{m.price > 0 ? ` +$${m.price}` : ''}
@@ -400,7 +400,7 @@ function ItemConfigDialog({
                       onClick={() => setSelectedCustom(p => p.includes(mod) ? p.filter(x => x !== mod) : [...p, mod])}
                       className={cn(
                         'rounded-full border px-3 py-1.5 text-xs font-semibold transition-all active:scale-95 touch-manipulation',
-                        active ? 'border-[#E85D04] bg-[#E85D04]/10 text-[#C44D00] shadow-sm' : 'border-stone-200 text-stone-500 hover:bg-stone-50',
+                        active ? 'border-[#D1400F] bg-[#D1400F]/10 text-[#B03508] shadow-sm' : 'border-stone-200 text-stone-500 hover:bg-stone-50',
                       )}
                     >
                       {mod}

@@ -26,7 +26,7 @@ import { cn } from '@/lib/utils/cn'
 import { ReceiptUploader } from '@/components/billing/ReceiptUploader'
 import { type LandingPlan, formatPlanPrice } from '../plans'
 
-const BRAND = '#E85D04'
+const BRAND = '#D1400F'
 const stripePromise = getStripe()
 
 type Method = 'card' | 'spei'
@@ -41,9 +41,9 @@ const SPEI_BANK = {
 function Wordmark() {
   return (
     <Link href="/landing" className="flex items-center gap-2">
-      <span className="h-8 w-8 rounded-xl bg-[#E85D04] text-white font-bold grid place-items-center font-heading">F</span>
+      <span className="h-8 w-8 rounded-xl bg-[#D1400F] text-white font-bold grid place-items-center font-heading">F</span>
       <span className="inline-block font-heading font-bold text-lg text-stone-900 animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-        Food<span className="text-[#E85D04]">IX</span><sup className="text-[0.55em] align-super">©</sup>
+        Food<span className="text-[#D1400F]">IX</span><sup className="text-[0.55em] align-super">©</sup>
       </span>
     </Link>
   )
@@ -60,7 +60,7 @@ function OrderSummary({ plan }: { plan: LandingPlan }) {
           <p className="text-sm text-stone-500">{plan.tagline}</p>
         </div>
         {plan.featured && (
-          <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-orange-50 text-[#E85D04] border border-orange-100">Recomendado</span>
+          <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-orange-50 text-[#D1400F] border border-orange-100">Recomendado</span>
         )}
       </div>
 
@@ -103,10 +103,10 @@ function MethodPicker({ method, onChange }: { method: Method; onChange: (m: Meth
             onClick={() => onChange(o.id)}
             className={cn(
               'flex items-start gap-2.5 rounded-xl border p-3 text-left transition-all',
-              on ? 'border-[#E85D04] bg-orange-50/50 ring-2 ring-orange-100' : 'border-stone-200 hover:border-stone-300',
+              on ? 'border-[#D1400F] bg-orange-50/50 ring-2 ring-orange-100' : 'border-stone-200 hover:border-stone-300',
             )}
           >
-            <span className={cn('mt-0.5', on ? 'text-[#E85D04]' : 'text-stone-400')}>{o.icon}</span>
+            <span className={cn('mt-0.5', on ? 'text-[#D1400F]' : 'text-stone-400')}>{o.icon}</span>
             <span>
               <span className="block text-sm font-semibold text-stone-900">{o.title}</span>
               <span className="block text-xs text-stone-500">{o.sub}</span>
@@ -151,7 +151,7 @@ function CardForm({ plan, email }: { plan: LandingPlan; email: string }) {
         disabled={!stripe || submitting}
         className={cn(
           'inline-flex w-full items-center justify-center gap-2 h-12 rounded-xl text-sm font-semibold text-white',
-          'bg-[#E85D04] hover:bg-[#C44D00] transition-all active:scale-[0.99] shadow-sm hover:shadow-md',
+          'bg-[#D1400F] hover:bg-[#B03508] transition-all active:scale-[0.99] shadow-sm hover:shadow-md',
           'disabled:opacity-60 disabled:cursor-not-allowed',
         )}
       >
@@ -185,7 +185,7 @@ function CopyRow({ label, value }: { label: string; value: string }) {
           'shrink-0 h-8 w-8 rounded-lg grid place-items-center transition-all',
           copied
             ? 'bg-green-50 text-green-600'
-            : 'bg-stone-100 text-stone-400 hover:bg-orange-50 hover:text-[#E85D04]',
+            : 'bg-stone-100 text-stone-400 hover:bg-orange-50 hover:text-[#D1400F]',
         )}
       >
         {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
@@ -267,8 +267,8 @@ function SpeiFlow({ plan, email, restaurant }: { plan: LandingPlan; email: strin
             <span className="text-base font-medium text-stone-500 ml-1">MXN / mes</span>
           </p>
         </div>
-        <div className="h-12 w-12 rounded-xl bg-[#E85D04]/10 grid place-items-center shrink-0">
-          <Landmark className="h-6 w-6 text-[#E85D04]" />
+        <div className="h-12 w-12 rounded-xl bg-[#D1400F]/10 grid place-items-center shrink-0">
+          <Landmark className="h-6 w-6 text-[#D1400F]" />
         </div>
       </div>
 
@@ -304,7 +304,7 @@ function SpeiFlow({ plan, email, restaurant }: { plan: LandingPlan; email: strin
               type="date"
               value={form.bank_transfer_date}
               onChange={e => setForm(f => ({ ...f, bank_transfer_date: e.target.value }))}
-              className="w-full h-10 rounded-lg border border-stone-200 px-3 text-sm outline-none focus:border-[#E85D04] focus:ring-2 focus:ring-orange-100 transition"
+              className="w-full h-10 rounded-lg border border-stone-200 px-3 text-sm outline-none focus:border-[#D1400F] focus:ring-2 focus:ring-orange-100 transition"
             />
           </div>
           <div className="space-y-1">
@@ -313,7 +313,7 @@ function SpeiFlow({ plan, email, restaurant }: { plan: LandingPlan; email: strin
               value={form.bank_sender_name}
               onChange={e => setForm(f => ({ ...f, bank_sender_name: e.target.value }))}
               placeholder="Titular que hizo la transferencia"
-              className="w-full h-10 rounded-lg border border-stone-200 px-3 text-sm outline-none focus:border-[#E85D04] focus:ring-2 focus:ring-orange-100 transition"
+              className="w-full h-10 rounded-lg border border-stone-200 px-3 text-sm outline-none focus:border-[#D1400F] focus:ring-2 focus:ring-orange-100 transition"
             />
           </div>
           <div className="space-y-1 sm:col-span-2">
@@ -322,7 +322,7 @@ function SpeiFlow({ plan, email, restaurant }: { plan: LandingPlan; email: strin
               value={form.tracking_reference}
               onChange={e => setForm(f => ({ ...f, tracking_reference: e.target.value }))}
               placeholder="Ej. 2024112912345678"
-              className="w-full h-10 rounded-lg border border-stone-200 px-3 text-sm outline-none focus:border-[#E85D04] focus:ring-2 focus:ring-orange-100 transition"
+              className="w-full h-10 rounded-lg border border-stone-200 px-3 text-sm outline-none focus:border-[#D1400F] focus:ring-2 focus:ring-orange-100 transition"
             />
           </div>
           <div className="space-y-1.5 sm:col-span-2">
@@ -348,7 +348,7 @@ function SpeiFlow({ plan, email, restaurant }: { plan: LandingPlan; email: strin
           disabled={loading}
           className={cn(
             'inline-flex w-full items-center justify-center gap-2 h-12 rounded-xl text-sm font-semibold text-white',
-            'bg-[#E85D04] hover:bg-[#C44D00] transition-all active:scale-[0.99] shadow-sm hover:shadow-md disabled:opacity-60 disabled:cursor-not-allowed',
+            'bg-[#D1400F] hover:bg-[#B03508] transition-all active:scale-[0.99] shadow-sm hover:shadow-md disabled:opacity-60 disabled:cursor-not-allowed',
           )}
         >
           {loading ? 'Enviando reporte…' : <>Reportar mi transferencia <ArrowRight className="h-4 w-4" /></>}
@@ -458,7 +458,7 @@ export default function CheckoutClient({ plan }: { plan: LandingPlan }) {
                     onChange={e => setEmail(e.target.value)}
                     placeholder="tucorreo@ejemplo.com"
                     autoComplete="email"
-                    className="w-full h-11 rounded-xl border border-stone-200 px-3.5 text-sm outline-none focus:border-[#E85D04] focus:ring-2 focus:ring-orange-100 transition"
+                    className="w-full h-11 rounded-xl border border-stone-200 px-3.5 text-sm outline-none focus:border-[#D1400F] focus:ring-2 focus:ring-orange-100 transition"
                   />
                 </div>
                 <div className="space-y-1.5">
@@ -469,7 +469,7 @@ export default function CheckoutClient({ plan }: { plan: LandingPlan }) {
                     onChange={e => setRestaurant(e.target.value)}
                     placeholder="Mariscos El Puerto"
                     autoComplete="organization"
-                    className="w-full h-11 rounded-xl border border-stone-200 px-3.5 text-sm outline-none focus:border-[#E85D04] focus:ring-2 focus:ring-orange-100 transition"
+                    className="w-full h-11 rounded-xl border border-stone-200 px-3.5 text-sm outline-none focus:border-[#D1400F] focus:ring-2 focus:ring-orange-100 transition"
                   />
                 </div>
 
@@ -487,7 +487,7 @@ export default function CheckoutClient({ plan }: { plan: LandingPlan }) {
                   disabled={loading}
                   className={cn(
                     'inline-flex w-full items-center justify-center gap-2 h-12 rounded-xl text-sm font-semibold text-white',
-                    'bg-[#E85D04] hover:bg-[#C44D00] transition-all active:scale-[0.99] shadow-sm hover:shadow-md disabled:opacity-60 disabled:cursor-not-allowed',
+                    'bg-[#D1400F] hover:bg-[#B03508] transition-all active:scale-[0.99] shadow-sm hover:shadow-md disabled:opacity-60 disabled:cursor-not-allowed',
                   )}
                 >
                   {loading ? 'Preparando…' : <>Continuar <ArrowRight className="h-4 w-4" /></>}
@@ -517,7 +517,7 @@ export default function CheckoutClient({ plan }: { plan: LandingPlan }) {
             ) : (
               <p className="text-sm text-amber-800 bg-amber-50 border border-amber-200 rounded-xl px-3 py-2.5">
                 El pago con tarjeta no está disponible en este momento. Usa la transferencia SPEI o escríbenos a{' '}
-                <a href="mailto:restauros@atomicmail.io" className="text-[#E85D04] hover:underline">restauros@atomicmail.io</a>.
+                <a href="mailto:restauros@atomicmail.io" className="text-[#D1400F] hover:underline">restauros@atomicmail.io</a>.
               </p>
             )}
           </div>

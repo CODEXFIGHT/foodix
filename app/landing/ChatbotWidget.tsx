@@ -122,10 +122,10 @@ export function ChatbotWidget() {
           onClick={openChat}
           aria-label="Abrir chat con Sol"
           aria-expanded={false}
-          className="animate-chat-fab group fixed bottom-5 right-4 z-[80] grid h-14 w-14 place-items-center rounded-full bg-[#E85D04] text-white shadow-[0_10px_30px_rgba(232,93,4,0.45)] transition-transform duration-300 hover:scale-105 hover:bg-[#d75503] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E85D04] focus-visible:ring-offset-2 sm:bottom-6 sm:right-6 sm:h-16 sm:w-16 dark:focus-visible:ring-offset-black"
+          className="animate-chat-fab group fixed bottom-5 right-4 z-[80] grid h-14 w-14 place-items-center rounded-full bg-[#D1400F] text-white shadow-[0_10px_30px_rgba(209,64,15,0.45)] transition-transform duration-300 hover:scale-105 hover:bg-[#C43F0E] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D1400F] focus-visible:ring-offset-2 sm:bottom-6 sm:right-6 sm:h-16 sm:w-16 dark:focus-visible:ring-offset-black"
         >
           {/* Anillo de "latido" ambiental para dar sensación de asistente vivo. */}
-          <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full bg-[#E85D04] animate-pulse-ring" />
+          <span aria-hidden className="pointer-events-none absolute inset-0 rounded-full bg-[#D1400F] animate-pulse-ring" />
           <MessageCircle className="relative h-6 w-6 transition-transform duration-300 group-hover:rotate-6 sm:h-7 sm:w-7" />
           <span className="absolute -top-0.5 -right-0.5 grid h-4 w-4 place-items-center rounded-full bg-white text-[10px] dark:bg-black">
             ☀️
@@ -167,7 +167,7 @@ export function ChatbotWidget() {
             </div>
             <div className="min-w-0 flex-1">
               <p className="flex items-center gap-1.5 font-heading text-sm font-bold text-stone-900 dark:text-white">
-                Sol <Sparkles className="h-3.5 w-3.5 text-[#E85D04]" />
+                Sol <Sparkles className="h-3.5 w-3.5 text-[#D1400F]" />
               </p>
               <p className="text-xs text-stone-500 dark:text-zinc-400">Asistente IA de FoodIX</p>
             </div>
@@ -189,7 +189,7 @@ export function ChatbotWidget() {
                   className={cn(
                     'max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed',
                     m.role === 'user'
-                      ? 'animate-chat-user rounded-br-sm bg-[#E85D04] text-white shadow-sm shadow-[#E85D04]/20'
+                      ? 'animate-chat-user rounded-br-sm bg-[#D1400F] text-white shadow-sm shadow-[#D1400F]/20'
                       : 'animate-chat-bot rounded-bl-sm bg-stone-100 text-stone-800 dark:bg-white/[0.06] dark:text-zinc-100',
                   )}
                 >
@@ -222,7 +222,7 @@ export function ChatbotWidget() {
                     type="button"
                     onClick={() => sendMessage(s)}
                     style={{ animationDelay: `${140 + i * 90}ms` }}
-                    className="animate-chat-chip rounded-full border border-stone-200 px-3 py-1.5 text-xs font-medium text-stone-600 transition-colors hover:border-orange-200 hover:bg-orange-50 hover:text-[#E85D04] dark:border-white/15 dark:text-zinc-300 dark:hover:bg-orange-500/10"
+                    className="animate-chat-chip rounded-full border border-stone-200 px-3 py-1.5 text-xs font-medium text-stone-600 transition-colors hover:border-orange-200 hover:bg-orange-50 hover:text-[#D1400F] dark:border-white/15 dark:text-zinc-300 dark:hover:bg-orange-500/10"
                   >
                     {s}
                   </button>
@@ -244,13 +244,13 @@ export function ChatbotWidget() {
               placeholder="Escribe tu pregunta..."
               rows={1}
               maxLength={1000}
-              className="max-h-28 min-h-[2.5rem] flex-1 resize-none rounded-2xl border border-stone-200 bg-white px-3.5 py-2.5 text-sm text-stone-800 placeholder:text-stone-400 focus:border-[#E85D04] focus:outline-none focus:ring-2 focus:ring-[#E85D04]/20 dark:border-white/15 dark:bg-black dark:text-zinc-100 dark:placeholder:text-zinc-500"
+              className="max-h-28 min-h-[2.5rem] flex-1 resize-none rounded-2xl border border-stone-200 bg-white px-3.5 py-2.5 text-sm text-stone-800 placeholder:text-stone-400 focus:border-[#D1400F] focus:outline-none focus:ring-2 focus:ring-[#D1400F]/20 dark:border-white/15 dark:bg-black dark:text-zinc-100 dark:placeholder:text-zinc-500"
             />
             <button
               type="submit"
               disabled={loading || !input.trim()}
               aria-label="Enviar mensaje"
-              className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#E85D04] text-white transition-all hover:scale-105 hover:bg-[#d75503] active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
+              className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#D1400F] text-white transition-all hover:scale-105 hover:bg-[#C43F0E] active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
             >
               <Send className="h-4 w-4" />
             </button>

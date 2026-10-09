@@ -183,7 +183,7 @@ export function CartaItemViewer({ items, activeId, onActiveIdChange, onClose, ca
           desborda del viewport. Pantalla casi completa en móvil, tarjeta de dos
           columnas en escritorio. */}
       <div
-        className="relative flex h-[100dvh] w-full flex-col overflow-hidden bg-gradient-to-br from-[#F26611] via-[#E85D04] to-[#C44D00] text-white shadow-2xl sm:h-[min(92vh,48rem)] sm:max-w-md sm:rounded-3xl sm:ring-1 sm:ring-white/10 lg:h-[min(88vh,44rem)] lg:max-w-4xl lg:flex-row"
+        className="relative flex h-[100dvh] w-full flex-col overflow-hidden bg-gradient-to-br from-[#F26611] via-[#D1400F] to-[#B03508] text-white shadow-2xl sm:h-[min(92vh,48rem)] sm:max-w-md sm:rounded-3xl sm:ring-1 sm:ring-white/10 lg:h-[min(88vh,44rem)] lg:max-w-4xl lg:flex-row"
         onClick={e => e.stopPropagation()}
       >
         {/* Columna de imagen — fija (no scrollea). Alto fijo arriba en móvil;
@@ -366,7 +366,7 @@ export function CartaItemViewer({ items, activeId, onActiveIdChange, onClose, ca
               {canOrder && (
                 <button
                   onClick={handleAdd}
-                  className="h-12 w-full rounded-xl bg-white text-[#C44D00] text-sm font-extrabold flex items-center justify-center gap-2 shadow-[0_10px_22px_-8px_rgba(0,0,0,0.5)] ring-1 ring-black/5 hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 transition-all duration-200"
+                  className="h-12 w-full rounded-xl bg-white text-[#B03508] text-sm font-extrabold flex items-center justify-center gap-2 shadow-[0_10px_22px_-8px_rgba(0,0,0,0.5)] ring-1 ring-black/5 hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 transition-all duration-200"
                 >
                   <ShoppingCart className="h-4 w-4" />
                   <span key={qty} className="animate-price-pop">Agregar al pedido · ${(item.price * qty).toFixed(2)}</span>

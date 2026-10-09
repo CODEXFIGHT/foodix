@@ -44,7 +44,7 @@ export function CategorySidebar({ categories, activeSectionId, onSelect, groupTa
               title={t.label}
               className={cn(
                 'flex h-10 items-center justify-center rounded-xl text-stone-500 transition-colors',
-                groupTabs.value === t.value ? 'bg-white text-[#E85D04] shadow-sm animate-carta-pop' : 'hover:text-stone-700',
+                groupTabs.value === t.value ? 'bg-white text-[#D1400F] shadow-sm animate-carta-pop' : 'hover:text-stone-700',
               )}
             >
               <t.Icon className="h-4 w-4" />
@@ -60,10 +60,10 @@ export function CategorySidebar({ categories, activeSectionId, onSelect, groupTa
           onClick={() => onSelect(null)}
           className={cn(
             'relative flex items-center rounded-xl px-3.5 py-2.5 text-left text-sm font-bold transition-colors',
-            activeSectionId === null ? 'bg-[#E85D04]/10 text-[#E85D04]' : 'text-stone-600 hover:bg-stone-50',
+            activeSectionId === null ? 'bg-[#D1400F]/10 text-[#D1400F]' : 'text-stone-600 hover:bg-stone-50',
           )}
         >
-          {activeSectionId === null && <span className="absolute left-0 top-1.5 bottom-1.5 w-1 rounded-full bg-[#E85D04]" />}
+          {activeSectionId === null && <span className="absolute left-0 top-1.5 bottom-1.5 w-1 rounded-full bg-[#D1400F]" />}
           Toda la carta
         </button>
 
@@ -81,7 +81,7 @@ export function CategorySidebar({ categories, activeSectionId, onSelect, groupTa
             >
               <span
                 className="absolute left-0 top-1.5 bottom-1.5 w-1 rounded-full transition-opacity"
-                style={{ backgroundColor: category.color || '#E85D04', opacity: active ? 1 : 0 }}
+                style={{ backgroundColor: category.color || '#D1400F', opacity: active ? 1 : 0 }}
               />
               {category.name}
             </button>

@@ -15,7 +15,7 @@
 import { jsPDF } from 'jspdf'
 import autoTable from 'jspdf-autotable'
 
-const BRAND: [number, number, number] = [232,93,4]   // #E85D04
+const BRAND: [number, number, number] = [209,64,15]   // #D1400F
 const INK:   [number, number, number] = [28, 25, 23]   // #1C1917
 const MUTED: [number, number, number] = [120, 113, 108] // stone-500
 

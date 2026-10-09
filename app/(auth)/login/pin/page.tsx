@@ -99,7 +99,7 @@ export default function PinLoginPage() {
         <p className="text-center text-muted-foreground">
           Este dispositivo aún no tiene una sucursal vinculada. Inicia sesión con usuario y contraseña una vez.
         </p>
-        <Link href="/login" className="text-[#E85D04] font-semibold mt-4">Ir al login</Link>
+        <Link href="/login" className="text-[#D1400F] font-semibold mt-4">Ir al login</Link>
       </Centered>
     )
   }
@@ -110,7 +110,7 @@ export default function PinLoginPage() {
         <p className="text-center text-muted-foreground">
           Dispositivo no autorizado para acceso por PIN. Aprueba el dispositivo o usa el login normal.
         </p>
-        <Link href="/login" className="text-[#E85D04] font-semibold mt-4">Ir al login</Link>
+        <Link href="/login" className="text-[#D1400F] font-semibold mt-4">Ir al login</Link>
       </Centered>
     )
   }
@@ -127,7 +127,7 @@ export default function PinLoginPage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
               {users.map(u => (
                 <button key={u.id} onClick={() => handleSelectUser(u)}
-                  className="h-20 sm:h-24 rounded-2xl border bg-card hover:border-[#E85D04] flex flex-col items-center justify-center gap-1 transition-colors active:scale-95">
+                  className="h-20 sm:h-24 rounded-2xl border bg-card hover:border-[#D1400F] flex flex-col items-center justify-center gap-1 transition-colors active:scale-95">
                   <span className="font-semibold sm:text-lg">{u.name}</span>
                   <span className="text-xs sm:text-sm text-muted-foreground capitalize">{u.role}</span>
                 </button>
@@ -170,7 +170,7 @@ export default function PinLoginPage() {
           )}
 
           {busy && (
-            <p className="text-[#E85D04] text-xs mt-3 text-center font-semibold animate-pulse">Verificando PIN...</p>
+            <p className="text-[#D1400F] text-xs mt-3 text-center font-semibold animate-pulse">Verificando PIN...</p>
           )}
         </div>
       )}

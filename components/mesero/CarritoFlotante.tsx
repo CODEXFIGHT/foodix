@@ -71,7 +71,7 @@ export function CarritoFlotante({
           onClick={() => setExpanded(e => !e)}
           className="flex min-h-[44px] w-full items-center gap-3 px-4 py-3"
         >
-          <Chip size="lg" radius="full" className="h-9 w-9 shrink-0 bg-[#E85D04]/10 text-[#E85D04]" classNames={{ content: 'p-0' }}>
+          <Chip size="lg" radius="full" className="h-9 w-9 shrink-0 bg-[#D1400F]/10 text-[#D1400F]" classNames={{ content: 'p-0' }}>
             <ChefHat className="h-4 w-4" />
           </Chip>
           <span className="flex-1 text-left">
@@ -108,7 +108,7 @@ export function CarritoFlotante({
         <div className="border-t border-stone-100 p-3 dark:border-stone-800">
           <Button
             className="h-12 w-full text-base font-semibold text-white"
-            style={{ backgroundColor: '#E85D04' }}
+            style={{ backgroundColor: '#D1400F' }}
             isDisabled={disabled || sending}
             isLoading={sending}
             onPress={onSend}

@@ -199,7 +199,7 @@ export function StationPanel({ station, fullscreen }: StationPanelProps) {
           <div className="flex items-center gap-2">
             <span className={cn(
               'flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold text-white select-none',
-              isHot ? 'bg-[#E85D04]' : 'bg-blue-600'
+              isHot ? 'bg-[#D1400F]' : 'bg-blue-600'
             )}>
               {isHot ? <Flame className="h-4 w-4 shrink-0" /> : <Snowflake className="h-4 w-4 shrink-0" />}
               {isHot ? 'Caliente' : 'Fría'}

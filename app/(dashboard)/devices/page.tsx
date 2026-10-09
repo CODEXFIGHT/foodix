@@ -303,7 +303,7 @@ export default function DevicesPage() {
           </div>
           <DialogFooter className="gap-2 sm:gap-2">
             <Button variant="ghost" onClick={() => setEditing(null)} disabled={updateDevice.isPending}>Cancelar</Button>
-            <Button onClick={saveEdit} disabled={updateDevice.isPending} className="bg-[#E85D04] hover:bg-[#C44D00]">
+            <Button onClick={saveEdit} disabled={updateDevice.isPending} className="bg-[#D1400F] hover:bg-[#B03508]">
               {updateDevice.isPending ? 'Guardando…' : 'Guardar'}
             </Button>
           </DialogFooter>

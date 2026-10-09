@@ -97,7 +97,7 @@ function activateTrialForSignup(PDO $db, array $signup, array $signals, array $r
             'INSERT INTO categories (branch_id, name, emoji, color, station, menu_group, sort_order)
              VALUES (?, ?, ?, ?, ?, ?, ?)'
         );
-        $seed->execute([$branchId, 'MESA CALIENTE', '🔥', '#E85D04', 'hot',  'alimento', 0]);
+        $seed->execute([$branchId, 'MESA CALIENTE', '🔥', '#D1400F', 'hot',  'alimento', 0]);
         $seed->execute([$branchId, 'MESA FRIA',     '🥗', '#3B82F6', 'cold', 'alimento', 1]);
 
         // ── Historial antiabuso: estas identidades ya consumieron su trial ───

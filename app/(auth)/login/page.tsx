@@ -357,7 +357,7 @@ function LoginForm() {
               className="h-7 w-7 rounded-lg shrink-0"
             />
             <span className="relative inline-block text-lg font-bold font-heading leading-none animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]">
-              Food<span className="text-[#E85D04]">IX</span><sup className="ml-0.5 align-super text-[0.55em] font-bold text-muted-foreground">&copy;</sup>
+              Food<span className="text-[#D1400F]">IX</span><sup className="ml-0.5 align-super text-[0.55em] font-bold text-muted-foreground">&copy;</sup>
             </span>
           </div>
           <button
@@ -418,7 +418,7 @@ function LoginForm() {
                       aria-hidden="true"
                       className="inline-block animate__animated animate__pulse animate__infinite [--animate-duration:2.4s]"
                     >
-                      Food<span className="text-[#E85D04]">IX</span>
+                      Food<span className="text-[#D1400F]">IX</span>
                       <sup className="ml-0.5 align-super text-[0.5em] font-bold text-muted-foreground">&copy;</sup>
                     </span>
                   </h1>
@@ -539,7 +539,7 @@ function LoginForm() {
                         <button
                           type="button"
                           onClick={() => setShowForgotPasswordModal(true)}
-                          className="text-xs font-bold text-[#E85D04] hover:underline"
+                          className="text-xs font-bold text-[#D1400F] hover:underline"
                         >
                           ¿Olvidaste tu contraseña?
                         </button>
@@ -552,7 +552,7 @@ function LoginForm() {
                       <Button
                         type="button"
                         onClick={enterDemo}
-                        className="w-full h-12 rounded-xl text-base bg-[#E85D04] hover:bg-[#C44D00] transition-all active:scale-95"
+                        className="w-full h-12 rounded-xl text-base bg-[#D1400F] hover:bg-[#B03508] transition-all active:scale-95"
                       >
                         <Sparkles className="h-4 w-4" />
                         Entrar al demo · {demoMatch.label}
@@ -564,7 +564,7 @@ function LoginForm() {
                   ) : !showPinPad && (
                     <Button
                       type="submit"
-                      className="w-full h-12 rounded-xl text-base font-semibold bg-[#E85D04] hover:bg-[#C44D00] transition-all active:scale-95"
+                      className="w-full h-12 rounded-xl text-base font-semibold bg-[#D1400F] hover:bg-[#B03508] transition-all active:scale-95"
                       disabled={isSubmitting || isLoggingIn || !usernameVal?.trim() || !passwordVal?.trim()}
                     >
                       {isSubmitting || isLoggingIn ? (
@@ -605,7 +605,7 @@ function LoginForm() {
                 <Button
                   asChild
                   variant="outline"
-                  className="h-12 w-full rounded-xl border-[#E85D04]/40 text-base font-semibold text-[#E85D04] transition-colors hover:bg-orange-50 hover:text-[#C44D00]"
+                  className="h-12 w-full rounded-xl border-[#D1400F]/40 text-base font-semibold text-[#D1400F] transition-colors hover:bg-orange-50 hover:text-[#B03508]"
                 >
                   <Link href="/register">
                     <Sparkles className="h-4 w-4" aria-hidden="true" />
@@ -639,7 +639,7 @@ function LoginForm() {
 
                 <div className="text-center mb-6">
                   <p className="text-xs text-neutral-400">Hola,</p>
-                  <h2 className="text-xl font-bold text-[#E85D04]">{pinGate?.name}</h2>
+                  <h2 className="text-xl font-bold text-[#D1400F]">{pinGate?.name}</h2>
                   <p className="text-neutral-500 text-xs mt-1">Ingresa tu PIN de 4 dígitos</p>
                 </div>
 
@@ -675,7 +675,7 @@ export default function LoginPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin h-8 w-8 border-2 border-[#E85D04] border-t-transparent rounded-full" />
+        <div className="animate-spin h-8 w-8 border-2 border-[#D1400F] border-t-transparent rounded-full" />
       </div>
     }>
       <LoginForm />

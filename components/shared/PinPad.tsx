@@ -97,7 +97,7 @@ export function PinPad({
                 filled
                   ? success
                     ? "bg-green-500 border-green-500 shadow-[0_0_10px_#22C55E] animate-pin-dot"
-                    : "bg-[#E85D04] border-[#E85D04] shadow-[0_0_10px_#E85D04] animate-pin-dot"
+                    : "bg-[#D1400F] border-[#D1400F] shadow-[0_0_10px_#D1400F] animate-pin-dot"
                   : "bg-transparent border-neutral-700"
               )}
             />
@@ -124,7 +124,7 @@ export function PinPad({
               onClick={() => handleKeyPress(k)}
               disabled={loading}
               style={{ animationDelay: `${i * 28}ms` }}
-              className="animate-pin-key flex items-center justify-center aspect-square rounded-full bg-neutral-900 border border-white/5 text-white text-xl font-semibold hover:bg-neutral-800 active:bg-[#E85D04]/10 active:text-[#E85D04] active:border-[#E85D04]/30 active:scale-95 transition-all duration-150 cursor-pointer shadow-sm focus:outline-none"
+              className="animate-pin-key flex items-center justify-center aspect-square rounded-full bg-neutral-900 border border-white/5 text-white text-xl font-semibold hover:bg-neutral-800 active:bg-[#D1400F]/10 active:text-[#D1400F] active:border-[#D1400F]/30 active:scale-95 transition-all duration-150 cursor-pointer shadow-sm focus:outline-none"
             >
               {k}
             </button>
@@ -148,7 +148,7 @@ export function PinPad({
             onClick={() => handleKeyPress('0')}
             disabled={loading}
             style={{ animationDelay: '280ms' }}
-            className="animate-pin-key flex items-center justify-center aspect-square rounded-full bg-neutral-900 border border-white/5 text-white text-xl font-semibold hover:bg-neutral-800 active:bg-[#E85D04]/10 active:text-[#E85D04] active:border-[#E85D04]/30 active:scale-95 transition-all duration-150 cursor-pointer shadow-sm focus:outline-none"
+            className="animate-pin-key flex items-center justify-center aspect-square rounded-full bg-neutral-900 border border-white/5 text-white text-xl font-semibold hover:bg-neutral-800 active:bg-[#D1400F]/10 active:text-[#D1400F] active:border-[#D1400F]/30 active:scale-95 transition-all duration-150 cursor-pointer shadow-sm focus:outline-none"
           >
             0
           </button>
@@ -175,7 +175,7 @@ export function PinPad({
               : "opacity-0 scale-90 pointer-events-none"
           )}
         >
-          <Loader2 className="h-12 w-12 animate-spin text-[#E85D04]" strokeWidth={2.5} />
+          <Loader2 className="h-12 w-12 animate-spin text-[#D1400F]" strokeWidth={2.5} />
           <p className="text-neutral-400 text-xs font-bold tracking-wider uppercase animate-pulse">
             Verificando PIN…
           </p>

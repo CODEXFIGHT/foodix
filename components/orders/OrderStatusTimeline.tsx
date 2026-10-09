@@ -41,7 +41,7 @@ export function OrderStatusTimeline({ status }: { status: OrderStatus }) {
               <div className={cn(
                 'w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold transition-all',
                 done ? 'bg-green-500 text-white' :
-                active ? 'bg-[#E85D04] text-white ring-2 ring-[#E85D04]/30' :
+                active ? 'bg-[#D1400F] text-white ring-2 ring-[#D1400F]/30' :
                 'bg-muted text-muted-foreground'
               )}>
                 {done ? <Check className="h-4 w-4" /> : idx + 1}

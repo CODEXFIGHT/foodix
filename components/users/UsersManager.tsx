@@ -205,7 +205,7 @@ export function UsersManager({ branchId, allowedRoles, canDelete = false, theme 
       <div className="flex justify-end">
         <Button
           onClick={openNew}
-          className={dark ? 'bg-yellow-500 hover:bg-yellow-600 text-yellow-900' : 'bg-[#E85D04] hover:bg-[#C44D00]'}
+          className={dark ? 'bg-yellow-500 hover:bg-yellow-600 text-yellow-900' : 'bg-[#D1400F] hover:bg-[#B03508]'}
         >
           <Plus className="h-4 w-4 mr-1" />Nuevo usuario
         </Button>
@@ -267,7 +267,7 @@ export function UsersManager({ branchId, allowedRoles, canDelete = false, theme 
                       onClick={() => openPinModal(u)}
                       title={u.has_pin ? 'Cambiar PIN' : 'Asignar PIN'}
                       className={cn(
-                        u.has_pin && 'border-[#E85D04]/40 text-[#E85D04]',
+                        u.has_pin && 'border-[#D1400F]/40 text-[#D1400F]',
                         dark ? 'border-white/10 bg-transparent text-slate-300 hover:bg-white/5' : '',
                       )}
                     >
@@ -373,7 +373,7 @@ export function UsersManager({ branchId, allowedRoles, canDelete = false, theme 
             <Button
               onClick={handleSave}
               disabled={create.isPending || update.isPending}
-              className={dark ? 'bg-yellow-500 hover:bg-yellow-600 text-yellow-900' : 'bg-[#E85D04] hover:bg-[#C44D00]'}
+              className={dark ? 'bg-yellow-500 hover:bg-yellow-600 text-yellow-900' : 'bg-[#D1400F] hover:bg-[#B03508]'}
             >
               {create.isPending || update.isPending ? 'Guardando…' : 'Guardar'}
             </Button>

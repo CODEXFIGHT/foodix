@@ -39,7 +39,7 @@ function handleCategories(array $seg, string $method): never {
         if (!$branchId) jsonError(422, 'branch_id requerido');
 
         $color     = preg_match('/^#[0-9A-Fa-f]{6}$/', (string)($body['color'] ?? ''))
-                         ? $body['color'] : '#E85D04';
+                         ? $body['color'] : '#D1400F';
         $emoji     = mb_substr(trim((string)($body['emoji'] ?? '')), 0, 10) ?: null;
         $sortOrder = (int)($body['sort_order'] ?? 0);
         $station   = in_array($body['station'] ?? '', ['hot', 'cold', 'both'], true) ? $body['station'] : 'hot';

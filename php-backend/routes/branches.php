@@ -174,7 +174,7 @@ function handleBranches(array $seg, string $method): never {
             // Seed default categories
             $db->prepare(
                 'INSERT INTO categories (branch_id, name, emoji, color, station, menu_group, sort_order)
-                 VALUES (?, \'MESA CALIENTE\', \'🔥\', \'#E85D04\', \'hot\', \'alimento\', 0)'
+                 VALUES (?, \'MESA CALIENTE\', \'🔥\', \'#D1400F\', \'hot\', \'alimento\', 0)'
             )->execute([$id]);
 
             $db->prepare(
